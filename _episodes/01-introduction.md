@@ -362,15 +362,15 @@ Hello world!
 >
 > ```java
 > public class Worker {
->		public static void main(String[] args) {
->		}
->		System.out.println("How do you do?");
+>	public static void main(String[] args) {
+>	}
+>	System.out.println("How do you do?");
 >}
 >```
 >
 > > ## SOLUTION
 > > Display statement exists outside the`main`method.
-> > Fixed code:
+> > Corrected version:
 > >
 > > ```java
 > > public class Worker {
@@ -390,35 +390,51 @@ Hello world!
 > ```java
 > public static void main(String[] args) {
 > 	public class Worker {
-> 		System.out.println("How do you do?");
->	  }
+> 		System.out.println("All right!");
+>	}
 >}
 >```
 >
 > > ## SOLUTION 
 > > `main` should be inside the `class`, not the other way round.
-> >
+> > Corrected version:
+> > 
 > > ```java
 > > public class Worker {
 > > 	public static void main(String[] args) {
-> > 		System.out.println("How do you do?");
+> > 		System.out.println("All right!");
 > > 	}
 > > }
 > > ```
 > {: .solution}
 {: .challenge}
 
-What's wrong with the following code?
+{: .challenge}
+> ## Debug a simple program
+> What's wrong with the following code?
+>
+> ```java
+> public class Worker {
+> 	public static void main(String[] args) {
+>		System.out.println("Wassup!")
+>	}
+> }
+> ```
+>
+> > ## SOLUTION
+> > Missing semi-colon at the end of line 3.
+> > Corrected version:
+> >
+> > ```java
+> > public class Worker {
+> > 	public static void main(String[] args) {
+> > 		System.out.println("Wassup!");
+> > 	}
+> > }
+> > ```
+> {: .solution}
+{: .challenge}  
 
-```java
-public class Worker {
-	public static void main(String[] args) {
-		System.out.println("How do you do?")
-	}
-}
-```
-
-Missing semi-colon at the end of line 3.
 
 ## First java program in Eclipse
 
@@ -476,7 +492,7 @@ another integer besides 1 and 77.
 Therefore, it's not a prime number.
 ```
 
-**NOTE:**You can see that this is a kind of `violation` algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with `failure (false)`status. Only if **no** violations are found, can the algorithm exit with `success (true)`status. The algorithm is,
+**NOTE:** You can see that this is a kind of `violation` algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with `failure (false)` status. Only if **no** violations are found, can the algorithm exit with `success (true)`status. The algorithm is,
 
 ```
 INPUT: Integer n
@@ -512,7 +528,7 @@ public static boolean isPrime(int n) {
 }
 ```
 
-Note: we really need to check only until $$\sqrt{n}$$ instead of `n-1`.
+Note: we really need to check only until square root of `n` instead of `n-1`.
 
 The way we can call this function from another function (say `main`) is as follows,
 

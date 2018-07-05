@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2018-07-05 17:44:06 +1000">
+    <meta http-equiv="last-modified" content="2018-07-05 19:04:04 +1000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -642,16 +642,16 @@ Compile and run the java program.</p>
   <p>What’s wrong with the following code?</p>
 
   <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
-		<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="o">}</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+	<span class="o">}</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre></div>  </div>
 
   <blockquote class="solution">
     <h2 id="solution-1">SOLUTION</h2>
     <p>Display statement exists outside the<code class="highlighter-rouge">main</code>method.
-Fixed code:</p>
+Corrected version:</p>
 
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
@@ -668,34 +668,49 @@ Fixed code:</p>
 
   <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 	<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">);</span>
-	  <span class="o">}</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"All right!"</span><span class="o">);</span>
+	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>  </div>
 
   <blockquote class="solution">
     <h2 id="solution-2">SOLUTION</h2>
-    <p><code class="highlighter-rouge">main</code> should be inside the <code class="highlighter-rouge">class</code>, not the other way round.</p>
+    <p><code class="highlighter-rouge">main</code> should be inside the <code class="highlighter-rouge">class</code>, not the other way round.
+Corrected version:</p>
 
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"All right!"</span><span class="o">);</span>
 	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>    </div>
   </blockquote>
 </blockquote>
 
-<p>What’s wrong with the following code?</p>
+<blockquote class="challenge challenge">
+  <h2 id="debug-a-simple-program-2">Debug a simple program</h2>
+  <p>What’s wrong with the following code?</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">)</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Wassup!"</span><span class="o">)</span>
 	<span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
+</code></pre></div>  </div>
 
-<p>Missing semi-colon at the end of line 3.</p>
+  <blockquote class="solution">
+    <h2 id="solution-3">SOLUTION</h2>
+    <p>Missing semi-colon at the end of line 3.
+Corrected version:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Wassup!"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
 
 <h2 id="first-java-program-in-eclipse">First java program in Eclipse</h2>
 
@@ -749,7 +764,7 @@ another integer besides 1 and 77.
 Therefore, it's not a prime number.
 </code></pre></div></div>
 
-<p><strong>NOTE:</strong>You can see that this is a kind of <code class="highlighter-rouge">violation</code> algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with <code class="highlighter-rouge">failure (false)</code>status. Only if <strong>no</strong> violations are found, can the algorithm exit with <code class="highlighter-rouge">success (true)</code>status. The algorithm is,</p>
+<p><strong>NOTE:</strong> You can see that this is a kind of <code class="highlighter-rouge">violation</code> algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with <code class="highlighter-rouge">failure (false)</code> status. Only if <strong>no</strong> violations are found, can the algorithm exit with <code class="highlighter-rouge">success (true)</code>status. The algorithm is,</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INPUT: Integer n
 PROCESS:
@@ -783,7 +798,7 @@ end loop
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Note: we really need to check only until <script type="math/tex">\sqrt{n}</script> instead of <code class="highlighter-rouge">n-1</code>.</p>
+<p>Note: we really need to check only until square root of <code class="highlighter-rouge">n</code> instead of <code class="highlighter-rouge">n-1</code>.</p>
 
 <p>The way we can call this function from another function (say <code class="highlighter-rouge">main</code>) is as follows,</p>
 
