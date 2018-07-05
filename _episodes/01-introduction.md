@@ -48,169 +48,84 @@ In the unit, we shall be doing a lot of work on computers, where your programs a
 
 We will start with trace of some programs to establish what we expect students to do while tracing through code.
 
-Trace the flow of the following program and determine the value of`result`at the end of it.
-
-```java
-int a = 5, b = 10;
-int result;
-if(a < b && b % a == 0 && a % 2 == 0) {
-	result = a;
-}
-else {
-	result = b;
-}
-```
-
->`a < b` is `true`
->
->`b % a == 0` is `true`
->
->`a % 2 == 0` is `false`
->
->The expression becomes `true && true && false`
->
->This is `false`
->
->Hence, the `else` block executes and `result` becomes `b (10)`.
+{: .challenge}
+> ## Tracing conditions
+> Trace the flow of the following program and determine the value of `result` at the end of it.
+> <script src="https://gist.github.com/gaurav1780/767824769b5456ddb080e63d84124d70.js"></script>
+> > ## Solution
+> >`a < b` is `true`
+> >
+> >`b % a == 0` is `true`
+> >
+> >`a % 2 == 0` is `false`
+> >
+> >The expression becomes `true && true && false`
+> >
+> >This is `false`
+> >
+> >Hence, the `else` block executes and `result` becomes `b (10)`.
+> {: .solution}
+{: .challenge}
 
 ---
 
-Trace the flow of the following program and determine the value of `result` at the end of it.
+{: .challenge}
+> ## Tracing conditions
+> Trace the flow of the following program and determine the value of `result` at the end of it.
+> <script src="https://gist.github.com/gaurav1780/0f335474bbbf8fcf488150b7b411c33a.js"></script>
+> > ## Solution
+> >`a == b` is `false`,
+> > 
+> > `else` executes
+> >  
+> > `b` decreases by 5, becomes 5
+> > `a == b` is `true`. 
+> > `if` block executes and `result` becomes `b (5)`.
+> {: .solution}
+{: .challenge}
 
-```java
-int a = 5, b = 10;
-int result = 0;
-if(a == b) {
-	result = a;
-}
-else {
-	b = b - a;
-	if(a == b) {
-		result = b;
-	}
-}
-```
 
-`a == b` is `false`, else executes `b` decreases by 5, becomes 5
-`a == b` is `true`. Hence, the `if` block executes and `result` becomes `b (5)`.
+{: .challenge}
+> ## Tracing condition and loop
+> Trace the flow of the following program and determine the value of `result` at the end of it.
+> <script src="https://gist.github.com/gaurav1780/0302ce7e20a43b1807584b4ca7f49ce7.js"></script>
+> > ## Solution
+> > > | i | i&lt;=7 | i%2 | i%2==1 | result |
+> > > | --- | --- | --- | --- | --- |
+> > > | 1 | true | 1 | true | -3+1 = -2 |
+> > > | 2 | true | 0 | false | |
+> > > | 3 | true | 1 | true | -2+3 = 1 |
+> > > | 4 | true | 0 | false | |
+> > > | 5 | true | 1 | true | 1+5 = 6 |
+> > > | 6 | true | 0 | false | |
+> > > | 7 | true | 1 | true | 6+7 = 13 |
+> > > | 8 | false | | | |
+> {: .solution}
+{: .challenge}
 
-Trace the flow of the following program.
-
-```java
-int result = -3;
-for(int i=1; i <= 7; i++) {
-	if(i%2 == 1) {
-		result = result + i;
-	}
-}
-```
-
-SOLUTION (using a logic table)
-
-| i | i&lt;=7 | i%2 | i%2==1 | result |
-| --- | --- | --- | --- | --- |
-| 1 | true | 1 | true | -3+1 = -2 |
-| 2 | true | 0 | false | |
-| 3 | true | 1 | true | -2+3 = 1 |
-| 4 | true | 0 | false | |
-| 5 | true | 1 | true | 1+5 = 6 |
-| 6 | true | 0 | false | |
-| 7 | true | 1 | true | 6+7 = 13 |
-| 8 | false | | | |
-
-Trace the flow of the following program.
-
-```java
-int a = 4, b = 12, c = 3;
-boolean d = false;
-int result = 4;
-if(a > b || b % c == 0) {
-	if(d == true) {
-		result = result + 1;
-	}
-	else {
-		result = result - 1;
-	}
-	result = result * 2;
-}
-
-if(d == false && a == b/c) {
-	result = result + 1;
-	a = a + 1;
-	d = true;
-}
-
-if(d == false && a == b/c) {
-	result = result + 2;
-}
-else {
-	b = b - 2;
-	c = c - 1;
-	d = false;
-}
-
-if(d == false && a == b/c) {
-	result = result + 3;
-}
-```
-
-```java
-int a = 4, b = 12, c = 3;
-boolean d = false;
-int result = 4;
-if(a < b || b % c == 1) {
-	//a < b: false, b%c==0: true, false || true: true
-	if(d == true) { //false == true: false
-		result = result + 1;
-	}
-	else { //else block executes
-		result = result - 1; //result becomes 4 - 1 = 3
-	}
-	result = result * 2; //result becomes 3 * 2 = 6
-}
-
-if(d == false && a == b/c) {
-	//false==false: true, 4 == 12/3: true, true && true: true
-	result = result + 1; //result becomes 6 + 1 = 7
-	a = a + 1; //a becomes 4 + 1 = 5
-	d = !d; //d becomes !false (true)
-}
-
-if(d == false && a == b/c) {
-	//true==false: false, false && anything: false
-	result = result + 2;
-}
-else { //else block executes
-	b = b - 2; //b becomes 12-2 = 10
-	c = c - 1; //c becomes 3-1 = 2
-	d = !d; //d becomes !true (false)
-}
-
-if(d == false && a == b/c) {
-	//false==false: true, 5==10/2: true, true&&true: true
-	result = result + 3; //result becomes 7+3 = 10
-}
-/*
-at the end:
-a = 5
-b = 10
-c = 2
-d = false
-result = 10
-*/
-```
+{: .challenge}
+> ## Tracing nested conditions
+> Trace the flow of the following code -
+> <script src="https://gist.github.com/gaurav1780/0b8969cabc916cff8ed88cfcde631560.js"></script>
+> > ## Solution
+> > At the end of the code, 
+> > `a = 5`, `b = 10`, `c = 2`, `d = false`, `result = 10`. 
+> > Explanation - 
+> > <script src="https://gist.github.com/gaurav1780/7edd01a8e4ae3182e3ddd7f6166a0e53.js"></script>
+> {: .solution}
+{: .challenge}
 
 # Compiling and running java programs from command prompt or terminal
 After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.
 
-A java source file`HelloWorld.java`is compiled as
+A java source file `HelloWorld.java` is compiled as
 
 ~~~
 javac HelloWorld.java
 ~~~
 {: .bash}
 
-Once it is compiled, there will be java class file generated with name`HelloWorld.class`. What you execute is this class file, as,
+Once it is compiled, there will be java class file generated with name `HelloWorld.class`. What you execute is this class file, as,
 
 ~~~
 java HelloWorld
@@ -227,7 +142,7 @@ This is a good skill and the benefit of doing this over using an IDE like Eclips
 
 4. Helps with pen and paper design.
 
-Let's say, following are the contents of`HelloWorld.java`
+Let's say, following are the contents of `HelloWorld.java`
 
 ```java
 public class HelloWorld {
@@ -249,7 +164,7 @@ I-2:intro gauravgupta$
 ~~~
 {: .bash}
 
-You can see that it points to the line number \(3\) with syntactical errors so you can correct them. In this case, we change the`5+`to`5+3`, and our program compiles, and executes, successfully.
+You can see that it points to the line number \(3\) with syntactical errors so you can correct them. In this case, we change the `5+` to `5+3`, and our program compiles, and executes, successfully.
 
 ```java
 public class HelloWorld {
@@ -343,16 +258,7 @@ Hello world!
 > them values of your choice. Calculate the speed and display on the console.
 > Compile and run the java program.
 > > ## Solution
-> > ```java
-> > public class NeedForSpeed {
-> > 	public static void main(String[] args) {
-> > 		double distance = 34;
-> > 		double time = 21;
-> > 		double speed = distance/time;
-> > 		System.out.println(speed);
-> > 	}
-> > }
-> > ```
+> > <script src="https://gist.github.com/gaurav1780/905f1681f5c75e60a7a4f3715355e14f.js"></script>
 > {: .solution}
 {: .challenge}
 
