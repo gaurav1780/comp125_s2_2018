@@ -275,16 +275,16 @@ Hello world!
 >```
 >
 > > ## SOLUTION
-> > Display statement exists outside the`main`method.
+> > Display statement exists outside the `main` method.
 > > Corrected version:
 > >
-> > ```java
-> > public class Worker {
-> > 	public static void main(String[] args) {
-> >			System.out.println("How do you do?");
-> >		}
-> > }
-> > ```
+> >```java
+> >public class Worker {
+> >	public static void main(String[] args) {
+> >		System.out.println("How do you do?");
+> >	}
+> >}
+> >```
 > {: .solution}
 {: .challenge}
 
@@ -348,29 +348,16 @@ Hello world!
 
 ## Adding more functions to a java program
 
-You will notice that the `main `function is labelled `static `by Java. Your program will not run if you remove this keyword. A function being static means that it doesn't need an object on which it operates \(more about this in week 2 and 3\), rather it's a stand-alone function. If you wish to add more functions in an *object-less* environment, those functions must be labelled `static `as well. So while in Processing, you would have defined a function as,
+You will notice that the `main` function is labelled `static` by Java. Your program will not run if you remove this keyword. A function being `static` means that the only data it operates on (if any) are the parameters passed. 
 
-```java
-boolean isPositive(int n) {
-	if(n > 0)
-		return true;
-	else
-		return false;
-}
-```
+Equivalent versions of the same function in `Processing` and `Java` are provided below -
 
-In Java, we write it as,
+| Processing                                                                                      | Java |
+|-------------------------------------------------------------------------------------------------|------|
+| <script src="https://gist.github.com/gaurav1780/b3653c5a7bc5b8918bae111279542573.js"></script> |    <script src="https://gist.github.com/gaurav1780/b9c62caf13fa64d008ee6770525158af.js"></script> |
 
-```java
-public static boolean isPositive(int n) {
-	if(n > 0)
-		return true;
-	else
-		return false;
-}
-```
 
-The`public`keyword is for consistency and will be used for all functions unless explicitly specified to be`private`\(again, more about this in week 2 and 3\).
+The `public` keyword is for consistency and will be used for all functions unless explicitly specified to be `private` \(again, more about this in week 2 and 3\).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XS48hrWdm4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -380,27 +367,29 @@ The`public`keyword is for consistency and will be used for all functions unless 
 
 What is a prime number?_A number more than 1 that is divisible only by 1 and itself.
 
-```
+~~~
 Is 37 a prime number?
 Is 37 divisible by 2? No. So we carry on
 ...
 Is 37 divisible by 36? No. This means 37 is not divisible by
 any integer besides 1 and 37.
 Thus, 37 is a prime number.
-```
+~~~
+{: .output}
 
-```
+~~~
 Is 77 a prime number?
 Is 77 divisible by 2? No. So we carry on
 ...
 Is 77 divisible by 7? Yes. This means 77 is divisible by
 another integer besides 1 and 77.
 Therefore, it's not a prime number.
-```
+~~~
+{: .output}
 
 **NOTE:** You can see that this is a kind of `violation` algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with `failure (false)` status. Only if **no** violations are found, can the algorithm exit with `success (true)`status. The algorithm is,
 
-```
+~~~
 INPUT: Integer n
 PROCESS:
 if n is less than 2
@@ -415,111 +404,62 @@ begin loop
 		OUTPUT false (as a non-trivial divisor was found)
 	end condition
 end loop
-```
+~~~
+{: .output}
 
 The equivalent Java code would be,
 
-```java
-public static boolean isPrime(int n) {
-	if(n < 2) {
-		return false;
-	}
-	for(int i=2; i < n; i++) {
-		if(n % i == 0) { //violation
-			return false;
-		}
-	}
-	//end of loop, no non-trivial divisor found
-	return true;
-}
-```
+<script src="https://gist.github.com/gaurav1780/dfe61c931d2b637931ffcd4a4d25f765.js"></script>
 
 Note: we really need to check only until square root of `n` instead of `n-1`.
 
 The way we can call this function from another function (say `main`) is as follows,
 
-
-```java
-public static void main(String[] args) {
-	int num = 56;
-	boolean np = isPrime(num);
-	System.out.println(np);
-}
-```
+<script src="https://gist.github.com/gaurav1780/2f84e7676a8fc2009b9c7df8b3bad1a6.js"></script>
 
 ## Problem 2: Determining if a String contains any space
 
 As opposed to the prime checking example, this is a `validation` algorithm, where we look for a validation, and as soon as one is found, we can return `true`. If there is no validation found, then, at the end, we can return `false`.
 
-```java
-public static boolean containsSpace(String s) {
-	for(int i=0; i < s.length(); i++) {
-		if(s.charAt(i) == ' ') { //validation
-			return true;
-		}
-	}
-	//end of loop, no character is a space
-	return false;
-}
-```
+<script src="https://gist.github.com/gaurav1780/a70018542384418de6724f5c5b9acd45.js"></script>
+
 
 ## Problem 3: Calculating the total of all items of an integer array
 
-The process for this one is to go through each item of the array, and add it to a variable that should store the total
+This is an `accumulation` algorithm. We go through each item of the array, and add it to a variable that stores the total.
 
-```java
-public static int total(int[] a) {
-	int result = 0;
-	for(int i=0; i < a.length; i++) {
-		result+=a[i];
-	}
-	return result;
-}
+<script src="https://gist.github.com/gaurav1780/990f005dee2573083528b3d0e6283a3f.js"></script>
 
-public static void main(String[] args) {
-	int[] taxicab = {1, 7, 2, 9};
-	int myTotal = total(taxicab);
-	System.out.println(myTotal);
-}
-```
+Once we know how to do this, we can apply this to other problems such as,
 
-This problem can be extended to more specific problems such as,
+{: .challenge}
+> ## Finding total of all even numbers in an integer array
+> Define a method that when passed an array, returns the sum of all even numbers in the array
+> > ## Solution
+> > <script src="https://gist.github.com/gaurav1780/b1abbb1a3bab1ef55c1c0cf4815482b9.js"></script>
+> {: .solution}
+{: .challenge}
 
-1. finding total of all even numbers in an integer array
+{: .challenge}
+> ## Finding total of all positive items in an integer array
+> Define a method that when passed an integer array, returns the sum of all positive numbers in the array.  Solution is not provided for this problem.
+{: .challenge}
 
-2. finding total of all positive items in an integer array
+{: .challenge}
+> ## Finding total of all items above a certain value in an integer array
+> Define a method that when passed an integer array and another integer (say `val`), returns the sum of all items numbers in the array that are **more than** `val`. Solution is not provided for this problem.
+{: .challenge}
 
-3. finding total of all items above a certain value in an integer array
 
-4. finding total of negative items in the first half of the array
+{: .challenge}
+> ## Finding total of negative items in the first half of the array
+> Define a method that when passed an integer array, returns the sum of all negative numbers in the first half of the array. For example, if array is `{-6, -8, -1, -2, 9}`, return `-14`, and if array is `{-6, -5, -8, -12, -1, 9}`, return `-19`.
+> > ## Solution
+> > <script src="https://gist.github.com/gaurav1780/671b713a16b53872f45a36c1659464ea.js"></script>
+> {: .solution}
+{: .challenge}
 
-Solutions for 1 and 4 are given below.
-
-```java
-public static int totalEven(int[] a) {
-	int result = 0;
-	for(int i=0; i < a.length; i++) {
-		if(a[i] % 2 == 0) {
-			result+=a[i];
-		}
-	}
-	return result;
-}
-```
-
-```java
-public static int totalFirstHalfNegatives(int[] a) {
-	int result = 0;
-	for(int i=0; i < a.length/2; i++) {
-		if(a[i] < 0) {
-			result+=a[i];
-		}
-	}
-	return result;
-}
-```
-
-# Compiling and running java programs from command prompt / terminal
+<!--# Compiling and running java programs from command prompt / terminal
 
 After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.
 
@@ -577,4 +517,4 @@ public class HelloWorld {
 		System.out.println(5+3);
 	}
 }
-```
+```-->

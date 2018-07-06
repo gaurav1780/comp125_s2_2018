@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2018-07-06 08:45:18 +1000">
+    <meta http-equiv="last-modified" content="2018-07-07 02:54:11 +1000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -100,7 +100,11 @@
             
             <li><a href="../12-supplementaryMaterial/index.html">Supplementary Material</a></li>
             
+            <li><a href="../debugging/index.html">Debugging</a></li>
+            
             <li><a href="../searching/index.html">Searching Algorithms</a></li>
+            
+            <li><a href="../unitTesting/index.html">Unit Testing</a></li>
             
           </ul>
         </li>
@@ -566,13 +570,13 @@ Compile and run the java program.</p>
 
   <blockquote class="solution">
     <h2 id="solution-5">SOLUTION</h2>
-    <p>Display statement exists outside the<code class="highlighter-rouge">main</code>method.
+    <p>Display statement exists outside the <code class="highlighter-rouge">main</code> method.
 Corrected version:</p>
 
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Worker</span> <span class="o">{</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">);</span>
-		<span class="o">}</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"How do you do?"</span><span class="o">);</span>
+	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>    </div>
   </blockquote>
@@ -634,27 +638,26 @@ Corrected version:</p>
 
 <h2 id="adding-more-functions-to-a-java-program">Adding more functions to a java program</h2>
 
-<p>You will notice that the <code class="highlighter-rouge">main </code>function is labelled <code class="highlighter-rouge">static </code>by Java. Your program will not run if you remove this keyword. A function being static means that it doesn’t need an object on which it operates (more about this in week 2 and 3), rather it’s a stand-alone function. If you wish to add more functions in an <em>object-less</em> environment, those functions must be labelled <code class="highlighter-rouge">static </code>as well. So while in Processing, you would have defined a function as,</p>
+<p>You will notice that the <code class="highlighter-rouge">main</code> function is labelled <code class="highlighter-rouge">static</code> by Java. Your program will not run if you remove this keyword. A function being <code class="highlighter-rouge">static</code> means that the only data it operates on (if any) are the parameters passed.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">boolean</span> <span class="nf">isPositive</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
-	<span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span>
-		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-	<span class="k">else</span>
-		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<p>Equivalent versions of the same function in <code class="highlighter-rouge">Processing</code> and <code class="highlighter-rouge">Java</code> are provided below -</p>
 
-<p>In Java, we write it as,</p>
+<table>
+  <thead>
+    <tr>
+      <th>Processing</th>
+      <th>Java</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><script src="https://gist.github.com/gaurav1780/b3653c5a7bc5b8918bae111279542573.js"></script></td>
+      <td><script src="https://gist.github.com/gaurav1780/b9c62caf13fa64d008ee6770525158af.js"></script></td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isPositive</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
-	<span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span>
-		<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-	<span class="k">else</span>
-		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>The<code class="highlighter-rouge">public</code>keyword is for consistency and will be used for all functions unless explicitly specified to be<code class="highlighter-rouge">private</code>(again, more about this in week 2 and 3).</p>
+<p>The <code class="highlighter-rouge">public</code> keyword is for consistency and will be used for all functions unless explicitly specified to be <code class="highlighter-rouge">private</code> (again, more about this in week 2 and 3).</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XS48hrWdm4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
@@ -664,7 +667,7 @@ Corrected version:</p>
 
 <p>What is a prime number?_A number more than 1 that is divisible only by 1 and itself.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Is 37 a prime number?
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Is 37 a prime number?
 Is 37 divisible by 2? No. So we carry on
 ...
 Is 37 divisible by 36? No. This means 37 is not divisible by
@@ -672,7 +675,7 @@ any integer besides 1 and 37.
 Thus, 37 is a prime number.
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Is 77 a prime number?
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Is 77 a prime number?
 Is 77 divisible by 2? No. So we carry on
 ...
 Is 77 divisible by 7? Yes. This means 77 is divisible by
@@ -682,7 +685,7 @@ Therefore, it's not a prime number.
 
 <p><strong>NOTE:</strong> You can see that this is a kind of <code class="highlighter-rouge">violation</code> algorithm, where we continuously look for a violation (existence non-trivial divisor) to the problem in context (primality). As soon as a violation is encountered, our algorithm can exit with <code class="highlighter-rouge">failure (false)</code> status. Only if <strong>no</strong> violations are found, can the algorithm exit with <code class="highlighter-rouge">success (true)</code>status. The algorithm is,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INPUT: Integer n
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INPUT: Integer n
 PROCESS:
 if n is less than 2
 begin condition
@@ -700,164 +703,117 @@ end loop
 
 <p>The equivalent Java code would be,</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isPrime</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
-	<span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
-		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-	<span class="o">}</span>
-	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-		<span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//violation</span>
-			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-		<span class="o">}</span>
-	<span class="o">}</span>
-	<span class="c1">//end of loop, no non-trivial divisor found</span>
-	<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/gaurav1780/dfe61c931d2b637931ffcd4a4d25f765.js"></script>
 
 <p>Note: we really need to check only until square root of <code class="highlighter-rouge">n</code> instead of <code class="highlighter-rouge">n-1</code>.</p>
 
 <p>The way we can call this function from another function (say <code class="highlighter-rouge">main</code>) is as follows,</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-	<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">56</span><span class="o">;</span>
-	<span class="kt">boolean</span> <span class="n">np</span> <span class="o">=</span> <span class="n">isPrime</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">np</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/gaurav1780/2f84e7676a8fc2009b9c7df8b3bad1a6.js"></script>
 
 <h2 id="problem-2-determining-if-a-string-contains-any-space">Problem 2: Determining if a String contains any space</h2>
 
 <p>As opposed to the prime checking example, this is a <code class="highlighter-rouge">validation</code> algorithm, where we look for a validation, and as soon as one is found, we can return <code class="highlighter-rouge">true</code>. If there is no validation found, then, at the end, we can return <code class="highlighter-rouge">false</code>.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">containsSpace</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
-	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-		<span class="k">if</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">==</span> <span class="sc">' '</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//validation</span>
-			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-		<span class="o">}</span>
-	<span class="o">}</span>
-	<span class="c1">//end of loop, no character is a space</span>
-	<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<script src="https://gist.github.com/gaurav1780/a70018542384418de6724f5c5b9acd45.js"></script>
 
 <h2 id="problem-3-calculating-the-total-of-all-items-of-an-integer-array">Problem 3: Calculating the total of all items of an integer array</h2>
 
-<p>The process for this one is to go through each item of the array, and add it to a variable that should store the total</p>
+<p>This is an <code class="highlighter-rouge">accumulation</code> algorithm. We go through each item of the array, and add it to a variable that stores the total.</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">total</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
-	<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-		<span class="n">result</span><span class="o">+=</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-	<span class="o">}</span>
-	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="o">}</span>
+<script src="https://gist.github.com/gaurav1780/990f005dee2573083528b3d0e6283a3f.js"></script>
 
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-	<span class="kt">int</span><span class="o">[]</span> <span class="n">taxicab</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">9</span><span class="o">};</span>
-	<span class="kt">int</span> <span class="n">myTotal</span> <span class="o">=</span> <span class="n">total</span><span class="o">(</span><span class="n">taxicab</span><span class="o">);</span>
-	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">myTotal</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<p>Once we know how to do this, we can apply this to other problems such as,</p>
 
-<p>This problem can be extended to more specific problems such as,</p>
+<blockquote class="challenge challenge">
+  <h2 id="finding-total-of-all-even-numbers-in-an-integer-array">Finding total of all even numbers in an integer array</h2>
+  <p>Define a method that when passed an array, returns the sum of all even numbers in the array</p>
+  <blockquote class="solution">
+    <h2 id="solution-8">Solution</h2>
+    <script src="https://gist.github.com/gaurav1780/b1abbb1a3bab1ef55c1c0cf4815482b9.js"></script>
 
-<ol>
-  <li>
-    <p>finding total of all even numbers in an integer array</p>
-  </li>
-  <li>
-    <p>finding total of all positive items in an integer array</p>
-  </li>
-  <li>
-    <p>finding total of all items above a certain value in an integer array</p>
-  </li>
-  <li>
-    <p>finding total of negative items in the first half of the array</p>
-  </li>
-</ol>
+  </blockquote>
+</blockquote>
 
-<p>Solutions for 1 and 4 are given below.</p>
+<blockquote class="challenge challenge">
+  <h2 id="finding-total-of-all-positive-items-in-an-integer-array">Finding total of all positive items in an integer array</h2>
+  <p>Define a method that when passed an integer array, returns the sum of all positive numbers in the array.  Solution is not provided for this problem.</p>
+</blockquote>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">totalEven</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
-	<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-		<span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-			<span class="n">result</span><span class="o">+=</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-		<span class="o">}</span>
-	<span class="o">}</span>
-	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<blockquote class="challenge challenge">
+  <h2 id="finding-total-of-all-items-above-a-certain-value-in-an-integer-array">Finding total of all items above a certain value in an integer array</h2>
+  <p>Define a method that when passed an integer array and another integer (say <code class="highlighter-rouge">val</code>), returns the sum of all items numbers in the array that are <strong>more than</strong> <code class="highlighter-rouge">val</code>. Solution is not provided for this problem.</p>
+</blockquote>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">totalFirstHalfNegatives</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
-	<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">/</span><span class="mi">2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-		<span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-			<span class="n">result</span><span class="o">+=</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
-		<span class="o">}</span>
-	<span class="o">}</span>
-	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<blockquote class="challenge challenge">
+  <h2 id="finding-total-of-negative-items-in-the-first-half-of-the-array">Finding total of negative items in the first half of the array</h2>
+  <p>Define a method that when passed an integer array, returns the sum of all negative numbers in the first half of the array. For example, if array is <code class="highlighter-rouge">{-6, -8, -1, -2, 9}</code>, return <code class="highlighter-rouge">-14</code>, and if array is <code class="highlighter-rouge">{-6, -5, -8, -12, -1, 9}</code>, return <code class="highlighter-rouge">-19</code>.</p>
+  <blockquote class="solution">
+    <h2 id="solution-9">Solution</h2>
+    <script src="https://gist.github.com/gaurav1780/671b713a16b53872f45a36c1659464ea.js"></script>
 
-<h1 id="compiling-and-running-java-programs-from-command-prompt--terminal">Compiling and running java programs from command prompt / terminal</h1>
+  </blockquote>
+</blockquote>
 
-<p>After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.</p>
+<!--# Compiling and running java programs from command prompt / terminal
 
-<p>A java source file<code class="highlighter-rouge">HelloWorld.java</code>is compiled as</p>
+After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.
 
-<div class="bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac HelloWorld.java
-</code></pre></div></div>
+A java source file`HelloWorld.java`is compiled as
 
-<p>Once it is compiled, there will be java class file generated with name<code class="highlighter-rouge">HelloWorld.class</code>. What you execute is this class file, as,</p>
+~~~
+javac HelloWorld.java
+~~~
+{: .bash}
 
-<div class="bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java HelloWorld
-</code></pre></div></div>
+Once it is compiled, there will be java class file generated with name`HelloWorld.class`. What you execute is this class file, as,
 
-<p>This is a good skill and the benefit of doing this over using an IDE like Eclipse include,</p>
+~~~
+java HelloWorld
+~~~
+{: .bash}
 
-<ol>
-  <li>
-    <p>reducing reliance on auto-complete done by Eclipse.</p>
-  </li>
-  <li>
-    <p>not relying on Eclipse to tell you each time there is a syntactical error.</p>
-  </li>
-  <li>
-    <p>program will not compile, and therefore the class file will not be generated to execute if there is a syntactical error.</p>
-  </li>
-  <li>
-    <p>Helps with pen and paper design.</p>
-  </li>
-</ol>
+This is a good skill and the benefit of doing this over using an IDE like Eclipse include,
 
-<p>Let’s say, following are the contents of<code class="highlighter-rouge">HelloWorld.java</code></p>
+1. reducing reliance on auto-complete done by Eclipse.
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">5</span><span class="o">+);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+2. not relying on Eclipse to tell you each time there is a syntactical error.
 
-<p>When you compile the program, you’ll get the following message,</p>
+3. program will not compile, and therefore the class file will not be generated to execute if there is a syntactical error.
 
-<div class="bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I-2:intro gauravgupta$ javac HelloWorld.java
+4. Helps with pen and paper design.
+
+Let's say, following are the contents of`HelloWorld.java`
+
+```java
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println(5+);
+	}
+}
+```
+
+When you compile the program, you'll get the following message,
+
+~~~
+I-2:intro gauravgupta$ javac HelloWorld.java
 HelloWorld.java:3: error: illegal start of expression
 System.out.println(5+);
 ^
 1 error
 I-2:intro gauravgupta$
-</code></pre></div></div>
+~~~
+{: .bash}
 
-<p>You can see that it points to the line number (3) with syntactical errors so you can correct them. In this case, we change the <code class="highlighter-rouge">5+</code> to <code class="highlighter-rouge">5+3</code>, and our program compiles, and executes, successfully.</p>
+You can see that it points to the line number \(3\) with syntactical errors so you can correct them. In this case, we change the `5+` to `5+3`, and our program compiles, and executes, successfully.
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">3</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+```java
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println(5+3);
+	}
+}
+```-->
 
 
 <blockquote class="keypoints">
