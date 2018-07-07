@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2018-07-07 02:54:11 +1000">
+    <meta http-equiv="last-modified" content="2018-07-07 09:21:32 +1000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
@@ -457,61 +457,47 @@
   <li>
     <p><code class="highlighter-rouge">assertTrue(boolean expression)</code>: passes if the boolean expression passed to the assertion is <code class="highlighter-rouge">true</code>, fails otherwise.</p>
 
-    <p>For example,</p>
-
-    <p><code class="highlighter-rouge">assertTrue(5 &gt; 3)</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertTrue(6 == 12/3)</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertTrue(5 &gt; 3): pass
+  assertTrue(6 == 12/3): fail
+</code></pre></div>    </div>
   </li>
   <li>
     <p><code class="highlighter-rouge">assertFalse(boolean expression)</code>: passes if the boolean expression passed to the assertion is <code class="highlighter-rouge">false</code>, fails otherwise.</p>
 
-    <p>For example,</p>
-
-    <p><code class="highlighter-rouge">assertFalse(2 &gt;= 3)</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertFalse(6 == 12/2)</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertFalse(2 &gt;= 3): pass
+  assertFalse(6 == 12/2): fail
+</code></pre></div>    </div>
   </li>
   <li>
     <p><code class="highlighter-rouge">assertEquals(expected integer value, integer expression)</code>: passes if the integer expression passed to the assertion equals the expected integer value, fails otherwise.</p>
 
-    <p>For example,</p>
-
-    <p><code class="highlighter-rouge">assertEquals(5.2, 5.16, 0.05)</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertEquals(5.2, 5.16, 0.01)</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertEquals(5, 10/2): pass
+  assertEquals(5, 2*3): fail
+</code></pre></div>    </div>
   </li>
   <li>
     <p><code class="highlighter-rouge">assertEquals(expected floating-point value, floating-point expression, tolerance)</code>: passes if the floating-point expression passed to the assertion is within tolerance distance of the expected floating-point value, fails otherwise.</p>
 
-    <p>For example,</p>
-
-    <p><code class="highlighter-rouge">assertEquals(1.2, 1.21, 0.02)</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertEquals(1.2, 1.23, 0.02)</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertEquals(1.2, 1.21, 0.02): pass
+  assertEquals(1.2, 1.23, 0.02): fail
+</code></pre></div>    </div>
   </li>
   <li>
     <p><code class="highlighter-rouge">assertNull(reference)</code>: passes if the reference (object/array) passed to the assertion is <code class="highlighter-rouge">null</code>, fails otherwise.</p>
 
-    <p>For example,</p>
-
-    <p><code class="highlighter-rouge">assertNull(null)</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertNull(new int[]{1,7,2,9})</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertNull(null): pass
+  assertNull(new int[]{1,7,2,9}): fail
+</code></pre></div>    </div>
   </li>
   <li>
     <p><code class="highlighter-rouge">assertNotNull(reference)</code>: passes if the reference (object/array) passed to the assertion is not <code class="highlighter-rouge">null</code>, fails otherwise.</p>
 
-    <p>For example,</p>
-
-    <p><code class="highlighter-rouge">assertNotNull(new int[]{1,7,2,9})</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertNotNull(null)</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertNotNull(new int[]{1,7,2,9}): pass
+  assertNotNull(null): fail
+</code></pre></div>    </div>
   </li>
   <li>
     <p><code class="highlighter-rouge">assertArrayEquals(expected integer array, actual integer array)</code>: passes if the actual integer array passed to the assertion equals the expected integer array, fails otherwise.</p>
-
-    <p>For example,</p>
 
     <p>Assuming three arrays created as following:</p>
 
@@ -520,9 +506,9 @@
   <span class="kt">int</span><span class="o">[]</span> <span class="n">c</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span><span class="mi">7</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">9</span><span class="o">};</span>
 </code></pre></div>    </div>
 
-    <p><code class="highlighter-rouge">assertArrayEquals(a,c)</code> passes</p>
-
-    <p><code class="highlighter-rouge">assertArrayEquals(a,b)</code> fails</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  assertArrayEquals(a,c): pass
+  assertArrayEquals(a,b): fail
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -534,7 +520,7 @@
 
 <script src="https://gist.github.com/gaurav1780/b3df9f0a24fcf9a0c41cc75cdb8616a3.js"></script>
 
-<p>The JUnit test is a separate class created to</p>
+<p>The JUnit test is a separate class created to test this method. The steps to create a JUnit test class are shown below.</p>
 
 
 
