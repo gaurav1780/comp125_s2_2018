@@ -12,7 +12,7 @@ keypoints:
 - A java source file named `Hello.java` is compiled to a class file named `Hello.class` using the command `javac Hello.java`.
 - A java class file named `Hello.class` is executed on the Java Virtual Machine using the command `java Hello` (no `.class`).
 ---
-#Welcome to the unit
+# Welcome to the unit
 
 This is the second-programming unit and is taught using Java as a programming language. The focus of the unit is on,
 
