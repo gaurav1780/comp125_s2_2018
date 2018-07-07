@@ -204,3 +204,86 @@ kbd {
     white-space: nowrap;
     font-style: normal;
 }
+
+// General
+body {
+  .container {
+    font-family: "national-book";
+    font-size: 16px;
+    h1, h2 {
+      font-family: "national-medium";
+    }
+  }
+}
+
+blockquote {
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+  p {
+    padding: 10px;
+  }
+  .row {
+    margin: 0px;
+  }
+  h2:before {
+    font-size: 0.7em;
+    margin: 4px 10px;
+  }
+  &.challenge {
+    padding: 10px;
+  }
+}
+
+h1 {
+  margin: 40px 0px 25px 0px;
+}
+.maintitle {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Navbar
+.logo.navbar-brand {
+  background-image: url(https://www.mq.edu.au/__data/assets/file/0007/1231/spritesheet.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 400px 1000px;
+  padding-left: 250px;
+}
+nav.navbar-default {
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  a {
+    font-family: "national-medium";
+    text-transform: uppercase;
+    font-size: 22px;
+    color: black;
+    .caret {
+      margin-left: 10px;
+    }
+  }
+  .dropdown-menu {
+    a {
+      font-family: "national-book";
+      text-transform: none;
+      font-size: 18px;
+    }
+  }
+}
+
+// Mobile styling
+@media only screen and (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+  .logo.navbar-brand {
+    margin-bottom: 5px;
+  }
+}
