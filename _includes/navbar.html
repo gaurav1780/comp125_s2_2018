@@ -31,6 +31,14 @@
           <ul class="dropdown-menu">
             {% for episode in site.episodes %}
             <li><a href="{{ page.root }}{{ episode.url }}">{{ episode.title }}</a></li>
+              {% for nav-item in episode.navigation %}
+              {% assign nav_id = nav-item.id | downcase | replace: " ", "-" %}
+                <li><a href="{{ page.root }}{{ episode.url }}#{{ nav_id }}">{{ nav-item.id }}</a></li>
+                  {% if nav-item.children %}
+                    {% assign menu = nav-item.children %}
+                    {% include custom_nav.html %}
+                  {% endif %}
+                {% endfor %}
             {% endfor %}
           </ul>
         </li>
