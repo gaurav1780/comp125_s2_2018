@@ -12,8 +12,8 @@
 \contentsline {subsection}{\numberline {7.3}Typical static methods}{19}{subsection.7.3}
 \contentsline {section}{\numberline {8}Manipulating references}{20}{section.8}
 \contentsline {subsection}{\numberline {8.1}Shallow copy}{20}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Deep copy}{22}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Copy constructor}{24}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Copy constructor call}{25}{subsubsection.8.3.1}
-\contentsline {section}{\numberline {9}Sample solutions for exercises}{26}{section.9}
+\contentsline {subsection}{\numberline {8.2}Deep copy}{24}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Copy constructor}{27}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Copy constructor call}{28}{subsubsection.8.3.1}
+\contentsline {section}{\numberline {9}Sample solutions for exercises}{29}{section.9}
 \contentsfinish 

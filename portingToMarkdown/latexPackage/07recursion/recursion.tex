@@ -41,27 +41,27 @@ public class Client {
   \item Actual parameters (\texttt{a+3, b*2} = \texttt{13,10}) passed are copied into the formal parameters (\texttt{m,n}). 
   \item An entry for \texttt{callee} with associated formal parameters and local variables is added on top of the \texttt{call stack}.
   \end{enumerate}
-  \begin{tikzpicture}
+  \bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=caller(),variables={{"a=10", "b=5", "flag"}},width=3.2}
 \scopeblock{x=5,functionName={callee(a+3, b*2)},variables={{"m=13","n=10","result=0"}},width=3.2}
 \arrow{startX=3,startY=2.3,endX=4.8,endY=2.3}
 \draw[rounded corners,fill=red!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {caller()};
 \draw[rounded corners,fill=green!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {callee(13, 10)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
   \item The method \texttt{callee(13, 10)} terminates with a \texttt{return} statement (or when the last statement  executes). The following happen when \texttt{callee} terminates,
   \begin{enumerate}
   \item The value returned (in case of non-void methods) replaces the method call. Thus \texttt{flag} inside \texttt{caller} becomes \texttt{false}.
   \item The entry for \texttt{callee} is removed from the call stack. All formal parameters and local variables are destroyed.
   \end{enumerate}
-  \begin{tikzpicture}
+  \bgroup \tikzset{png export} \begin{tikzpicture}
 	\scopeblock{functionName=caller(),variables={{"a=10", "b=5", "flag=false"}},width=3.2}
 	\scopeblock{x=5,functionName={callee(a+3, b*2)},variables={{"m=13","n=10","result=0"}},width=3.2}
 	\arrow{startX=4.8,startY=2.3,endX=2.5,endY=0.3,style=dashed,label=false}
 	\draw[rounded corners,fill=green!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {caller()};
 	\draw[red, very thick](5,2.5) -- (8,0);
 	\draw[red, very thick](5,0) -- (8,2.5);
-  \end{tikzpicture}
+  \end{tikzpicture} \egroup
 \end{enumerate}
 
 \section{Overview}
@@ -155,34 +155,34 @@ public class Client {
 
 \newpage
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=main,variables={{"a=4","b=sum(4)"}},width=3.2}	
 \draw[rounded corners,fill=green!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {main};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=main,variables={{"a=4","b=sum(4)"}},width=3.2}	
 \scopeblock{x=5,functionName=sum(4),variables={{"n=4","result= 4 + sum(3)"}},width=3.2}
 \arrow{startX=3,startY=2.3,endX=5.2,endY=2.3}
 \draw[rounded corners,fill=red!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {main};
 \draw[rounded corners,fill=green!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {sum(4)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(4),variables={{"n=4","result= 4 + sum(3)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(3),variables={{"n=3","result= 3 + sum(2)"}},width=3.2}
 \arrow{startX=3,startY=2.3,endX=5.2,endY=2.3}
 \draw[rounded corners,fill=red!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {main};
 \draw[rounded corners,fill=red!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {sum(4)};
 \draw[rounded corners,fill=green!10!white] (10,1) rectangle (15,1.5) node[pos=.5] {sum(3)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(3),variables={{"n=3","result= 3 + sum(2)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(2),variables={{"n=2","result= 2 + sum(1)"}},width=3.2}
 \arrow{startX=3,startY=2.3,endX=5.2,endY=2.3}
@@ -190,11 +190,11 @@ public class Client {
 \draw[rounded corners,fill=red!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {sum(4)};
 \draw[rounded corners,fill=red!10!white] (10,1) rectangle (15,1.5) node[pos=.5] {sum(3)};
 \draw[rounded corners,fill=green!10!white] (10.5,1.5) rectangle (14.5,2) node[pos=.5] {sum(2)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(2),variables={{"n=2","result= 2 + sum(1)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(1),variables={{"n=1","result= 1 + sum(0)"}},width=3.2}
 \arrow{startX=3,startY=2.3,endX=5.2,endY=2.3}
@@ -203,11 +203,11 @@ public class Client {
 \draw[rounded corners,fill=red!10!white] (10,1) rectangle (15,1.5) node[pos=.5] {sum(3)};
 \draw[rounded corners,fill=red!10!white] (10.5,1.5) rectangle (14.5,2) node[pos=.5] {sum(2)};
 \draw[rounded corners,fill=green!10!white] (11,2) rectangle (14,2.5) node[pos=.5] {sum(1)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(1),variables={{"n=1","result= 1 + sum(0)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(0),variables={{"n=0","result= 0"}},width=3.2}
 \arrow{startX=3,startY=2.3,endX=5.2,endY=2.3}
@@ -217,11 +217,11 @@ public class Client {
 \draw[rounded corners,fill=red!10!white] (10.5,1.5) rectangle (14.5,2) node[pos=.5] {sum(2)};
 \draw[rounded corners,fill=red!10!white] (11,2) rectangle (14,2.5) node[pos=.5] {sum(1)};
 \draw[rounded corners,fill=green!10!white] (11.5,2.5) rectangle (13.5,3) node[pos=.5] {sum(0)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(1),variables={{"n=1","result= 1 + sum(0)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(0),variables={{"n=0","result= 0"}},width=3.2}
 \arrow{style=dashed,startX=5.2,startY=2.3,endX=2.8,endY=0.8,label=0}
@@ -232,11 +232,11 @@ public class Client {
 \draw[rounded corners,fill=red!10!white] (10,1) rectangle (15,1.5) node[pos=.5] {sum(3)};
 \draw[rounded corners,fill=red!10!white] (10.5,1.5) rectangle (14.5,2) node[pos=.5] {sum(2)};
 \draw[rounded corners,fill=green!10!white] (11,2) rectangle (14,2.5) node[pos=.5] {sum(1)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(2),variables={{"n=2","result= 2 + sum(1)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(1),variables={{"n=1","result=1"}},width=3.2}
 \arrow{style=dashed,startX=5.2,startY=2.3,endX=2.8,endY=0.8,label=1}
@@ -246,11 +246,11 @@ public class Client {
 \draw[rounded corners,fill=red!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {sum(4)};
 \draw[rounded corners,fill=red!10!white] (10,1) rectangle (15,1.5) node[pos=.5] {sum(3)};
 \draw[rounded corners,fill=green!10!white] (10.5,1.5) rectangle (14.5,2) node[pos=.5] {sum(2)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(3),variables={{"n=3","result= 3 + sum(2)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(2),variables={{"n=2","result=3"}},width=3.2}
 \arrow{style=dashed,startX=5.2,startY=2.3,endX=2.8,endY=0.8,label=3}
@@ -259,11 +259,11 @@ public class Client {
 \draw[rounded corners,fill=red!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {main};
 \draw[rounded corners,fill=red!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {sum(4)};
 \draw[rounded corners,fill=green!10!white] (10,1) rectangle (15,1.5) node[pos=.5] {sum(3)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=sum(4),variables={{"n=4","result= 4 + sum(3)"}},width=3.2}
 \scopeblock{x=5,functionName=sum(3),variables={{"n=3","result=6"}},width=3.2}
 \arrow{style=dashed,startX=5.2,startY=2.3,endX=2.8,endY=0.8,label=6}
@@ -271,26 +271,26 @@ public class Client {
 \draw[red, very thick](5,0) -- (8,2.5);
 \draw[rounded corners,fill=red!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {main};
 \draw[rounded corners,fill=green!10!white] (9.5,0.5) rectangle (15.5,1) node[pos=.5] {sum(4)};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=main,variables={{"a=4","b = sum(4)"}},width=3.2}	
 \scopeblock{x=5,functionName=sum(4),variables={{"n=4","result=10"}},width=3.2}
 \arrow{style=dashed,startX=5.2,startY=2.3,endX=2.8,endY=0.8,label=10}
 \draw[red, very thick](5,2.5) -- (8,0);
 \draw[red, very thick](5,0) -- (8,2.5);
 \draw[rounded corners,fill=green!10!white] (9,0) rectangle (16,0.5) node[pos=.5] {main};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip0.6cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \scopeblock{functionName=main,variables={{"a=4","b=10"}},width=3.2}	
 \draw[red, very thick](0,2.5) -- (3,0);
 \draw[red, very thick](0,0) -- (3,2.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \newpage
 \section{Tracing some more recursive code}

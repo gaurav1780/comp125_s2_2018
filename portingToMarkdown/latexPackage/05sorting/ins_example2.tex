@@ -3,7 +3,7 @@
 \newcommand{\inssiterb}{{"is", "how", "hello", "everyone"}}
 \newcommand{\inssiterc}{{"is", "how", "hello", "everyone"}}
 \newcommand{\insssorted}{{"is", "how", "hello", "everyone"}}
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \pgfmathsetmacro{\step}{15}
 \pgfmathsetmacro{\headerChange}{1}
 \pgfmathsetmacro{\change}{-2}
@@ -61,4 +61,4 @@
 \foreach \x in {0,...,3} {
 	\node[sorted] at (\x*3,\step) (block\x) {\pgfmathparse{\inssiterc[\x]}\pgfmathresult};
 }
-\end{tikzpicture}
+\end{tikzpicture} \egroup

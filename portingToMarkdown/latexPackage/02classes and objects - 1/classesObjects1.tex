@@ -24,7 +24,7 @@ Java is an object-oriented language. Classes and objects are one of the key prog
   
 \vskip 0.1cm
   	\begin{center}
-		\begin{tikzpicture}
+		\bgroup \tikzset{png export} \begin{tikzpicture}
 			\umlclass{ClassName}
 			{
 				scope	instanceVariable1 : type\\
@@ -36,7 +36,7 @@ Java is an object-oriented language. Classes and objects are one of the key prog
 				scope	instanceMethod2 ( parameter : type, ... ) : return type\\
 				...			
 			}
-		\end{tikzpicture}
+		\end{tikzpicture} \egroup 
 	\end{center}
 \vskip 0.1cm
 
@@ -114,7 +114,7 @@ Note that the above class definition  merely provides a template or blueprint fo
 
 \vskip 0.1cm
 \begin{center}
-	\begin{tikzpicture}
+	\bgroup \tikzset{png export} \begin{tikzpicture}
 		\umlclass{Rectangle}
 		{
 			+ width : double\\
@@ -122,7 +122,7 @@ Note that the above class definition  merely provides a template or blueprint fo
 		}
 		{
 		}
-	\end{tikzpicture}				
+	\end{tikzpicture} \egroup 				
 \end{center}
 \vskip 0.1cm
 
@@ -151,9 +151,9 @@ Rectangle r; //example
 	
 \vskip 0.5cm
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{textsize = \LARGE, y=6, width=6, height=2, array={"r"}}
-\end{tikzpicture}
+\end{tikzpicture} \egroup 
 \end{center}
 
 \subsection{Declaration}
@@ -173,14 +173,14 @@ r = new Rectangle(); //example
 
 \vskip 0.5cm
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{textsize = \LARGE, y=6, width=2, height=2, array={"r"}}{\normalsize}
 %\node (object) at (9.5, 10.5) {\Large{r}};
 \arrow{startX=1.6, startY=7, endX=6, endY=7} 
 \memoryblock{textsize = \Large, x=6, y=2, width=8, height=6,array={"width = 0","height = 0"}}
 %\node (width) at (18, 11.5) {\Large{width=0}};
 %\node (height) at (18, 8.5) {\Large{height=0}};
-\end{tikzpicture}
+\end{tikzpicture} \egroup 
 \end{center}
 
 %\begin{center}
@@ -222,7 +222,7 @@ You can add methods inside the class that can be called on any \textit{instance}
 
 \vskip 0.1cm
 \begin{center}
-	\begin{tikzpicture}
+	\bgroup \tikzset{png export} \begin{tikzpicture}
 		\umlclass{Rectangle}
 		{
 			+ width : double\\
@@ -232,7 +232,7 @@ You can add methods inside the class that can be called on any \textit{instance}
 			+ area (  ) : double\\
 			+ isSquare(  ) : boolean\\		
 		}
-	\end{tikzpicture}				
+	\end{tikzpicture} \egroup 				
 \end{center}
 \vskip 0.1cm
 
@@ -303,7 +303,7 @@ System.out.println(r.area());
 
 \vskip 0.1cm
 \begin{center}
-		\begin{tikzpicture}
+		\bgroup \tikzset{png export} \begin{tikzpicture}
 			\umlclass{Rectangle}
 			{
 				- width : double\\
@@ -313,7 +313,7 @@ System.out.println(r.area());
 				+ area ( ) : double\\
 				+ isSquare ( ) : boolean\\				
 			}
-		\end{tikzpicture}
+		\end{tikzpicture} \egroup 
 \end{center}
 \vskip 0.1cm
 
@@ -336,7 +336,7 @@ You can see that we validated the passed values before assigning to the instance
 
 \vskip 0.1cm
 \begin{center}
-		\begin{tikzpicture}
+		\bgroup \tikzset{png export} \begin{tikzpicture}
 			\umlclass{Rectangle}
 			{
 				- width : double\\
@@ -351,7 +351,7 @@ You can see that we validated the passed values before assigning to the instance
 				+ perimeter ( ) : double\\		
 				+ isSquare ( ) : boolean \\	
 			}
-		\end{tikzpicture}	
+		\end{tikzpicture} \egroup 	
 \end{center}
 \vskip 0.1cm
 
@@ -455,7 +455,7 @@ public class Rectangle {
 
 \vskip 0.1cm
 \begin{center}
-		\begin{tikzpicture}
+		\bgroup \tikzset{png export} \begin{tikzpicture}
 			\umlclass{Rectangle}
 			{
 				- width : double\\
@@ -473,7 +473,7 @@ public class Rectangle {
 				+ perimeter ( ) : double\\	
 				+ isSquare( ) : boolean\\		
 			}
-		\end{tikzpicture}
+		\end{tikzpicture} \egroup 
 \end{center}
 \vskip 0.1cm
 
@@ -654,13 +654,13 @@ It now becomes,
 
 \vskip 0.5cm
 
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{textsize=\Large,x=0,y=8.5,width=4,height=3,array={"list"}}
 \memoryblock{textsize=\Large,x=8, y=6, width=8, height=5,array={"data","nItems=0"}}
 \arrow{startX=3.5, startY=10, endX=8, endY=10}
 \memoryblock{textsize=\Large,x=20,y=5,width=6,height=8,array={"[0]=0","[1]=0","[2]=0","[3]=0"}}
 \arrow{startX=13.5, startY=10, endX=20, endY=12}
-\end{tikzpicture}
+\end{tikzpicture} \egroup 
 \vskip 0.5cm
 
 Finally, we can modify the items of the array as,
@@ -680,11 +680,11 @@ public class Client {
 \newpage
 This gives us,
 \vskip 0.5cm
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{textsize=\Large,x=0,y=8.5,width=4,height=3,array={"list"}}
 \memoryblock{textsize=\Large,x=8, y=6, width=8, height=5,array={"data","nItems=2"}}
 \arrow{startX=3.5, startY=10, endX=8, endY=10}
 \memoryblock{textsize=\Large,x=20,y=5,width=6,height=8,array={"[0]=5","[1]=12","[2]=0","[3]=0"}}
 \arrow{startX=13.5, startY=10, endX=20, endY=12}
-\end{tikzpicture}
+\end{tikzpicture} \egroup 
 \input{comp125lectureFooter}

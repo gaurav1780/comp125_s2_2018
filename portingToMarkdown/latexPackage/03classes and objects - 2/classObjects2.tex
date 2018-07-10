@@ -433,7 +433,7 @@ class IntegerService {
 %  \end{center}
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{x=8,y=9,width=3,height=3,array={"c"}, colour=green!10!white}{\normalsize}
 \memoryblock{x=8,y=4,width=3,height=3,array={"d"}, colour=green!10!white}{\normalsize}
 %\node (object) at (9.5, 10.5) {\Large{r}};
@@ -442,13 +442,13 @@ class IntegerService {
 \block{{14,9,8,3,1}}{{"radius=50"}}
 %\node (width) at (18, 11.5) {\Large{width=0}};
 %\node (height) at (18, 8.5) {\Large{height=0}};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 Let's say, \texttt{c} changes to \texttt{null}.
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{x=4,y=9,width=5,height=3,array={"c=null"}, colour=green!10!white}{\normalsize}
 \memoryblock{x=8,y=4,width=3,height=3,array={"d"}, colour=green!10!white}{\normalsize}
 %\node (object) at (9.5, 10.5) {\Large{r}};
@@ -457,7 +457,7 @@ Let's say, \texttt{c} changes to \texttt{null}.
 \block{{14,9,8,3,1}}{{"radius=50"}}
 %\node (width) at (18, 11.5) {\Large{width=0}};
 %\node (height) at (18, 8.5) {\Large{height=0}};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
   
 \begin{exercise}[5][Create a shallow copy]
@@ -497,7 +497,7 @@ System.out.println(myObj.getRadius()); //will be 3.5
   Object \texttt{d} is a clone of object \texttt{c}. Object \texttt{c} and \texttt{d} are independent objects. Modifying one does not alter the other.
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \block{{8,9,3,3,1}}{{"c"}}{\normalsize}
 \block{{14,9,8,3,1}}{{"radius=30"}}
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (10.5, 10.5) -- (14, 10.5);
@@ -509,7 +509,7 @@ System.out.println(myObj.getRadius()); //will be 3.5
 
 %\node (width) at (18, 11.5) {\Large{width=0}};
 %\node (height) at (18, 8.5) {\Large{height=0}};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 %  \begin{center}

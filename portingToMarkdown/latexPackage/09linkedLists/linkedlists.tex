@@ -33,12 +33,12 @@ p.next = null;
 
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 %\memoryblock{x=0,10,3,3,array={"p"}}
 \memoryblock{x=0, y=10, width=3, height=3, array={"p"}, colour = green!10!white}
 \memoryblock{x=5,y=9,width=6,height=5,array={"data = 25", "next = null"}, colour = red!10!white}
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (2.5, 11.5) -- (5, 11.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 Code to create objects \texttt{p, q} of class \texttt{Node} and resulting memory diagram are:
@@ -53,7 +53,7 @@ p.next = q;
 \end{lstlisting}
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{x=0,y=10,width=3,height=3,array={"p"}, colour = green!10!white}
 \memoryblock{x=5,y=9,width=5,height=5,array={"data = 25", "next"}, , colour = red!10!white}
 \memoryblock{x=11,y=11,width=3,height=3,array={"q"}, colour = green!10!white}
@@ -61,7 +61,7 @@ p.next = q;
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (2.5, 11.5) -- (5, 11.5);
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (8.8, 10) -- (16, 10);
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (13.2, 12) -- (16, 10.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 Here, we can see that \texttt{p.next} (of type \texttt{Node}) is a shallow copy of \texttt{q} (of type \texttt{Node}).
@@ -105,7 +105,7 @@ The memory diagram for this code is below. Notice they key points:
 \end{itemize}
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{x=0,y=8,width=2,height=2,array={"p"}, colour = green!10!white}
 \memoryblock{x=4,y=6.5,width=4,height=5,array={"data", "next"}, colour=red!10!white}
 \memoryblock{x=6,y=12,width=2,height=2,array={"r1"}, colour = green!10!white}
@@ -121,7 +121,7 @@ The memory diagram for this code is below. Notice they key points:
 \memoryblock{x=25,y=6.5,width=5,height=5,array={"width=4.2", "height=3.6"}, colour=red!10!white}
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (19.5, 7.5) -- (25, 7.5);
 \draw [line width = 0.5mm, -{Latex[length=5mm]}] (22.5, 10.5) -- (25, 10.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 \begin{exercise}[5]
@@ -204,7 +204,7 @@ The memory diagram for the above code is given below:
 \vskip 0.5cm
 
 \begin{center}
-\begin{tikzpicture}[scale=.5]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
 \memoryblock{x=1.5,y=10,width=2,height=2,array={"n1"}, colour=green!10!white}
 \memoryblock{x=7.5,y=10,width=2,height=2,array={"n2"}, colour=green!10!white}
 \memoryblock{x=13.5,y=10,width=2,height=2,array={"n3"}, colour=green!10!white}
@@ -226,7 +226,7 @@ The memory diagram for the above code is given below:
 \draw [line width = 0.5mm, -{Latex[length=3mm]}] (14.5, 10.5) -- (14.5, 8);
 \draw [line width = 0.5mm, -{Latex[length=3mm]}] (20.5, 10.5) -- (20.5, 8);
 \draw [line width = 0.5mm, -{Latex[length=3mm]}] (26.5, 10.5) -- (26.5, 8);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 \subsection{Simplified representation of linked nodes}
@@ -234,7 +234,7 @@ The memory diagram for the above code is given below:
 The above diagram, while thorough, is \emph{too} detailed. We apply a little abstraction and represent the same diagram as:
 
 \begin{center}
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \foreach \i in {0,...,4} {
 	\def\data{{30, 90, 10, 70, 20}}
 	\filldraw [fill=white!80!red, rounded corners = 8pt, line width = 0.25mm] (3*\i, 0) rectangle (2+3*\i, 1);
@@ -249,7 +249,7 @@ The above diagram, while thorough, is \emph{too} detailed. We apply a little abs
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}
 
 \newpage
@@ -266,7 +266,7 @@ while(n1 != null) {
 
 You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, the instance referred by \texttt{n1} before the update is deleted from memory. Thereby, all the nodes will be erased from the memory at the end of execution. So yeah, not a good idea.
 \vskip 0.5cm
-\begin{tikzpicture}[scale=0.9]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.9]
 \foreach \i in {0,...,4} {
 	\def\data{{30, 90, 10, 70, 20}}
 	\def\labels{{"n1","n2","n3","n4","n5"}}
@@ -291,10 +291,10 @@ You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, t
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.3cm
 
-\begin{tikzpicture}[scale=0.9]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.9]
 \foreach \i in {0,...,4} {
 	\def\data{{30, 90, 10, 70, 20}}
 	\def\labels{{"unreferenced (deleted)", "n1, n2","n3","n4","n5"}}
@@ -331,11 +331,11 @@ You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, t
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.3cm
 
 
-\begin{tikzpicture}[scale=0.9]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.9]
 \foreach \i in {0,...,3} {
 	\def\data{{90, 10, 70, 20}}
 	\def\labels{{"n2","n1, n3","n4","n5"}}
@@ -366,10 +366,10 @@ You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, t
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (12.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.3cm
 
-\begin{tikzpicture}[scale=0.9]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.9]
 \foreach \i in {0,...,3} {
 	\def\data{{90, 10, 70, 20}}
 	\def\labels{{"n2","n3","n1, n4","n5"}}
@@ -400,10 +400,10 @@ You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, t
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (12.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.3cm
 
-\begin{tikzpicture}[scale=0.9]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.9]
 \foreach \i in {0,...,3} {
 	\def\data{{90, 10, 70, 20}}
 	\def\labels{{"n2","n3","n4","n1, n5"}}
@@ -434,10 +434,10 @@ You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, t
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (12.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.3cm
 
-\begin{tikzpicture}[scale=0.9]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.9]
 \foreach \i in {0,...,3} {
 	\def\data{{90, 10, 70, 20}}
 	\def\labels{{"n2","n3","n4","n5"}}
@@ -464,7 +464,7 @@ You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, t
 }
 \node at (12.5, 0.5) {null};
 \node at (12.5, -0.5) {\textbf{n1}};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.5cm
 
 This results in us losing the reference to the first item (\texttt{n1}) and the object being deleted from the memory.
@@ -482,7 +482,7 @@ while(temp != null) {
 \end{lstlisting}
 
 \vskip 0.5cm
-\begin{tikzpicture}[scale=0.85]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.85]
 \foreach \k in {-1,...,4} {
 \foreach \i in {0,...,4} {
 	\def\data{{30, 90, 10, 70, 20}}
@@ -516,7 +516,7 @@ while(temp != null) {
 \node at (15.5, 0.5+3*\k) {null};
 }
 \node [blue] at (15.5, -3.5) {\Large temp \normalsize};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \newpage
 
@@ -704,7 +704,7 @@ A linked list \texttt{myList} where head holds a reference to a node with data 3
 
 \vskip 0.5cm
 
-\begin{tikzpicture}[scale=0.8]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.8]
 \memoryblock{x=0,y=5,width=2,height=2,array={"myList"}}
 \memoryblock{x=0,y=2,width=2,height=2,array={"head"}}
 \draw [line width = 0.5mm, -{Latex[length=4mm]}] (1, 5) -- (1, 4);	
@@ -723,7 +723,7 @@ A linked list \texttt{myList} where head holds a reference to a node with data 3
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \begin{exercise}[5]
 Define a method \texttt{total()} that returns the sum of data values of all nodes in a list based along the lines of \texttt{toString()} method.	
@@ -810,11 +810,11 @@ We can either pass the item to be inserted (in our case, an integer), or a \text
 
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\memoryblock{colour=white!80!blue, width=1.5, height=1.5, array={"node"}}
 	\memoryblock{colour=white!80!blue, x = 3, y = -0.25, width=3, height=2, array={"data=50", "next=null"}}
 	\arrow{startX=1.25, startY=0.75, endX=3, endY=0.75}
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 0.5cm
 
@@ -822,14 +822,14 @@ For simplicity, the diagram is reduced as follows,
 
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \filldraw [fill=white!80!blue, rounded corners = 8pt, line width = 0.25mm] (0, 0) rectangle (2, 1);
 \draw (1,0) -- (1,1);
 \node at (1, -0.5) {node};
 \node at (0.5, 0.5) {50};
 \node at (1.5, 0.5) {null};
 \node at (1, -0.5) {node};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
  
 \subsubsection{SCENARIO 1: Inserting in an empty list}
 
@@ -837,9 +837,9 @@ We can only insert at index 0 in an empty list. When the list is empty, \texttt{
 
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\memoryblock{colour=white!80!red, width=2.5, height=1.5, array={"head = null"}}
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 0.5cm
 
@@ -847,7 +847,7 @@ In this case, all we have to do is re-refer \texttt{head} to \texttt{node}.
 
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \memoryblock{colour=white!80!red, width=1.5, height=1.5, array={"head"}}
 	
 \filldraw [fill=white!80!blue, rounded corners = 8pt, line width = 0.25mm] (3, 0) rectangle (6, 1.5);
@@ -858,7 +858,7 @@ In this case, all we have to do is re-refer \texttt{head} to \texttt{node}.
 \node at (4.5, -0.5) {node};
 
 \arrow{startX=1.5, startY=0.75, endX=3, endY=0.75}
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \newpage
 
@@ -881,7 +881,7 @@ Let's say we want to insert a node with data 50 at index 3 (after the 3rd item) 
 
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \foreach \i in {0,...,4} {
 	\def\data{{30, 90, 10, 70, 20}}
@@ -897,7 +897,7 @@ Let's say we want to insert a node with data 50 at index 3 (after the 3rd item) 
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 We must reach the 3rd item (at index 2) and manipulate it's \texttt{next} instance variable.
 
@@ -913,7 +913,7 @@ for(int i=1; i < 3; i++) {
 Initial state:
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (0,-0.5) {\text{\small head, }}; 	
 \begin{scope}[text=red]
 \node at (1.2,-0.5) {\text{\small current}}; 	
@@ -937,12 +937,12 @@ Initial state:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 After iteration 1:
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (4,-0.5) {\text{\small current}}; 	
@@ -966,12 +966,12 @@ After iteration 1:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 After iteration 2:
 \vskip 0.5cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (7,-0.5) {\text{\small current}}; 	
@@ -994,7 +994,7 @@ After iteration 2:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 Then we have a reference to the 3rd item in \texttt{current}.
 
@@ -1004,7 +1004,7 @@ The node after \texttt{current} should be after the node to inserted.
 node.setNext(current.getNext());
 \end{lstlisting}
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (7,-0.5) {\text{\small current}}; 	
@@ -1032,7 +1032,7 @@ node.setNext(current.getNext());
 \node at (6.5,-2) {\text{\small 50}};
  \node at (7,-3) {\text{\small node}};
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (7.5, -2) -- (9, 0.5);	
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 And the node to be inserted should be after \texttt{current}.
 
@@ -1040,7 +1040,7 @@ And the node to be inserted should be after \texttt{current}.
 current.setNext(node);
 \end{lstlisting}
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (7,-0.5) {\text{\small current}}; 	
@@ -1069,11 +1069,11 @@ current.setNext(node);
 \node at (6.5,-2) {\text{\small 50}};
  \node at (7,-3) {\text{\small node}};
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (7.5, -2) -- (9, 0.5);	
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 Thus, the list becomes,
 \vskip 0.5cm
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \foreach \i in {0,...,5} {
 	\def\data{{30, 90, 10, 50, 70, 20}}
@@ -1089,7 +1089,7 @@ Thus, the list becomes,
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+2.5*\i, 0.5) -- (2.5+2.5*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \newpage
 
@@ -1125,7 +1125,7 @@ If we need to remove an item at a particular index \texttt{idx} (in this example
 Initial state \textbf{(item to be removed in red)}:
 \vskip 0.2cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (0,-0.5) {\text{\small head, }}; 	
 \begin{scope}[text=red]
 \node at (1.2,-0.5) {\text{\small current}}; 	
@@ -1155,13 +1155,13 @@ Initial state \textbf{(item to be removed in red)}:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.2cm
 
 After iteration 1:
 \vskip 0.2cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (4,-0.5) {\text{\small current}}; 	
@@ -1191,13 +1191,13 @@ After iteration 1:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.2cm
 
 After iteration 2:
 \vskip 0.2cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (7,-0.5) {\text{\small current}}; 	
@@ -1226,12 +1226,12 @@ After iteration 2:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.2cm
 
 Updating the link:
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \begin{scope}[text=red]
 \node at (7,-0.5) {\text{\small current}}; 	
@@ -1268,13 +1268,13 @@ Updating the link:
 	}
 }
 \node at (15.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 0.2cm
 
 End product:
 \vskip 0.2cm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \node at (1,-0.5) {\text{\small head}}; 
 \foreach \i in {0,...,3} {
 	\def\data{{30, 90, 10, 20}}
@@ -1289,7 +1289,7 @@ End product:
 	\draw [line width = 0.5mm, -{Latex[length=2mm]}] (1.5+3*\i, 0.5) -- (3+3*\i, 0.5);	
 }
 \node at (12.5, 0.5) {null};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 
 \newpage

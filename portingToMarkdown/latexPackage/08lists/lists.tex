@@ -564,9 +564,9 @@ An array is stored as a contiguous block of memory.
 
 As an example, if there is an array of 6 integers, 24 bytes are reserved (4 per integer). The first item is stored in the first four bytes, the second item in the next four bytes and so on.
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \memory{arr}{6}{600}{6}{4}{4}{4}{{20,50,10,90,70,30}}
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 Thus,
 \begin{itemize}
@@ -612,9 +612,9 @@ Show the steps involved in accessing item \texttt{data[5]}.
 double[] data = 	{12.5, 6.4, 8.5, 9.6, -3.4, -6.8, 0, -4.5};
 \end{lstlisting}
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \memory{data}{8}{320}{6}{4}{4}{8}{{12.5, 6.4, 8.5, 9.6, -3.4, -6.8, 0, -4.5}}
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \newline
 \end{exercise}
 \begin{answer}
@@ -642,11 +642,11 @@ There are four cases for inserting an item:
 
 For example, if there are 5 items currently being used in an array of size 8, and we try to insert an item 5.6 at index 0, all 5 items need to be moved forward.
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \memory{data}{8}{320}{6}{4}{4}{8}{{12.5, 6.4, 8.5, 9.6, -3.4, 0, 0, 0}}
 \draw [red, very thick, <->] (9.8, 5) -- (9.8, 2.5);
 \node [text width = 2cm] at (11, 3.75) {need to move down by 1 each}; 
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \tikzstyle{occupied} = [draw,fill=red!10!white,minimum size=2.4em]
 \tikzstyle{newItem} = [draw,fill=blue!20!white,minimum size=2.8em]
@@ -662,7 +662,7 @@ For example, if there are 5 items currently being used in an array of size 8, an
 					
 \tikzstyle{line}=[draw] % here
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \pgfmathsetmacro{\step}{12}
 \pgfmathsetmacro{\headerChange}{1}
 \pgfmathsetmacro{\change}{-2}
@@ -706,7 +706,7 @@ For example, if there are 5 items currently being used in an array of size 8, an
 	\node[unoccupied] at (\x*1.5,-1) (block\x) {\pgfmathparse{\data[6][\x]}\pgfmathresult};
 	}
 }
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \item Array is full and you are inserting an item somewhere (not at the end): Double whammy, but  $\mathcal{O}(n) + \mathcal{O}(n)$ is still $\mathcal{O}(n)$.
 \end{enumerate}
@@ -721,12 +721,12 @@ There are two relevant cases for removing an item:
 
 For example, if there are 5 items currently being used in an array of size 8, and we try to remove the first item, all 5 items need to be moved backward by one.
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \memory{data}{8}{320}{6}{4}{4}{8}{{12.5, 6.4, 8.5, 9.6, -3.4, 0, 0, 0}}
 \draw [red, very thick, <->] (9.8, 4.5) -- (9.8, 2.5);
 \draw [red, thick] (5.5, 4.75) -- (6.5, 4.75);
 \node [text width = 2cm] at (11, 3.25) {need to move up by 1 each}; 
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{enumerate}
 
 \tikzstyle{occupied} = [draw,fill=red!10!white,minimum size=2.4em]
@@ -738,7 +738,7 @@ For example, if there are 5 items currently being used in an array of size 8, an
 					{6.4, 8.5, 9.6, 9.6, -3.4, 0, 0, 0},
 					{6.4, 8.5, 9.6, -3.4, -3.4, 0, 0, 0},
 					{6.4, 8.5, 9.6, -3.4, -3.4, 0, 0, 0}}}
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \pgfmathsetmacro{\step}{12}
 \pgfmathsetmacro{\headerChange}{1}
 \pgfmathsetmacro{\change}{-2}
@@ -776,7 +776,7 @@ For example, if there are 5 items currently being used in an array of size 8, an
 	\node[unoccupied] at (\x*1.5,1) (block\x) {\pgfmathparse{\data[5][\x]}\pgfmathresult};
 	}
 }
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1cm
 
@@ -815,7 +815,7 @@ An iterator offers the exact same functionality.
 Consider a list containing items 10, 70, 20, 90, 30, 80
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -823,14 +823,14 @@ Consider a list containing items 10, 70, 20, 90, 30, 80
    	    \draw[very thick, blue, rounded corners]  (2*\x,0) rectangle node[black] (A) {\item} (2*\x+1,1);
    	    \node[below of=A] (B) {[\x]};	
    	}
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \newpage
 
 Initial state of the iterator:
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -839,14 +839,14 @@ Initial state of the iterator:
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (-0.5,-0.2) rectangle (-0.4,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1mm
 
 After accessing the first item (10):
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -855,14 +855,14 @@ After accessing the first item (10):
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (1.5,-0.2) rectangle (1.6,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1mm
 
 After accessing the second item (70):
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -871,14 +871,14 @@ After accessing the second item (70):
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (3.5,-0.2) rectangle (3.6,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1mm
 
 After accessing the third item (20):
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -887,14 +887,14 @@ After accessing the third item (20):
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (5.5,-0.2) rectangle (5.6,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1mm
 
 After accessing the fourth item (90):
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -903,14 +903,14 @@ After accessing the fourth item (90):
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (7.5,-0.2) rectangle (7.6,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1mm
 
 After accessing the fifth item (30):
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -919,14 +919,14 @@ After accessing the fifth item (30):
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (9.5,-0.2) rectangle (9.6,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \vskip 1mm
 				
 After accessing the last item (80):
 \vskip 1mm
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 	\def\items{{10,70,20,90,30,80}}
 	\foreach \x in {0,...,5} {
 		\pgfmathparse{\items[\x]}
@@ -935,7 +935,7 @@ After accessing the last item (80):
    	    \node[below of=A] (B) {[\x]};	
    	}
    	\draw[red, very thick] (11.5,-0.2) rectangle (11.6,1.2);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 
 \newpage
 

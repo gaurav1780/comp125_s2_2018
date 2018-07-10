@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.15)  10 JUL 2018 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.15)  11 JUL 2018 06:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2591,77 +2591,77 @@ Package: ulem 2012/05/18
 ) (/Users/gauravgupta/Library/texmf/tex/fancylistings.tex)) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))
 \openout4 = `recursion.auxlock'.
 
-LaTeX Font Info:    Try loading font information for T1+Heuristica-TLF on input line 12.
+LaTeX Font Info:    Try loading font information for T1+Heuristica-TLF on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/heuristica/T1Heuristica-TLF.fd
 File: T1Heuristica-TLF.fd 2015/01/04 (autoinst) Font definitions for T1/Heuristica-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 12.
+(Font)              scaled to size 10.0pt on input line 40.
  (/Users/gauravgupta/Documents/GitHub/comp125contentdevelopment/comp125contentDevelopment/07recursion/.texpadtmp/recursion.aux)
 \openout1 = `recursion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/zutmi/m/it on input line 12.
-LaTeX Font Info:    Try loading font information for OML+zutmi on input line 12.
+LaTeX Font Info:    Checking defaults for OML/zutmi/m/it on input line 40.
+LaTeX Font Info:    Try loading font information for OML+zutmi on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/omlzutmi.fd
 File: omlzutmi.fd 2014/04/14 Fontinst v1.933 font definitions for OML/zutmi.
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/omsntxsy.fd
 File: omsntxsy.fd 2012/11/14 Fontinst v1.933 font definitions for OMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 40.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for T2A+cmr on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for T2B+cmr on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for T2B+cmr on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2bcmr.fd
 File: t2bcmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for T2C+cmr on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for T2C+cmr on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2ccmr.fd
 File: t2ccmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for LY1+ptm on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 12.
+(Font)              scaled to size 10.95pt on input line 40.
 \AtBeginShipoutBox=\box205
-Package hyperref Info: Link coloring ON on input line 12.
+Package hyperref Info: Link coloring ON on input line 40.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -2669,9 +2669,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count315
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
  (/Users/gauravgupta/Documents/GitHub/comp125contentdevelopment/comp125contentDevelopment/07recursion/.texpadtmp/recursion.out) (/Users/gauravgupta/Documents/GitHub/comp125contentdevelopment/comp125contentDevelopment/07recursion/.texpadtmp/recursion.out)
 \@outlinefile=\write7
 \openout7 = `recursion.out'.
@@ -2703,42 +2703,42 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \c@mv@tabular=\count322
 \c@mv@boldtabular=\count323
 \c@lstlisting=\count324
-LaTeX Font Info:    Try loading font information for T1+fla on input line 14.
+LaTeX Font Info:    Try loading font information for T1+fla on input line 42.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lato/t1fla.fd
 File: t1fla.fd 2011/12/25 Fontinst v1.933 font definitions for T1/fla.
 ) <mqlogo.jpeg, id=71, 501.875pt x 150.5625pt>
 File: mqlogo.jpeg Graphic file (type jpg)
  <use mqlogo.jpeg>
-Package pdftex.def Info: mqlogo.jpeg used on input line 14.
+Package pdftex.def Info: mqlogo.jpeg used on input line 42.
 (pdftex.def)             Requested size: 125.47794pt x 37.64282pt.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 14.
+(Font)              scaled to size 14.4pt on input line 42.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 14.
+(Font)              scaled to size 10.5pt on input line 42.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 7.9pt on input line 14.
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 14.
+(Font)              scaled to size 7.9pt on input line 42.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 42.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 14.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 42.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 14.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 42.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 14.
+(Font)              scaled to size 14.4pt on input line 42.
  [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/gauravgupta/Library/texmf/tex/mqlogo.jpeg>]
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 16.
+(Font)              scaled to size 10.95pt on input line 44.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/it' will be
-(Font)              scaled to size 14.4pt on input line 16.
+(Font)              scaled to size 14.4pt on input line 44.
  (/Users/gauravgupta/Documents/GitHub/comp125contentdevelopment/comp125contentDevelopment/07recursion/.texpadtmp/recursion.toc
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 7.
@@ -2780,17 +2780,24 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 ]
 ===== Image 'recursion-figure0' is up-to-date. ======
 
-Overfull \hbox (64.91936pt too wide) in paragraph at lines 44--51
+Overfull \hbox (2098.41951pt too wide) in paragraph at lines 44--51
 [] 
  []
 
+[5]
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [6 <./recursion-figure0.png>]
 ===== Image 'recursion-figure1' is up-to-date. ======
 
-Overfull \hbox (64.91936pt too wide) in paragraph at lines 57--65
+Overfull \hbox (2098.41951pt too wide) in paragraph at lines 57--65
 [] 
  []
 
-[5 <./recursion-figure0.pdf> <./recursion-figure1.pdf>]
+[7]
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [8 <./recursion-figure1.png>]
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 72.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
@@ -2803,7 +2810,7 @@ File: TS1Heuristica-TLF.fd 2015/01/04 (autoinst) Font definitions for TS1/Heuris
 )
 LaTeX Font Info:    Font shape `TS1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 102.
- [6
+ [9
 
 ]
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
@@ -2812,95 +2819,146 @@ LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 16.1pt on input line 117.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 11.4pt on input line 117.
- [7] [8
+ [10] [11
 
 ]
 ===== Image 'recursion-figure2' is up-to-date. ======
 
-Overfull \hbox (48.4943pt too wide) in paragraph at lines 158--162
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 158--162
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [12 <./recursion-figure2.png>]
 ===== Image 'recursion-figure3' is up-to-date. ======
 
-Overfull \hbox (48.4943pt too wide) in paragraph at lines 164--171
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 164--171
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [13 <./recursion-figure3.png>]
 ===== Image 'recursion-figure4' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 174--182
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 174--182
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [14 <./recursion-figure4.png>]
 ===== Image 'recursion-figure5' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 185--194
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 185--194
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [15 <./recursion-figure5.png>]
 ===== Image 'recursion-figure6' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 197--207
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 197--207
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [16 <./recursion-figure6.png>]
 ===== Image 'recursion-figure7' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 210--221
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 210--221
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [17 <./recursion-figure7.png>]
 ===== Image 'recursion-figure8' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 224--236
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 224--236
 [][] 
  []
 
-[9 <./recursion-figure2.pdf> <./recursion-figure3.pdf> <./recursion-figure4.pdf> <./recursion-figure5.pdf> <./recursion-figure6.pdf> <./recursion-figure7.pdf>]
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [18 <./recursion-figure8.png>]
 ===== Image 'recursion-figure9' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 239--250
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 239--250
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [19 <./recursion-figure9.png>]
 ===== Image 'recursion-figure10' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 253--263
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 253--263
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [20 <./recursion-figure10.png>]
 ===== Image 'recursion-figure11' is up-to-date. ======
 
-Overfull \hbox (50.54498pt too wide) in paragraph at lines 266--275
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 266--275
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [21 <./recursion-figure11.png>]
 ===== Image 'recursion-figure12' is up-to-date. ======
 
-Overfull \hbox (48.4943pt too wide) in paragraph at lines 278--286
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 278--286
 [][] 
  []
 
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [22 <./recursion-figure12.png>]
 ===== Image 'recursion-figure13' is up-to-date. ======
-[10 <./recursion-figure8.pdf> <./recursion-figure9.pdf> <./recursion-figure10.pdf> <./recursion-figure11.pdf> <./recursion-figure12.pdf> <./recursion-figure13.pdf>]
+
+Overfull \hbox (2081.99445pt too wide) in paragraph at lines 289--294
+[][] 
+ []
+
+
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
+
+ [23 <./recursion-figure13.png>]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 298.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package hyperref Info: bookmark level for unknown exercise defaults to 0 on input line 298.
- [11
+ [24
 
 ]
 Overfull \hbox (10.95pt too wide) in paragraph at lines 336--369
 []$[]$
  []
 
-[12] [13
+[25] [26
 
-] [14
+] [27
 
-] (/Users/gauravgupta/Library/texmf/tex/comp125lectureFooter.tex [15] [16
+] (/Users/gauravgupta/Library/texmf/tex/comp125lectureFooter.tex [28] [29
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4.
@@ -2913,18 +2971,18 @@ Package rerunfilecheck Info: File `recursion.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4.
  ) ) 
 Here is how much of TeX's memory you used:
- 42927 strings out of 493089
- 846058 string characters out of 6134842
- 1220495 words of memory out of 5000000
- 45358 multiletter control sequences out of 15000+600000
+ 42946 strings out of 493089
+ 846308 string characters out of 6134842
+ 1221025 words of memory out of 5000000
+ 45364 multiletter control sequences out of 15000+600000
  143634 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,11n,90p,10480b,1489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/heuristica/zut_5b7xz5.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/heuristica/zut_geqeyh.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lato/lato-01.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-Bold.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-BoldItalic.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-Italic.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-Regular.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lato/Lato-Bol.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/newtx/ntxsyralt.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/txsy.pfb>
-Output written on /Users/gauravgupta/Documents/GitHub/comp125contentdevelopment/comp125contentDevelopment/07recursion/.texpadtmp/recursion.pdf (16 pages, 415414 bytes).
+Output written on /Users/gauravgupta/Documents/GitHub/comp125contentdevelopment/comp125contentDevelopment/07recursion/.texpadtmp/recursion.pdf (29 pages, 1362310 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 151 named destinations out of 1000 (max. 500000)
+ 466 PDF objects out of 1000 (max. 8388607)
+ 363 compressed objects within 4 object streams
+ 164 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

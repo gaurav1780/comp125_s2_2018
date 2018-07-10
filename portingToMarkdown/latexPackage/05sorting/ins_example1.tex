@@ -8,7 +8,7 @@
 \newcommand{\insiterg}{{10,10,30,40,50,70,80,90}}
 \newcommand{\inssorted}{{10,10,30,40,50,70,80,90}}
 \begin{center}
-\begin{tikzpicture}[scale = 0.8]
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale = 0.8]
 \pgfmathsetmacro{\step}{15}
 \pgfmathsetmacro{\headerChange}{1}
 \pgfmathsetmacro{\change}{-2}
@@ -132,5 +132,5 @@
 \foreach \x in {0,1,...,7} {
 	\node[sorted] at (\x*1.5,\step) (block\x) {\pgfmathparse{\inssorted[\x]}\pgfmathresult};
 }
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{center}

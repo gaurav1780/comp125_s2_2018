@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.8}Variation 3}{18}{subsection.2.8}
 \contentsline {subsection}{\numberline {2.9}Variation 4}{20}{subsection.2.9}
 \contentsline {section}{\numberline {3}Binary search}{22}{section.3}
-\contentsline {subsection}{\numberline {3.1}Formal discussion on binary search}{25}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Binary search code}{28}{subsection.3.2}
-\contentsline {section}{\numberline {4}Sample solutions for exercises}{31}{section.4}
+\contentsline {subsection}{\numberline {3.1}Formal discussion on binary search}{46}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Binary search code}{49}{subsection.3.2}
+\contentsline {section}{\numberline {4}Sample solutions for exercises}{52}{section.4}
 \contentsfinish 

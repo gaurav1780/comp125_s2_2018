@@ -347,11 +347,11 @@ Let's play a game.
 
 Player 1 thinks of a number between 0 and 64. 
 \vskip 1cm
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 1cm
 
 Player 2 guesses the number such that after each guess, player 1 has to say,
@@ -372,13 +372,13 @@ Hypothetically, if the first guess is 8, then, the following scenarios (along wi
 \item Higher. (56/65)
 \end{itemize}
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=blue, draw=black] (1.6, 0) rectangle(12.8, 0.5);
 \filldraw[fill=red, draw=black] (0, 0) rectangle(1.6, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 1cm
 
 On the other hand, if the first guess is 56, then, the following scenarios (along with their probabilities) occur,
@@ -389,13 +389,13 @@ On the other hand, if the first guess is 56, then, the following scenarios (alon
 \item Higher. (8/65)
 \end{itemize}
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=red, draw=black] (0, 0) rectangle(11.2, 0.5);
 \filldraw[fill=blue, draw=black] (11.2, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 1cm
 
 if the first guess is 32, then, then we have,
@@ -406,13 +406,13 @@ if the first guess is 32, then, then we have,
 \item Higher. (32/65)
 \end{itemize}
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=red, draw=black] (0, 0) rectangle(6.4, 0.5);
 \filldraw[fill=blue, draw=black] (6.4, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 1cm
 
 This is a \emph{balanced} outcome as we approximately \textbf{halve} the search space with every guess.
@@ -423,26 +423,26 @@ If not, there are two scenarios:
 \begin{enumerate}
 	\item \texttt{target} is either less than 32. The second guess should be 15 (integer mid-point of 0 and 31). 
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=red, draw=black] (0, 0) rectangle(3.2, 0.5);
 \filldraw[fill=blue, draw=black] (3.2, 0) rectangle(6.4, 0.5);
 \filldraw[fill=black!10!white, draw=black] (6.4, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \vskip 1cm
 
 	\item \texttt{target} is more than the first guess. The second guess should be 48 (integer mid-point of 33 and 64)
 
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=red, draw=black] (6.4, 0) rectangle(9.6, 0.5);
 \filldraw[fill=blue, draw=black] (9.6, 0) rectangle(12.8, 0.5);
 \filldraw[fill=black!10!white, draw=black] (0, 0) rectangle(6.4, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 \end{enumerate}
 	
 \newpage
@@ -450,30 +450,30 @@ A trace of progression when \texttt{target = 17} is given below:
 
 \begin{center}
 Guess 1: 32
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=red, draw=black] (0, 0) rectangle(6.4, 0.5);
 \filldraw[fill=blue, draw=black] (6.4, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 Feedback: Lower
 \vskip 1cm
 
 Guess 2: 16
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
 \filldraw[fill=red, draw=black] (0, 0) rectangle(3.2, 0.5);
 \filldraw[fill=blue, draw=black] (3.2, 0) rectangle(6.4, 0.5);
 \filldraw[fill=black!10!white, draw=black] (6.4, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 Feedback: Higher
 \vskip 1cm
 
 Guess 3: 24
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
@@ -481,12 +481,12 @@ Guess 3: 24
 \filldraw[fill=blue, draw=black] (4.8, 0) rectangle(6.4, 0.5);
 \filldraw[fill=black!10!white, draw=black] (0, 0) rectangle(3.2, 0.5);
 \filldraw[fill=black!10!white, draw=black] (6.4, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 Feedback: Lower
 \vskip 1cm
 
 Guess 4: 20
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,8,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\x};
@@ -494,12 +494,12 @@ Guess 4: 20
 \filldraw[fill=blue, draw=black] (4.0, 0) rectangle(4.8, 0.5);
 \filldraw[fill=black!10!white, draw=black] (0, 0) rectangle(3.2, 0.5);
 \filldraw[fill=black!10!white, draw=black] (4.8, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 Feedback: Lower
 \vskip 1cm
 
 Guess 5: 18
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,4,8,12,16,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\scriptsize \x};
@@ -507,12 +507,12 @@ Guess 5: 18
 \filldraw[fill=blue, draw=black] (3.6, 0) rectangle(4.0, 0.5);
 \filldraw[fill=black!10!white, draw=black] (0, 0) rectangle(3.2, 0.5);
 \filldraw[fill=black!10!white, draw=black] (4.0, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 Feedback: Lower
 \vskip 1cm
 
 Guess 6: 17
-\begin{tikzpicture}
+\bgroup \tikzset{png export} \begin{tikzpicture}
 \draw (0,0) -- (12.8,0) -- (12.8,0.5) -- (0,0.5) -- (0,0);
 \foreach \x in {0,2,4,...,64}
 	\draw (\x/5, 0) -- (\x/5, 0.5) node[anchor=south] {\tiny \x};
@@ -520,7 +520,7 @@ Guess 6: 17
 \filldraw[fill=blue, draw=black] (3.4, 0) rectangle(3.6, 0.5);
 \filldraw[fill=black!10!white, draw=black] (0, 0) rectangle(3.2, 0.5);
 \filldraw[fill=black!10!white, draw=black] (3.6, 0) rectangle(12.8, 0.5);
-\end{tikzpicture}
+\end{tikzpicture} \egroup
 Feedback: \Large{Bingo!}
 \end{center}
 
