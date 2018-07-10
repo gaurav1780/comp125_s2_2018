@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2018-07-07 09:21:32 +1000">
+    <meta http-equiv="last-modified" content="2018-07-10 16:44:23 +1000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/syntax.css" />
 
@@ -63,7 +64,8 @@
 
 
       
-      <a class="navbar-brand" href="./">Home</a>
+      <a class="navbar-brand logo" href="./"></a>
+      <a class="navbar-brand desktop-only" href="./">Home</a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -80,29 +82,31 @@
             
             <li><a href="./01-introduction/index.html">Introduction</a></li>
             
-            <li><a href="./02-classesObjects1/index.html">Classes and Objects 1</a></li>
+            <li><a href="./01introduction/index.html">Introduction</a></li>
             
-            <li><a href="./03-classesObjects2/index.html">Classes and Objects 2</a></li>
+            <li><a href="./arrayBasedLists/index.html">Array-based Lists</a></li>
             
-            <li><a href="./05-sorting/index.html">Sorting Algorithms</a></li>
+            <li><a href="./classesObjects1/index.html">Classes and Objects 1</a></li>
             
-            <li><a href="./06-objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a></li>
-            
-            <li><a href="./07-Recursion/index.html">Recursion</a></li>
-            
-            <li><a href="./08-Lists/index.html">Lists</a></li>
-            
-            <li><a href="./09-ArrayBasedLists/index.html">Array-based Lists</a></li>
-            
-            <li><a href="./10-LinkBasedLists/index.html">Link Based Lists</a></li>
-            
-            <li><a href="./11-recursionAdvanced/index.html">Advanced Recursion</a></li>
-            
-            <li><a href="./12-supplementaryMaterial/index.html">Supplementary Material</a></li>
+            <li><a href="./classesObjects2/index.html">Classes and Objects 2</a></li>
             
             <li><a href="./debugging/index.html">Debugging</a></li>
             
+            <li><a href="./linkBasedLists/index.html">Link Based Lists</a></li>
+            
+            <li><a href="./lists/index.html">Lists</a></li>
+            
+            <li><a href="./objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a></li>
+            
+            <li><a href="./recursion/index.html">Recursion</a></li>
+            
+            <li><a href="./recursionAdvanced/index.html">Advanced Recursion</a></li>
+            
             <li><a href="./searching/index.html">Searching Algorithms</a></li>
+            
+            <li><a href="./sorting/index.html">Sorting Algorithms</a></li>
+            
+            <li><a href="./supplementaryMaterial/index.html">Supplementary Material</a></li>
             
             <li><a href="./unitTesting/index.html">Unit Testing</a></li>
             
@@ -175,12 +179,18 @@
   
     <tr>
       <td class="col-md-3">
-        <a href="./02-classesObjects1/index.html">Classes and Objects 1</a>
+        <a href="./01introduction/index.html">Introduction</a>
       </td>
       <td class="col-md-9">
         <ul>
         
-        <li><p>Use <code class="highlighter-rouge">git config</code> with the <code class="highlighter-rouge">--global</code> option to configure a user name, email address, editor, and other preferences once per machine.</p>
+        <li><p>A typical java source file named <code class="highlighter-rouge">Hello.java</code> has a class named <code class="highlighter-rouge">Hello</code> that contains a <code class="highlighter-rouge">main</code> method that contains your code.</p>
+</li>
+        
+        <li><p>A java source file named <code class="highlighter-rouge">Hello.java</code> is compiled to a class file named <code class="highlighter-rouge">Hello.class</code> using the command <code class="highlighter-rouge">javac Hello.java</code>.</p>
+</li>
+        
+        <li><p>A java class file named <code class="highlighter-rouge">Hello.class</code> is executed on the Java Virtual Machine using the command <code class="highlighter-rouge">java Hello</code> (no <code class="highlighter-rouge">.class</code>).</p>
 </li>
         
         </ul>
@@ -191,102 +201,7 @@
   
     <tr>
       <td class="col-md-3">
-        <a href="./03-classesObjects2/index.html">Classes and Objects 2</a>
-      </td>
-      <td class="col-md-9">
-        <ul>
-        
-        <li><p><code class="highlighter-rouge">git init</code> initializes a repository.</p>
-</li>
-        
-        <li><p>Git stores all of its repository data in the <code class="highlighter-rouge">.git</code> directory.</p>
-</li>
-        
-        </ul>
-      </td>
-    </tr>
-  
-
-  
-    <tr>
-      <td class="col-md-3">
-        <a href="./05-sorting/index.html">Sorting Algorithms</a>
-      </td>
-      <td class="col-md-9">
-        <ul>
-        
-        <li><p><code class="highlighter-rouge">git diff</code> displays differences between commits.</p>
-</li>
-        
-        <li><p><code class="highlighter-rouge">git checkout</code> recovers old versions of files.</p>
-</li>
-        
-        </ul>
-      </td>
-    </tr>
-  
-
-  
-    <tr>
-      <td class="col-md-3">
-        <a href="./06-objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a>
-      </td>
-      <td class="col-md-9">
-        <ul>
-        
-        <li><p>The <code class="highlighter-rouge">.gitignore</code> file tells Git what files to ignore.</p>
-</li>
-        
-        </ul>
-      </td>
-    </tr>
-  
-
-  
-    <tr>
-      <td class="col-md-3">
-        <a href="./07-Recursion/index.html">Recursion</a>
-      </td>
-      <td class="col-md-9">
-        <ul>
-        
-        <li><p>A local Git repository can be connected to one or more remote repositories.</p>
-</li>
-        
-        <li><p>Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.</p>
-</li>
-        
-        <li><p><code class="highlighter-rouge">git push</code> copies changes from a local repository to a remote repository.</p>
-</li>
-        
-        <li><p><code class="highlighter-rouge">git pull</code> copies changes from a remote repository to a local repository.</p>
-</li>
-        
-        </ul>
-      </td>
-    </tr>
-  
-
-  
-    <tr>
-      <td class="col-md-3">
-        <a href="./08-Lists/index.html">Lists</a>
-      </td>
-      <td class="col-md-9">
-        <ul>
-        
-        <li><p><code class="highlighter-rouge">git clone</code> copies a remote repository to create a local repository with a remote called <code class="highlighter-rouge">origin</code> automatically set up.</p>
-</li>
-        
-        </ul>
-      </td>
-    </tr>
-  
-
-  
-    <tr>
-      <td class="col-md-3">
-        <a href="./09-ArrayBasedLists/index.html">Array-based Lists</a>
+        <a href="./arrayBasedLists/index.html">Array-based Lists</a>
       </td>
       <td class="col-md-9">
         <ul>
@@ -305,12 +220,12 @@
   
     <tr>
       <td class="col-md-3">
-        <a href="./10-LinkBasedLists/index.html">Link Based Lists</a>
+        <a href="./classesObjects1/index.html">Classes and Objects 1</a>
       </td>
       <td class="col-md-9">
         <ul>
         
-        <li><p>Open scientific work is more useful and more highly cited than closed.</p>
+        <li><p>Use <code class="highlighter-rouge">git config</code> with the <code class="highlighter-rouge">--global</code> option to configure a user name, email address, editor, and other preferences once per machine.</p>
 </li>
         
         </ul>
@@ -321,34 +236,15 @@
   
     <tr>
       <td class="col-md-3">
-        <a href="./11-recursionAdvanced/index.html">Advanced Recursion</a>
+        <a href="./classesObjects2/index.html">Classes and Objects 2</a>
       </td>
       <td class="col-md-9">
         <ul>
         
-        <li><p>People who incorporate General Public License (GPL’d) software into their own software must make their software also open under the GPL license; most other open licenses do not require this.</p>
+        <li><p><code class="highlighter-rouge">git init</code> initializes a repository.</p>
 </li>
         
-        <li><p>The Creative Commons family of licenses allow people to mix and match requirements and restrictions on attribution, creation of derivative works, further sharing, and commercialization.</p>
-</li>
-        
-        <li><p>People who are not lawyers should not try to write licenses from scratch.</p>
-</li>
-        
-        </ul>
-      </td>
-    </tr>
-  
-
-  
-    <tr>
-      <td class="col-md-3">
-        <a href="./12-supplementaryMaterial/index.html">Supplementary Material</a>
-      </td>
-      <td class="col-md-9">
-        <ul>
-        
-        <li><p>Create an RStudio project</p>
+        <li><p>Git stores all of its repository data in the <code class="highlighter-rouge">.git</code> directory.</p>
 </li>
         
         </ul>
@@ -381,6 +277,101 @@
   
     <tr>
       <td class="col-md-3">
+        <a href="./linkBasedLists/index.html">Link Based Lists</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p>Open scientific work is more useful and more highly cited than closed.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
+        <a href="./lists/index.html">Lists</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p><code class="highlighter-rouge">git clone</code> copies a remote repository to create a local repository with a remote called <code class="highlighter-rouge">origin</code> automatically set up.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
+        <a href="./objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p>The <code class="highlighter-rouge">.gitignore</code> file tells Git what files to ignore.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
+        <a href="./recursion/index.html">Recursion</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p>A local Git repository can be connected to one or more remote repositories.</p>
+</li>
+        
+        <li><p>Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.</p>
+</li>
+        
+        <li><p><code class="highlighter-rouge">git push</code> copies changes from a local repository to a remote repository.</p>
+</li>
+        
+        <li><p><code class="highlighter-rouge">git pull</code> copies changes from a remote repository to a local repository.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
+        <a href="./recursionAdvanced/index.html">Advanced Recursion</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p>People who incorporate General Public License (GPL’d) software into their own software must make their software also open under the GPL license; most other open licenses do not require this.</p>
+</li>
+        
+        <li><p>The Creative Commons family of licenses allow people to mix and match requirements and restrictions on attribution, creation of derivative works, further sharing, and commercialization.</p>
+</li>
+        
+        <li><p>People who are not lawyers should not try to write licenses from scratch.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
         <a href="./searching/index.html">Searching Algorithms</a>
       </td>
       <td class="col-md-9">
@@ -399,6 +390,41 @@
 </li>
         
         <li><p>Write a commit message that accurately describes your changes.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
+        <a href="./sorting/index.html">Sorting Algorithms</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p><code class="highlighter-rouge">git diff</code> displays differences between commits.</p>
+</li>
+        
+        <li><p><code class="highlighter-rouge">git checkout</code> recovers old versions of files.</p>
+</li>
+        
+        </ul>
+      </td>
+    </tr>
+  
+
+  
+    <tr>
+      <td class="col-md-3">
+        <a href="./supplementaryMaterial/index.html">Supplementary Material</a>
+      </td>
+      <td class="col-md-9">
+        <ul>
+        
+        <li><p>Create an RStudio project</p>
 </li>
         
         </ul>

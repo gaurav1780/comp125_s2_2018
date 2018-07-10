@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="last-modified" content="2018-07-07 09:21:32 +1000">
+    <meta http-equiv="last-modified" content="2018-07-10 16:44:23 +1000">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="">
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/syntax.css" />
 
@@ -63,7 +64,8 @@
 
 
       
-      <a class="navbar-brand" href="./">Home</a>
+      <a class="navbar-brand logo" href="./"></a>
+      <a class="navbar-brand desktop-only" href="./">Home</a>
 
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -80,29 +82,31 @@
             
             <li><a href="./01-introduction/index.html">Introduction</a></li>
             
-            <li><a href="./02-classesObjects1/index.html">Classes and Objects 1</a></li>
+            <li><a href="./01introduction/index.html">Introduction</a></li>
             
-            <li><a href="./03-classesObjects2/index.html">Classes and Objects 2</a></li>
+            <li><a href="./arrayBasedLists/index.html">Array-based Lists</a></li>
             
-            <li><a href="./05-sorting/index.html">Sorting Algorithms</a></li>
+            <li><a href="./classesObjects1/index.html">Classes and Objects 1</a></li>
             
-            <li><a href="./06-objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a></li>
-            
-            <li><a href="./07-Recursion/index.html">Recursion</a></li>
-            
-            <li><a href="./08-Lists/index.html">Lists</a></li>
-            
-            <li><a href="./09-ArrayBasedLists/index.html">Array-based Lists</a></li>
-            
-            <li><a href="./10-LinkBasedLists/index.html">Link Based Lists</a></li>
-            
-            <li><a href="./11-recursionAdvanced/index.html">Advanced Recursion</a></li>
-            
-            <li><a href="./12-supplementaryMaterial/index.html">Supplementary Material</a></li>
+            <li><a href="./classesObjects2/index.html">Classes and Objects 2</a></li>
             
             <li><a href="./debugging/index.html">Debugging</a></li>
             
+            <li><a href="./linkBasedLists/index.html">Link Based Lists</a></li>
+            
+            <li><a href="./lists/index.html">Lists</a></li>
+            
+            <li><a href="./objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a></li>
+            
+            <li><a href="./recursion/index.html">Recursion</a></li>
+            
+            <li><a href="./recursionAdvanced/index.html">Advanced Recursion</a></li>
+            
             <li><a href="./searching/index.html">Searching Algorithms</a></li>
+            
+            <li><a href="./sorting/index.html">Sorting Algorithms</a></li>
+            
+            <li><a href="./supplementaryMaterial/index.html">Supplementary Material</a></li>
             
             <li><a href="./unitTesting/index.html">Unit Testing</a></li>
             
@@ -146,52 +150,7 @@
 
 <h1 class="maintitle"><a href="./">COMP125 Lecture Notes</a></h1>
 
-<p>Wolfman and Dracula have been hired by Universal Missions (a space
-services spinoff from Euphoric State University) to investigate if it
-is possible to send their next planetary lander to Mars.  They want to
-be able to work on the plans at the same time, but they have run into
-problems doing this in the past.  If they take turns, each one will
-spend a lot of time waiting for the other to finish, but if they work
-on their own copies and email changes back and forth things will be
-lost, overwritten, or duplicated.</p>
-
-<p>A colleague suggests using <a href="./reference/#version-control">version control</a> to
-manage their work. Version control is better than mailing files back and forth:</p>
-
-<ul>
-  <li>
-    <p>Nothing that is committed to version control is ever lost, unless
-you work really, really hard at it. Since all old versions of
-files are saved, it’s always possible to go back in time to see
-exactly who wrote what on a particular day, or what version of a
-program was used to generate a particular set of results.</p>
-  </li>
-  <li>
-    <p>As we have this record of who made what changes when, we know who to ask
-if we have questions later on, and, if needed, revert to a previous
-version, much like the “undo” feature in an editor.</p>
-  </li>
-  <li>
-    <p>When several people collaborate in the same project, it’s possible to
-accidentally overlook or overwrite someone’s changes. The version control
-system automatically notifies users whenever there’s a conflict between one
-person’s work and another’s.</p>
-  </li>
-</ul>
-
-<p>Teams are not the only ones to benefit from version control: lone
-researchers can benefit immensely.  Keeping a record of what was
-changed, when, and why is extremely useful for all researchers if they
-ever need to come back to the project later on (e.g., a year later,
-when memory has faded).</p>
-
-<p>Version control is the lab notebook of the digital world: it’s what
-professionals use to keep track of what they’ve done and to
-collaborate with other people.  Every large software development
-project relies on it, and most programmers use it for their small jobs
-as well.  And it isn’t just for software: books,
-papers, small data sets, and anything that changes over time or needs
-to be shared can and should be stored in a version control system.</p>
+<p>COMP125 Lecture Notes. Bigger, better, stronger!</p>
 
 <blockquote class="prereq">
   <h2 id="prerequisites">Prerequisites</h2>
@@ -208,6 +167,8 @@ Some previous experience with the shell is expected,
   
   
   
+  
+    
   
     
   
@@ -279,7 +240,55 @@ Some previous experience with the shell is expected,
       <td class="col-md-2">04:00</td>
       <td class="col-md-3">
         
-	2. <a href="./02-classesObjects1/index.html">Classes and Objects 1</a>
+	2. <a href="./01introduction/index.html">Introduction</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Introduction to COMP125 structure and contents
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">08:00</td>
+      <td class="col-md-3">
+        
+	3. <a href="./arrayBasedLists/index.html">Array-based Lists</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Array-based Lists
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">12:00</td>
+      <td class="col-md-3">
+        
+	4. <a href="./classesObjects1/index.html">Classes and Objects 1</a>
       </td>
       <td class="col-md-7">
         
@@ -300,10 +309,10 @@ Some previous experience with the shell is expected,
     
     <tr>
       
-      <td class="col-md-2">08:00</td>
+      <td class="col-md-2">16:00</td>
       <td class="col-md-3">
         
-	3. <a href="./03-classesObjects2/index.html">Classes and Objects 2</a>
+	5. <a href="./classesObjects2/index.html">Classes and Objects 2</a>
       </td>
       <td class="col-md-7">
         
@@ -324,16 +333,16 @@ Some previous experience with the shell is expected,
     
     <tr>
       
-      <td class="col-md-2">12:00</td>
+      <td class="col-md-2">20:00</td>
       <td class="col-md-3">
         
-	4. <a href="./05-sorting/index.html">Sorting Algorithms</a>
+	6. <a href="./debugging/index.html">Debugging</a>
       </td>
       <td class="col-md-7">
         
           
             
-              Exploring some of the sorting algorithms
+              The power of debugging
 
               
             
@@ -348,10 +357,58 @@ Some previous experience with the shell is expected,
     
     <tr>
       
-      <td class="col-md-2">16:00</td>
+      <td class="col-md-2">24:00</td>
       <td class="col-md-3">
         
-	5. <a href="./06-objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a>
+	7. <a href="./linkBasedLists/index.html">Link Based Lists</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Link-based Lists
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">28:00</td>
+      <td class="col-md-3">
+        
+	8. <a href="./lists/index.html">Lists</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Why arrays just aren’t practical enough to use a.k.a. Need For Lists
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">32:00</td>
+      <td class="col-md-3">
+        
+	9. <a href="./objectOrientedProblemSolving/index.html">Object-Oriented Problem Solving</a>
       </td>
       <td class="col-md-7">
         
@@ -372,10 +429,10 @@ Some previous experience with the shell is expected,
     
     <tr>
       
-      <td class="col-md-2">20:00</td>
+      <td class="col-md-2">36:00</td>
       <td class="col-md-3">
         
-	6. <a href="./07-Recursion/index.html">Recursion</a>
+	10. <a href="./recursion/index.html">Recursion</a>
       </td>
       <td class="col-md-7">
         
@@ -408,82 +465,10 @@ Some previous experience with the shell is expected,
     
     <tr>
       
-      <td class="col-md-2">24:00</td>
+      <td class="col-md-2">40:00</td>
       <td class="col-md-3">
         
-	7. <a href="./08-Lists/index.html">Lists</a>
-      </td>
-      <td class="col-md-7">
-        
-          
-            
-              Why arrays just aren’t practical enough to use a.k.a. Need For Lists
-
-              
-            
-          
-        
-      </td>
-    </tr>
-    
-  
-    
-    
-    
-    <tr>
-      
-      <td class="col-md-2">28:00</td>
-      <td class="col-md-3">
-        
-	8. <a href="./09-ArrayBasedLists/index.html">Array-based Lists</a>
-      </td>
-      <td class="col-md-7">
-        
-          
-            
-              Array-based Lists
-
-              
-            
-          
-        
-      </td>
-    </tr>
-    
-  
-    
-    
-    
-    <tr>
-      
-      <td class="col-md-2">32:00</td>
-      <td class="col-md-3">
-        
-	9. <a href="./10-LinkBasedLists/index.html">Link Based Lists</a>
-      </td>
-      <td class="col-md-7">
-        
-          
-            
-              Link-based Lists
-
-              
-            
-          
-        
-      </td>
-    </tr>
-    
-  
-    
-    
-    
-    <tr>
-      
-      <td class="col-md-2">36:00</td>
-      <td class="col-md-3">
-        
-	10. <a href="./11-recursionAdvanced/index.html">Advanced Recursion</a>
+	11. <a href="./recursionAdvanced/index.html">Advanced Recursion</a>
       </td>
       <td class="col-md-7">
         
@@ -504,58 +489,10 @@ Some previous experience with the shell is expected,
     
     <tr>
       
-      <td class="col-md-2">40:00</td>
-      <td class="col-md-3">
-        
-	11. <a href="./12-supplementaryMaterial/index.html">Supplementary Material</a>
-      </td>
-      <td class="col-md-7">
-        
-          
-            
-              Supplementary material for expanding on core topics
-
-              
-            
-          
-        
-      </td>
-    </tr>
-    
-  
-    
-    
-    
-    <tr>
-      
       <td class="col-md-2">44:00</td>
       <td class="col-md-3">
         
-	12. <a href="./debugging/index.html">Debugging</a>
-      </td>
-      <td class="col-md-7">
-        
-          
-            
-              The power of debugging
-
-              
-            
-          
-        
-      </td>
-    </tr>
-    
-  
-    
-    
-    
-    <tr>
-      
-      <td class="col-md-2">48:00</td>
-      <td class="col-md-3">
-        
-	13. <a href="./searching/index.html">Searching Algorithms</a>
+	12. <a href="./searching/index.html">Searching Algorithms</a>
       </td>
       <td class="col-md-7">
         
@@ -576,10 +513,58 @@ Some previous experience with the shell is expected,
     
     <tr>
       
+      <td class="col-md-2">48:00</td>
+      <td class="col-md-3">
+        
+	13. <a href="./sorting/index.html">Sorting Algorithms</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Exploring some of the sorting algorithms
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    <tr>
+      
       <td class="col-md-2">52:00</td>
       <td class="col-md-3">
         
-	14. <a href="./unitTesting/index.html">Unit Testing</a>
+	14. <a href="./supplementaryMaterial/index.html">Supplementary Material</a>
+      </td>
+      <td class="col-md-7">
+        
+          
+            
+              Supplementary material for expanding on core topics
+
+              
+            
+          
+        
+      </td>
+    </tr>
+    
+  
+    
+    
+    
+    <tr>
+      
+      <td class="col-md-2">56:00</td>
+      <td class="col-md-3">
+        
+	15. <a href="./unitTesting/index.html">Unit Testing</a>
       </td>
       <td class="col-md-7">
         
@@ -599,7 +584,7 @@ Some previous experience with the shell is expected,
   
   <tr>
     
-    <td class="col-md-2">56:00</td>
+    <td class="col-md-2">60:00</td>
     <td class="col-md-3">Finish</td>
     <td class="col-md-7"></td>
   </tr>

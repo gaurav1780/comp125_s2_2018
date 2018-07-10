@@ -1,7 +1,6 @@
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
-# markdown: redcarpet-pygments
   
 # Which carpentry is this ("swc", "dc", "lc", or "cp")?
 # swc: Software Carpentry
@@ -89,5 +88,3 @@ exclude:
   
 # Turn on built-in syntax highlighting.
 highlighter: rouge
-
-markdown: kramdown

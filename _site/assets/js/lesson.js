@@ -18,7 +18,6 @@ $(".solution").each(function() {
     h2.append("<span class='fold-unfold glyphicon glyphicon-collapse-down'></span>");
 });
 
-
 // Handle searches.
 // Relies on document having 'meta' element with name 'search-domain'.
 function google_search() {
