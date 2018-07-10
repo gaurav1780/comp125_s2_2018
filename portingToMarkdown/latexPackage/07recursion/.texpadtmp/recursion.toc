@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Background}{4}{section.1}
+\contentsline {section}{\numberline {2}Overview}{6}{section.2}
+\contentsline {section}{\numberline {3}Detailed example}{8}{section.3}
+\contentsline {section}{\numberline {4}Tracing some more recursive code}{11}{section.4}
+\contentsline {section}{\numberline {5}Recursion with Strings}{13}{section.5}
+\contentsline {section}{\numberline {6}Actually useful recursion}{14}{section.6}
+\contentsline {subsection}{\numberline {6.1}The Problem}{14}{subsection.6.1}
+\contentsline {section}{\numberline {7}Sample solutions for exercises}{16}{section.7}
+\contentsfinish 
