@@ -340,10 +340,9 @@ Binary search
 
 Let’s play a game.
 
-Player 1 thinks of a number between 0 and 64.
-
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
+Player 1 thinks of a number between 0 and 64. \<img
+src=“./../fig/searching/searching-figure0.png” alt=“Drawing” width =
+“400”/\>
 
 Player 2 guesses the number such that after each guess, player 1 has to
 say,
@@ -365,9 +364,8 @@ Hypothetically, if the first guess is 8, then, the following scenarios
 
 -   Higher. (56/65)
 
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
-(1.6, 0) rectangle(12.8, 0.5); (0, 0) rectangle(1.6, 0.5);
+\<img src=“./../fig/searching/searching-figure1.png” alt=“Drawing” width
+= “400”/\>
 
 On the other hand, if the first guess is 56, then, the following
 scenarios (along with their probabilities) occur,
@@ -378,9 +376,8 @@ scenarios (along with their probabilities) occur,
 
 -   Higher. (8/65)
 
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ; (0,
-0) rectangle(11.2, 0.5); (11.2, 0) rectangle(12.8, 0.5);
+\<img src=“./../fig/searching/searching-figure2.png” alt=“Drawing” width
+= “400”/\>
 
 if the first guess is 32, then, then we have,
 
@@ -390,9 +387,8 @@ if the first guess is 32, then, then we have,
 
 -   Higher. (32/65)
 
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ; (0,
-0) rectangle(6.4, 0.5); (6.4, 0) rectangle(12.8, 0.5);
+\<img src=“./../fig/searching/searching-figure3.png” alt=“Drawing” width
+= “400”/\>
 
 This is a *balanced* outcome as we approximately **halve** the search
 space with every guess.
@@ -406,73 +402,34 @@ If not, there are two scenarios:
 1.  `target` is either less than 32. The second guess should be 15
     (integer mid-point of 0 and 31).
 
-    (0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-    <span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
-    (0, 0) rectangle(3.2, 0.5); (3.2, 0) rectangle(6.4, 0.5); (6.4, 0)
-    rectangle(12.8, 0.5);
+    \<img src=“./../fig/searching/searching-figure4.png” alt=“Drawing”
+    width = “400”/\>
 
 2.  `target` is more than the first guess. The second guess should be 48
     (integer mid-point of 33 and 64)
 
-    (0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-    <span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
-    (6.4, 0) rectangle(9.6, 0.5); (9.6, 0) rectangle(12.8, 0.5); (0, 0)
-    rectangle(6.4, 0.5);
+    \<img src=“./../fig/searching/searching-figure5.png” alt=“Drawing”
+    width = “400”/\>
 
 A trace of progression when `target = 17` is given below:
 
-Guess 1: 32
+Guess 1: 32 \<img src=“./../fig/searching/searching-figure6.png”
+alt=“Drawing” width = “400”/\> Feedback: Lower
 
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ; (0,
-0) rectangle(6.4, 0.5); (6.4, 0) rectangle(12.8, 0.5);
+Guess 2: 16 \<img src=“./../fig/searching/searching-figure7.png”
+alt=“Drawing” width = “400”/\> Feedback: Higher
 
-Feedback: Lower
+Guess 3: 24 \<img src=“./../fig/searching/searching-figure8.png”
+alt=“Drawing” width = “400”/\> Feedback: Lower
 
-Guess 2: 16
+Guess 4: 20 \<img src=“./../fig/searching/searching-figure9.png”
+alt=“Drawing” width = “400”/\> Feedback: Lower
 
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ; (0,
-0) rectangle(3.2, 0.5); (3.2, 0) rectangle(6.4, 0.5); (6.4, 0)
-rectangle(12.8, 0.5);
+Guess 5: 18 \<img src=“./../fig/searching/searching-figure10.png”
+alt=“Drawing” width = “400”/\> Feedback: Lower
 
-Feedback: Higher
-
-Guess 3: 24
-
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
-(3.2, 0) rectangle(4.8, 0.5); (4.8, 0) rectangle(6.4, 0.5); (0, 0)
-rectangle(3.2, 0.5); (6.4, 0) rectangle(12.8, 0.5);
-
-Feedback: Lower
-
-Guess 4: 20
-
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,8,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
-(3.2, 0) rectangle(4.0, 0.5); (4.0, 0) rectangle(4.8, 0.5); (0, 0)
-rectangle(3.2, 0.5); (4.8, 0) rectangle(12.8, 0.5);
-
-Feedback: Lower
-
-Guess 5: 18
-
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,4,8,12,16,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ;
-(3.2, 0) rectangle(3.6, 0.5); (3.6, 0) rectangle(4.0, 0.5); (0, 0)
-rectangle(3.2, 0.5); (4.0, 0) rectangle(12.8, 0.5);
-
-Feedback: Lower
-
-Guess 6: 17
-
-(0,0) – (12.8,0) – (12.8,0.5) – (0,0.5) – (0,0); in
-<span>0,2,4,...,64</span> (/5, 0) – (/5, 0.5) node[anchor=south] ; (3.2,
-0) rectangle(3.4, 0.5); (3.4, 0) rectangle(3.6, 0.5); (0, 0)
-rectangle(3.2, 0.5); (3.6, 0) rectangle(12.8, 0.5);
-
-Feedback:
+Guess 6: 17 \<img src=“./../fig/searching/searching-figure11.png”
+alt=“Drawing” width = “400”/\> Feedback:
 
 Thus, in the worst case for 64 numbers, we need 6 guesses.
 

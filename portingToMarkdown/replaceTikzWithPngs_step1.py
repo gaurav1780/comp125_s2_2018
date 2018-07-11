@@ -7,7 +7,6 @@ def updateToImg(path):
     file = open(path, 'r')
     content = file.read()
 
-
     print(path)
 
     # Works

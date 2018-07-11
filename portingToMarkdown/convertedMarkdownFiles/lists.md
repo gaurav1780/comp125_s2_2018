@@ -578,6 +578,9 @@ As an example, if there is an array of 6 integers, 24 bytes are reserved
 (4 per integer). The first item is stored in the first four bytes, the
 second item in the next four bytes and so on.
 
+\<img src=“./../fig/lists/lists-figure0.png” alt=“Drawing” width =
+“400”/\>
+
 Thus,
 
 -   The address of the first item (at index 0) is the base address of
@@ -630,6 +633,9 @@ Show the steps involved in accessing item `data[5]`.
 
     double[] data =     {12.5, 6.4, 8.5, 9.6, -3.4, -6.8, 0, -4.5};
 
+\<img src=“./../fig/lists/lists-figure1.png” alt=“Drawing” width =
+“400”/\>
+
 address of `data[5]` = base address of `data` + 5 \* 8\
 = 320 + 40\
 = 360\
@@ -668,25 +674,15 @@ There are four cases for inserting an item:
     of size 8, and we try to insert an item 5.6 at index 0, all 5 items
     need to be moved forward.
 
-    (9.8, 5) – (9.8, 2.5); at (11, 3.75) <span>need to move down by 1
-    each</span>;
+    \<img src=“./../fig/lists/lists-figure2.png” alt=“Drawing” width =
+    “400”/\>
 
     = [draw,fill=red!10!white,minimum size=2.4em] =
     [draw,fill=blue!20!white,minimum size=2.8em] =
     [draw,fill=green!10!white,minimum size=2.4em]
 
-    =[draw]
-
-    in <span>0,...,7</span> <span> at (1.5, +) <span>[]</span>; </span>
-
-    in <span>0,...,5</span> <span> <span> (6 - 1.5, 12 - 2) – (7.5 -1.5,
-    10.5 - 2); </span> <span> </span> in <span>0,...,7</span> <span>
-    <span> at (1.5,12 - 2) (block) ; </span> <span> at (1.5,12 - 2)
-    (block) ; </span> </span> </span> at (3, 0.5) <span>Insert new item
-    at index 0, increment `nItems` by 1</span>; in <span>0,...,7</span>
-    <span> <span> <span> at (1.5,-1) (block) ; </span> <span> at
-    (1.5,-1) (block) ; </span> </span> <span> at (1.5,-1) (block) ;
-    </span> </span>
+    =[draw] \<img src=“./../fig/lists/lists-figure3.png” alt=“Drawing”
+    width = “400”/\>
 
 4.  Array is full and you are inserting an item somewhere (not at the
     end): Double whammy, but $\mathcal{O}(n) + \mathcal{O}(n)$ is still
@@ -705,21 +701,14 @@ There are two relevant cases for removing an item:
     of size 8, and we try to remove the first item, all 5 items need to
     be moved backward by one.
 
-    (9.8, 4.5) – (9.8, 2.5); (5.5, 4.75) – (6.5, 4.75); at (11, 3.25)
-    <span>need to move up by 1 each</span>;
+    \<img src=“./../fig/lists/lists-figure4.png” alt=“Drawing” width =
+    “400”/\>
 
 = [draw,fill=red!10!white,minimum size=2.4em] =
 [draw,fill=green!10!white,minimum size=2.4em]
 
-in <span>0,...,7</span> <span> at (1.5, +) <span>[]</span>; </span>
-
-in <span>0,...,4</span> <span> <span> (1.5 + 1.5, 12 - 2) – (1.5, 10.5 -
-2); </span> <span> </span> in <span>0,...,7</span> <span> <span> at
-(1.5,12 - 2) (block) ; </span> <span> at (1.5,12 - 2) (block) ; </span>
-</span> </span> at (3, 2.5) <span>Decrement `nItems` by 1 (the last -3.4
-is there in memory but not counted)</span>; in <span>0,...,7</span>
-<span> <span> at (1.5,1) (block) ; </span> <span> at (1.5,1) (block) ;
-</span> </span>
+\<img src=“./../fig/lists/lists-figure5.png” alt=“Drawing” width =
+“400”/\>
 
 Following table summarizes the time complexities of the various
 operations in an ArrayList:
@@ -752,81 +741,43 @@ An iterator offers the exact same functionality.
 
 Consider a list containing items 10, 70, 20, 90, 30, 80
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
+\<img src=“./../fig/lists/lists-figure6.png” alt=“Drawing” width =
+“400”/\>
 
 Initial state of the iterator:
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(-0.5,-0.2) rectangle (-0.4,1.2);
+\<img src=“./../fig/lists/lists-figure7.png” alt=“Drawing” width =
+“400”/\>
 
 After accessing the first item (10):
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(1.5,-0.2) rectangle (1.6,1.2);
+\<img src=“./../fig/lists/lists-figure8.png” alt=“Drawing” width =
+“400”/\>
 
 After accessing the second item (70):
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(3.5,-0.2) rectangle (3.6,1.2);
+\<img src=“./../fig/lists/lists-figure9.png” alt=“Drawing” width =
+“400”/\>
 
 After accessing the third item (20):
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(5.5,-0.2) rectangle (5.6,1.2);
+\<img src=“./../fig/lists/lists-figure10.png” alt=“Drawing” width =
+“400”/\>
 
 After accessing the fourth item (90):
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(7.5,-0.2) rectangle (7.6,1.2);
+\<img src=“./../fig/lists/lists-figure11.png” alt=“Drawing” width =
+“400”/\>
 
 After accessing the fifth item (30):
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(9.5,-0.2) rectangle (9.6,1.2);
+\<img src=“./../fig/lists/lists-figure12.png” alt=“Drawing” width =
+“400”/\>
 
 After accessing the last item (80):
 
-in <span>0,...,5</span>
-
-(2\*,0) rectangle node[black] (A)
-
-(2\*+1,1); (B) <span>[]</span>;
-
-(11.5,-0.2) rectangle (11.6,1.2);
+\<img src=“./../fig/lists/lists-figure13.png” alt=“Drawing” width =
+“400”/\>
 
 Iterator implementation
 -----------------------

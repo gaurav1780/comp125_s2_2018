@@ -31,7 +31,8 @@ are:
     p.data = 25;
     p.next = null;
 
-[scale=.5] (2.5, 11.5) – (5, 11.5);
+\<img src=“./../fig/linkedLists/linkedLists-figure0.png” alt=“Drawing”
+width = “400”/\>
 
 Code to create objects `p, q` of class `Node` and resulting memory
 diagram are:
@@ -43,8 +44,8 @@ diagram are:
     p.data = 25;
     p.next = q;
 
-[scale=.5] (2.5, 11.5) – (5, 11.5); (8.8, 10) – (16, 10); (13.2, 12) –
-(16, 10.2);
+\<img src=“./../fig/linkedLists/linkedLists-figure1.png” alt=“Drawing”
+width = “400”/\>
 
 Here, we can see that `p.next` (of type `Node`) is a shallow copy of `q`
 (of type `Node`).
@@ -82,9 +83,8 @@ The memory diagram for this code is below. Notice they key points:
 
 -   `q.data (Rectangle)` is a shallow copy of `r2 (Rectangle)`
 
-[scale=.5] (7.5, 13) – (11, 13); (7.5, 10) – (11, 10); (1.5, 9) – (4,
-9); (7.5, 8) – (16, 8); (12.5, 6) – (16, 6); (19.5, 7.5) – (25, 7.5);
-(22.5, 10.5) – (25, 10.5);
+\<img src=“./../fig/linkedLists/linkedLists-figure2.png” alt=“Drawing”
+width = “400”/\>
 
 [5] Draw a memory diagram for the following code:
 
@@ -156,13 +156,8 @@ The memory diagram for the above code is given below:
 
 0.5cm
 
-[scale=.5]
-
-(4, 6) – (6, 6); (10, 6) – (12, 6); (16, 6) – (18, 6); (22, 6) – (24,
-6);
-
-(2.5, 10.5) – (2.5, 8); (8.5, 10.5) – (8.5, 8); (14.5, 10.5) – (14.5,
-8); (20.5, 10.5) – (20.5, 8); (26.5, 10.5) – (26.5, 8);
+\<img src=“./../fig/linkedLists/linkedLists-figure3.png” alt=“Drawing”
+width = “400”/\>
 
 Simplified representation of linked nodes
 -----------------------------------------
@@ -170,16 +165,8 @@ Simplified representation of linked nodes
 The above diagram, while thorough, is *too* detailed. We apply a little
 abstraction and represent the same diagram as:
 
-iin <span>0,...,4</span>
-
-(3\*i, 0) rectangle (2+3\*i, 1); (1+3\*i,0) – (1+3\*i,1); at
-(1+3\*i,-0.5) <span>n </span>;
-
-at (0.5+3\*i,0.5)
-
-; (1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure4.png” alt=“Drawing”
+width = “400”/\>
 
 Traversing a linked list
 ------------------------
@@ -193,101 +180,24 @@ Traversing a linked list
 You are modifying the reference `n1`. Each time you update `n1`, the
 instance referred by `n1` before the update is deleted from memory.
 Thereby, all the nodes will be erased from the memory at the end of
-execution. So yeah, not a good idea. 0.5cm
+execution. So yeah, not a good idea. 0.5cm \<img
+src=“./../fig/linkedLists/linkedLists-figure5.png” alt=“Drawing” width =
+“400”/\> 0.3cm
 
-[scale=0.9] iin <span>0,...,4</span>
+\<img src=“./../fig/linkedLists/linkedLists-figure6.png” alt=“Drawing”
+width = “400”/\> 0.3cm
 
-(3\*i, 0) rectangle (2+3\*i, 1); (1+3\*i,0) – (1+3\*i,1);
+\<img src=“./../fig/linkedLists/linkedLists-figure7.png” alt=“Drawing”
+width = “400”/\> 0.3cm
 
-[] <span> at (1+3\*i,-0.6) <span>****</span>; </span> <span> at
-(1+3\*i,-0.6) ; </span>
+\<img src=“./../fig/linkedLists/linkedLists-figure8.png” alt=“Drawing”
+width = “400”/\> 0.3cm
 
-at (0.5+3\*i,0.5) ;
+\<img src=“./../fig/linkedLists/linkedLists-figure9.png” alt=“Drawing”
+width = “400”/\> 0.3cm
 
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
-
-0.3cm
-
-[scale=0.9] iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-[] <span> at (1.5+3\*i,-0.6) <span>****</span>; </span> <span> <span> at
-(1+3\*i,-0.6) ; </span> <span> at (2+3\*i,-0.6) ; </span> </span>
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
-
-0.3cm
-
-[scale=0.9] iin <span>0,...,3</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-[] <span> at (1.5+3\*i,-0.6) <span>****</span>; </span> <span> at
-(2+3\*i,-0.6) ; </span>
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (12.5, 0.5) <span>null</span>;
-
-0.3cm
-
-[scale=0.9] iin <span>0,...,3</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-[] <span> at (1.5+3\*i,-0.6) <span>****</span>; </span> <span> at
-(2+3\*i,-0.6) ; </span>
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (12.5, 0.5) <span>null</span>;
-
-0.3cm
-
-[scale=0.9] iin <span>0,...,3</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-[] <span> at (1.5+3\*i,-0.6) <span>****</span>; </span> <span> at
-(2+3\*i,-0.6) ; </span>
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (12.5, 0.5) <span>null</span>;
-
-0.3cm
-
-[scale=0.9] iin <span>0,...,3</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-[] at (2+3\*i,-0.6) ;
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (12.5, 0.5) <span>null</span>; at (12.5, -0.5) <span>**n1**</span>;
-
-0.5cm
+\<img src=“./../fig/linkedLists/linkedLists-figure10.png” alt=“Drawing”
+width = “400”/\> 0.5cm
 
 This results in us losing the reference to the first item (`n1`) and the
 object being deleted from the memory.
@@ -303,27 +213,8 @@ variable into it.
         temp = temp.getNext();
     }
 
-0.5cm
-
-[scale=0.85] in <span>-1,...,4</span>
-
-iin <span>0,...,4</span>
-
-(1+3\*i,3\*) – (1+3\*i,1+3\*);
-
-[]
-
-<span> (3\*i, 3\*) rectangle (2+3\*i, 1+3\*); at (1+3\*i,-0.6+3\*)
-<span>temp, []</span>; </span> <span> (3\*i, 3\*) rectangle (2+3\*i,
-1+3\*); at (1+3\*i,-0.6+3\*) ; </span>
-
-at (0.5+3\*i,0.5+3\*) ;
-
-(1.5+3\*i, 0.5+3\*) – (3+3\*i, 0.5+3\*);
-
-at (15.5, 0.5+3\*) <span>null</span>;
-
-at (15.5, -3.5) <span>temp </span>;
+0.5cm \<img src=“./../fig/linkedLists/linkedLists-figure11.png”
+alt=“Drawing” width = “400”/\>
 
 Some examples of traversal
 --------------------------
@@ -501,15 +392,8 @@ A linked list `myList` where head holds a reference to a node with data
 
 0.5cm
 
-[scale=0.8] (1, 5) – (1, 4); (1, 2) – (1, 1); iin <span>0,...,4</span>
-
-(3\*i, 0) rectangle (2+3\*i, 1); (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure12.png” alt=“Drawing”
+width = “400”/\>
 
 [5] Define a method `total()` that returns the sum of data values of all
 nodes in a list based along the lines of `toString()` method.
@@ -589,15 +473,17 @@ a `Node` containing the item as instance variable `data` as shown below:
 
 0.5cm
 
+\<img src=“./../fig/linkedLists/linkedLists-figure13.png” alt=“Drawing”
+width = “400”/\>
+
 0.5cm
 
 For simplicity, the diagram is reduced as follows,
 
 0.5cm
 
-(0, 0) rectangle (2, 1); (1,0) – (1,1); at (1, -0.5) <span>node</span>;
-at (0.5, 0.5) <span>50</span>; at (1.5, 0.5) <span>null</span>; at (1,
--0.5) <span>node</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure14.png” alt=“Drawing”
+width = “400”/\>
 
 ### SCENARIO 1: Inserting in an empty list
 
@@ -606,15 +492,17 @@ We can only insert at index 0 in an empty list. When the list is empty,
 
 0.5cm
 
+\<img src=“./../fig/linkedLists/linkedLists-figure15.png” alt=“Drawing”
+width = “400”/\>
+
 0.5cm
 
 In this case, all we have to do is re-refer `head` to `node`.
 
 0.5cm
 
-(3, 0) rectangle (6, 1.5); (4.5,0) – (4.5,1.5); at (4.5, -0.5)
-<span>node</span>; at (3.75, 0.75) <span>50</span>; at (5.25, 0.75)
-<span>null</span>; at (4.5, -0.5) <span>node</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure16.png” alt=“Drawing”
+width = “400”/\>
 
 ### SCENARIO 2: Inserting in a non-empty list
 
@@ -636,15 +524,8 @@ Let’s say we want to insert a node with data 50 at index 3 (after the
 
 0.5cm
 
-at (1,-0.5) ; iin <span>0,...,4</span>
-
-(3\*i, 0) rectangle (2+3\*i, 1); (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure17.png” alt=“Drawing”
+width = “400”/\>
 
 We must reach the 3rd item (at index 2) and manipulate it’s `next`
 instance variable.
@@ -659,54 +540,18 @@ item at index 2? That’s right - 2 times.
 
 Initial state: 0.5cm
 
-at (0,-0.5) ;
-
-[text=red] at (1.2,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure18.png” alt=“Drawing”
+width = “400”/\>
 
 After iteration 1: 0.5cm
 
-at (1,-0.5) ;
-
-[text=red] at (4,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure19.png” alt=“Drawing”
+width = “400”/\>
 
 After iteration 2: 0.5cm
 
-at (1,-0.5) ;
-
-[text=red] at (7,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure20.png” alt=“Drawing”
+width = “400”/\>
 
 Then we have a reference to the 3rd item in `current`.
 
@@ -714,52 +559,19 @@ The node after `current` should be after the node to inserted.
 
     node.setNext(current.getNext());
 
-at (1,-0.5) ;
-
-[text=red] at (7,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>; (6, -2.5) rectangle (8, -1.5);
-(7,-2.5) – (7,-1.5); at (6.5,-2) ; at (7,-3) ; (7.5, -2) – (9, 0.5);
+\<img src=“./../fig/linkedLists/linkedLists-figure21.png” alt=“Drawing”
+width = “400”/\>
 
 And the node to be inserted should be after `current`.
 
     current.setNext(node);
 
-at (1,-0.5) ;
+\<img src=“./../fig/linkedLists/linkedLists-figure22.png” alt=“Drawing”
+width = “400”/\>
 
-[text=red] at (7,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); (1.5+3\*i, 0.5) – (7.5, -1.5);
-</span> <span> (3\*i, 0) rectangle (2+3\*i, 1); (1.5+3\*i, 0.5) –
-(3+3\*i, 0.5); </span> (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-at (15.5, 0.5) <span>null</span>; (6, -2.5) rectangle (8, -1.5);
-(7,-2.5) – (7,-1.5); at (6.5,-2) ; at (7,-3) ; (7.5, -2) – (9, 0.5);
-
-Thus, the list becomes, 0.5cm
-
-at (1,-0.5) ; iin <span>0,...,5</span>
-
-(2.5\*i, 0) rectangle (2+2.5\*i, 1); (1+2.5\*i,0) – (1+2.5\*i,1);
-
-at (0.5+2.5\*i,0.5) ;
-
-(1.5+2.5\*i, 0.5) – (2.5+2.5\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
+Thus, the list becomes, 0.5cm \<img
+src=“./../fig/linkedLists/linkedLists-figure23.png” alt=“Drawing” width
+= “400”/\>
 
 The overall code is below.
 
@@ -793,99 +605,28 @@ current node (at index `idx-1`) to the node at index `idx+1`.
 
 Initial state **(item to be removed in red)**: 0.2cm
 
-at (0,-0.5) ;
-
-[text=red] at (1.2,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); at (1+3\*i, -0.5) <span>(to be removed)</span>;
-</span> <span> (3\*i, 0) rectangle (2+3\*i, 1); </span> </span>
-(1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
-
-0.2cm
+\<img src=“./../fig/linkedLists/linkedLists-figure24.png” alt=“Drawing”
+width = “400”/\> 0.2cm
 
 After iteration 1: 0.2cm
 
-at (1,-0.5) ;
-
-[text=red] at (4,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); at (1+3\*i, -0.5) <span>(to be removed)</span>;
-</span> <span> (3\*i, 0) rectangle (2+3\*i, 1); </span> </span>
-(1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
-
-0.2cm
+\<img src=“./../fig/linkedLists/linkedLists-figure25.png” alt=“Drawing”
+width = “400”/\> 0.2cm
 
 After iteration 2: 0.2cm
 
-at (1,-0.5) ;
-
-[text=red] at (7,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); at (1+3\*i, -0.5) <span>(to be removed)</span>;
-</span> <span> (3\*i, 0) rectangle (2+3\*i, 1); </span> </span>
-(1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-(1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (15.5, 0.5) <span>null</span>;
-
-0.2cm
+\<img src=“./../fig/linkedLists/linkedLists-figure26.png” alt=“Drawing”
+width = “400”/\> 0.2cm
 
 Updating the link:
 
-at (1,-0.5) ;
-
-[text=red] at (7,-0.5) ;
-
-iin <span>0,...,4</span>
-
-<span> (3\*i, 0) rectangle (2+3\*i, 1); </span> <span> <span> (3\*i, 0)
-rectangle (2+3\*i, 1); </span> <span> (3\*i, 0) rectangle (2+3\*i, 1);
-</span> </span> (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ;
-
-<span> (1.5+3\*i, 0.6) – (2.5+3\*i, 1.5); (2.5+3\*i, 1.5) – (5+3\*i,
-1.5); (5+3\*i, 1.5) – (6+3\*i, 0.6); at (4+3\*i, -0.5)
-<span>unreferenced (deleted)</span>; </span> <span> (1.5+3\*i, 0.5) –
-(3+3\*i, 0.5); </span>
-
-at (15.5, 0.5) <span>null</span>;
-
-0.2cm
+\<img src=“./../fig/linkedLists/linkedLists-figure27.png” alt=“Drawing”
+width = “400”/\> 0.2cm
 
 End product: 0.2cm
 
-at (1,-0.5) ; iin <span>0,...,3</span>
-
-(3\*i, 0) rectangle (2+3\*i, 1); (1+3\*i,0) – (1+3\*i,1);
-
-at (0.5+3\*i,0.5) ; (1.5+3\*i, 0.5) – (3+3\*i, 0.5);
-
-at (12.5, 0.5) <span>null</span>;
+\<img src=“./../fig/linkedLists/linkedLists-figure28.png” alt=“Drawing”
+width = “400”/\>
 
     public Integer remove(int idx) {
         if(idx < 0 || idx >= size()) 

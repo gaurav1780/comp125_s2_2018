@@ -42,9 +42,8 @@ We will use the following example to explain method calls:
     3.  An entry for `callee` with associated formal parameters and
         local variables is added on top of the `call stack`.
 
-    (9,0) rectangle (16,0.5) node[pos=.5] <span>caller()</span>;
-    (9.5,0.5) rectangle (15.5,1) node[pos=.5] <span>callee(13,
-    10)</span>;
+    \<img src=“./../fig/recursion/recursion-figure0.png” alt=“Drawing”
+    width = “400”/\>
 
 3.  The method `callee(13, 10)` terminates with a `return` statement (or
     when the last statement executes). The following happen when
@@ -56,8 +55,8 @@ We will use the following example to explain method calls:
     2.  The entry for `callee` is removed from the call stack. All
         formal parameters and local variables are destroyed.
 
-    (9,0) rectangle (16,0.5) node[pos=.5] <span>caller()</span>; (5,2.5)
-    – (8,0); (5,0) – (8,2.5);
+    \<img src=“./../fig/recursion/recursion-figure1.png” alt=“Drawing”
+    width = “400”/\>
 
 Overview
 ========
@@ -138,81 +137,61 @@ Detailed example
         }
     }
 
-(9,0) rectangle (16,0.5) node[pos=.5] <span>main</span>;
+\<img src=“./../fig/recursion/recursion-figure2.png” alt=“Drawing” width
+= “400”/\> 0.6cm
+
+\<img src=“./../fig/recursion/recursion-figure3.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(9,0) rectangle (16,0.5) node[pos=.5] <span>main</span>; (9.5,0.5)
-rectangle (15.5,1) node[pos=.5] <span>sum(4)</span>;
+\<img src=“./../fig/recursion/recursion-figure4.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(9,0) rectangle (16,0.5) node[pos=.5] <span>main</span>; (9.5,0.5)
-rectangle (15.5,1) node[pos=.5] <span>sum(4)</span>; (10,1) rectangle
-(15,1.5) node[pos=.5] <span>sum(3)</span>;
+\<img src=“./../fig/recursion/recursion-figure5.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(9,0) rectangle (16,0.5) node[pos=.5] <span>main</span>; (9.5,0.5)
-rectangle (15.5,1) node[pos=.5] <span>sum(4)</span>; (10,1) rectangle
-(15,1.5) node[pos=.5] <span>sum(3)</span>; (10.5,1.5) rectangle (14.5,2)
-node[pos=.5] <span>sum(2)</span>;
+\<img src=“./../fig/recursion/recursion-figure6.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(9,0) rectangle (16,0.5) node[pos=.5] <span>main</span>; (9.5,0.5)
-rectangle (15.5,1) node[pos=.5] <span>sum(4)</span>; (10,1) rectangle
-(15,1.5) node[pos=.5] <span>sum(3)</span>; (10.5,1.5) rectangle (14.5,2)
-node[pos=.5] <span>sum(2)</span>; (11,2) rectangle (14,2.5) node[pos=.5]
-<span>sum(1)</span>;
+\<img src=“./../fig/recursion/recursion-figure7.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(9,0) rectangle (16,0.5) node[pos=.5] <span>main</span>; (9.5,0.5)
-rectangle (15.5,1) node[pos=.5] <span>sum(4)</span>; (10,1) rectangle
-(15,1.5) node[pos=.5] <span>sum(3)</span>; (10.5,1.5) rectangle (14.5,2)
-node[pos=.5] <span>sum(2)</span>; (11,2) rectangle (14,2.5) node[pos=.5]
-<span>sum(1)</span>; (11.5,2.5) rectangle (13.5,3) node[pos=.5]
-<span>sum(0)</span>;
+\<img src=“./../fig/recursion/recursion-figure8.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(5,2.5) – (8,0); (5,0) – (8,2.5); (9,0) rectangle (16,0.5) node[pos=.5]
-<span>main</span>; (9.5,0.5) rectangle (15.5,1) node[pos=.5]
-<span>sum(4)</span>; (10,1) rectangle (15,1.5) node[pos=.5]
-<span>sum(3)</span>; (10.5,1.5) rectangle (14.5,2) node[pos=.5]
-<span>sum(2)</span>; (11,2) rectangle (14,2.5) node[pos=.5]
-<span>sum(1)</span>;
+\<img src=“./../fig/recursion/recursion-figure9.png” alt=“Drawing” width
+= “400”/\>
 
 0.6cm
 
-(5,2.5) – (8,0); (5,0) – (8,2.5); (9,0) rectangle (16,0.5) node[pos=.5]
-<span>main</span>; (9.5,0.5) rectangle (15.5,1) node[pos=.5]
-<span>sum(4)</span>; (10,1) rectangle (15,1.5) node[pos=.5]
-<span>sum(3)</span>; (10.5,1.5) rectangle (14.5,2) node[pos=.5]
-<span>sum(2)</span>;
+\<img src=“./../fig/recursion/recursion-figure10.png” alt=“Drawing”
+width = “400”/\>
 
 0.6cm
 
-(5,2.5) – (8,0); (5,0) – (8,2.5); (9,0) rectangle (16,0.5) node[pos=.5]
-<span>main</span>; (9.5,0.5) rectangle (15.5,1) node[pos=.5]
-<span>sum(4)</span>; (10,1) rectangle (15,1.5) node[pos=.5]
-<span>sum(3)</span>;
+\<img src=“./../fig/recursion/recursion-figure11.png” alt=“Drawing”
+width = “400”/\>
 
 0.6cm
 
-(5,2.5) – (8,0); (5,0) – (8,2.5); (9,0) rectangle (16,0.5) node[pos=.5]
-<span>main</span>; (9.5,0.5) rectangle (15.5,1) node[pos=.5]
-<span>sum(4)</span>;
+\<img src=“./../fig/recursion/recursion-figure12.png” alt=“Drawing”
+width = “400”/\>
 
 0.6cm
 
-(5,2.5) – (8,0); (5,0) – (8,2.5); (9,0) rectangle (16,0.5) node[pos=.5]
-<span>main</span>;
-
-0.6cm
-
-(0,2.5) – (3,0); (0,0) – (3,2.5);
+\<img src=“./../fig/recursion/recursion-figure13.png” alt=“Drawing”
+width = “400”/\>
 
 Tracing some more recursive code
 ================================

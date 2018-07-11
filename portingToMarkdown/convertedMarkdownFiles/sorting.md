@@ -225,81 +225,8 @@ sorted part. *
 Example 1 {#example-1 .unnumbered}
 ---------
 
-[scale = 0.8]
-
-in <span>0,...,0</span> <span> at (1.5,) (block) ; </span> at (0, +)
-<span>a[0]</span>; in <span>1,...,7</span> <span> <span> at (1.5,)
-(block) ; </span> <span> at (1.5,) (block) ; </span> at (1.5, +)
-<span>a[]</span>; </span> (1\*1.5, -0.6) – (1\*1.5, -1) – (-0.75, -1) –
-(-0.75, -0.5);
-
-at (0\*1.5,) (block0) ;
-
-in <span>0,...,1</span> <span> at (1.5,) (block) ; </span> in
-<span>2,...,7</span> <span> <span> at (1.5,) (block) ; </span> <span> at
-(1.5,) (block) ; </span> </span> (2\*1.5, -0.6) – (2\*1.5, -1) – (-0.75,
--1) – (-0.75, -0.5);
-
-in <span>0,...,2</span> <span> at (1.5,) (block) ; </span> in
-<span>3,...,7</span>
-
-<span> at (1.5,) (block) ; </span>
-
-at (1.5,) (block) ;
-
-(3\*1.5, -0.6) – (3\*1.5, -1) – (-0.75 + 1\*1.5, -1) – (-0.75 + 1\*1.5,
--0.5);
-
-in <span>0,...,3</span> <span> at (1.5,) (block) ; </span> in
-<span>4,...,7</span> <span> <span> at (1.5,) (block) ; </span> <span> at
-(1.5,) (block) ; </span> </span> (4\*1.5, -0.6) – (4\*1.5, -1) – (-0.75
-+ 2\*1.5, -1) – (-0.75 + 2\*1.5, -0.5);
-
-in <span>0,...,4</span> <span> at (1.5,) (block) ; </span> in
-<span>5,...,7</span> <span> <span> at (1.5,) (block) ; </span> <span> at
-(1.5,) (block) ; </span> </span> (5\*1.5, -0.6) – (5\*1.5, -1) – (-0.75
-+ 2\*1.5, -1) – (-0.75 + 2\*1.5, -0.5);
-
-in <span>0,...,5</span> <span> at (1.5,) (block) ; </span> in
-<span>6,...,7</span> <span> <span> at (1.5,) (block) ; </span> <span> at
-(1.5,) (block) ; </span> </span> (6\*1.5, -0.6) – (6\*1.5, -1) –
-(6\*1.5-0.75, -1) – (6\*1.5-0.75, -0.6);
-
-in <span>0,...,6</span> <span> at (1.5,) (block) ; </span> in
-<span>7,...,7</span> <span> <span> at (1.5,) (block) ; </span> <span> at
-(1.5,) (block) ; </span> </span> (7\*1.5, -0.6) – (7\*1.5, -1) – (-0.75
-+ 3\*1.5, -1) – (-0.75 + 3\*1.5, -0.5);
-
-in <span>0,...,6</span> <span> at (1.5,) (block) ; </span> in
-<span>7,...,7</span> <span> at (1.5,) (block) ; </span>
-
-in <span>0,1,...,7</span> <span> at (1.5,) (block) ; </span>
-
 Example 2 {#example-2 .unnumbered}
 ---------
-
-in <span>0,...,0</span> <span> at (3,) (block) ; </span> at (0, +)
-<span>a[0]</span>; in <span>1,...,3</span> <span> <span> at (3,) (block)
-; </span> <span> at (3,) (block) ; </span> at (3, +) <span>a[]</span>;
-</span> (1\*3, -0.6) – (1\*3, -1) – (-0.75, -1) – (-0.75, -0.5);
-
-at (0\*3,) (block0) ;
-
-in <span>0,...,1</span> <span> at (3,) (block) ; </span> in
-<span>2,...,3</span> <span> <span> at (3,) (block) ; </span> <span> at
-(3,) (block) ; </span> </span> (2\*3, -0.6) – (2\*3, -1) – (-0.75, -1) –
-(-0.75, -0.5);
-
-in <span>0,...,2</span> <span> at (3,) (block) ; </span> in
-<span>3,...,3</span>
-
-<span> at (3,) (block) ; </span>
-
-at (3,) (block) ;
-
-(3\*3, -0.6) – (3\*3, -1) – (3\*3 - 1.5, -1) – (3\*3 - 1.5, -0.6);
-
-in <span>0,...,3</span> <span> at (3,) (block) ; </span>
 
 Insertion sort sample pseudo-code
 ---------------------------------
@@ -345,21 +272,18 @@ insertion sort for the following cases:
 
 2.  `arr = {1, 8, 2, 7, 3, 6}`
 
-
-	~~~
-	    4 3 6 5 2 1
-   	    3 4 6 5 2 1
+1.  4 3 6 5 2 1
+        3 4 6 5 2 1
         3 4 6 5 2 1
         3 4 5 6 2 1
         2 3 4 5 6 1
         1 2 3 4 5 6
-	~~~
-	
-3.  ~~~
-        1 8 2 7 3 6
+
+2.  1 8 2 7 3 6
         1 8 2 7 3 6
         1 2 8 7 3 6
         1 2 7 8 3 6
         1 2 3 7 8 6
         1 2 3 6 7 8
-    
+
+p<span>1cm</span>|
