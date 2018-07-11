@@ -30,7 +30,7 @@ public class Circle {
 
 Because the parameter and instance variable have the same name
 (`radius`), it is not clear which one is affected in the assignment
-statement on line 4 above. <p> &nbsp;<p> Java provides a keyword `this` that
+statement on line 4 above. <p> &nbsp; <p> Java provides a keyword `this` that
 refers to the calling object and gives access to its instance variables
 and methods.
 
@@ -275,14 +275,14 @@ Static members are the ones that are accessed in the context of a class.
 You don’t need to create objects of that class in order to access them.
 For example, consider the number of eyes **dinosaurs** have. Note, we
 didn’t say, how many eyes does Dorothy the dinosaur, or Tyrone the
-dinosaur have. <p> &nbsp;<p> We don’t even need any dinosaur to be alive to
+dinosaur have. <p> &nbsp; <p> We don’t even need any dinosaur to be alive to
 answer that question, since it’s an attribute of the *collective* (the
-class) rather than an *individual* (an object). <p> &nbsp;<p> On the other hand,
+class) rather than an *individual* (an object). <p> &nbsp; <p> On the other hand,
 the variables `weight, height` are different for each dinosaur that was
 there. Hence, they are *instance variables*. Similarly, the body mass
 index (defined as weight divided by square of height) is an *instance
 method*, that must be called on an *individual* (the object), not the
-*collective* (the class) <p> &nbsp;<p> Consider the following class:
+*collective* (the class) <p> &nbsp; <p> Consider the following class:
 
     class Dinosaur {
       public @static@ int nEyes = 2;

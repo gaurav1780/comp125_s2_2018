@@ -23,7 +23,7 @@ def fixImgTag(path):
     # Additional cleaning
 
     p = re.compile(r'(0.1cm|0.5cm|\.{3})', re.DOTALL)
-    content = re.sub(p, '<p> &nbsp;<p>', content)
+    content = re.sub(p, '<p> &nbsp; <p>', content)
 
     file.close()
 
