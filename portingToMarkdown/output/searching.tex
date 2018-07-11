@@ -347,7 +347,7 @@ Let's play a game.
 
 Player 1 thinks of a number between 0 and 64. 
 \vskip 1cm
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure0.png" alt="Drawing" width = "400"/>
 \vskip 1cm
 
 Player 2 guesses the number such that after each guess, player 1 has to say,
@@ -368,7 +368,7 @@ Hypothetically, if the first guess is 8, then, the following scenarios (along wi
 \item Higher. (56/65)
 \end{itemize}
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure1.png" alt="Drawing" width = "400"/>
 \vskip 1cm
 
 On the other hand, if the first guess is 56, then, the following scenarios (along with their probabilities) occur,
@@ -379,7 +379,7 @@ On the other hand, if the first guess is 56, then, the following scenarios (alon
 \item Higher. (8/65)
 \end{itemize}
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure2.png" alt="Drawing" width = "400"/>
 \vskip 1cm
 
 if the first guess is 32, then, then we have,
@@ -390,7 +390,7 @@ if the first guess is 32, then, then we have,
 \item Higher. (32/65)
 \end{itemize}
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure3.png" alt="Drawing" width = "400"/>
 \vskip 1cm
 
 This is a \emph{balanced} outcome as we approximately \textbf{halve} the search space with every guess.
@@ -401,12 +401,12 @@ If not, there are two scenarios:
 \begin{enumerate}
 	\item \texttt{target} is either less than 32. The second guess should be 15 (integer mid-point of 0 and 31). 
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure4.png" alt="Drawing" width = "400"/>
 \vskip 1cm
 
 	\item \texttt{target} is more than the first guess. The second guess should be 48 (integer mid-point of 33 and 64)
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure5.png" alt="Drawing" width = "400"/>
 \end{enumerate}
 	
 \newpage
@@ -414,32 +414,32 @@ A trace of progression when \texttt{target = 17} is given below:
 
 \begin{center}
 Guess 1: 32
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure6.png" alt="Drawing" width = "400"/>
 Feedback: Lower
 \vskip 1cm
 
 Guess 2: 16
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure7.png" alt="Drawing" width = "400"/>
 Feedback: Higher
 \vskip 1cm
 
 Guess 3: 24
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure8.png" alt="Drawing" width = "400"/>
 Feedback: Lower
 \vskip 1cm
 
 Guess 4: 20
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure9.png" alt="Drawing" width = "400"/>
 Feedback: Lower
 \vskip 1cm
 
 Guess 5: 18
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure10.png" alt="Drawing" width = "400"/>
 Feedback: Lower
 \vskip 1cm
 
 Guess 6: 17
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/searching/searching-figure11.png" alt="Drawing" width = "400"/>
 Feedback: \Large{Bingo!}
 \end{center}
 

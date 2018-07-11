@@ -10,15 +10,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/portingToMarkdown$replaceTikzWithPngs_step1.coverage" NAME="replaceTikzWithPngs_step1 Coverage Results" MODIFIED="1531281889916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/portingToMarkdown$replaceTikzWithPngs_step1.coverage" NAME="replaceTikzWithPngs_step1 Coverage Results" MODIFIED="1531284262115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="replaceTikzWithPngs_step1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/replaceTikzWithPngs_step1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+            <state relative-caret-position="301">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -48,7 +48,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="145" />
+    <option name="x" value="128" />
     <option name="y" value="23" />
     <option name="width" value="1190" />
     <option name="height" value="777" />
@@ -232,15 +232,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531281845365</updated>
-      <workItem from="1531281846937" duration="132000" />
+      <workItem from="1531281846937" duration="2391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132000" />
+    <option name="totallyTimeSpent" value="2391000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="145" y="23" width="1190" height="777" extended-state="0" />
+    <frame x="128" y="23" width="1190" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -285,8 +285,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/replaceTikzWithPngs_step1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        <state relative-caret-position="301">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

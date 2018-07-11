@@ -33,7 +33,7 @@ p.next = null;
 
 
 \begin{center}
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure0.png" alt="Drawing" width = "400"/>
 \end{center}
 
 Code to create objects \texttt{p, q} of class \texttt{Node} and resulting memory diagram are:
@@ -48,7 +48,7 @@ p.next = q;
 \end{lstlisting}
 
 \begin{center}
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure1.png" alt="Drawing" width = "400"/>
 \end{center}
 
 Here, we can see that \texttt{p.next} (of type \texttt{Node}) is a shallow copy of \texttt{q} (of type \texttt{Node}).
@@ -92,7 +92,7 @@ The memory diagram for this code is below. Notice they key points:
 \end{itemize}
 
 \begin{center}
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure2.png" alt="Drawing" width = "400"/>
 \end{center}
 
 \begin{exercise}[5]
@@ -175,7 +175,7 @@ The memory diagram for the above code is given below:
 \vskip 0.5cm
 
 \begin{center}
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure3.png" alt="Drawing" width = "400"/>
 \end{center}
 
 \subsection{Simplified representation of linked nodes}
@@ -183,7 +183,7 @@ The memory diagram for the above code is given below:
 The above diagram, while thorough, is \emph{too} detailed. We apply a little abstraction and represent the same diagram as:
 
 \begin{center}
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure4.png" alt="Drawing" width = "400"/>
 \end{center}
 
 \newpage
@@ -200,23 +200,23 @@ while(n1 != null) {
 
 You are modifying the reference \texttt{n1}. Each time you update \texttt{n1}, the instance referred by \texttt{n1} before the update is deleted from memory. Thereby, all the nodes will be erased from the memory at the end of execution. So yeah, not a good idea.
 \vskip 0.5cm
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure5.png" alt="Drawing" width = "400"/>
 \vskip 0.3cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure6.png" alt="Drawing" width = "400"/>
 \vskip 0.3cm
 
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure7.png" alt="Drawing" width = "400"/>
 \vskip 0.3cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure8.png" alt="Drawing" width = "400"/>
 \vskip 0.3cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure9.png" alt="Drawing" width = "400"/>
 \vskip 0.3cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure10.png" alt="Drawing" width = "400"/>
 \vskip 0.5cm
 
 This results in us losing the reference to the first item (\texttt{n1}) and the object being deleted from the memory.
@@ -234,7 +234,7 @@ while(temp != null) {
 \end{lstlisting}
 
 \vskip 0.5cm
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure11.png" alt="Drawing" width = "400"/>
 
 \newpage
 
@@ -422,7 +422,7 @@ A linked list \texttt{myList} where head holds a reference to a node with data 3
 
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure12.png" alt="Drawing" width = "400"/>
 
 \begin{exercise}[5]
 Define a method \texttt{total()} that returns the sum of data values of all nodes in a list based along the lines of \texttt{toString()} method.	
@@ -509,7 +509,7 @@ We can either pass the item to be inserted (in our case, an integer), or a \text
 
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure13.png" alt="Drawing" width = "400"/>
 
 \vskip 0.5cm
 
@@ -517,7 +517,7 @@ For simplicity, the diagram is reduced as follows,
 
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure14.png" alt="Drawing" width = "400"/>
  
 \subsubsection{SCENARIO 1: Inserting in an empty list}
 
@@ -525,7 +525,7 @@ We can only insert at index 0 in an empty list. When the list is empty, \texttt{
 
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure15.png" alt="Drawing" width = "400"/>
 
 \vskip 0.5cm
 
@@ -533,7 +533,7 @@ In this case, all we have to do is re-refer \texttt{head} to \texttt{node}.
 
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure16.png" alt="Drawing" width = "400"/>
 
 \newpage
 
@@ -556,7 +556,7 @@ Let's say we want to insert a node with data 50 at index 3 (after the 3rd item) 
 
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure17.png" alt="Drawing" width = "400"/>
 
 We must reach the 3rd item (at index 2) and manipulate it's \texttt{next} instance variable.
 
@@ -572,17 +572,17 @@ for(int i=1; i < 3; i++) {
 Initial state:
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure18.png" alt="Drawing" width = "400"/>
 
 After iteration 1:
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure19.png" alt="Drawing" width = "400"/>
 
 After iteration 2:
 \vskip 0.5cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure20.png" alt="Drawing" width = "400"/>
 
 Then we have a reference to the 3rd item in \texttt{current}.
 
@@ -592,7 +592,7 @@ The node after \texttt{current} should be after the node to inserted.
 node.setNext(current.getNext());
 \end{lstlisting}
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure21.png" alt="Drawing" width = "400"/>
 
 And the node to be inserted should be after \texttt{current}.
 
@@ -600,11 +600,11 @@ And the node to be inserted should be after \texttt{current}.
 current.setNext(node);
 \end{lstlisting}
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure22.png" alt="Drawing" width = "400"/>
 
 Thus, the list becomes,
 \vskip 0.5cm
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure23.png" alt="Drawing" width = "400"/>
 
 \newpage
 
@@ -640,30 +640,30 @@ If we need to remove an item at a particular index \texttt{idx} (in this example
 Initial state \textbf{(item to be removed in red)}:
 \vskip 0.2cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure24.png" alt="Drawing" width = "400"/>
 \vskip 0.2cm
 
 After iteration 1:
 \vskip 0.2cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure25.png" alt="Drawing" width = "400"/>
 \vskip 0.2cm
 
 After iteration 2:
 \vskip 0.2cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure26.png" alt="Drawing" width = "400"/>
 \vskip 0.2cm
 
 Updating the link:
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure27.png" alt="Drawing" width = "400"/>
 \vskip 0.2cm
 
 End product:
 \vskip 0.2cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/linkedLists/linkedLists-figure28.png" alt="Drawing" width = "400"/>
 
 
 \newpage

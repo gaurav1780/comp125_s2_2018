@@ -564,7 +564,7 @@ An array is stored as a contiguous block of memory.
 
 As an example, if there is an array of 6 integers, 24 bytes are reserved (4 per integer). The first item is stored in the first four bytes, the second item in the next four bytes and so on.
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure0.png" alt="Drawing" width = "400"/>
 
 Thus,
 \begin{itemize}
@@ -610,7 +610,7 @@ Show the steps involved in accessing item \texttt{data[5]}.
 double[] data = 	{12.5, 6.4, 8.5, 9.6, -3.4, -6.8, 0, -4.5};
 \end{lstlisting}
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure1.png" alt="Drawing" width = "400"/>
 \newline
 \end{exercise}
 \begin{answer}
@@ -638,7 +638,7 @@ There are four cases for inserting an item:
 
 For example, if there are 5 items currently being used in an array of size 8, and we try to insert an item 5.6 at index 0, all 5 items need to be moved forward.
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure2.png" alt="Drawing" width = "400"/>
 
 \tikzstyle{occupied} = [draw,fill=red!10!white,minimum size=2.4em]
 \tikzstyle{newItem} = [draw,fill=blue!20!white,minimum size=2.8em]
@@ -654,7 +654,7 @@ For example, if there are 5 items currently being used in an array of size 8, an
 					
 \tikzstyle{line}=[draw] % here
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure3.png" alt="Drawing" width = "400"/>
 
 \item Array is full and you are inserting an item somewhere (not at the end): Double whammy, but  $\mathcal{O}(n) + \mathcal{O}(n)$ is still $\mathcal{O}(n)$.
 \end{enumerate}
@@ -669,7 +669,7 @@ There are two relevant cases for removing an item:
 
 For example, if there are 5 items currently being used in an array of size 8, and we try to remove the first item, all 5 items need to be moved backward by one.
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure4.png" alt="Drawing" width = "400"/>
 \end{enumerate}
 
 \tikzstyle{occupied} = [draw,fill=red!10!white,minimum size=2.4em]
@@ -681,7 +681,7 @@ For example, if there are 5 items currently being used in an array of size 8, an
 					{6.4, 8.5, 9.6, 9.6, -3.4, 0, 0, 0},
 					{6.4, 8.5, 9.6, -3.4, -3.4, 0, 0, 0},
 					{6.4, 8.5, 9.6, -3.4, -3.4, 0, 0, 0}}}
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure5.png" alt="Drawing" width = "400"/>
 
 \vskip 1cm
 
@@ -720,56 +720,56 @@ An iterator offers the exact same functionality.
 Consider a list containing items 10, 70, 20, 90, 30, 80
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure6.png" alt="Drawing" width = "400"/>
 
 \newpage
 
 Initial state of the iterator:
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure7.png" alt="Drawing" width = "400"/>
 
 \vskip 1mm
 
 After accessing the first item (10):
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure8.png" alt="Drawing" width = "400"/>
 
 \vskip 1mm
 
 After accessing the second item (70):
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure9.png" alt="Drawing" width = "400"/>
 
 \vskip 1mm
 
 After accessing the third item (20):
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure10.png" alt="Drawing" width = "400"/>
 
 \vskip 1mm
 
 After accessing the fourth item (90):
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure11.png" alt="Drawing" width = "400"/>
 
 \vskip 1mm
 
 After accessing the fifth item (30):
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure12.png" alt="Drawing" width = "400"/>
 
 \vskip 1mm
 				
 After accessing the last item (80):
 \vskip 1mm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/lists/lists-figure13.png" alt="Drawing" width = "400"/>
 
 \newpage
 

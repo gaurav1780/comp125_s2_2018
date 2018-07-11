@@ -41,14 +41,14 @@ public class Client {
   \item Actual parameters (\texttt{a+3, b*2} = \texttt{13,10}) passed are copied into the formal parameters (\texttt{m,n}). 
   \item An entry for \texttt{callee} with associated formal parameters and local variables is added on top of the \texttt{call stack}.
   \end{enumerate}
-  <img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+  <img src="./../fig/recursion/recursion-figure0.png" alt="Drawing" width = "400"/>
 
   \item The method \texttt{callee(13, 10)} terminates with a \texttt{return} statement (or when the last statement  executes). The following happen when \texttt{callee} terminates,
   \begin{enumerate}
   \item The value returned (in case of non-void methods) replaces the method call. Thus \texttt{flag} inside \texttt{caller} becomes \texttt{false}.
   \item The entry for \texttt{callee} is removed from the call stack. All formal parameters and local variables are destroyed.
   \end{enumerate}
-  <img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+  <img src="./../fig/recursion/recursion-figure1.png" alt="Drawing" width = "400"/>
 \end{enumerate}
 
 \section{Overview}
@@ -142,50 +142,50 @@ public class Client {
 
 \newpage
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure2.png" alt="Drawing" width = "400"/>
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
-
-\vskip0.6cm
-
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure3.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure4.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure5.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure6.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure7.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure8.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure9.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure10.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure11.png" alt="Drawing" width = "400"/>
 
 \vskip0.6cm
 
-<img src="./../fig/classesObjects/classesObjects-ClassUMLDiagram.png" alt="Drawing" width = "400"/>
+<img src="./../fig/recursion/recursion-figure12.png" alt="Drawing" width = "400"/>
+
+\vskip0.6cm
+
+<img src="./../fig/recursion/recursion-figure13.png" alt="Drawing" width = "400"/>
 
 \newpage
 \section{Tracing some more recursive code}
