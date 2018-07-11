@@ -11,7 +11,25 @@ keypoints:
 - A typical java source file named `Hello.java` has a class named `Hello` that contains a `main` method that contains your code.
 - A java source file named `Hello.java` is compiled to a class file named `Hello.class` using the command `javac Hello.java`.
 - A java class file named `Hello.class` is executed on the Java Virtual Machine using the command `java Hello` (no `.class`).
+
+
+# Incomplete list of links
+navigation:
+- id: Welcome to the unit
+  children:
+  - id: Information specific to current offering
+- id: Pen and paper methodology
+- id: Compiling and running java programs from command prompt or terminal
+- id: Java
+  children:
+  - id: How a java program compiles and executes
+- id: Software to install and first program
+  children:
+  - id: First java program
+- id: Some problem solving to revise COMP115/WCOM115
 ---
+* This will become a table of contents (this text will be scraped).
+{:toc}
 # Welcome to the unit
 
 This is the second-programming unit and is taught using Java as a programming language. The focus of the unit is on,
@@ -518,3 +536,7 @@ public class HelloWorld {
 	}
 }
 ```-->
+
+## How a java program compiles and executes
+
+Test
