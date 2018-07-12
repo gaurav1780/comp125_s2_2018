@@ -405,7 +405,7 @@ Therefore, when the `radius` of object `d` is modified, `radius` of
 object `c` also gets updated.
 
 <img src="./../fig/classesObjects2/classesObjects2-figure0.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "300"/>
 
 Let’s say, `c` changes to `null`.
 
@@ -447,7 +447,7 @@ Object `d` is a clone of object `c`. Object `c` and `d` are independent
 objects. Modifying one does not alter the other.
 
 <img src="./../fig/classesObjects2/classesObjects2-figure2.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "300"/>
 
 [3][Create a deep copy] Create a deep copy of `myObj` into `yourObj`.
 Increase the radius of `yourObj` by 2. What is the new radius of
