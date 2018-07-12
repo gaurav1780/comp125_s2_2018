@@ -16,16 +16,10 @@ keypoints:
 # Incomplete list of links
 navigation:
 - id: Welcome to the unit
-  children:
-  - id: Information specific to current offering
 - id: Pen and paper methodology
 - id: Compiling and running java programs from command prompt or terminal
 - id: Java
-  children:
-  - id: How a java program compiles and executes
 - id: Software to install and first program
-  children:
-  - id: First java program
 - id: Some problem solving to revise COMP115/WCOM115
 ---
 * This will become a table of contents (this text will be scraped).

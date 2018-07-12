@@ -9,6 +9,9 @@ objectives:
 - "Understand the meaning of the `--global` configuration flag."
 keypoints:
 -   "Use `git config` with the `--global` option to configure a user name, email address, editor, and other preferences once per machine."
+# Incomplete list of links
+navigation:
+- id: Line Endings
 ---
 
 When we use Git on a new computer for the first time,
@@ -64,12 +67,12 @@ in a later lesson will include this information.
 > $ git config --global core.autocrlf true
 > ~~~
 > {: .bash}
-> 
-> You can read more about this issue 
+>
+> You can read more about this issue
 > [on this GitHub page](https://help.github.com/articles/dealing-with-line-endings/).
 {: .callout}
 
-For these lessons, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy]. 
+For these lessons, we will be interacting with [GitHub](https://github.com/) and so the email address used should be the same as the one used when setting up your GitHub account. If you are concerned about privacy, please review [GitHub's instructions for keeping your email address private][git-privacy].
 If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one. You can change the email address later on by using the `git config` command again.
 
 Dracula also has to set his favorite text editor, following this table:
