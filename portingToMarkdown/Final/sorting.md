@@ -29,6 +29,9 @@ made simpler if a collection is sorted, such as:
 
 -   faster search (using binary search algorithm)
 
+<img src="./../fig/sorting/sorting-figure0.png"
+alt="Drawing" width = "400"/>
+
 Selection Sort
 ==============
 
@@ -37,9 +40,9 @@ The principle behind selection sort is:
 * Swap the smallest item in the unsorted part of the array with the
 first item of the unsorted part of the array*
 
-= [draw,fill=red!40,minimum size=2.4em] =
-[draw,fill=green!90!black,minimum size=2.4em] = [draw,fill=red,minimum
-size=3em]
+<img src="./../fig/sorting/sorting-figure1.png"
+alt="Drawing" width = "400"/>
+
 
 Selection Sort sample pseudo-code
 ---------------------------------
@@ -222,11 +225,18 @@ The principle behind insertion sort is:
 * Put the first item of the unsorted part at the right place in the
 sorted part. *
 
-Example 1 {#example-1 .unnumbered}
+Example 1
 ---------
 
-Example 2 {#example-2 .unnumbered}
+<img src="./../fig/sorting/sorting-figure2.png"
+alt="Drawing" width = "400"/>
+
+Example 2
 ---------
+
+<img src="./../fig/sorting/sorting-figure3.png"
+alt="Drawing" width = "400"/>
+
 
 Insertion sort sample pseudo-code
 ---------------------------------
