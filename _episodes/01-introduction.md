@@ -22,10 +22,16 @@ navigation:
 - id: Software to install and first program
 - id: Some problem solving to revise COMP115/WCOM115
 ---
-* This will become a table of contents (this text will be scraped).
+* Table of contents.
 {:toc}
-# Welcome to the unit
+{::options parse_block_html="true" /}
 
+
+<div class="content-toggle">
+# Welcome to the unit
+</div>
+
+<div class="collapsible-content">
 This is the second-programming unit and is taught using Java as a programming language. The focus of the unit is on,
 
 1. problem solving
@@ -53,9 +59,13 @@ Please refer to the unit guide available at [http://unitguides.mq.edu.au/units](
 5. Important dates, including assessment deadlines
 
 6. Academic honesty policy
+</div>
 
+<div class="content-toggle">
 # Pen and paper methodology
+</div>
 
+<div class="collapsible-content">
 In the unit, we shall be doing a lot of work on computers, where your programs are auto-marked by the machine and instant feedback is given. However, one skill is critical for good understanding of programming and improving problem solving skills -
 
 We will start with trace of some programs to establish what we expect students to do while tracing through code.
@@ -87,11 +97,11 @@ We will start with trace of some programs to establish what we expect students t
 > <script src="https://gist.github.com/gaurav1780/0f335474bbbf8fcf488150b7b411c33a.js"></script>
 > > ## Solution
 > >`a == b` is `false`,
-> > 
+> >
 > > `else` executes
 > >  
 > > `b` decreases by 5, becomes 5
-> > `a == b` is `true`. 
+> > `a == b` is `true`.
 > > `if` block executes and `result` becomes `b (5)`.
 > {: .solution}
 {: .challenge}
@@ -120,14 +130,20 @@ We will start with trace of some programs to establish what we expect students t
 > Trace the flow of the following code -
 > <script src="https://gist.github.com/gaurav1780/0b8969cabc916cff8ed88cfcde631560.js"></script>
 > > ## Solution
-> > At the end of the code, 
-> > `a = 5`, `b = 10`, `c = 2`, `d = false`, `result = 10`. 
-> > Explanation - 
+> > At the end of the code,
+> > `a = 5`, `b = 10`, `c = 2`, `d = false`, `result = 10`.
+> > Explanation -
 > > <script src="https://gist.github.com/gaurav1780/7edd01a8e4ae3182e3ddd7f6166a0e53.js"></script>
 > {: .solution}
 {: .challenge}
 
+</div>
+
+<div class="content-toggle">
 # Compiling and running java programs from command prompt or terminal
+</div>
+
+<div class="collapsible-content">
 After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.
 
 A java source file `HelloWorld.java` is compiled as
@@ -186,8 +202,13 @@ public class HelloWorld {
 }
 ```
 
-# Java
+</div>
 
+<div class="content-toggle">
+# Java
+</div>
+
+<div class="collapsible-content">
 Some history about Java as a programming language follows.
 
 * Java was developed at Sun Microsystems, and most of the work was carried out between 1991 and 1995.
@@ -203,9 +224,13 @@ Some history about Java as a programming language follows.
 ## How a java program compiles and executes
 
 ![](/fig/javaCompileExecute.png)
+</div>
 
+<div class="content-toggle">
 # Software to install and first program
+</div>
 
+<div class="collapsible-content">
 Install the following software **in the order below**. You will be asked to choose your operating system for each software, and whether it's 32-bits or 64-bits. If not sure, use this [link](http://www.computerhope.com/issues/ch001121.htm) to determine the same.
 
 1. Java Standard Development Kit (Java SDK), also called Java Standard Edition (Java SE). On the date of writing this document, the current version is 9u04 (version 9, update 4). You'll be fine as long as you have version 8 or above.
@@ -313,10 +338,10 @@ Hello world!
 >}
 >```
 >
-> > ## SOLUTION 
+> > ## SOLUTION
 > > `main` should be inside the `class`, not the other way round.
 > > Corrected version:
-> > 
+> >
 > > ```java
 > > public class Worker {
 > > 	public static void main(String[] args) {
@@ -360,7 +385,7 @@ Hello world!
 
 ## Adding more functions to a java program
 
-You will notice that the `main` function is labelled `static` by Java. Your program will not run if you remove this keyword. A function being `static` means that the only data it operates on (if any) are the parameters passed. 
+You will notice that the `main` function is labelled `static` by Java. Your program will not run if you remove this keyword. A function being `static` means that the only data it operates on (if any) are the parameters passed.
 
 Equivalent versions of the same function in `Processing` and `Java` are provided below -
 
@@ -372,12 +397,16 @@ Equivalent versions of the same function in `Processing` and `Java` are provided
 The `public` keyword is for consistency and will be used for all functions unless explicitly specified to be `private` \(again, more about this in week 2 and 3\).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XS48hrWdm4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
+<div class="content-toggle">
 # Some problem solving to revise COMP115/WCOM115
+</div>
 
+<div class="collapsible-content">
 ## Problem 1: Determining if a given integer is prime
 
-What is a prime number?_A number more than 1 that is divisible only by 1 and itself.
+What is a prime number?_A number more than 1 that is divisible only by 1 and itself._
 
 ~~~
 Is 37 a prime number?
@@ -534,3 +563,5 @@ public class HelloWorld {
 ## How a java program compiles and executes
 
 Test
+
+</div>
