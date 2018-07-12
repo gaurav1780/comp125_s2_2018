@@ -32,7 +32,7 @@ are:
     p.next = null;
 
 <img src="./../fig/linkedLists/linkedLists-figure0.png" alt="Drawing"
-width = "400"/>
+width = "300"/>
 
 Code to create objects `p, q` of class `Node` and resulting memory
 diagram are:
@@ -84,7 +84,7 @@ The memory diagram for this code is below. Notice they key points:
 -   `q.data (Rectangle)` is a shallow copy of `r2 (Rectangle)`
 
 <img src="./../fig/linkedLists/linkedLists-figure2.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
 [5] Draw a memory diagram for the following code:
 
@@ -157,7 +157,7 @@ The memory diagram for the above code is given below:
 <p> &nbsp; <p>
 
 <img src="./../fig/linkedLists/linkedLists-figure3.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
 Simplified representation of linked nodes
 -----------------------------------------
@@ -166,7 +166,7 @@ The above diagram, while thorough, is *too* detailed. We apply a little
 abstraction and represent the same diagram as:
 
 <img src="./../fig/linkedLists/linkedLists-figure4.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
 Traversing a linked list
 ------------------------
@@ -182,22 +182,22 @@ instance referred by `n1` before the update is deleted from memory.
 Thereby, all the nodes will be erased from the memory at the end of
 execution. So yeah, not a good idea. <p> &nbsp; <p> <img
 src="./../fig/linkedLists/linkedLists-figure5.png" alt="Drawing" width =
-"400"/> 0.3cm
+"550"/> 0.3cm
 
 <img src="./../fig/linkedLists/linkedLists-figure6.png" alt="Drawing"
-width = "400"/> 0.3cm
+width = "550"/> 0.3cm
 
 <img src="./../fig/linkedLists/linkedLists-figure7.png" alt="Drawing"
-width = "400"/> 0.3cm
+width = "550"/> 0.3cm
 
 <img src="./../fig/linkedLists/linkedLists-figure8.png" alt="Drawing"
-width = "400"/> 0.3cm
+width = "550"/> 0.3cm
 
 <img src="./../fig/linkedLists/linkedLists-figure9.png" alt="Drawing"
-width = "400"/> 0.3cm
+width = "550"/> 0.3cm
 
 <img src="./../fig/linkedLists/linkedLists-figure10.png" alt="Drawing"
-width = "400"/> <p> &nbsp; <p>
+width = "550"/> <p> &nbsp; <p>
 
 This results in us losing the reference to the first item (`n1`) and the
 object being deleted from the memory.
@@ -214,7 +214,7 @@ variable into it.
     }
 
 <p> &nbsp; <p> <img src="./../fig/linkedLists/linkedLists-figure11.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "550"/>
 
 Some examples of traversal
 --------------------------
@@ -393,7 +393,7 @@ A linked list `myList` where head holds a reference to a node with data
 <p> &nbsp; <p>
 
 <img src="./../fig/linkedLists/linkedLists-figure12.png" alt="Drawing"
-width = "400"/>
+width = "550"/>
 
 [5] Define a method `total()` that returns the sum of data values of all
 nodes in a list based along the lines of `toString()` method.
@@ -474,7 +474,7 @@ a `Node` containing the item as instance variable `data` as shown below:
 <p> &nbsp; <p>
 
 <img src="./../fig/linkedLists/linkedLists-figure13.png" alt="Drawing"
-width = "400"/>
+width = "350"/>
 
 <p> &nbsp; <p>
 
@@ -483,7 +483,7 @@ For simplicity, the diagram is reduced as follows,
 <p> &nbsp; <p>
 
 <img src="./../fig/linkedLists/linkedLists-figure14.png" alt="Drawing"
-width = "400"/>
+width = "200"/>
 
 ### SCENARIO 1: Inserting in an empty list
 
@@ -493,7 +493,7 @@ We can only insert at index 0 in an empty list. When the list is empty,
 <p> &nbsp; <p>
 
 <img src="./../fig/linkedLists/linkedLists-figure15.png" alt="Drawing"
-width = "400"/>
+width = "200"/>
 
 <p> &nbsp; <p>
 
@@ -525,7 +525,7 @@ Let’s say we want to insert a node with data 50 at index 3 (after the
 <p> &nbsp; <p>
 
 <img src="./../fig/linkedLists/linkedLists-figure17.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
 We must reach the 3rd item (at index 2) and manipulate it’s `next`
 instance variable.
@@ -538,20 +538,26 @@ item at index 2? That’s right - 2 times.
         current = current.getNext();
     }
 
-Initial state: <p> &nbsp; <p>
+Initial state:
 
 <img src="./../fig/linkedLists/linkedLists-figure18.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
-After iteration 1: <p> &nbsp; <p>
+<p> &nbsp; <p>
+
+After iteration 1: 
 
 <img src="./../fig/linkedLists/linkedLists-figure19.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
-After iteration 2: <p> &nbsp; <p>
+<p> &nbsp; <p>
+
+After iteration 2: 
 
 <img src="./../fig/linkedLists/linkedLists-figure20.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
+
+<p> &nbsp; <p>
 
 Then we have a reference to the 3rd item in `current`.
 
@@ -560,18 +566,18 @@ The node after `current` should be after the node to inserted.
     node.setNext(current.getNext());
 
 <img src="./../fig/linkedLists/linkedLists-figure21.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
 And the node to be inserted should be after `current`.
 
     current.setNext(node);
 
 <img src="./../fig/linkedLists/linkedLists-figure22.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
 Thus, the list becomes, <p> &nbsp; <p> <img
 src="./../fig/linkedLists/linkedLists-figure23.png" alt="Drawing" width
-= "400"/>
+= "600"/>
 
 The overall code is below.
 
@@ -606,27 +612,27 @@ current node (at index `idx-1`) to the node at index `idx+1`.
 Initial state **(item to be removed in red)**: 0.2cm
 
 <img src="./../fig/linkedLists/linkedLists-figure24.png" alt="Drawing"
-width = "400"/> 0.2cm
+width = "600"/> 0.2cm
 
 After iteration 1: 0.2cm
 
 <img src="./../fig/linkedLists/linkedLists-figure25.png" alt="Drawing"
-width = "400"/> 0.2cm
+width = "600"/> 0.2cm
 
 After iteration 2: 0.2cm
 
 <img src="./../fig/linkedLists/linkedLists-figure26.png" alt="Drawing"
-width = "400"/> 0.2cm
+width = "600"/> 0.2cm
 
 Updating the link:
 
 <img src="./../fig/linkedLists/linkedLists-figure27.png" alt="Drawing"
-width = "400"/> 0.2cm
+width = "600"/> 0.2cm
 
 End product: 0.2cm
 
 <img src="./../fig/linkedLists/linkedLists-figure28.png" alt="Drawing"
-width = "400"/>
+width = "600"/>
 
     public Integer remove(int idx) {
         if(idx < 0 || idx >= size()) 

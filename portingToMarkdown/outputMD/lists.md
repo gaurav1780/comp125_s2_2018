@@ -579,7 +579,7 @@ As an example, if there is an array of 6 integers, 24 bytes are reserved
 second item in the next four bytes and so on.
 
 <img src="./../fig/lists/lists-figure0.png" alt="Drawing" width =
-"400"/>
+"350"/>
 
 Thus,
 

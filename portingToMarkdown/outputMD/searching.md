@@ -340,9 +340,12 @@ Binary search
 
 Let’s play a game.
 
-Player 1 thinks of a number between 0 and 64. <img
+Player 1 thinks of a number between 0 and 64. 
+
+<img
 src="./../fig/searching/searching-figure0.png" alt="Drawing" width =
 "400"/>
+
 
 Player 2 guesses the number such that after each guess, player 1 has to
 say,

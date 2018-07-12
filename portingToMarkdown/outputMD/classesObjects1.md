@@ -119,7 +119,7 @@ class has yet been created.
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure1.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "200"/>
 
 <p> &nbsp; <p>
 
@@ -148,7 +148,7 @@ Declaration and instantiation
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure2.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "150"/>
 
 Declaration
 -----------
@@ -171,7 +171,7 @@ Declaration and instantiation
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure3.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "350"/>
 
 -   These can be combined:
 
@@ -202,7 +202,7 @@ You can add methods inside the class that can be called on any
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure4.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "250"/>
 
 <p> &nbsp; <p>
 
@@ -281,7 +281,7 @@ Changing visibility to private
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure5.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "250"/>
 
 <p> &nbsp; <p>
 
@@ -310,7 +310,7 @@ instance variables.
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure6.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "250"/>
 
 <p> &nbsp; <p>
 
@@ -422,7 +422,7 @@ Example - Constructor
 <p> &nbsp; <p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure7.png"
-alt="Drawing" width = "400"/>
+alt="Drawing" width = "300"/>
 
 <p> &nbsp; <p>
 

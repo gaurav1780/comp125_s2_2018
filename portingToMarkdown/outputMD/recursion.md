@@ -43,7 +43,7 @@ We will use the following example to explain method calls:
         local variables is added on top of the `call stack`.
 
     <img src="./../fig/recursion/recursion-figure0.png" alt="Drawing"
-    width = "400"/>
+    width = "600"/>
 
 3.  The method `callee(13, 10)` terminates with a `return` statement (or
     when the last statement executes). The following happen when
@@ -56,7 +56,7 @@ We will use the following example to explain method calls:
         formal parameters and local variables are destroyed.
 
     <img src="./../fig/recursion/recursion-figure1.png" alt="Drawing"
-    width = "400"/>
+    width = "600"/>
 
 Overview
 ========
@@ -138,60 +138,60 @@ Detailed example
     }
 
 <img src="./../fig/recursion/recursion-figure2.png" alt="Drawing" width
-= "400"/> 0.6cm
+= "500"/> <p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure3.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure4.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure5.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure6.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure7.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure8.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure9.png" alt="Drawing" width
-= "400"/>
+= "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure10.png" alt="Drawing"
-width = "400"/>
+width = "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure11.png" alt="Drawing"
-width = "400"/>
+width = "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure12.png" alt="Drawing"
-width = "400"/>
+width = "500"/>
 
-0.6cm
+<p> &nbsp; <p>
 
 <img src="./../fig/recursion/recursion-figure13.png" alt="Drawing"
-width = "400"/>
+width = "100"/>
 
 Tracing some more recursive code
 ================================
