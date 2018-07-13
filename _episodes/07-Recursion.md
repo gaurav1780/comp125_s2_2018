@@ -16,12 +16,12 @@ keypoints:
 - "`git pull` copies changes from a remote repository to a local repository."
 
 navigation: 
-- id: Background
-- id: Overview
-- id: Detailed example
-- id: Tracing some more recursive code
-- id: Recursion with Strings
-- id: Actually useful recursion
+- id: "Background"
+- id: "Overview"
+- id: "Detailed example"
+- id: "Tracing some more recursive code"
+- id: "Recursion with Strings"
+- id: "Actually useful recursion"
 ---
 
 ![Source: [Credit: Paul

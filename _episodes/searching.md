@@ -16,9 +16,9 @@ keypoints:
 - "Write a commit message that accurately describes your changes."
 
 navigation: 
-- id: Overview
-- id: Linear search
-- id: Binary search
+- id: "Overview"
+- id: "Linear search"
+- id: "Binary search"
 ---
 
 Overview

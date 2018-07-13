@@ -13,10 +13,11 @@ keypoints:
 - "`git diff` displays differences between commits."
 - "`git checkout` recovers old versions of files."
 
+
 navigation: 
-- id: Overview
-- id: Selection Sort
-- id: Insertion Sort
+- id: "Overview"
+- id: "Selection Sort"
+- id: "Insertion Sort"
 ---
 
 Overview

@@ -12,14 +12,14 @@ keypoints:
 
 # Incomplete list of links
 navigation: 
-- id: Overview
-- id: `this` keyword
-- id: Comparing objects (`compareTo` method)
-- id: Multi-criteria comparison
-- id: Unit testing methods of a class
-- id: JUnit testing
-- id: Static members vs. Instance members
-- id: Manipulating references
+- id: "Overview"
+- id: "`this` keyword"
+- id: "Comparing objects (`compareTo` method)"
+- id: "Multi-criteria comparison"
+- id: "Unit testing methods of a class"
+- id: "JUnit testing"
+- id: "Static members vs. Instance members"
+- id: "Manipulating references"
 ---
 
 

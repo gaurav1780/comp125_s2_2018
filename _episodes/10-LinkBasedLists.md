@@ -10,10 +10,10 @@ keypoints:
 - "Open scientific work is more useful and more highly cited than closed."
 
 navigation: 
-- id: So why are we learning this?
-- id: The `Node` class
-- id: Creating a “linked list” manually
-- id: Custom-built LinkedList class
+- id: "So why are we learning this?"
+- id: "The `Node` class"
+- id: "Creating a “linked list” manually"
+- id: "Custom-built LinkedList class"
 ---
 
 So why are we learning this?

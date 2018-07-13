@@ -12,14 +12,14 @@ keypoints:
 # Incomplete list of links
 
 navigation: 
-- id: Introduction
-- id: Object Oriented Programming – Brief Introduction
-- id: Classes and instances
-- id: Class definition and instantiation
-- id: Getters and setters
-- id: Constructors
-- id: Displaying objects
-- id: Class containing an array
+- id: "Introduction"
+- id: "Object Oriented Programming – Brief Introduction"
+- id: "Classes and instances"
+- id: "Class definition and instantiation"
+- id: "Getters and setters"
+- id: "Constructors"
+- id: "Displaying objects"
+- id: "Class containing an array"
 ---
 
 Introduction

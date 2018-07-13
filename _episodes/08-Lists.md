@@ -12,11 +12,11 @@ keypoints:
 - "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
 
 navigation: 
-- id: Why, oh why?
-- id: The List Interface (adapted from official Java Tutorials)
-- id: Difference between ArrayList and LinkedList
-- id: Custom Implementation of the essence of ArrayList class
-- id: Iterators
+- id: "Why, oh why?"
+- id: "The List Interface (adapted from official Java Tutorials)"
+- id: "Difference between ArrayList and LinkedList"
+- id: "Custom Implementation of the essence of ArrayList class"
+- id: "Iterators"
 ---
 
 Why, oh why?
