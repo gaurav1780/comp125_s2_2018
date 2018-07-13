@@ -9,7 +9,7 @@ def generate(path):
     output = 'navigation: \n'
 
     for x in re.findall(p, content):
-        characters = ["\"", "“", "”", "*"]
+        characters = ["*", "_"]
         for character in characters:
             x = x.replace(character, "")
 
