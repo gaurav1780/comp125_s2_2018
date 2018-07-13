@@ -12,7 +12,7 @@ keypoints:
 navigation: 
 - id: So why are we learning this?
 - id: The `Node` class
-- id: Creating a *“linked list”* manually
+- id: Creating a linked list manually
 - id: Custom-built LinkedList class
 ---
 
@@ -132,7 +132,7 @@ Node r = new Node(c1, p);
 
 Solution not provided for this exercise
 
-Creating a *“linked list”* manually
+Creating a *"linked list"* manually
 ===================================
 
 Once we understand the `Node` class, we can link objects of `Node`
