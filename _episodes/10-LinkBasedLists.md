@@ -12,7 +12,7 @@ keypoints:
 navigation: 
 - id: So why are we learning this?
 - id: The `Node` class
-- id: Creating a linked list manually
+- id: Creating a “linked list” manually
 - id: Custom-built LinkedList class
 ---
 

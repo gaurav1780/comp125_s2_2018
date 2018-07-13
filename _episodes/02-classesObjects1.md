@@ -10,6 +10,7 @@ objectives:
 keypoints:
 -   "Use `git config` with the `--global` option to configure a user name, email address, editor, and other preferences once per machine."
 # Incomplete list of links
+
 navigation: 
 - id: Introduction
 - id: Object Oriented Programming – Brief Introduction
