@@ -1,4 +1,4 @@
 navigation: 
-- id: Overview
-- id: Selection Sort
-- id: Insertion Sort
+- id: "Overview"
+- id: "Selection Sort"
+- id: "Insertion Sort"

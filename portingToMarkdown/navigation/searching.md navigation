@@ -1,4 +1,4 @@
 navigation: 
-- id: Overview
-- id: Linear search
-- id: Binary search
+- id: "Overview"
+- id: "Linear search"
+- id: "Binary search"

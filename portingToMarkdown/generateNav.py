@@ -13,7 +13,7 @@ def generate(path):
         for character in characters:
             x = x.replace(character, "")
 
-        output += ('- id: ' + x + '\n')
+        output += ('- id: \"' + x + '\"\n')
 
     file.close()
 
