@@ -340,12 +340,9 @@ Binary search
 
 Let’s play a game.
 
-Player 1 thinks of a number between 0 and 64. 
-
-<img
+Player 1 thinks of a number between 0 and 64. <img
 src="./../fig/searching/searching-figure0.png" alt="Drawing" width =
 "400"/>
-
 
 Player 2 guesses the number such that after each guess, player 1 has to
 say,
@@ -416,34 +413,22 @@ If not, there are two scenarios:
 
 A trace of progression when `target = 17` is given below:
 
-Guess 1: 32 
-
-<img src="./../fig/searching/searching-figure6.png"
+Guess 1: 32 <img src="./../fig/searching/searching-figure6.png"
 alt="Drawing" width = "400"/> Feedback: Lower
 
-Guess 2: 16 
-
-<img src="./../fig/searching/searching-figure7.png"
+Guess 2: 16 <img src="./../fig/searching/searching-figure7.png"
 alt="Drawing" width = "400"/> Feedback: Higher
 
-Guess 3: 24 
-
-<img src="./../fig/searching/searching-figure8.png"
+Guess 3: 24 <img src="./../fig/searching/searching-figure8.png"
 alt="Drawing" width = "400"/> Feedback: Lower
 
-Guess 4: 20 
-
-<img src="./../fig/searching/searching-figure9.png"
+Guess 4: 20 <img src="./../fig/searching/searching-figure9.png"
 alt="Drawing" width = "400"/> Feedback: Lower
 
-Guess 5: 18 
-
-<img src="./../fig/searching/searching-figure10.png"
+Guess 5: 18 <img src="./../fig/searching/searching-figure10.png"
 alt="Drawing" width = "400"/> Feedback: Lower
 
-Guess 6: 17 
-
-<img src="./../fig/searching/searching-figure11.png"
+Guess 6: 17 <img src="./../fig/searching/searching-figure11.png"
 alt="Drawing" width = "400"/> Feedback:
 
 Thus, in the worst case for 64 numbers, we need 6 guesses.

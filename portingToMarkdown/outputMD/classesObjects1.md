@@ -30,12 +30,12 @@ Class definition specifies -
     objects and class methods or static methods that are called on the
     class directly without invoking objects.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure0.png"
 alt="Drawing" width = "400"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 Example: Java’s String class
 ----------------------------
@@ -74,7 +74,7 @@ Standard way of instantiatiation
 -   First is known as *lazy instantiation*, just for Strings.
 
 -   Second (using `new`) is generally how we create instances. More
-    information about this will come a bit later in this lecture <p> &nbsp; <p>
+    information about this will come a bit later in this lecture <p> &nbsp; </p>
 
 Class definition and instantiation
 ==================================
@@ -116,12 +116,12 @@ provides a template or blueprint for the class. No complete program
 using this class has yet been written, and no object (instance) of this
 class has yet been created.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure1.png"
-alt="Drawing" width = "200"/>
+alt="Drawing" width = "400"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 [6][Define a class] Define a class for a Circle that is represented by
 its radius.
@@ -145,10 +145,10 @@ Declaration and instantiation
     ClassName  classVar; //declaration
     Rectangle r; //example
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure2.png"
-alt="Drawing" width = "150"/>
+alt="Drawing" width = "400"/>
 
 Declaration
 -----------
@@ -168,10 +168,10 @@ Declaration and instantiation
     classVar = new ClassName(); //instantiation
     r = new Rectangle(); //example
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure3.png"
-alt="Drawing" width = "350"/>
+alt="Drawing" width = "400"/>
 
 -   These can be combined:
 
@@ -199,12 +199,12 @@ Adding method to a class
 You can add methods inside the class that can be called on any
 *instance* of the class.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure4.png"
-alt="Drawing" width = "250"/>
+alt="Drawing" width = "400"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 The dot (.) operator
 --------------------
@@ -233,7 +233,7 @@ human language (as in *“Gaurav’s class”* or *“Matt’s workshop”*)
       System.out.println(r.area());
       
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 Here, `r.area()` returns `width * height` and since the method is called
 on object `r`, it returns `r.width * r.height`. Had the method been
@@ -278,12 +278,12 @@ System.out.println(r.area());
 Changing visibility to private
 ------------------------------
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure5.png"
-alt="Drawing" width = "250"/>
+alt="Drawing" width = "400"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 Now, the instance variables `width` and `height` are visible only within
 the class definition.
@@ -307,12 +307,12 @@ instance variable as `width = Math.abs(w)`. This is a typical case and
 setters are in charge of validating data before assigning it to the
 instance variables.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure6.png"
-alt="Drawing" width = "250"/>
+alt="Drawing" width = "400"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 [8][Add getters and setters] Add getters and setters to class `Circle`.
 The setter should result in radius becoming zero if the parameter passed
@@ -419,12 +419,12 @@ Example - Constructor
         //rest of the code
     }
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure7.png"
-alt="Drawing" width = "300"/>
+alt="Drawing" width = "400"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 Constructors should call setters - always!
 ------------------------------------------
@@ -462,7 +462,7 @@ can define the default constructor as,
 the class `Circle`.
 
 1.  No parameters passed (default constructor): Assigns the value 1.0 to
-    radius <p> &nbsp; <p> through the setter.
+    radius <p> &nbsp; </p> through the setter.
 
 2.  Parameter passed for radius (parameterized constructor): Assigns the
     passed value to radius through the setter.
@@ -587,7 +587,7 @@ The client is as follows,
 
 At this stage, the memory state looks like,
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 If we change the values of the instance variables as,
 
@@ -601,10 +601,10 @@ If we change the values of the instance variables as,
 
 It now becomes,
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/classesObjects1/classesObjects1-figure8.png"
-alt="Drawing" width = "400"/> <p> &nbsp; <p>
+alt="Drawing" width = "400"/> <p> &nbsp; </p>
 
 Finally, we can modify the items of the array as,
 
@@ -618,6 +618,6 @@ Finally, we can modify the items of the array as,
         }
     }
 
-This gives us, <p> &nbsp; <p> <img
+This gives us, <p> &nbsp; </p> <img
 src="./../fig/classesObjects1/classesObjects1-figure9.png" alt="Drawing"
 width = "400"/>

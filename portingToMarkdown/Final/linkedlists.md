@@ -154,7 +154,7 @@ together to create a *“linked” list*.
 
 The memory diagram for the above code is given below:
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure3.png" alt="Drawing"
 width = "600"/>
@@ -180,7 +180,7 @@ Traversing a linked list
 You are modifying the reference `n1`. Each time you update `n1`, the
 instance referred by `n1` before the update is deleted from memory.
 Thereby, all the nodes will be erased from the memory at the end of
-execution. So yeah, not a good idea. <p> &nbsp; <p> <img
+execution. So yeah, not a good idea. <p> &nbsp; </p> <img
 src="./../fig/linkedLists/linkedLists-figure5.png" alt="Drawing" width =
 "550"/> 0.3cm
 
@@ -197,7 +197,7 @@ width = "550"/> 0.3cm
 width = "550"/> 0.3cm
 
 <img src="./../fig/linkedLists/linkedLists-figure10.png" alt="Drawing"
-width = "550"/> <p> &nbsp; <p>
+width = "550"/> <p> &nbsp; </p>
 
 This results in us losing the reference to the first item (`n1`) and the
 object being deleted from the memory.
@@ -213,7 +213,7 @@ variable into it.
         temp = temp.getNext();
     }
 
-<p> &nbsp; <p> <img src="./../fig/linkedLists/linkedLists-figure11.png"
+<p> &nbsp; </p> <img src="./../fig/linkedLists/linkedLists-figure11.png"
 alt="Drawing" width = "550"/>
 
 Some examples of traversal
@@ -390,7 +390,7 @@ A linked list `myList` where head holds a reference to a node with data
 70, whose `next` instance variable holds a reference to a node with data
 20, is given below.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure12.png" alt="Drawing"
 width = "550"/>
@@ -433,7 +433,7 @@ Assuming that indexing begins with 0, we can write a method
 `idx`.
 
 First, we should write a method `size()` since valid indices would then
-be `[0, <p> &nbsp; <p>, size()-1]`.
+be `[0, <p> &nbsp; </p>, size()-1]`.
 
     public int size() {
         int count = 0;
@@ -457,7 +457,7 @@ Our method `get(int idx)` is:
         move forward idx times. 
         if idx = 0, don't move forward at all
         if idx = 4, move forward four times
-        <p> &nbsp; <p>
+        <p> &nbsp; </p>
         */
         for(int i=0; i < idx; i++) {
             temp = temp.getNext();
@@ -471,16 +471,16 @@ Inserting an item at an arbitrary index
 We can either pass the item to be inserted (in our case, an integer), or
 a `Node` containing the item as instance variable `data` as shown below:
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure13.png" alt="Drawing"
 width = "350"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 For simplicity, the diagram is reduced as follows,
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure14.png" alt="Drawing"
 width = "200"/>
@@ -490,16 +490,16 @@ width = "200"/>
 We can only insert at index 0 in an empty list. When the list is empty,
 `head` is `null`.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure15.png" alt="Drawing"
 width = "200"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 In this case, all we have to do is re-refer `head` to `node`.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure16.png" alt="Drawing"
 width = "400"/>
@@ -522,7 +522,7 @@ For any index more than 0, we follow the procedure described below:
 Let’s say we want to insert a node with data 50 at index 3 (after the
 3rd item) in the following list.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/linkedLists/linkedLists-figure17.png" alt="Drawing"
 width = "600"/>
@@ -543,21 +543,21 @@ Initial state:
 <img src="./../fig/linkedLists/linkedLists-figure18.png" alt="Drawing"
 width = "600"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 After iteration 1: 
 
 <img src="./../fig/linkedLists/linkedLists-figure19.png" alt="Drawing"
 width = "600"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 After iteration 2: 
 
 <img src="./../fig/linkedLists/linkedLists-figure20.png" alt="Drawing"
 width = "600"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 Then we have a reference to the 3rd item in `current`.
 
@@ -575,7 +575,7 @@ And the node to be inserted should be after `current`.
 <img src="./../fig/linkedLists/linkedLists-figure22.png" alt="Drawing"
 width = "600"/>
 
-Thus, the list becomes, <p> &nbsp; <p> <img
+Thus, the list becomes, <p> &nbsp; </p> <img
 src="./../fig/linkedLists/linkedLists-figure23.png" alt="Drawing" width
 = "600"/>
 

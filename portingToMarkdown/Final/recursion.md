@@ -138,57 +138,57 @@ Detailed example
     }
 
 <img src="./../fig/recursion/recursion-figure2.png" alt="Drawing" width
-= "500"/> <p> &nbsp; <p>
+= "500"/> <p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure3.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure4.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure5.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure6.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure7.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure8.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure9.png" alt="Drawing" width
 = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure10.png" alt="Drawing"
 width = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure11.png" alt="Drawing"
 width = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure12.png" alt="Drawing"
 width = "500"/>
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 <img src="./../fig/recursion/recursion-figure13.png" alt="Drawing"
 width = "100"/>

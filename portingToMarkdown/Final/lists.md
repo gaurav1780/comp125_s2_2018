@@ -106,14 +106,14 @@ throughout the official java documentation), the syntax to create a List
 object is:
 
     import java.util.ArrayList; 
-    <p> &nbsp; <p>
+    <p> &nbsp; </p>
     ArrayList<T> list = new ArrayList<T>(); //prior to JDK 7
     ArrayList<T> list = new ArrayList(); //JDK 7 and later
 
 Similarly for `LinkedList`,
 
     import java.util.LinkedList; 
-    <p> &nbsp; <p>
+    <p> &nbsp; </p>
     LinkedList<T> list = new LinkedList<T>(); //prior to JDK 7
     LinkedList<T> list = new LinkedList(); //JDK 7 and later
 
@@ -293,7 +293,7 @@ The purpose of this program is to,
 **PART 1 - Loading values**
 
     import java.util.*; //both ArrayList and Random are in util package
-    <p> &nbsp; <p>
+    <p> &nbsp; </p>
     int min = 25;
     int max = 10000;
     Random randomizer = new Random(); //random number generator
@@ -512,11 +512,11 @@ As the last step, we will add two more methods.
             return result;
         }
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
 Putting it all together (and compacting a little bit),
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
     [escapechar=^]
     class MyArrayList {
@@ -629,7 +629,7 @@ it packed as an integer: 90.
 
 Show the steps involved in accessing item `data[5]`.
 
-<p> &nbsp; <p>
+<p> &nbsp; </p>
 
     double[] data =     {12.5, 6.4, 8.5, 9.6, -3.4, -6.8, 0, -4.5};
 
