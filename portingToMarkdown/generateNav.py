@@ -9,6 +9,13 @@ def generate(path):
     output = 'navigation: \n'
 
     for x in re.findall(p, content):
+        characters = ["\"", "“", "”", "*"]
+        for character in characters:
+            x = x.replace(character, "")
+
+        if x[0] == "`": # ' at start of nav breaks nav, remove if found
+            x = x.replace("`", "", 2)
+
         output += ('- id: ' + x + '\n')
 
     file.close()
