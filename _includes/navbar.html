@@ -35,8 +35,11 @@
                   {% comment %} For each episode, generate a navigation dropdown based on the front matter variable 'navigation'. {% endcomment %}
 			            <ul class="dropdown-menu">
                     {% for nav-item in episode.navigation %}
-                      {% assign nav_id = nav-item.id | downcase | replace: " ", "-" %}
-                    <li><a href="{{ page.root }}{{ episode.url }}#{{ nav_id }}">{{ nav-item.id }}</a></li>
+                      {% assign nav_id = nav-item.id %}
+                      {% assign nav_id_stripped = nav-item.id | downcase | remove: '–'| remove: '-' | remove: ':' |
+                          remove: '`' | remove: '(' | remove: ')' | remove: ',' | remove: '?' | remove: '.' | remove: '/' %}
+                      {% assign nav_id_stripped = nav_id_stripped | replace: " ", "-" %}
+                    <li><a href="{{ page.root }}{{ episode.url }}#{{ nav_id_stripped }}">{{ nav-item.id }}</a></li>
                     {% endfor %}
 			             </ul>
                </li>
