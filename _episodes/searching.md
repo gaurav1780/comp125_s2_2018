@@ -14,816 +14,613 @@ keypoints:
 - "`git add` puts files in the staging area."
 - "`git commit` saves the staged content as a new commit in the local repository."
 - "Write a commit message that accurately describes your changes."
+
+navigation: 
+- id: Overview
+- id: Linear search
+- id: Binary search
 ---
 
-First let's make sure we're still in the right directory.
-You should be in the `planets` directory.
-
-~~~
-$ pwd
-~~~
-{: .bash}
-~~~
-/home/vlad/Desktop/planets
-~~~
-{: .output}
-
-If you are still in `moons`, navigate back up to `planets`
-
-~~~
-$ pwd
-~~~
-{: .bash}
-~~~
-/home/vlad/Desktop/planets/moons
-~~~
-{: .output}
-~~~
-$ cd ..
-~~~
-{: .bash}
-
-Let's create a file called `mars.txt` that contains some notes
-about the Red Planet's suitability as a base.
-We'll use `nano` to edit the file;
-you can use whatever editor you like.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
-
-~~~
-$ nano mars.txt
-~~~
-{: .bash}
-
-Type the text below into the `mars.txt` file:
-
-~~~
-Cold and dry, but everything is my favorite color
-~~~
-
-`mars.txt` now contains a single line, which we can see by running:
-
-~~~
-$ ls
-~~~
-{: .bash}
-
-~~~
-mars.txt
-~~~
-{: .output}
-
-~~~
-$ cat mars.txt
-~~~
-{: .bash}
-
-~~~
-Cold and dry, but everything is my favorite color
-~~~
-{: .output}
-
-If we check the status of our project again,
-Git tells us that it's noticed the new file:
-
-~~~
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-
-Initial commit
-
-Untracked files:
-   (use "git add <file>..." to include in what will be committed)
-
-	mars.txt
-nothing added to commit but untracked files present (use "git add" to track)
-~~~
-{: .output}
-
-The "untracked files" message means that there's a file in the directory
-that Git isn't keeping track of.
-We can tell Git to track a file using `git add`:
-
-~~~
-$ git add mars.txt
-~~~
-{: .bash}
-
-and then check that the right thing happened:
-
-~~~
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-
-Initial commit
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-	new file:   mars.txt
-
-~~~
-{: .output}
-
-Git now knows that it's supposed to keep track of `mars.txt`,
-but it hasn't recorded these changes as a commit yet.
-To get it to do that,
-we need to run one more command:
-
-~~~
-$ git commit -m "Start notes on Mars as a base"
-~~~
-{: .bash}
-
-~~~
-[master (root-commit) f22b25e] Start notes on Mars as a base
- 1 file changed, 1 insertion(+)
- create mode 100644 mars.txt
-~~~
-{: .output}
-
-When we run `git commit`,
-Git takes everything we have told it to save by using `git add`
-and stores a copy permanently inside the special `.git` directory.
-This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
-(or [revision]({{ page.root }}/reference/#revision)) and its short identifier is `f22b25e`.
-Your commit may have another identifier.
-
-We use the `-m` flag (for "message")
-to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
-If we just run `git commit` without the `-m` option,
-Git will launch `nano` (or whatever other editor we configured as `core.editor`)
-so that we can write a longer message.
-
-[Good commit messages][commit-messages] start with a brief (<50 characters) statement about the
-changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>.
-If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
-
-If we run `git status` now:
-
-~~~
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-nothing to commit, working directory clean
-~~~
-{: .output}
-
-it tells us everything is up to date.
-If we want to know what we've done recently,
-we can ask Git to show us the project's history using `git log`:
-
-~~~
-$ git log
-~~~
-{: .bash}
-
-~~~
-commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 09:51:46 2013 -0400
-
-    Start notes on Mars as a base
-~~~
-{: .output}
-
-`git log` lists all commits  made to a repository in reverse chronological order.
-The listing for each commit includes
-the commit's full identifier
-(which starts with the same characters as
-the short identifier printed by the `git commit` command earlier),
-the commit's author,
-when it was created,
-and the log message Git was given when the commit was created.
-
-> ## Where Are My Changes?
->
-> If we run `ls` at this point, we will still see just one file called `mars.txt`.
-> That's because Git saves information about files' history
-> in the special `.git` directory mentioned earlier
-> so that our filesystem doesn't become cluttered
-> (and so that we can't accidentally edit or delete an old version).
-{: .callout}
-
-Now suppose Dracula adds more information to the file.
-(Again, we'll edit with `nano` and then `cat` the file to show its contents;
-you may use a different editor, and don't need to `cat`.)
-
-~~~
-$ nano mars.txt
-$ cat mars.txt
-~~~
-{: .bash}
-
-~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-~~~
-{: .output}
-
-When we run `git status` now,
-it tells us that a file it already knows about has been modified:
-
-~~~
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   mars.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-~~~
-{: .output}
-
-The last line is the key phrase:
-"no changes added to commit".
-We have changed this file,
-but we haven't told Git we will want to save those changes
-(which we do with `git add`)
-nor have we saved them (which we do with `git commit`).
-So let's do that now. It is good practice to always review
-our changes before saving them. We do this using `git diff`.
-This shows us the differences between the current state
-of the file and the most recently saved version:
-
-~~~
-$ git diff
-~~~
-{: .bash}
-
-~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..315bf3a 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,2 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-~~~
-{: .output}
-
-The output is cryptic because
-it is actually a series of commands for tools like editors and `patch`
-telling them how to reconstruct one file given the other.
-If we break it down into pieces:
-
-1.  The first line tells us that Git is producing output similar to the Unix `diff` command
-    comparing the old and new versions of the file.
-2.  The second line tells exactly which versions of the file
-    Git is comparing;
-    `df0654a` and `315bf3a` are unique computer-generated labels for those versions.
-3.  The third and fourth lines once again show the name of the file being changed.
-4.  The remaining lines are the most interesting, they show us the actual differences
-    and the lines on which they occur.
-    In particular,
-    the `+` marker in the first column shows where we added a line.
-
-After reviewing our change, it's time to commit it:
-
-~~~
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   mars.txt
-
-no changes added to commit (use "git add" and/or "git commit -a")
-~~~
-{: .output}
-
-Whoops:
-Git won't commit because we didn't use `git add` first.
-Let's fix that:
-
-~~~
-$ git add mars.txt
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
-~~~
-{: .bash}
-
-~~~
-[master 34961b1] Add concerns about effects of Mars' moons on Wolfman
- 1 file changed, 1 insertion(+)
-~~~
-{: .output}
-
-Git insists that we add files to the set we want to commit
-before actually committing anything. This allows us to commit our
-changes in stages and capture changes in logical portions rather than
-only large batches.
-For example,
-suppose we're adding a few citations to relevant research to our thesis.
-We might want to commit those additions,
-and the corresponding bibliography entries,
-but *not* commit some of our work drafting the conclusion
-(which we haven't finished yet).
-
-To allow for this,
-Git has a special *staging area*
-where it keeps track of things that have been added to
-the current [changeset]({{ page.root }}/reference/#changeset)
-but not yet committed.
-
-> ## Staging Area
->
-> If you think of Git as taking snapshots of changes over the life of a project,
-> `git add` specifies *what* will go in a snapshot
-> (putting things in the staging area),
-> and `git commit` then *actually takes* the snapshot, and
-> makes a permanent record of it (as a commit).
-> If you don't have anything staged when you type `git commit`,
-> Git will prompt you to use `git commit -a` or `git commit --all`,
-> which is kind of like gathering *everyone* for the picture!
-> However, it's almost always better to
-> explicitly add things to the staging area, because you might
-> commit changes you forgot you made. (Going back to snapshots,
-> you might get the extra with incomplete makeup walking on
-> the stage for the snapshot because you used `-a`!)
-> Try to stage things manually,
-> or you might find yourself searching for "git undo commit" more
-> than you would like!
-{: .callout}
-
-![The Git Staging Area](../fig/git-staging-area.svg)
-
-Let's watch as our changes to a file move from our editor
-to the staging area
-and into long-term storage.
-First,
-we'll add another line to the file:
-
-~~~
-$ nano mars.txt
-$ cat mars.txt
-~~~
-{: .bash}
-
-~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-~~~
-{: .output}
-
-~~~
-$ git diff
-~~~
-{: .bash}
-
-~~~
-diff --git a/mars.txt b/mars.txt
-index 315bf3a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1,2 +1,3 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-~~~
-{: .output}
-
-So far, so good:
-we've added one line to the end of the file
-(shown with a `+` in the first column).
-Now let's put that change in the staging area
-and see what `git diff` reports:
-
-~~~
-$ git add mars.txt
-$ git diff
-~~~
-{: .bash}
-
-There is no output:
-as far as Git can tell,
-there's no difference between what it's been asked to save permanently
-and what's currently in the directory.
-However,
-if we do this:
-
-~~~
-$ git diff --staged
-~~~
-{: .bash}
-
-~~~
-diff --git a/mars.txt b/mars.txt
-index 315bf3a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1,2 +1,3 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-~~~
-{: .output}
-
-it shows us the difference between
-the last committed change
-and what's in the staging area.
-Let's save our changes:
-
-~~~
-$ git commit -m "Discuss concerns about Mars' climate for Mummy"
-~~~
-{: .bash}
-
-~~~
-[master 005937f] Discuss concerns about Mars' climate for Mummy
- 1 file changed, 1 insertion(+)
-~~~
-{: .output}
-
-check our status:
-
-~~~
-$ git status
-~~~
-{: .bash}
-
-~~~
-On branch master
-nothing to commit, working directory clean
-~~~
-{: .output}
-
-and look at the history of what we've done so far:
-
-~~~
-$ git log
-~~~
-{: .bash}
-
-~~~
-commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 10:14:07 2013 -0400
-
-    Discuss concerns about Mars' climate for Mummy
-
-commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 10:07:21 2013 -0400
-
-    Add concerns about effects of Mars' moons on Wolfman
-
-commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 09:51:46 2013 -0400
-
-    Start notes on Mars as a base
-~~~
-{: .output}
-
-> ## Word-based diffing
->
-> Sometimes, e.g. in the case of the text documents a line-wise
-> diff is too coarse. That is where the `--color-words` option of
-> `git diff` comes in very useful as it highlights the changed
-> words using colors.
-{: .callout}
-
-> ## Paging the Log
->
-> When the output of `git log` is too long to fit in your screen,
-> `git` uses a program to split it into pages of the size of your screen.
-> When this "pager" is called, you will notice that the last line in your
-> screen is a `:`, instead of your usual prompt.
->
-> *   To get out of the pager, press <kbd>Q</kbd>.
-> *   To move to the next page, press <kbd>Spacebar</kbd>.
-> *   To search for `some_word` in all pages,
->     press <kbd>/</kbd>
->     and type `some_word`.
->     Navigate through matches pressing <kbd>N</kbd>.
-{: .callout}
-
-> ## Limit Log Size
->
-> To avoid having `git log` cover your entire terminal screen, you can limit the
-> number of commits that Git lists by using `-N`, where `N` is the number of
-> commits that you want to view. For example, if you only want information from
-> the last commit you can use:
->
-> ~~~
-> $ git log -1
-> ~~~
-> {: .bash}
->
-> ~~~
-> commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-> Author: Vlad Dracula <vlad@tran.sylvan.ia>
-> Date:   Thu Aug 22 10:14:07 2013 -0400
->
->    Discuss concerns about Mars' climate for Mummy
-> ~~~
-> {: .output}
->
-> You can also reduce the quantity of information using the
-> `--oneline` option:
->
-> ~~~
-> $ git log --oneline
-> ~~~
-> {: .bash}
-> ~~~
-> * 005937f Discuss concerns about Mars' climate for Mummy
-> * 34961b1 Add concerns about effects of Mars' moons on Wolfman
-> * f22b25e Start notes on Mars as a base
-> ~~~
-> {: .output}
->
-> You can also combine the `--oneline` options with others. One useful
-> combination is:
->
-> ~~~
-> $ git log --oneline --graph --all --decorate
-> ~~~
-> {: .bash}
-> ~~~
-> * 005937f Discuss concerns about Mars' climate for Mummy (HEAD, master)
-> * 34961b1 Add concerns about effects of Mars' moons on Wolfman
-> * f22b25e Start notes on Mars as a base
-> ~~~
-> {: .output}
-{: .callout}
-
-> ## Directories
->
-> Two important facts you should know about directories in Git.
->
-> 1. Git does not track directories on their own, only files within them.
->    Try it for yourself:
->
->    ~~~
->    $ mkdir directory
->    $ git status
->    $ git add directory
->    $ git status
->    ~~~
->    {: .bash}
->
->    Note, our newly created empty directory `directory` does not appear in
->    the list of untracked files even if we explicitly add it (_via_ `git add`) to our
->    repository. This is the reason why you will sometimes see `.gitkeep` files
->    in otherwise empty directories. Unlike `.gitignore`, these files are not special
->    and their sole purpose is to populate a directory so that Git adds it to
->    the repository. In fact, you can name such files anything you like.
->
-> 2. If you create a directory in your Git repository and populate it with files,
->    you can add all files in the directory at once by:
->
->    ~~~
->    git add <directory-with-files>
->    ~~~
->    {: .bash}
->
-{: .callout}
-
-To recap, when we want to add changes to our repository,
-we first need to add the changed files to the staging area
-(`git add`) and then commit the staged changes to the
-repository (`git commit`):
-
-![The Git Commit Workflow](../fig/git-committing.svg)
-
-> ## Choosing a Commit Message
->
-> Which of the following commit messages would be most appropriate for the
-> last commit made to `mars.txt`?
->
-> 1. "Changes"
-> 2. "Added line 'But the Mummy will appreciate the lack of humidity' to mars.txt"
-> 3. "Discuss effects of Mars' climate on the Mummy"
->
-> > ## Solution
-> > Answer 1 is not descriptive enough, and the purpose of the commit is unclear; 
-> > and answer 2 is redundant to using "git diff" to see what changed in this commit;
-> > but answer 3 is good: short, descriptive, and imperative.
-> {: .solution}
-{: .challenge}
-
-> ## Committing Changes to Git
->
-> Which command(s) below would save the changes of `myfile.txt`
-> to my local Git repository?
->
-> 1. ~~~
->    $ git commit -m "my recent changes"
->    ~~~
->    {: .bash}
-> 2. ~~~
->    $ git init myfile.txt
->    $ git commit -m "my recent changes"
->    ~~~
->    {: .bash}
-> 3. ~~~
->    $ git add myfile.txt
->    $ git commit -m "my recent changes"
->    ~~~
->    {: .bash}
-> 4. ~~~
->    $ git commit -m myfile.txt "my recent changes"
->    ~~~
->    {: .bash}
->
-> > ## Solution
-> >
-> > 1. Would only create a commit if files have already been staged.
-> > 2. Would try to create a new repository.
-> > 3. Is correct: first add the file to the staging area, then commit.
-> > 4. Would try to commit a file "my recent changes" with the message myfile.txt.
-> {: .solution}
-{: .challenge}
-
-> ## Committing Multiple Files
->
-> The staging area can hold changes from any number of files
-> that you want to commit as a single snapshot.
->
-> 1. Add some text to `mars.txt` noting your decision
-> to consider Venus as a base
-> 2. Create a new file `venus.txt` with your initial thoughts
-> about Venus as a base for you and your friends
-> 3. Add changes from both files to the staging area,
-> and commit those changes.
->
-> > ## Solution
-> >
-> > First we make our changes to the `mars.txt` and `venus.txt` files:
-> > ~~~
-> > $ nano mars.txt
-> > $ cat mars.txt
-> > ~~~
-> > {: .bash}
-> > ~~~
-> > Maybe I should start with a base on Venus.
-> > ~~~
-> > {: .output}
-> > ~~~
-> > $ nano venus.txt
-> > $ cat venus.txt
-> > ~~~
-> > {: .bash}
-> > ~~~
-> > Venus is a nice planet and I definitely should consider it as a base.
-> > ~~~
-> > {: .output}
-> > Now you can add both files to the staging area. We can do that in one line:
-> >
-> > ~~~
-> > $ git add mars.txt venus.txt
-> > ~~~
-> > {: .bash}
-> > Or with multiple commands:
-> > ~~~
-> > $ git add mars.txt
-> > $ git add venus.txt
-> > ~~~
-> > {: .bash}
-> > Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
-> > ~~~
-> > $ git commit -m "Write plans to start a base on Venus"
-> > ~~~
-> > {: .bash}
-> > ~~~
-> > [master cc127c2]
-> >  Write plans to start a base on Venus
-> >  2 files changed, 2 insertions(+)
-> >  create mode 100644 venus.txt
-> > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
-
-> ## `bio` Repository
->
-> * Create a new Git repository on your computer called `bio`.
-> * Write a three-line biography for yourself in a file called `me.txt`,
-> commit your changes
-> * Modify one line, add a fourth line
-> * Display the differences
-> between its updated state and its original state.
->
-> > ## Solution
-> >
-> > If needed, move out of the `planets` folder:
-> >
-> > ~~~
-> > $ cd ..
-> > ~~~
-> > {: .bash}
-> >
-> > Create a new folder called `bio` and 'move' into it:
-> >
-> > ~~~
-> > $ mkdir bio
-> > $ cd bio
-> > ~~~
-> > {: .bash}
-> >
-> > Initialise git:
-> >
-> > ~~~
-> > $ git init
-> > ~~~
-> > {: .bash}
-> >
-> > Create your biography file `me.txt` using `nano` or another text editor.
-> > Once in place, add and commit it to the repository:
-> >
-> > ~~~
-> > $ git add me.txt
-> > $ git commit -m'Adding biography file'
-> > ~~~
-> > {: .bash}
-> >
-> > Modify the file as described (modify one line, add a fourth line).
-> > To display the differences
-> > between its updated state and its original state, use `git diff`:
-> >
-> > ~~~
-> > $ git diff me.txt
-> > ~~~
-> > {: .bash}
-> >
-> {: .solution}
-{: .challenge}
-
-> ## Author and Committer
->
-> For each of the commits you have done, Git stored your name twice.
-> You are named as the author and as the committer. You can observe
-> that by telling Git to show you more information about your last
-> commits:
->
-> ~~~
-> $ git log --format=full
-> ~~~
-> {: .bash}
->
-> When committing you can name someone else as the author:
->
-> ~~~
-> $ git commit --author="Vlad Dracula <vlad@tran.sylvan.ia>"
-> ~~~
-> {: .bash}
->
-> Create a new repository and create two commits: one without the
-> `--author` option and one by naming a colleague of yours as the
-> author. Run `git log` and `git log --format=full`. Think about ways
-> how that can allow you to collaborate with your colleagues.
->
-> > ## Solution
-> >
-> > ~~~
-> > $ git add me.txt
-> > $ git commit -m "Update Vlad's bio." --author="Frank N. Stein <franky@monster.com>"
-> > ~~~
-> > {: .bash}
-> > ~~~
-> > [master 4162a51] Update Vlad's bio.
-> > Author: Frank N. Stein <franky@monster.com>
-> > 1 file changed, 2 insertions(+), 2 deletions(-)
-> >
-> > $ git log --format=full
-> > commit 4162a51b273ba799a9d395dd70c45d96dba4e2ff
-> > Author: Frank N. Stein <franky@monster.com>
-> > Commit: Vlad Dracula <vlad@tran.sylvan.ia>
-> >
-> > Update Vlad's bio.
-> >
-> > commit aaa3271e5e26f75f11892718e83a3e2743fab8ea
-> > Author: Vlad Dracula <vlad@tran.sylvan.ia>
-> > Commit: Vlad Dracula <vlad@tran.sylvan.ia>
-> >
-> > Vlad's initial bio.
-> > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
-
-[commit-messages]: https://chris.beams.io/posts/git-commit/
+Overview
+========
+
+![image](images/sherlock.jpg)
+
+We explore the two standard searching algorithms, along with analysis of
+the two.
+
+Why is searching important?
+---------------------------
+
+Searching for *something* is one of the most fundamental operations on
+which more complex algorithms are based. Consider some of the following
+real-life scenarios,
+
+-   Check if a particular student is enrolled in a unit.
+
+-   Check if there are any items between a certain price range in the
+bill.
+
+-   Compute the number of debit transactions over a certain amount in
+your monthly credit card statement.
+
+-   Determine a mutually suitable time for a meeting between 2 people
+(and more broadly $n$ people) based on their calendars.
+
+-   Determine the number of public holidays on a Friday/Monday (Yes!)
+
+-   Find the number of rows in a spreadsheet that have a keyword in it.
+
+-   Find the number of rows in a spreadsheet that have any one of $n$
+keywords in it.
+
+-   Find the number of rows in a spreadsheet that have every one of $n$
+keywords in it.
+
+All these problems rely on searching through some data set.
+
+So, it’s really very simple! You need searching to become good at
+algorithms that build on top of it.
+
+Linear search
+=============
+
+Version 1
+---------
+
+-   Simplest search algorithm.
+
+-   Look at each element of the array in turn.
+
+-   If you find the target, stop.
+
+-   If you don’t find the target by the end, it’s not there.
+
+<!-- -->
+
+/**
+* Perform a linear search for a given integer in the array.
+* @return true if target present, false otherwise
+*/
+public static boolean linearSearch(int[] arr, int target) {
+for( int i=0; i<arr.length; i++ ) {
+if (arr[i] == target) {
+return true;
+} else {
+return false;
+}
+}
+}
+
+Trace the above code with the following pair of values:
+
+-   `arr = {1, 7, 2, 9}, target = 1`
+
+-   `arr = {1, 7, 2, 9}, target = 8`
+
+-   `arr = {1, 7, 2, 9}, target = 9`
+
+When `target = 1`, the first item (1) matches the target and the method
+returns `true` correctly.
+
+When `target = 8`, the first item (1) **DOES NOT** match the target and
+the method immediately returns `false` - which is incidentally correct.
+
+When `target = 9`, the first item (1) **DOES NOT** match the target and
+the method immediately returns `false` - .
+
+You can see the problem is the `else` block. The code returns `false` as
+soon as an item doesn’t match the target.
+
+So, if the target exists in the array at any index other than 0, the
+method incorrectly returns `false`.
+
+[8][Debug linear search] Write a corrected version of the linear search
+code from above.
+
+public static boolean linearSearch(int[] arr, int target) <span> for(
+int i=0; i\<arr.length; i++ ) <span> if (arr[i] == target) <span> return
+true; </span> </span> return false; </span>
+
+[8][Analyze linear search performance] Consider an array
+`arr = {1, 2, \cdots, n}` (such that `arr.length = n`). How many times
+is the loop executed in the linear search code to search for,
+
+-   `target = 1`
+
+-   `target = n/2`
+
+-   `target = n + 1`
+
+-   `target = 1: 1 time`
+
+-   `target = n/2: n/2 times`
+
+-   `target = n + 1: n times`
+
+What information did you deduce from the above exercise?
+
+-   In the best case scenario (fastest possible), the loop executes just
+once (irrespective of the value of $n$)
+
+-   In the worst case scenario (slowest possible), the loop executes $n$
+times. Thus, the time taken is proportional to $n$ (as time is
+proportional to number of loop executions and number of loop
+executions is proportional to $n$).
+
+Version 2
+---------
+
+[8][Code for linear search - version 2] Write a method in java that
+implements the pseudo-code from Algorithm [lsv2]
+
+[H] set `idx` to first item’s index (0 in java) set `result` to `false`
+return `result`
+
+public static boolean linearSearchV2(int[] arr, int target) {
+boolean result = false;
+for(int i=0; i < arr.length; i++) {
+if(arr[i] == target) {
+result = true;
+}
+}
+return result;
+}
+
+[8][Analysis of linear search - version 2] Consider an array
+`arr = {1, 2, \cdots, n}` (such that `arr.length = n`). How many times
+is the loop executed in linear search - version 2 code to search for,
+
+-   `target = 1`
+
+-   `target = n/2`
+
+-   `target = n + 1`
+
+-   `target = 1: n times`
+
+-   `target = n/2: n times`
+
+-   `target = n + 1: n times`
+
+Comparison of versions 1 and 2
+------------------------------
+
+[5][Comparison of versions 1 and 2] Which version is better - 1 or 2?
+
+The loop in both versions executes $n$ times in the worst case scenario,
+but in the best case scenario, version 1 loop executes only once
+(compared to $n$ executions of the loop in version 2). Therefore,
+
+Returning index instead of true/false
+-------------------------------------
+
+Returning `true` if an item is found in an array (and `false` otherwise)
+is fine, but returning the index at which it is found (and -1 if it
+isn’t) is even better!
+
+[8][Modify linear search to return index] Write a method that when
+passed,
+
+-   an integer array `arr`
+
+-   an integer `target`
+
+returns,
+
+-   the first index in `arr` at which `target` exists
+
+-   -1 if `target` is not found in `arr`
+
+public static int linearSearch(int[] arr, int target) <span> for(int
+i=0; i \< arr.length; i++) <span> if(arr[i] == target) <span> return i;
+</span> </span> return -1; </span>
+
+Handling `null` array
+---------------------
+
+Since we’ll be dealing with arrays and other containers throughout this
+unit, it’s important to think about the scenario where a `null` array or
+object is passed to a method.
+
+The code that we wrote will raise a `NullPointerException` because we’d
+be accessing `arr.length` for a `null` array. This is no good. We must
+handle a `null` array scenario before accessing the array.
+
+The course of action is dependent on the problem.
+
+[5][Handling `null` array] What value should we return if a `null` array
+is passed to a linear search algorithm, and why?
+
+The method should return -1 if you try to search for an item in a `null`
+array, since -1 is not a valid index, hence it is a clear error code
+indicating that the array was `null`.
+
+Variation 1
+-----------
+
+[8][Returning number of occurrences of an item] Write a method that
+returns the number of times an integer `target` exists in an integer
+array `arr`. Return 0 if `target` doesn’t exist in `arr`. Handle the
+`null` array scenario (think about what value should be returned in
+`arr = null`.
+
+Perform an analysis of how many times the iterating loop executes in the
+best and worst cases.
+
+public static int count(int[] arr, int target) {
+if(arr == null)
+return 0; //a null array has 0 occurrences of any item
+int count = 0;
+for(int i=0; i < arr.length; i++) {
+if(arr[i] == target) {
+count++;
+}
+}
+return count;
+}
+
+Variation 2
+-----------
+
+[8][Returning index of the last occurrence of an item] Write a method
+that returns the last index at which an integer `target` exists in an
+integer array `arr`. Return -1 if no such item is found. Handle the
+`null` array scenario (think about what value should be returned in
+`arr = null`.
+
+Perform an analysis of how many times the iterating loop executes in the
+best and worst cases.
+
+Version 1 (slow in best case scenario)
+
+public static int lastIndexOf(int[] arr, int target) {
+if(arr == null)
+return -1;
+int result = -1;
+for(int i=0; i < arr.length; i++) {
+if(arr[i] == target) {
+result = i; //over-write earlier index with later index
+}
+}
+return result;
+}
+
+Best case: n times Worst case: n times Version 2 (faster in best case
+scenario)
+
+public static int lastIndexOf(int[] arr, int target) {
+if(arr == null)
+return -1;
+for(int i=arr.length - 1; i >= 0; i--) {
+if(arr[i] == target) {
+return i;
+}
+}
+return -1;
+}
+
+Best case: 1 time Worst case: n times
+
+Variation 3
+-----------
+
+[8][Returning index of an item in a given range] Write a method, that
+when passed three values, `int[] arr, int low, int high`, returns the
+first index at which an item in the range $[low, high]$ (including both
+`low` and `high`) exists in an integer array `arr`. Return -1 if no such
+item is found. Handle the `null` array scenario (think about what value
+should be returned in `arr = null`.
+
+Perform an analysis of how many times the iterating loop executes in the
+best and worst cases.
+
+Version 1 (slow in best case scenario)
+
+public static int indexOf(int[] arr, int low, int high) {
+if(arr == null)
+return -1;
+for(int i=0; i < arr.length; i++) {
+if(arr[i] >= low && arr[i] <= high) {
+return i;
+}
+}
+return -1;
+}
+
+Best case: 1 time Worst case: n times
+
+Variation 4
+-----------
+
+[8][Returning first positive item after a negative item] Write a method,
+that when passed an integer array, returns the first index at which a
+positive item (more than 0) exists such that the previous item is a
+negative item (less than 0). Return -1 if no such item is found. Handle
+the `null` array scenario (think about what value should be returned in
+`arr = null`.
+
+Perform an analysis of how many times the iterating loop executes in the
+best and worst cases.
+
+Version 1 (slow in best case scenario)
+
+public static int indexOfPosAfterNeg(int[] arr) {
+if(arr == null)
+return -1;
+for(int i=1; i < arr.length; i++) { //IMPORTANT: start from index 1
+if(arr[i] > 0 && arr[i-1] < 0) {
+return i;
+}
+}
+return -1;
+}
+
+Best case: 1 time Worst case: n times
+
+Binary search
+=============
+
+Let’s play a game.
+
+Player 1 thinks of a number between 0 and 64. 
+
+<img
+src="./../fig/searching/searching-figure0.png" alt="Drawing" width =
+"400"/>
+
+
+Player 2 guesses the number such that after each guess, player 1 has to
+say,
+
+-   Bingo! If the guess is correct
+
+-   Higher. If guess is more than the number thought
+
+-   Lower. If guess is less than the number thought
+
+What would be your guesses? And why?
+
+Hypothetically, if the first guess is 8, then, the following scenarios
+(along with their probabilities) occur,
+
+-   Bingo! (1/65)
+
+-   Lower. (8/65)
+
+-   Higher. (56/65)
+
+<img src="./../fig/searching/searching-figure1.png" alt="Drawing" width
+= "400"/>
+
+On the other hand, if the first guess is 56, then, the following
+scenarios (along with their probabilities) occur,
+
+-   Bingo! (1/65)
+
+-   Lower. (56/65)
+
+-   Higher. (8/65)
+
+<img src="./../fig/searching/searching-figure2.png" alt="Drawing" width
+= "400"/>
+
+if the first guess is 32, then, then we have,
+
+-   Bingo! (1/65)
+
+-   Lower. (32/65)
+
+-   Higher. (32/65)
+
+<img src="./../fig/searching/searching-figure3.png" alt="Drawing" width
+= "400"/>
+
+This is a *balanced* outcome as we approximately **halve** the search
+space with every guess.
+
+Let’s look at the *hits* after each iteration. We have already seen that
+if `target = 32`, we get a hit after the first *balanced* guess (32)
+itself.
+
+If not, there are two scenarios:
+
+1.  `target` is either less than 32. The second guess should be 15
+(integer mid-point of 0 and 31).
+
+<img src="./../fig/searching/searching-figure4.png" alt="Drawing"
+width = "400"/>
+
+2.  `target` is more than the first guess. The second guess should be 48
+(integer mid-point of 33 and 64)
+
+<img src="./../fig/searching/searching-figure5.png" alt="Drawing"
+width = "400"/>
+
+A trace of progression when `target = 17` is given below:
+
+Guess 1: 32 
+
+<img src="./../fig/searching/searching-figure6.png"
+alt="Drawing" width = "400"/> Feedback: Lower
+
+Guess 2: 16 
+
+<img src="./../fig/searching/searching-figure7.png"
+alt="Drawing" width = "400"/> Feedback: Higher
+
+Guess 3: 24 
+
+<img src="./../fig/searching/searching-figure8.png"
+alt="Drawing" width = "400"/> Feedback: Lower
+
+Guess 4: 20 
+
+<img src="./../fig/searching/searching-figure9.png"
+alt="Drawing" width = "400"/> Feedback: Lower
+
+Guess 5: 18 
+
+<img src="./../fig/searching/searching-figure10.png"
+alt="Drawing" width = "400"/> Feedback: Lower
+
+Guess 6: 17 
+
+<img src="./../fig/searching/searching-figure11.png"
+alt="Drawing" width = "400"/> Feedback:
+
+Thus, in the worst case for 64 numbers, we need 6 guesses.
+
+If we had 128 numbers to start with instead of 64, the first guess would
+reduce the search space to 64.
+
+Thus, in the worst case for 128 numbers, we need 7 guesses.
+
+By the same logic, we can reach the following table:
+
+If $n = 2^k$, then $k = log_2(n)$ (read as *“k is log n base 2”*).\
+More generally, if $n = b^k$, then $k = log_b(n)$.
+
+The number of iterations required to guess a number from a range of size
+$n$ when feedback is provided is $log_2(n)$.
+
+Formal discussion on binary search
+----------------------------------
+
+The key in the game we played above is the feedback the guesser gets.
+Without that we can’t split the search space in half. Similarly, if we
+are to use binary search on an integer array, **it must be sorted**.
+
+It doesn’t matter if it’s sorted in ascending order or descending, as we
+can tweak the algorithm accordingly.
+
+The pseudo-code for binary search algorithm is given below:
+
+[H] set `first` to first item’s index (0 in java) set `last` to last
+item’s index (arr.length - 1 in java) return -1 //first \> last implies
+no match
+
+[5][Binary search - descending order] Tweak binary search algorithm to
+use on array sorted in **descending** order. Re-write only those lines
+that need to be modified. The fewer changes, the better!
+
+Line 8: Change \< (less) to \> (more). That way larger items are
+searched in left half and smaller items in right half.
+
+Binary search code
+------------------
+
+Following is a code for binary search in Java (with comments).
+
+``` {style="junit"}
+/**
+* @param arr: array in which item should be searched.
+* if not null, arr is assumed to be sorted in ascending order
+* @param target: item to be searched
+* @return index at which target exists in arr, 
+* -1 if target doe not exist in arr
+*/
+public static int binarySearch(double[] arr, double target) {
+if(arr == null) {
+return -1;
+int first = 0; //left boundary of search space
+int last = arr.length - 1; //right boundary of search space
+while(first <= last) { //search space not exhausted
+int median = (first+last)/2; //mid-point
+if(target == arr[median])
+return median; //return index where target found
+if(target < arr[median])
+last = median - 1; //search in left half
+else
+first = median + 1; //search in right half
+}
+//loops exists means search space exhausted
+return -1;  
+}
+```
+
+[1][Trace execution of binary search] Trace the execution of the above
+code for,
+
+arr = {0, 0, 0, 2, 5, 54, 54, 56, 65, 68, 68, 69, 72, 82, 90, 120}  
+
+and target =
+
+1.  54
+
+<span>p<span>1cm</span>|p<span>1cm</span>|p<span>2cm</span>|p<span>1.5cm</span>|p<span>2.5cm</span>|
+p<span>4cm</span></span> first & last & first $\leq$ last & median &
+arr[median] & target ? arr[median] (== or \< or \>)\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+
+2.  42
+
+<span>p<span>1cm</span>|p<span>1cm</span>|p<span>2cm</span>|p<span>1.5cm</span>|p<span>2.5cm</span>|
+p<span>4cm</span></span> first & last & first $\leq$ last & median &
+arr[median] & target ? arr[median] (== or \< or \>)\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+
+3.  120
+
+<span>p<span>1cm</span>|p<span>1cm</span>|p<span>2cm</span>|p<span>1.5cm</span>|p<span>2.5cm</span>|
+p<span>4cm</span></span> first & last & first $\leq$ last & median &
+arr[median] & target ? arr[median] (== or \< or \>)\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+& & & & &\
+
+1.  54
+
+<span>p<span>1cm</span>|p<span>1cm</span>|p<span>2cm</span>|p<span>1.5cm</span>|p<span>2.5cm</span>|
+p<span>4cm</span></span> first & last & first $\leq$ last & median &
+arr[median] & target ? arr[median] (== or \< or \>)\
+0 & 15 & true & 7 & 56 & 54 \< 56\
+0 & 6 & true & 3 & 2 & 54 \> 2\
+4 & 6 & true & 5 & 54 & 54 == 54\
+
+2.  42
+
+<span>p<span>1cm</span>|p<span>1cm</span>|p<span>2cm</span>|p<span>1.5cm</span>|p<span>2.5cm</span>|
+p<span>4cm</span></span> first & last & first $\leq$ last & median &
+arr[median] & target ? arr[median] (== or \< or \>)\
+0 & 15 & true & 7 & 56 & 42 \< 56\
+0 & 6 & true & 3 & 2 & 42 \> 2\
+4 & 6 & true & 5 & 54 & 42 \< 54\
+4 & 4 & true & 7 & 56 & 42 \> 5\
+5 & 4 & false & & &\
+
+3.  120
+
+<span>p<span>1cm</span>|p<span>1cm</span>|p<span>2cm</span>|p<span>1.5cm</span>|p<span>2.5cm</span>|
+p<span>4cm</span></span> first & last & first $\leq$ last & median &
+arr[median] & target ? arr[median] (== or \< or \>)\
+0 & 15 & true & 7 & 56 & 120 \> 56\
+8 & 15 & true & 11 & 69 & 120 \> 69\
+12 & 15 & true & 13 & 82 & 120 \> 82\
+14 & 15 & true & 14 & 90 & 120 \> 90\
+15 & 15 & true & 15 & 120 & 120 == 90\
+
+[8][Analysis of Binary Search] What are the best case and worst case
+scenarios for binary search and for each scenario, how many times is the
+loop executed?
+
+-   Best case scenario: Item at the first median. Number of loop
+executions: 1
+
+-   Worst case scenario: Item not present in the array. Number of loop
+executions (for an array of size $n$): $log_2(n)$.
+
+p<span>1cm</span>|

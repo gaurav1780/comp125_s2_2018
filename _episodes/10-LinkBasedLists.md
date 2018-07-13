@@ -8,114 +8,662 @@ objectives:
 - "Explain how a version control system can be leveraged as an electronic lab notebook for computational work."
 keypoints:
 - "Open scientific work is more useful and more highly cited than closed."
+
+navigation: 
+- id: So why are we learning this?
+- id: The `Node` class
+- id: Creating a *“linked list”* manually
+- id: Custom-built LinkedList class
 ---
 
-> The opposite of "open" isn't "closed".
-> The opposite of "open" is "broken".
->
-> --- John Wilbanks
-{: .quotation}
+So why are we learning this?
+============================
 
-Free sharing of information might be the ideal in science,
-but the reality is often more complicated.
-Normal practice today looks something like this:
+We have mentioned in earlier sections that `ArrayLists` generally offer
+better performance than `LinkedLists`. So why do we need to learn about
+`LinkedLists`? Because:
 
-*   A scientist collects some data and stores it on a machine
-    that is occasionally backed up by her department.
-*   She then writes or modifies a few small programs
-    (which also reside on her machine)
-    to analyze that data.
-*   Once she has some results,
-    she writes them up and submits her paper.
-    She might include her data—a growing number of journals require this—but
-    she probably doesn't include her code.
-*   Time passes.
-*   The journal sends her reviews written anonymously by a handful of other people in her field.
-    She revises her paper to satisfy them,
-    during which time she might also modify the scripts she wrote earlier,
-    and resubmits.
-*   More time passes.
-*   The paper is eventually published.
-    It might include a link to an online copy of her data,
-    but the paper itself will be behind a paywall:
-    only people who have personal or institutional access
-    will be able to read it.
+1.  `LinkedLists` require $n$ small pockets of memory to hold $n$ values
+rather than 1 large block of memory.
 
-For a growing number of scientists,
-though,
-the process looks like this:
+2.  `LinkedLists` are a fantastic introduction to *recursive data
+structures*. We can extend these to binary trees, trees, and graphs.
 
-*   The data that the scientist collects is stored in an open access repository
-    like [figshare](https://figshare.com/) or
-    [Zenodo](https://zenodo.org), possibly as soon as it's collected,
-    and given its own
-    [Digital Object Identifier](https://en.wikipedia.org/wiki/Digital_object_identifier) (DOI).
-    Or the data was already published and is stored in
-    [Dryad](https://datadryad.org/).
-*   The scientist creates a new repository on GitHub to hold her work.
-*   As she does her analysis,
-    she pushes changes to her scripts
-    (and possibly some output files)
-    to that repository.
-    She also uses the repository for her paper;
-    that repository is then the hub for collaboration with her colleagues.
-*   When she's happy with the state of her paper,
-    she posts a version to [arXiv](https://arxiv.org/)
-    or some other preprint server
-    to invite feedback from peers.
-*   Based on that feedback,
-    she may post several revisions
-    before finally submitting her paper to a journal.
-*   The published paper includes links to her preprint
-    and to her code and data repositories,
-    which  makes it much easier for other scientists
-    to use her work as starting point for their own research.
+The `Node` class
+================
 
-This open model accelerates discovery:
-the more open work is,
-[the more widely it is cited and re-used](https://doi.org/10.1371/journal.pone.0000308).
-However,
-people who want to work this way need to make some decisions
-about what exactly "open" means and how to do it. You can find more on the different aspects of Open Science in [this book](https://link.springer.com/book/10.1007/978-3-319-00026-8).
+A `Node` is a class that has two instance variables: `next: Node` and
+`data: <dataType>`.
 
-This is one of the (many) reasons we teach version control.
-When used diligently,
-it answers the "how" question
-by acting as a shareable electronic lab notebook for computational work:
+A `Node` holding `int` data is:
 
-*   The conceptual stages of your work are documented, including who did
-    what and when. Every step is stamped with an identifier (the commit ID)
-    that is for most intents and purposes unique.
-*   You can tie documentation of rationale, ideas, and other
-    intellectual work directly to the changes that spring from them.
-*   You can refer to what you used in your research to obtain your
-    computational results in a way that is unique and recoverable.
-*   With a version control system such as Git, 
-    the entire history of the repository is easy to archive for perpetuity.
+class Node {
+public int data;
+public Node next; //reference to next node
+}
 
-> ## Making Code Citable
->
-> Anything that is hosted in a version control repository (data, code, papers, 
-> etc.) can be turned into a citable object. You'll learn how to do this in
-> [lesson 12: Citation]({{ page.root }}/12-citation/).
-{: .callout}
+Code to create object `p` of class `Node` and resulting memory diagram
+are:
 
-> ## How Reproducible Is My Work?
->
-> Ask one of your labmates to reproduce a result you recently obtained
-> using only what they can find in your papers or on the web.
-> Try to do the same for one of their results,
-> then try to do it for a result from a lab you work with.
-{: .challenge}
+Node p = new Node();
+p.data = 25;
+p.next = null;
 
-> ## How to Find an Appropriate Data Repository?
->
-> Surf the internet for a couple of minutes and check out the data repositories
-> mentioned above: [Figshare](https://figshare.com/), [Zenodo](https://zenodo.org),
-> [Dryad](https://datadryad.org/). Depending on your field of research, you might
-> find community-recognized repositories that are well-known in your field.
-> You might also find useful [these data repositories recommended by Nature](
-> https://www.nature.com/sdata/data-policies/repositories).
-> Discuss with your neighbor which data repository you might want to
-> approach for your current project and explain why.
-{: .challenge}
+<img src="./../fig/linkedLists/linkedLists-figure0.png" alt="Drawing"
+width = "300"/>
+
+Code to create objects `p, q` of class `Node` and resulting memory
+diagram are:
+
+Node q = new Node();
+q.data = 42;
+q.next = null;
+Node p = new Node();
+p.data = 25;
+p.next = q;
+
+<img src="./../fig/linkedLists/linkedLists-figure1.png" alt="Drawing"
+width = "400"/>
+
+Here, we can see that `p.next` (of type `Node`) is a shallow copy of `q`
+(of type `Node`).
+
+The `data` instance variable in a `Node` class may be object of another
+class too. For example,
+
+class Rectangle {
+public double width, height;
+}  
+
+class Node {
+public Rectangle data;
+public Node next;
+}
+
+Rectangle r1 = new Rectangle();
+r1.width = 2.5;
+r1.height = 1.5;
+Rectangle r2 = new Rectangle();
+r2.width = 4.2;
+r2.height = 3.6;
+Node q = new Node();
+q.data = r2;
+q.next = null;
+Node p = new Node();
+p.data = r1;
+p.next = q;
+
+The memory diagram for this code is below. Notice they key points:
+
+-   `p.next (Node)` is a shallow copy of `q (Node)`
+
+-   `p.data (Rectangle)` is a shallow copy of `r1 (Rectangle)`
+
+-   `q.data (Rectangle)` is a shallow copy of `r2 (Rectangle)`
+
+<img src="./../fig/linkedLists/linkedLists-figure2.png" alt="Drawing"
+width = "600"/>
+
+[5] Draw a memory diagram for the following code:
+
+class Circle {
+private double radius;
+public Circle(double r) { 
+radius = Math.abs(r); 
+}
+}
+class Node {
+private Circle data;
+private Node next;
+public Node(Circle d, Node n) { 
+data = d; 
+next = n; 
+}
+}
+public class Client {
+public static void main(String[] args) {
+Circle c1 = new Circle(2.8);
+Circle c2 = new Circle(1.6);
+Node p = new Node(c1, null);
+Node q = new Node(c2, p);
+Node r = new Node(c1, p);
+}
+}
+
+Solution not provided for this exercise
+
+Creating a *“linked list”* manually
+===================================
+
+Once we understand the `Node` class, we can link objects of `Node`
+together to create a *“linked” list*.
+
+class Node {
+private int data; //primitive data type for simplicity
+private Node next;
+
+//getter, setter for data
+public int getData() { return data; }   
+public void setData(int d) { data = d; }
+
+//getter, setter for next
+public Node getNext() { return next; }
+public void setNext(Node n) { next = n; }
+
+public Node(int d) { 
+data = d; 
+next = null; 
+}
+public Node(int d, Node n) { 
+data = d; 
+next = n; 
+}
+}
+
+class Client {
+public static void main(String[] args) {
+Node n5 = new Node(20, null);
+Node n4 = new Node(70, n5);
+Node n3 = new Node(10, n4);
+Node n2 = new Node(90, n3);
+Node n1 = new Node(30, n2);
+}
+}
+
+The memory diagram for the above code is given below:
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure3.png" alt="Drawing"
+width = "600"/>
+
+Simplified representation of linked nodes
+-----------------------------------------
+
+The above diagram, while thorough, is *too* detailed. We apply a little
+abstraction and represent the same diagram as:
+
+<img src="./../fig/linkedLists/linkedLists-figure4.png" alt="Drawing"
+width = "600"/>
+
+Traversing a linked list
+------------------------
+
+### Incorrect Approach
+
+while(n1 != null) {
+n1 = n1.getNext();
+}
+
+You are modifying the reference `n1`. Each time you update `n1`, the
+instance referred by `n1` before the update is deleted from memory.
+Thereby, all the nodes will be erased from the memory at the end of
+execution. So yeah, not a good idea. <p> &nbsp; </p> <img
+src="./../fig/linkedLists/linkedLists-figure5.png" alt="Drawing" width =
+"550"/> 0.3cm
+
+<img src="./../fig/linkedLists/linkedLists-figure6.png" alt="Drawing"
+width = "550"/> 0.3cm
+
+<img src="./../fig/linkedLists/linkedLists-figure7.png" alt="Drawing"
+width = "550"/> 0.3cm
+
+<img src="./../fig/linkedLists/linkedLists-figure8.png" alt="Drawing"
+width = "550"/> 0.3cm
+
+<img src="./../fig/linkedLists/linkedLists-figure9.png" alt="Drawing"
+width = "550"/> 0.3cm
+
+<img src="./../fig/linkedLists/linkedLists-figure10.png" alt="Drawing"
+width = "550"/> <p> &nbsp; </p>
+
+This results in us losing the reference to the first item (`n1`) and the
+object being deleted from the memory.
+
+### Correct Approach
+
+We shallow copy the starting node into a *traversal* node. Then we shift
+it forward every time in the loop by shallow copying the `next` instance
+variable into it.
+
+Node temp = n1;
+while(temp != null) {
+temp = temp.getNext();
+}
+
+<p> &nbsp; </p> <img src="./../fig/linkedLists/linkedLists-figure11.png"
+alt="Drawing" width = "550"/>
+
+Some examples of traversal
+--------------------------
+
+1.  Counting the number of linked nodes:
+
+Node temp = n1;
+int counter = 0;
+while(temp != null) {
+counter++;
+temp = temp.getNext();
+}
+
+2.  Adding the data values in the linked nodes:
+
+Node temp = n1;
+int total = 0;
+while(temp != null) {
+total = total + temp.getData();
+temp = temp.getNext();
+}
+
+3.  Adding values over 30 in the linked nodes:
+
+Node temp = n1;
+int total = 0;
+while(temp != null) {
+if(temp.getData() > 30) {
+total = total + temp.getData();
+}
+temp = temp.getNext();
+}
+
+4.  Determining highest data value in the linked nodes (assuming list is
+not empty):
+
+Node temp = n1;
+int highest = temp.getData();
+while(temp != null) {
+if(temp.getData() > highest) {
+highest = temp.getData();
+}
+temp = temp.getNext();
+}
+
+5.  Determining if each item is different from the other:
+
+``` {linewidth="14cm"}
+Node temp = n1;
+boolean foundDuplicate = false; 
+while(temp != null && !foundDuplicate) {
+Node temp2 = temp.getNext();
+while(temp2 != null && !foundDuplicate) {
+if(temp.getData() == temp2.getData()) {//DUPLICATE
+foundDuplicate = true; 
+}
+temp2 = temp2.getNext();
+}
+temp = temp.getNext();
+}
+```
+
+Obviously, we can pass a `Node` object to a method just like any other
+object.
+
+1.  Example 1: Counting occurrences of an item
+
+public static int countOccurrences(Node node, int item) {
+int result = 0;
+/*
+note that node is a shallow copy of 
+the actual object passed to the method 
+call and hence can be modified without
+modifying the actual object. 
+*/
+while(node != null) { 
+if(node.getData() == item) {
+result++;
+}
+node = node.getNext();
+}
+return result;
+}   
+
+2.  Example 2: Checking if all values are positive
+
+public static boolean allPositives(Node node) {
+while(node != null) { 
+if(node.getData() <= 0) {
+return false;
+}
+node = node.getNext();
+} //end loop
+return true;
+}   
+
+### Recursive methods on linked nodes
+
+**Advanced** A brilliant example of how this is useful is given in the
+following method:
+
+/*
+return true the sum of some items starting at node n
+is total, false otherwise
+*/
+public static boolean addsTo(Node node, int total) {
+if(total == 0)
+return true;    
+//now we know total is not 0
+if(node == null) 
+return false;
+int remaining = total - node.getData();
+if(addsTo(node.getNext(), remaining)) {
+/*
+there is a combination after node for 
+(total minus what node contains)
+*/
+return true;
+}
+else {
+/*
+there is no combination after node for
+(total minus what node contains) so check for a
+combination after node for total
+*/
+return addsTo(node.getNext(), total);
+}   
+}   
+
+Custom-built LinkedList class
+=============================
+
+In this next and final step, we put the starting node in a class and
+operate on the list using the starting node.
+
+class MyLinkedList {
+private Node head;
+
+public MyLinkedList() {
+head = null;
+}
+
+/**
+insert the passed node object at beginning of list
+*/
+public void add(Node node) {
+if(head == null) { //empty list
+head = node; 
+}
+else { //not empty
+node.setNext(head); //link so head follows node
+head = node; //update  reference for starting node
+}
+}
+
+public String toString() {
+Node temp = head;
+String result = "[";
+while(temp != null) {
+result = result + temp.getData() + ", ";
+temp = temp.getNext();
+}
+result = result.substring(0, result.length()-2); 
+//remove the last ", "
+return result + "]";
+}
+}
+
+A linked list `myList` where head holds a reference to a node with data
+30, whose `next` instance variable holds a reference to a node with data
+90, whose `next` instance variable holds a reference to a node with data
+10, whose `next` instance variable holds a reference to a node with data
+70, whose `next` instance variable holds a reference to a node with data
+20, is given below.
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure12.png" alt="Drawing"
+width = "550"/>
+
+[5] Define a method `total()` that returns the sum of data values of all
+nodes in a list based along the lines of `toString()` method.
+
+public int total() {
+Node temp = head;
+int result = 0;
+while(temp != null) {
+result = result + temp.getData();
+temp = temp.getNext();
+}
+return result;
+}
+
+[8] Define a method `highest()` that returns the highest value in the
+list (`null` if list is empty). Note that since `null` is required as
+error return status, return type should be `Integer`, not `int`.
+
+public Integer highest() {
+if(head == null)
+return null;
+Node temp = head;
+int result = head.getData();
+while(temp != null) {
+if(temp.getData() > result) {
+result = temp.getData();
+temp = temp.getNext();
+}
+return result;
+}
+
+Accessing an item at an arbitrary index
+---------------------------------------
+
+Assuming that indexing begins with 0, we can write a method
+`get(int idx)` that returns the value of an item at an arbitrary index
+`idx`.
+
+First, we should write a method `size()` since valid indices would then
+be `[0, <p> &nbsp; </p>, size()-1]`.
+
+public int size() {
+int count = 0;
+Node temp = head;
+while(temp!=null) {
+count++;
+temp = temp.getNext();
+}
+return count;
+}
+
+Our method `get(int idx)` is:
+
+public Integer get(int idx) {
+if(idx < 0 || idx >= size()) {
+return null;
+}
+
+Node temp = head;
+/*
+move forward idx times. 
+if idx = 0, don't move forward at all
+if idx = 4, move forward four times
+<p> &nbsp; </p>
+*/
+for(int i=0; i < idx; i++) {
+temp = temp.getNext();
+}
+return temp.getData();
+}
+
+Inserting an item at an arbitrary index
+---------------------------------------
+
+We can either pass the item to be inserted (in our case, an integer), or
+a `Node` containing the item as instance variable `data` as shown below:
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure13.png" alt="Drawing"
+width = "350"/>
+
+<p> &nbsp; </p>
+
+For simplicity, the diagram is reduced as follows,
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure14.png" alt="Drawing"
+width = "200"/>
+
+### SCENARIO 1: Inserting in an empty list
+
+We can only insert at index 0 in an empty list. When the list is empty,
+`head` is `null`.
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure15.png" alt="Drawing"
+width = "200"/>
+
+<p> &nbsp; </p>
+
+In this case, all we have to do is re-refer `head` to `node`.
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure16.png" alt="Drawing"
+width = "400"/>
+
+### SCENARIO 2: Inserting in a non-empty list
+
+We can insert at any index from 0 (insert before the first item) to
+`size()` (insert after the last item).
+
+If we are going to insert at index 0, `head` must be updated. In fact,
+this code also works when list is empty (`head` is `null`).
+
+if(index == 0) {
+node.setNext(head);
+head = node;
+}
+
+For any index more than 0, we follow the procedure described below:
+
+Let’s say we want to insert a node with data 50 at index 3 (after the
+3rd item) in the following list.
+
+<p> &nbsp; </p>
+
+<img src="./../fig/linkedLists/linkedLists-figure17.png" alt="Drawing"
+width = "600"/>
+
+We must reach the 3rd item (at index 2) and manipulate it’s `next`
+instance variable.
+
+Starting with `head`, how many times must we *move forward* to reach the
+item at index 2? That’s right - 2 times.
+
+Node current = head;
+for(int i=1; i < 3; i++) {
+current = current.getNext();
+}
+
+Initial state:
+
+<img src="./../fig/linkedLists/linkedLists-figure18.png" alt="Drawing"
+width = "600"/>
+
+<p> &nbsp; </p>
+
+After iteration 1: 
+
+<img src="./../fig/linkedLists/linkedLists-figure19.png" alt="Drawing"
+width = "600"/>
+
+<p> &nbsp; </p>
+
+After iteration 2: 
+
+<img src="./../fig/linkedLists/linkedLists-figure20.png" alt="Drawing"
+width = "600"/>
+
+<p> &nbsp; </p>
+
+Then we have a reference to the 3rd item in `current`.
+
+The node after `current` should be after the node to inserted.
+
+node.setNext(current.getNext());
+
+<img src="./../fig/linkedLists/linkedLists-figure21.png" alt="Drawing"
+width = "600"/>
+
+And the node to be inserted should be after `current`.
+
+current.setNext(node);
+
+<img src="./../fig/linkedLists/linkedLists-figure22.png" alt="Drawing"
+width = "600"/>
+
+Thus, the list becomes, <p> &nbsp; </p> <img
+src="./../fig/linkedLists/linkedLists-figure23.png" alt="Drawing" width
+= "600"/>
+
+The overall code is below.
+
+public void add(Node node, int idx) {
+if(idx < 0 || idx > size()) 
+return;
+
+// at the beginning of an empty or non-empty list
+if(index == 0) { 
+node.setNext(head);
+head = node;
+}
+
+Node current = head;
+for(int i=1; i < idx; i++)
+current = current.getNext();
+node.setNext(current.getNext());
+current.setNext(node);
+}
+
+Note that `idx == size()` refers to adding an item at the end of the
+list and the above code works for the same.
+
+Removing an item from an arbitrary index
+----------------------------------------
+
+If we need to remove an item at a particular index `idx` (in this
+example `idx = 3`), we need to reach the node **before** the node to be
+removed. For this, we move forward `idx-1` times. Then, simply link the
+current node (at index `idx-1`) to the node at index `idx+1`.
+
+Initial state **(item to be removed in red)**: 0.2cm
+
+<img src="./../fig/linkedLists/linkedLists-figure24.png" alt="Drawing"
+width = "600"/> 0.2cm
+
+After iteration 1: 0.2cm
+
+<img src="./../fig/linkedLists/linkedLists-figure25.png" alt="Drawing"
+width = "600"/> 0.2cm
+
+After iteration 2: 0.2cm
+
+<img src="./../fig/linkedLists/linkedLists-figure26.png" alt="Drawing"
+width = "600"/> 0.2cm
+
+Updating the link:
+
+<img src="./../fig/linkedLists/linkedLists-figure27.png" alt="Drawing"
+width = "600"/> 0.2cm
+
+End product: 0.2cm
+
+<img src="./../fig/linkedLists/linkedLists-figure28.png" alt="Drawing"
+width = "600"/>
+
+public Integer remove(int idx) {
+if(idx < 0 || idx >= size()) 
+return null;
+if(idx == 0) { //removing head
+double result = head.getData();
+head = head.getNext();
+return result;
+}
+Node current = head;
+for(int i=1; i < idx; i++)
+current = current.getNext();
+int result = current.getNext().getData();
+current.setNext(current.getNext().getNext());
+return result;
+}

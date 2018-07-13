@@ -14,271 +14,358 @@ keypoints:
 - "Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH."
 - "`git push` copies changes from a local repository to a remote repository."
 - "`git pull` copies changes from a remote repository to a local repository."
+
+navigation: 
+- id: Background
+- id: Overview
+- id: Detailed example
+- id: Tracing some more recursive code
+- id: Recursion with Strings
+- id: Actually useful recursion
 ---
 
-Version control really comes into its own when we begin to collaborate with
-other people.  We already have most of the machinery we need to do this; the
-only thing missing is to copy changes from one repository to another.
+![Source: [Credit: Paul
+Noth](https://condenaststore.com/featured/a-doctor-is-seen-giving-an-sonogram-to-a-russian-paul-noth.html)](images/russiandoll.jpg)
 
-Systems like Git allow us to move work between any two repositories.  In
-practice, though, it's easiest to use one copy as a central hub, and to keep it
-on the web rather than on someone's laptop.  Most programmers use hosting
-services like [GitHub](https://github.com), [BitBucket](https://bitbucket.org) or
-[GitLab](https://gitlab.com/) to hold those master copies; we'll explore the pros
-and cons of this in the final section of this lesson.
+Background
+==========
 
-Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
-create a new repository called `planets`:
+Before we jump into the concept of recursive solutions and definition of
+recursive methods, it’s critical that we understand how method calls
+work.
 
-![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
+We will use the following example to explain method calls:
 
-Name your repository "planets" and then click "Create Repository":
+public class Client {
+public static void caller() {
+int a = 10, b = 5;
+boolean flag = callee(a+3, b*2);
+}
 
-![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
+public static boolean callee(int m, int n) {
+boolean result;
+if(m%2 == n%2) {
+result = true;
+}
+else {
+result = false;
+}
+return result;
+}
+}
 
-As soon as the repository is created, GitHub displays a page with a URL and some
-information on how to configure your local repository:
+1.  Any piece of code that we write is inside some method (besides
+declaring variables).
 
-![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
+2.  When a piece of code inside one method (`caller`) calls another
+method (`callee`), the following things occurs,
 
-This effectively does the following on GitHub's servers:
+1.  The control transfers from `caller` to `callee`.
 
-~~~
-$ mkdir planets
-$ cd planets
-$ git init
-~~~
-{: .bash}
+2.  Actual parameters (`a+3, b*2` = `13,10`) passed are copied into
+the formal parameters (`m,n`).
 
-If you remember back to the earlier [lesson](./04-changes.html) where we added and
-commited our earlier work on `mars.txt`, we had a diagram of the local repository
-which looked like this:
+3.  An entry for `callee` with associated formal parameters and
+local variables is added on top of the `call stack`.
 
-![The Local Repository with Git Staging Area](../fig/git-staging-area.svg)
+<img src="./../fig/recursion/recursion-figure0.png" alt="Drawing"
+width = "600"/>
 
-Now that we have two repositories, we need a diagram like this:
+3.  The method `callee(13, 10)` terminates with a `return` statement (or
+when the last statement executes). The following happen when
+`callee` terminates,
 
-![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.svg)
+1.  The value returned (in case of non-void methods) replaces the
+method call. Thus `flag` inside `caller` becomes `false`.
 
-Note that our local repository still contains our earlier work on `mars.txt`, but the
-remote repository on GitHub appears empty as it doesn't contain any files yet.
+2.  The entry for `callee` is removed from the call stack. All
+formal parameters and local variables are destroyed.
 
-The next step is to connect the two repositories.  We do this by making the
-GitHub repository a [remote]({{ page.root }}/reference/#remote) for the local repository.
-The home page of the repository on GitHub includes the string we need to
-identify it:
+<img src="./../fig/recursion/recursion-figure1.png" alt="Drawing"
+width = "600"/>
 
-![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
+Overview
+========
 
-Click on the 'HTTPS' link to change the [protocol]({{ page.root }}/reference/#protocol) from
-SSH to HTTPS.
+Recursion is the process of *reducing a problem into a simpler form of
+itself*.
 
-> ## HTTPS vs. SSH
->
-> We use HTTPS here because it does not require additional configuration.  After
-> the workshop you may want to set up SSH access, which is a bit more secure, by
-> following one of the great tutorials from
-> [GitHub](https://help.github.com/articles/generating-ssh-keys),
-> [Atlassian/BitBucket](https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git)
-> and [GitLab](https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/)
-> (this one has a screencast).
-{: .callout}
+For example, $x^n$ (read as *$x$ to the power of $n$*) is defined as
+$x * x * \cdots n$ times.
 
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
+$$\begin{aligned}
+x^n&=x * x * x \cdots n \text{times}\\
+&=[x * x * x \cdots (n-1) \text{times}] * x\\
+&=x^{n-1} * x\end{aligned}$$
 
-Copy that URL from the browser, go into the local `planets` repository, and run
-this command:
+If we were writing a method to compute $x^n$, how would we define it?
 
-~~~
-$ git remote add origin https://github.com/vlad/planets.git
-~~~
-{: .bash}
+It needs the values for $x$ and $n$, and returns the result ($x^n$).
 
-Make sure to use the URL for your repository rather than Vlad's: the only
-difference should be your username instead of `vlad`.
+So something like:
 
-We can check that the command has worked by running `git remote -v`:
+public static double power(double x, int n)
 
-~~~
-$ git remote -v
-~~~
-{: .bash}
+Now, the formula tells us that this method, when called with parameters
+$x$ and $n$, should return $x^{n-1} * x$. So,
 
-~~~
-origin   https://github.com/vlad/planets.git (push)
-origin   https://github.com/vlad/planets.git (fetch)
-~~~
-{: .output}
+public static double power(double x, int n) {
+return power(x, n-1) * x;
+}
 
-The name `origin` is a local nickname for your remote repository. We could use
-something else if we wanted to, but `origin` is by far the most common choice.
+But if we do this, our method calls (while computing $2^3$) will look
+like,
 
-Once the nickname `origin` is set up, this command will push the changes from
-our local repository to the repository on GitHub:
+-   power(2, 3) $\rightarrow$
 
-~~~
-$ git push origin master
-~~~
-{: .bash}
+-   power(2, 2) $\rightarrow$
 
-~~~
-Counting objects: 9, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (9/9), 821 bytes, done.
-Total 9 (delta 2), reused 0 (delta 0)
-To https://github.com/vlad/planets
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
-~~~
-{: .output}
+-   power(2, 1) $\rightarrow$
 
-> ## Proxy
->
-> If the network you are connected to uses a proxy, there is a chance that your
-> last command failed with "Could not resolve hostname" as the error message. To
-> solve this issue, you need to tell Git about the proxy:
->
-> ~~~
-> $ git config --global http.proxy http://user:password@proxy.url
-> $ git config --global https.proxy http://user:password@proxy.url
-> ~~~
-> {: .bash}
->
-> When you connect to another network that doesn't use a proxy, you will need to
-> tell Git to disable the proxy using:
->
-> ~~~
-> $ git config --global --unset http.proxy
-> $ git config --global --unset https.proxy
-> ~~~
-> {: .bash}
-{: .callout}
+-   power(2, 0) $\rightarrow$
 
-> ## Password Managers
->
-> If your operating system has a password manager configured, `git push` will
-> try to use it when it needs your username and password.  For example, this
-> is the default behavior for Git Bash on Windows. If you want to type your
-> username and password at the terminal instead of using a password manager,
-> type:
->
-> ~~~
-> $ unset SSH_ASKPASS
-> ~~~
-> {: .bash}
->
-> in the terminal, before you run `git push`.  Despite the name, [git uses
-> `SSH_ASKPASS` for all credential
-> entry](https://git-scm.com/docs/gitcredentials#_requesting_credentials), so
-> you may want to unset `SSH_ASKPASS` whether you are using git via SSH or
-> https.
->
-> You may also want to add `unset SSH_ASKPASS` at the end of your `~/.bashrc`
-> to make git default to using the terminal for usernames and passwords.
-{: .callout}
+-   power(2, -1) $\rightarrow$
 
-Our local and remote repositories are now in this state:
+-   $\cdots$ forever
 
-![GitHub Repository After First Push](../fig/github-repo-after-first-push.svg)
+Which means, at some stage we need to stop the method calls.
 
-> ## The '-u' Flag
->
-> You may see a `-u` option used with `git push` in some documentation.  This
-> option is synonymous with the `--set-upstream-to` option for the `git branch`
-> command, and is used to associate the current branch with a remote branch so
-> that the `git pull` command can be used without any arguments. To do this,
-> simply use `git push -u origin master` once the remote has been set up.
-{: .callout}
+What do we know about the power operation?
 
-We can pull changes from the remote repository to the local one as well:
+If we reach $n=0$, we can return 1. This is called the termination step.
 
-~~~
-$ git pull origin master
-~~~
-{: .bash}
+Our final method:
 
-~~~
-From https://github.com/vlad/planets
- * branch            master     -> FETCH_HEAD
-Already up-to-date.
-~~~
-{: .output}
+public static double power(double x, int n) {
+if(n == 0) {
+return 1;
+}
+else {
+return power(x, n-1) * x;
+}
+}
 
-Pulling has no effect in this case because the two repositories are already
-synchronized.  If someone else had pushed some changes to the repository on
-GitHub, though, this command would download them to our local repository.
+Detailed example
+================
 
-> ## GitHub GUI
->
-> Browse to your `planets` repository on GitHub.
-> Under the Code tab, find and click on the text that says "XX commits" (where "XX" is some number).
-> Hover over, and click on, the three buttons to the right of each commit.
-> What information can you gather/explore from these buttons?
-> How would you get that same information in the shell?
->
-> > ## Solution
-> > The left-most button (with the picture of a clipboard) copies the full identifier of the commit to the clipboard. In the shell, ```git log``` will show you the full commit identifier for each commit.
-> >
-> > When you click on the middle button, you'll see all of the changes that were made in that particular commit. Green shaded lines indicate additions and red ones removals. In the shell we can do the same thing with ```git diff```. In particular, ```git diff ID1..ID2``` where ID1 and ID2 are commit identifiers (e.g. ```git diff a3bf1e5..041e637```) will show the differences between those two commits.
-> >
-> > The right-most button lets you view all of the files in the repository at the time of that commit. To do this in the shell, we'd need to checkout the repository at that particular time. We can do this with ```git checkout ID``` where ID is the identifier of the commit we want to look at. If we do this, we need to remember to put the repository back to the right state afterwards!
-> {: .solution}
-{: .challenge}
+public class Client {
+public static void main(String[] args) {
+int a = 4;
+int b = sum(a);
+}
 
-> ## GitHub Timestamp
->
-> Create a remote repository on GitHub.  Push the contents of your local
-> repository to the remote.  Make changes to your local repository and push
-> these changes.  Go to the repo you just created on GitHub and check the
-> [timestamps]({{ page.root }}/reference/#timestamp) of the files.  How does GitHub record
-> times, and why?
->
-> > ## Solution
-> > GitHub displays timestamps in a human readable relative format (i.e. "22 hours ago" or "three weeks ago"). However, if you hover over the timestamp, you can see the exact time at which the last change to the file occurred.
-> {: .solution}
-{: .challenge}
+public static int sum(int n) {
+if(n == 0) {
+return 0;
+}
+int result = n + sum(n-1);
+return result;
+}
+}
 
-> ## Push vs. Commit
->
-> In this lesson, we introduced the "git push" command.
-> How is "git push" different from "git commit"?
->
-> > ## Solution
-> > When we push changes, we're interacting with a remote repository to update it with the changes we've made locally (often this corresponds to sharing the changes we've made with others). Commit only updates your local repository.
-> {: .solution}
-{: .challenge}
+<img src="./../fig/recursion/recursion-figure2.png" alt="Drawing" width
+= "500"/> <p> &nbsp; </p>
 
-> ## Fixing Remote Settings
->
-> It happens quite often in practice that you made a typo in the
-> remote URL. This exercise is about how to fix this kind of issue.
-> First start by adding a remote with an invalid URL:
->
-> ~~~
-> git remote add broken https://github.com/this/url/is/invalid
-> ~~~
-> {: .bash}
->
-> Do you get an error when adding the remote? Can you think of a
-> command that would make it obvious that your remote URL was not
-> valid? Can you figure out how to fix the URL (tip: use `git remote
-> -h`)? Don't forget to clean up and remove this remote once you are
-> done with this exercise.
->
-> > ## Solution
-> > We don't see any error message when we add the remote (adding the remote tells git about it, but doesn't try to use it yet). As soon as we try to use ```git push``` we'll see an error message. The command ```git remote set-url``` allows us to change the remote's URL to fix it.
-> {: .solution}
-{: .challenge}
+<img src="./../fig/recursion/recursion-figure3.png" alt="Drawing" width
+= "500"/>
 
-> ## GitHub License and README files
->
-> In this section we learned about creating a remote repository on GitHub, but when you initialized your
-> GitHub repo, you didn't add a README.md or a license file. If you had, what do you think would have happened when
-> you tried to link your local and remote repositories?
->
-> > ## Solution
-> > In this case, since we already had a README file in our own (local) repository, we'd see a merge conflict (when git realises that there are two versions of the file and asks us to reconcile the differences).
-> {: .solution}
-{: .challenge}
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure4.png" alt="Drawing" width
+= "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure5.png" alt="Drawing" width
+= "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure6.png" alt="Drawing" width
+= "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure7.png" alt="Drawing" width
+= "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure8.png" alt="Drawing" width
+= "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure9.png" alt="Drawing" width
+= "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure10.png" alt="Drawing"
+width = "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure11.png" alt="Drawing"
+width = "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure12.png" alt="Drawing"
+width = "500"/>
+
+<p> &nbsp; </p>
+
+<img src="./../fig/recursion/recursion-figure13.png" alt="Drawing"
+width = "100"/>
+
+Tracing some more recursive code
+================================
+
+[6] Trace the call to recursive method `foo`
+
+public class Client {
+public static void main(String[] args) {
+int a = 8327;
+int b = foo(a);
+}
+
+public static int foo(int n) {
+if(n==0) {
+return 0;
+}
+int result = n%10 + sum(n/10);
+return result;
+}
+}
+
+foo(8327) = 7 + foo(832)
+foo(832) = 2 + foo(83)
+foo(83) = 3 + foo(8)
+foo(8) = 8 + foo(0)
+foo(0) = 0
+Therefore,
+foo(8) = 8 + 0 = 8
+foo(83) = 3 + 8 = 11
+foo(832) = 2 + 11 = 13
+foo(8327) = 7 + 13 = 20
+b = 20  
+
+[6] Trace the call to recursive method `foo`
+
+public class Client {
+public static void main(String[] args) {
+int a = 42, b = 140;
+int c = foo(a, b);
+}
+
+public static int foo(int n) {
+if(b==0) {
+return a;
+}
+int result = foo(b, a%b);
+return result;
+}
+}
+
+foo(42, 140) = foo(140, 42)
+foo(140, 42) = foo(42, 14)
+foo(42, 14) = foo(14, 0)
+foo(14, 0) = 14
+Therefore,
+foo(42, 14) = 14
+foo(140, 42) = 14
+foo(42, 140) = 14
+c = 14
+
+Recursion with Strings
+======================
+
+Recursive solutions can be very useful when working with Strings.
+
+For example, if you want to reverse a String, you can reverse all but
+the first character and then append the first character at the end of
+that.
+
+public static String reverse(String s) {
+if(s.length() < 2) {
+return s;
+}
+char first = s.charAt(0);
+String rest = s.substring(1);
+return reverse(rest) + first;
+}
+
+Once you have the method `reverse`, checking if a String is a palindrome
+(same when reversed) or not is a breeze.
+
+public static boolean isPalindrome(String s) {
+if(s.length() < 2) {
+return true;
+}
+return s.equals(reverse(s));
+}
+
+Actually useful recursion
+=========================
+
+The examples that we saw so far are pedagogical in nature, that is, they
+are easy to understand. However, they are not very useful in real life
+as the same thing can be done without using recursion (using an
+*iterative* solution).
+
+However, recursion **is** very powerful as explained in the following
+problem and its (recursive) solution.
+
+The Problem
+-----------
+
+Given an integer array (`arr`) and another integer (`target`), finding
+out whether some items of `arr` add up to `target` or not.
+
+-   For every item in the array (`arr[i])`, either the item is a part of
+the subset that adds up to the target, or its not.
+
+-   If that item **is** a part of the subset adding up to the `target`,
+we need to check if the rest of the array adds up to
+`target - arr[i]`
+
+-   If that item is **not** a part of the subset adding up to the
+`target`, we need to check if the rest of the array adds up to
+`target`
+
+-   But how do we tell the method that we want to look through **the
+rest of the** array? By passing a starting index.
+
+-   If that index reaches `arr.length` and we haven’t successfully
+*constructed* `target`, we can return `false`
+
+<!-- -->
+
+public static boolean addUpTo(int[] arr, int target, int start) {
+if(target == 0) {
+return true;
+}
+
+if(start == arr.length) {
+return false;
+}
+//can target can be constructed with arr[start]?
+if(addUpTo(arr, target - arr[start], start + 1)) {
+return true;
+}
+//can target can be constructed without arr[start]?
+if(addUpTo(arr, target, start + 1)) {
+return true;
+}
+return false;
+}
+
+The beauty about the method is that all the current method call needs to
+do is explore two options,
+
+-   to use the current item, or,
+
+-   not (to use the current item)
+
+and the the delegate method call will worry about the rest.

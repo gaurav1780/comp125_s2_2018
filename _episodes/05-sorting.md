@@ -12,489 +12,309 @@ objectives:
 keypoints:
 - "`git diff` displays differences between commits."
 - "`git checkout` recovers old versions of files."
+
+navigation: 
+- id: Overview
+- id: Selection Sort
+- id: Insertion Sort
 ---
 
-As we saw in the previous lesson, we can refer to commits by their
-identifiers.  You can refer to the _most recent commit_ of the working
-directory by using the identifier `HEAD`.
+Overview
+========
 
-We've been adding one line at a time to `mars.txt`, so it's easy to track our
-progress by looking, so let's do that using our `HEAD`s.  Before we start,
-let's make a change to `mars.txt`.
+![Art: Nancy Hebert, licensed for reuse.](images/sortingHat.jpg)
 
-~~~
-$ nano mars.txt
-$ cat mars.txt
-~~~
-{: .bash}
+We explore the two standard sorting algorithms - insertion, and
+selection, along with analysis of the two. In addition, we also take a
+less detailed look at merge sort.
 
-~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-An ill-considered change
-~~~
-{: .output}
+Why is sorting important?
+-------------------------
 
-Now, let's see what we get.
+Sorting a collection makes it easy to analyse data. Several tasks are
+made simpler if a collection is sorted, such as:
 
-~~~
-$ git diff HEAD mars.txt
-~~~
-{: .bash}
+-   finding the lowest value (first value in a collection sorted in
+ascending order)
 
-~~~
-diff --git a/mars.txt b/mars.txt
-index b36abfd..0848c8d 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1,3 +1,4 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
- But the Mummy will appreciate the lack of humidity
-+An ill-considered change.
-~~~
-{: .output}
+-   finding the highest value (last value in a collection sorted in
+ascending order)
 
-which is the same as what you would get if you leave out `HEAD` (try it).  The
-real goodness in all this is when you can refer to previous commits.  We do
-that by adding `~1` 
-(where "~" is "tilde", pronounced [**til**-d*uh*]) 
-to refer to the commit one before `HEAD`.
+-   finding the median value (item at `arr.length/2`)
 
-~~~
-$ git diff HEAD~1 mars.txt
-~~~
-{: .bash}
+-   checking if the array contains any negative value (it does if the
+lowest value is less than zero)
 
-If we want to see the differences between older commits we can use `git diff`
-again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to them:
+-   checking if the array contains only negative value (it does if the
+highest value is less than zero)
+
+-   faster search (using binary search algorithm)
+
+<img src="./../fig/sorting/sorting-figure0.png"
+alt="Drawing" width = "400"/>
+
+Selection Sort
+==============
+
+The principle behind selection sort is:
+
+* Swap the smallest item in the unsorted part of the array with the
+first item of the unsorted part of the array*
+
+<img src="./../fig/sorting/sorting-figure1.png"
+alt="Drawing" width = "400"/>
 
 
-~~~
-$ git diff HEAD~2 mars.txt
-~~~
-{: .bash}
+Selection Sort sample pseudo-code
+---------------------------------
 
-~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,4 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-+An ill-considered change
-~~~
-{: .output}
+[H] set `i` to 0
 
-We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
+Selection Sort sample source code
+---------------------------------
 
-~~~
-$ git show HEAD~2 mars.txt
-~~~
-{: .bash}
+//helper 1
+public static void swap(int[] a, int idx1, int idx2) {
+if(a == null) nothing to do 
+return;
+if(idx1 < 0 || idx1 >= a.length) //invalid index 1
+return;
+if(idx2 < 0 || idx2 >= a.length) //invalid index 2
+return;
+int temp = a[idx1];
+a[idx1] = a[idx2];
+a[idx2] = temp;
+}
 
-~~~
-commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 10:07:21 2013 -0400
+//helper 2
+public static int indexSmallestItem(int[] a, int start) {
+if(a == null) 
+return -1; //error code
+if(start < 0 || start >= a.length) //invalid index
+return -1;
+int result = start; 
+for(int k=start+1; k < a.length; k++) {
+if(a[k] < a[result]) {
+result = k;
+}
+}
+return result;
+}
 
-    Start notes on Mars as a base
+//sorting method
+public static void selectionSort(int[] arr) {
+if(arr == null) //nothing to do
+return;
+for(int i=0; i < arr.length - 1; i++) {
+int minIndex = indexSmallestItem(arr, i);   
+swap(arr, i, minIndex);
+}
+}
 
-diff --git a/mars.txt b/mars.txt
-new file mode 100644
-index 0000000..df0654a
---- /dev/null
-+++ b/mars.txt
-@@ -0,0 +1 @@
-+Cold and dry, but everything is my favorite color
-~~~
-{: .output}
+The helpers can be written inline as well, with which the method is:
 
-In this way,
-we can build up a chain of commits.
-The most recent end of the chain is referred to as `HEAD`;
-we can refer to previous commits using the `~` notation,
-so `HEAD~1`
-means "the previous commit",
-while `HEAD~123` goes back 123 commits from where we are now.
+//sorting method
+public static void selectionSort(int[] arr) {
+if(arr == null) //nothing to do
+return;
+for(int i=0; i < arr.length - 1; i++) {
+int minIndex = i;
+for(int k=i+1; k < arr.length; k++) {
+if(arr[k] < arr[minIndex]) {
+minIndex = k;
+}
+}
+int temp = arr[i];
+arr[i] = arr[minIndex];
+arr[minIndex] = temp;
+}
+}
 
-We can also refer to commits using
-those long strings of digits and letters
-that `git log` displays.
-These are unique IDs for the changes,
-and "unique" really does mean unique:
-every change to any set of files on any computer
-has a unique 40-character identifier.
-Our first commit was given the ID
-`f22b25e3233b4645dabd0d81e651fe074bd8e73b`,
-so let's try this:
+[8][Trace selection sort execution] Trace the status of the array at the
+end of each iteration of the loop controlled by variable `i` in
+selection sort for the following cases:
 
-~~~
-$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
-~~~
-{: .bash}
+1.  `arr = {4, 3, 6, 5, 2, 1}`
 
-~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..93a3e13 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,4 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-+An ill-considered change
-~~~
-{: .output}
+2.  `arr = {1, 8, 2, 7, 3, 6}`
 
-That's the right answer,
-but typing out random 40-character strings is annoying,
-so Git lets us use just the first few characters:
+1.  4 3 6 5 2 1
+1 3 6 5 2 4
+1 2 6 5 3 4
+1 2 3 5 6 4
+1 2 3 4 6 5
+1 2 3 4 5 6 
 
-~~~
-$ git diff f22b25e mars.txt
-~~~
-{: .bash}
+2.  1 8 2 7 3 6
+1 8 2 7 3 6 (no change as smallest item already at front)
+1 2 8 7 3 6
+1 2 3 7 8 6
+1 2 3 6 8 7
+1 2 3 6 7 8
 
-~~~
-diff --git a/mars.txt b/mars.txt
-index df0654a..93a3e13 100644
---- a/mars.txt
-+++ b/mars.txt
-@@ -1 +1,4 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-+An ill-considered change
-~~~
-{: .output}
+Sorting array of objects
+------------------------
 
-All right! So
-we can save changes to files and see what we've changed—now how
-can we restore older versions of things?
-Let's suppose we accidentally overwrite our file:
+Since objects cannot be compared using the primitive comparison
+operators ($>, <, \geq, \leq$), we must use the method `compareTo` to
+compare them.
 
-~~~
-$ nano mars.txt
-$ cat mars.txt
-~~~
-{: .bash}
+Essentially,
 
-~~~
-We will need to manufacture our own oxygen
-~~~
-{: .output}
+obj1 < obj2
+//is same as
+obj1.compareTo(obj2) == -1
 
-`git status` now tells us that the file has been changed,
-but those changes haven't been staged:
+Similarly,
 
-~~~
-$ git status
-~~~
-{: .bash}
+obj1 > obj2
+//is same as
+obj1.compareTo(obj2) == 1
 
-~~~
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+The only two statements in the sorted algorithm that are affected are:
 
-	modified:   mars.txt
+if(arr[k] < arr[minIndex]) //on line 8
+int temp = arr[i]; //on line 12
 
-no changes added to commit (use "git add" and/or "git commit -a")
-~~~
-{: .output}
+The sorting algorithm applied on array of objects changes to:
 
-We can put things back the way they were
-by using `git checkout`:
+``` {style="buggy"}
+//sorting method
+public static void selectionSort(Circle[] arr) {
+if(arr == null) //nothing to do
+return;
+for(int i=0; i < arr.length - 1; i++) {
+int minIndex = i;
+for(int k=i+1; k < arr.length; k++) {
+if(@arr[k].compareTo(arr[minIndex]) == -1@) {
+minIndex = k;
+}
+}
+@Circle temp = arr[i];@
+arr[i] = arr[minIndex];
+arr[minIndex] = temp;
+}
+}
+```
 
-~~~
-$ git checkout HEAD mars.txt
-$ cat mars.txt
-~~~
-{: .bash}
+Variations to sorting algorithm
+-------------------------------
 
-~~~
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-~~~
-{: .output}
+Sometimes, the basis of sorting might be a bit more complex than simple
+numerical comparison. For example, I might want to sort an array of
+integers in ascending order of number of divisors. For example, if the
+array is `{14, 5202, 12, 121, 36}`, the diferent states of the array
+sorted on different criteria are below:
 
-As you might guess from its name,
-`git checkout` checks out (i.e., restores) an old version of a file.
-In this case,
-we're telling Git that we want to recover the version of the file recorded in `HEAD`,
-which is the last saved commit.
-If we want to go back even further,
-we can use a commit identifier instead:
+1.  Based on numerical value: `{12, 14, 36, 121, 5202}`
 
-~~~
-$ git checkout f22b25e mars.txt
-~~~
-{: .bash}
+2.  Based on number of digits: `{14, 12, 36, 121, 5202}`
 
-~~~
-$ cat mars.txt
-~~~
-{: .bash}
+3.  Based on number of divisors: `{121, 5202, 14, 12, 36}`
 
-~~~
-Cold and dry, but everything is my favorite color
-~~~
-{: .output}
+This **only** affects the comparison statement.
 
-~~~
-$ git status
-~~~
-{: .bash}
+In each of the above situations, the comparison statements would be:
 
-~~~
-# On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   mars.txt
-#
-no changes added to commit (use "git add" and/or "git commit -a")
-~~~
-{: .output}
+1.  Based on numerical value:
 
-Notice that the changes are on the staged area.
-Again, we can put things back the way they were
-by using `git checkout`:
+if(arr[k] < arr[minIndex])
 
-~~~
-$ git checkout HEAD mars.txt
-~~~
-{: .bash}
+2.  Based on number of digits:
 
-> ## Don't Lose Your HEAD
->
-> Above we used
->
-> ~~~
-> $ git checkout f22b25e mars.txt
-> ~~~
-> {: .bash}
->
-> to revert `mars.txt` to its state after the commit `f22b25e`. But be careful! 
-> The command `checkout` has other important functionalities and Git will misunderstand
-> your intentions if you are not accurate with the typing. For example, 
-> if you forget `mars.txt` in the previous command.
->
-> ~~~
-> $ git checkout f22b25e
-> ~~~
-> {: .bash}
-> ~~~
-> Note: checking out 'f22b25e'.
->
-> You are in 'detached HEAD' state. You can look around, make experimental
-> changes and commit them, and you can discard any commits you make in this
-> state without impacting any branches by performing another checkout.
->
-> If you want to create a new branch to retain commits you create, you may
-> do so (now or later) by using -b with the checkout command again. Example:
->
->  git checkout -b <new-branch-name>
->
-> HEAD is now at f22b25e Start notes on Mars as a base
-> ~~~
-> {: .error}
->
-> The "detached HEAD" is like "look, but don't touch" here,
-> so you shouldn't make any changes in this state.
-> After investigating your repo's past state, reattach your `HEAD` with `git checkout master`.
-{: .callout}
+if(nDigits(arr[k]) < nDigits(arr[minIndex]))
 
-It's important to remember that
-we must use the commit number that identifies the state of the repository
-*before* the change we're trying to undo.
-A common mistake is to use the number of
-the commit in which we made the change we're trying to get rid of.
-In the example below, we want to retrieve the state from before the most
-recent commit (`HEAD~1`), which is commit `f22b25e`:
+3.  Based on number of divisors:
 
-![Git Checkout](../fig/git-checkout.svg)
+if(nDivisors(arr[k]) < nDivisors(arr[minIndex]))
 
-So, to put it all together,
-here's how Git works in cartoon form:
+In general, when comparing on a function of the items of the array, we
+should be using,
 
-![https://figshare.com/articles/How_Git_works_a_cartoon/1328266](../fig/git_staging.svg)
+if(someFunction(arr[k]) < someFunction(arr[minIndex]))
 
-> ## Simplifying the Common Case
->
-> If you read the output of `git status` carefully,
-> you'll see that it includes this hint:
->
-> ~~~
-> (use "git checkout -- <file>..." to discard changes in working directory)
-> ~~~
-> {: .bash}
->
-> As it says,
-> `git checkout` without a version identifier restores files to the state saved in `HEAD`.
-> The double dash `--` is needed to separate the names of the files being recovered
-> from the command itself:
-> without it,
-> Git would try to use the name of the file as the commit identifier.
-{: .callout}
+Where the simplest function is the identity function (the item itself),
+reducing the statement to,
 
-The fact that files can be reverted one by one
-tends to change the way people organize their work.
-If everything is in one large document,
-it's hard (but not impossible) to undo changes to the introduction
-without also undoing changes made later to the conclusion.
-If the introduction and conclusion are stored in separate files,
-on the other hand,
-moving backward and forward in time becomes much easier.
+if(arr[k] < arr[minIndex])
 
-> ## Recovering Older Versions of a File
->
-> Jennifer has made changes to the Python script that she has been working on for weeks, and the
-> modifications she made this morning "broke" the script and it no longer runs. She has spent
-> ~ 1hr trying to fix it, with no luck...
->
-> Luckily, she has been keeping track of her project's versions using Git! Which commands below will
-> let her recover the last committed version of her Python script called
-> `data_cruncher.py`?
->
-> 1. `$ git checkout HEAD`
->
-> 2. `$ git checkout HEAD data_cruncher.py`
->
-> 3. `$ git checkout HEAD~1 data_cruncher.py`
->
-> 4. `$ git checkout <unique ID of last commit> data_cruncher.py`
->
-> 5. Both 2 and 4
-{: .challenge}
+Insertion Sort
+==============
 
-> ## Reverting a Commit
->
-> Jennifer is collaborating on her Python script with her colleagues and
-> realizes her last commit to the group repository is wrong and wants to
-> undo it.  Jennifer needs to undo correctly so everyone in the group
-> repository gets the correct change.  `git revert [wrong commit ID]`
-> will make a new commit that undoes Jennifer's previous wrong
-> commit. Therefore `git revert` is different than `git checkout [commit
-> ID]` because `checkout` is for local changes not committed to the
-> group repository.  Below are the right steps and explanations for
-> Jennifer to use `git revert`, what is the missing command?
->
-> 1. `________ # Look at the git history of the project to find the commit ID`
->
-> 2. Copy the ID (the first few characters of the ID, e.g. 0b1d055).
->
-> 3. `git revert [commit ID]`
->
-> 4. Type in the new commit message.
->
-> 5. Save and close
-{: .challenge}
+The principle behind insertion sort is:
 
-> ## Understanding Workflow and History
->
-> What is the output of the last command in
->
-> ~~~
-> $ cd planets
-> $ echo "Venus is beautiful and full of love" > venus.txt
-> $ git add venus.txt
-> $ echo "Venus is too hot to be suitable as a base" >> venus.txt
-> $ git commit -m "Comment on Venus as an unsuitable base"
-> $ git checkout HEAD venus.txt
-> $ cat venus.txt #this will print the contents of venus.txt to the screen
-> ~~~
-> {: .bash}
->
-> 1. ~~~
->    Venus is too hot to be suitable as a base
->    ~~~
->    {: .output}
-> 2. ~~~
->    Venus is beautiful and full of love
->    ~~~
->    {: .output}
-> 3. ~~~
->    Venus is beautiful and full of love
->    Venus is too hot to be suitable as a base
->    ~~~
->    {: .output}
-> 4. ~~~
->    Error because you have changed venus.txt without committing the changes
->    ~~~
->    {: .output}
->
-> > ## Solution
-> >
-> > The answer is 2 because `git add venus.txt` was used only before add the line
-> > `Venus is too hot to be suitable as a base`
-> > which was lost when `git checkout` was executed.
-> > Using the flag `-a` with `git commit` would have prevented the lost.
-> {: .solution}
-{: .challenge}
+* Put the first item of the unsorted part at the right place in the
+sorted part. *
 
-> ## Checking Understanding of `git diff`
->
-> Consider this command: `git diff HEAD~3 mars.txt`. What do you predict this command
-> will do if you execute it? What happens when you do execute it? Why?
->
-> Try another command, `git diff [ID] mars.txt`, where [ID] is replaced with
-> the unique identifier for your most recent commit. What do you think will happen,
-> and what does happen?
-{: .challenge}
+Example 1
+---------
 
-> ## Getting Rid of Staged Changes
->
-> `git checkout` can be used to restore a previous commit when unstaged changes have
-> been made, but will it also work for changes that have been staged but not committed?
-> Make a change to `mars.txt`, add that change, and use `git checkout` to see if
-> you can remove your change.
-{: .challenge}
+<img src="./../fig/sorting/sorting-figure2.png"
+alt="Drawing" width = "400"/>
 
-> ## Explore and Summarize Histories
->
-> Exploring history is an important part of git, often it is a challenge to find
-> the right commit ID, especially if the commit is from several months ago.
->
-> Imagine the `planets` project has more than 50 files.
-> You would like to find a commit with specific text in `mars.txt` is modified.
-> When you type `git log`, a very long list appeared,
-> How can you narrow down the search?
->
-> Recall that the `git diff` command allow us to explore one specific file,
-> e.g. `git diff mars.txt`. We can apply a similar idea here.
->
-> ~~~
-> $ git log mars.txt
-> ~~~
-> {: .bash}
->
-> Unfortunately some of these commit messages are very ambiguous e.g. `update files`.
-> How can you search through these files?
->
-> Both `git diff` and `git log` are very useful and they summarize a different part of the history for you.
-> Is it possible to combine both? Let's try the following:
->
-> ~~~
-> $ git log --patch mars.txt
-> ~~~
-> {: .bash}
->
-> You should get a long list of output, and you should be able to see both commit messages and the difference between each commit.
->
-> Question: What does the following command do?
->
-> ~~~
-> $ git log --patch HEAD~3 *.txt
-> ~~~
-> {: .bash}
-{: .challenge}
+Example 2
+---------
+
+<img src="./../fig/sorting/sorting-figure3.png"
+alt="Drawing" width = "400"/>
+
+
+Insertion sort sample pseudo-code
+---------------------------------
+
+[H] set `i` to 1 <span> set backup to `arr[i]` set `k` to `i-1` set
+`arr[k+1]` to `backup` </span>
+
+Insertion Sort sample source code
+---------------------------------
+
+/**
+* @param arr: assumed to be sorted in ascending order from index 0 to index (pivotIndex-1)
+* @param pivotIndex: assumed to be an integer between 0 and (arr.length-1)
+* post-condition: after the method finishes, arr is sorted in ascending order from index 0 to index pivotIndex
+*/
+public static void insertIntoSortedRegion(int[] arr, int pivotIndex) {
+int backup = a[pivotIndex]; 
+int k = pivotIndex - 1;
+while(k >= 0 && a[k] > backup) { 
+a[k+1] = a[k]; 
+k--;
+}
+a[k+1] = backup; 
+}
+
+/**
+* @param a: array to be sorted
+* post-condition: array is sorted (based on ordering determined by insertIntoSortedRegion 
+*/
+public static void insertionSort(int[] a) {
+if(a == null)
+return;
+for(int i=1; i < a.length; i++) {
+insertIntoSortedRegion(a, i);
+}
+}
+
+[8][Trace insertion sort execution] Trace the status of the array at the
+end of each iteration of the loop controlled by variable `i` in
+insertion sort for the following cases:
+
+1.  `arr = {4, 3, 6, 5, 2, 1}`
+
+2.  `arr = {1, 8, 2, 7, 3, 6}`
+
+1.  4 3 6 5 2 1
+3 4 6 5 2 1
+3 4 6 5 2 1
+3 4 5 6 2 1
+2 3 4 5 6 1
+1 2 3 4 5 6
+
+2.  1 8 2 7 3 6
+1 8 2 7 3 6
+1 2 8 7 3 6
+1 2 7 8 3 6
+1 2 3 7 8 6
+1 2 3 6 7 8
+
+p<span>1cm</span>|
