@@ -174,8 +174,8 @@ Let's say, following are the contents of `HelloWorld.java`
 
 ```java
 public class HelloWorld {
-	public static void main(String[] args) {
-		System.out.println(5+);
+	public static void main(String[] args) {		
+	    System.out.println(5+);
 	}
 }
 ```
