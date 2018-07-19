@@ -1,6 +1,5 @@
 # Welcome to the unit
 
-<div class="collapsible-content">
 This is the second-programming unit and is taught using Java as a programming language. The focus of the unit is on,
 
 1. problem solving

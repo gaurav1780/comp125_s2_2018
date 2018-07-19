@@ -1,6 +1,5 @@
 # Pen and paper methodology
 
-<div class="collapsible-content">
 In the unit, we shall be doing a lot of work on computers, where your programs are auto-marked by the machine and instant feedback is given. However, one skill is critical for good understanding of programming and improving problem solving skills -
 
 We will start with trace of some programs to establish what we expect students to do while tracing through code.

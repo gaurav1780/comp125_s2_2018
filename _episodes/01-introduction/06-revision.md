@@ -1,7 +1,5 @@
 # Some problem solving to revise COMP115/WCOM115
 
-
-<div class="collapsible-content">
 ## Problem 1: Determining if a given integer is prime
 
 What is a prime number?_A number more than 1 that is divisible only by 1 and itself._

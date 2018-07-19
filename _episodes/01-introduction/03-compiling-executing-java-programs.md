@@ -1,6 +1,5 @@
 # Compiling and running java programs from command prompt or terminal
 
-<div class="collapsible-content">
 After installing Java SDK, you can write a code in a basic text editor (like notepad, atom, sublime) and then compile and run Java programs from command prompt or terminal.
 
 A java source file `HelloWorld.java` is compiled as

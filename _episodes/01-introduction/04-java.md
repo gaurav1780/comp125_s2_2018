@@ -1,6 +1,5 @@
 # Java
 
-<div class="collapsible-content">
 Some history about Java as a programming language follows.
 
 * Java was developed at Sun Microsystems, and most of the work was carried out between 1991 and 1995.
