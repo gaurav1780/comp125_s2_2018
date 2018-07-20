@@ -54,14 +54,20 @@ training_post_survey: "https://www.surveymonkey.com/r/post-instructor-training"
 # Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am).
 start_time: 0
 
+
+collections_dir: _collections
+
 # Specify that things in the episodes collection should be output.
 collections:
-  episodes:
-    output: true
-    permalink: /:path/index.html
-  extras:
-    output: true
-    permalink: /:path/index.html
+    episodes:
+        output: true
+        permalink: /:collection/:path
+    extras:
+        output: true
+        permalink: /:path/index.html
+    01-introduction:
+        output: true
+        permalink: /:collection/:path
 
 # Set the default layout for things in the episodes collection.
 defaults:
@@ -80,6 +86,12 @@ defaults:
     values:
       root: ..
       layout: page
+  - scope:
+      path: ""
+      type: 01-introduction
+    values:
+      root: ..
+      layout: episode
 
 # Files and directories that are not to be copied.
 exclude:
