@@ -51,22 +51,17 @@
         <li class="dropdown">
           <a href="{{ page.root }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            {% for collection in site.collections order:ascending %}
-                {% assign name = collection.label %}
-                {% assign first_character = name | slice: 0 %}
-                {% if first_character == "0" or first_character == "1" %}
-                    {% assign pretty_name = name | replace: '-', ' ' %}
-                    {% assign pretty_name = pretty_name | slice: 3, pretty_name.size %}
-
+            {% for collection in site.data.navigation-list.navigation_list %}
+                {% assign id = collection.id %}
+                {% assign collection_title = collection.title %}
                   <li class="dropdown-submenu">
-                      <a class="nav-folder" href="#">{{ pretty_name }}</a>
+                      <a class="nav-folder" href="#">{{ collection_title }}</a>
                             <ul class="dropdown-menu">
-                        {% for page in site.[name] %}
-                        <li><a href="{{ page.root }}{{ page.url  }}">{{ page.title }}</a></li>
+                        {% for link in collection.links %}
+                            <li><a href="{{ page.root }}/{{ id }}/{{ link.link }}"> {{ link.title }}</a></li>
                         {% endfor %}
                              </ul>
                    </li>
-                {% endif %}
             {% endfor %}
           </ul>
         </li>
