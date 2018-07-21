@@ -1,6 +1,7 @@
 ---
+title: History of Java 
 ---
-# Java
+# History of Java
 
 Some history about Java as a programming language follows.
 

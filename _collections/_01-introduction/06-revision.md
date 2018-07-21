@@ -1,4 +1,5 @@
 ---
+title: COMP115 recap
 ---
 # Some problem solving to revise COMP115/WCOM115
 
