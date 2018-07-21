@@ -25,27 +25,7 @@
 	{% comment %} Show setup instructions. {% endcomment %}
         <li><a href="{{ page.root }}{% link setup.md %}">Setup</a></li>
 
-        {% comment %} Show lesson episodes for lessons. {% endcomment %}
-        <li class="dropdown">
-          <a href="{{ page.root }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            {% for episode in site.episodes %}
-              <li class="dropdown-submenu">
-				          <a class="test" href="{{ page.root }}{{ episode.url }}">{{ episode.title }}</a>
-                  {% comment %} For each episode, generate a navigation dropdown based on the front matter variable 'navigation'. {% endcomment %}
-			            <ul class="dropdown-menu">
-                    {% for nav-item in episode.navigation %}
-                      {% assign nav_id = nav-item.id %}
-                      {% assign nav_id_stripped = nav-item.id | downcase | remove: '–'| remove: '-' | remove: ':' |
-                          remove: '`' | remove: '(' | remove: ')' | remove: ',' | remove: '?' | remove: '.' | remove: '/' %}
-                      {% assign nav_id_stripped = nav_id_stripped | replace: " ", "-" %}
-                    <li><a href="{{ page.root }}{{ episode.url }}#{{ nav_id_stripped }}">{{ nav-item.id }}</a></li>
-                    {% endfor %}
-			             </ul>
-               </li>
-            {% endfor %}
-          </ul>
-        </li>
+
 
         {% comment %} Show lecture material{% endcomment %}
         <li class="dropdown">
