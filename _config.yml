@@ -98,6 +98,7 @@ exclude:
   - Makefile
   - bin/
   - .Rproj.user/
+  - makeNavigationList.py
   
 # Turn on built-in syntax highlighting.
 highlighter: rouge
