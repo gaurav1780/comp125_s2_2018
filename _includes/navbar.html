@@ -34,8 +34,9 @@
             {% for collection in site.data.navigation-list.navigation_list %}
                 {% assign id = collection.id %}
                 {% assign collection_title = collection.title %}
+                {% assign collection_first_link = collection.links[0].link %}
                   <li class="dropdown-submenu">
-                      <a class="nav-folder" href="#">{{ collection_title }}</a>
+                      <a class="nav-folder" href="{{ page.root }}/{{ id }}/{{ collection_first_link }}">{{ collection_title }}</a>
                             <ul class="dropdown-menu">
                         {% for link in collection.links %}
                             <li><a href="{{ page.root }}/{{ id }}/{{ link.link }}"> {{ link.title }}</a></li>
