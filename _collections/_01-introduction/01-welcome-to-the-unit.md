@@ -2,7 +2,6 @@
 title: "Welcome to the unit!"
 layout: episode
 root: ..
-# permalink: "test/a"
 ---
 
 # Welcome to the unit

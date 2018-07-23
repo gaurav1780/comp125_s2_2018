@@ -15,4 +15,9 @@ navigation_list:
     link: 05-software-to-install
   - title: COMP115 recap
     link: 06-revision
+- id: 02-classes_and_objects_1
+  title: Classes And Objects 1
+  links:
+  - title: Introduction
+    link: 01-brief-introduction-to-object-oriented-programming
 ---

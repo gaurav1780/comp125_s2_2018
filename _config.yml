@@ -68,6 +68,9 @@ collections:
     01-introduction:
         output: true
         permalink: /:collection/:path
+    02-classes_and_objects_1:
+        output: true
+        permalink: /:collection/:path
 
 # Set the default layout for things in the episodes collection.
 defaults:
@@ -89,6 +92,12 @@ defaults:
   - scope:
       path: ""
       type: 01-introduction
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: 02-classes_and_objects_1
     values:
       root: ..
       layout: episode
