@@ -17,14 +17,14 @@
                     {% assign prev_link = page.root | append: '/' %}
                     {% assign prev_title = "Home" %}
                     {% if forloop.index == 1 %}
-                        {% if i == 0 %}
-                        {% else %}
+                        {% unless i == 0 %}
                             {% assign prev_collection_index = i | minus: 1 %}
-                            {% assign prev_collection_last_item_index = collections[prev_collection_index].links | size  | minus: 1 %}
-                            {% assign prev_collection_last_item = collections[prev_collection_index].links[prev_collection_last_item_index] %}
+                            {% assign prev_collection = collections[prev_collection_index] %}
+                            {% assign prev_collection_last_item_index = prev_collection.links | size  | minus: 1 %}
+                            {% assign prev_collection_last_item = prev_collection.links[prev_collection_last_item_index] %}
                             {% assign prev_link = prev_link | append: collections[prev_collection_index].id | append: '/' | append: prev_collection_last_item.link%}
-                            {% assign prev_title = prev_collection_last_item.title %}
-                        {% endif %}
+                            {% assign prev_title =  prev_collection.title | append: ' - ' | append: prev_collection_last_item.title %}
+                        {% endunless %}
                         {% comment %} Not the first item in the collection, so previous page is the page before it in the list. {% endcomment %}
                     {% else %}
                         {% assign prev_item_index = k | minus: 1 %}
@@ -62,15 +62,14 @@
                     {% assign next_link = page.root | append: '/' %}
                     {% assign next_title = "Home" %}
                     {% if forloop.index == collection_links_size %}
-                        {% if collection_index == collections_size %}
-
-                        {% else %}
+                        {% unless collection_index == collections_size %}
                             {% assign next_collection_index = i | plus: 1 %}
-                            {% assign next_collection_id = collections[next_collection_index].id %}
-                            {% assign next_page =  collections[next_collection_index].links[0] %}
-                            {% assign next_link = next_link | append: collections[next_collection_index].id | append: '/' | append: next_page.link %}
-                            {% assign next_title = next_page.title %}
-                        {% endif %}
+                            {% assign next_collection = collections[next_collection_index] %}
+                            {% assign next_collection_id = next_collection.id %}
+                            {% assign next_page =  next_collection.links[0] %}
+                            {% assign next_link = next_link | append: next_collection_id | append: '/' | append: next_page.link %}
+                            {% assign next_title = next_collection.title | append: ' - ' | append: next_page.title %}
+                        {% endunless %}
                         {%comment %} Not the last item in the collection, so next page is the page after it in the list. {% endcomment %}
                     {% else %}
                         {% assign next_item_index = k | plus: 1 %}
@@ -102,5 +101,3 @@
         {% endfor %}
     {% endif %}
 {% endfor %}
-
-{{ page.collection }}
