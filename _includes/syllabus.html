@@ -18,7 +18,7 @@ Days are displayed if at least one episode has 'start = true'.
             {% if multiday %}<td class="col-md-1"></td>{% endif %}
             <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}"></td>
             <td class="col-md-3"><a href="{{ page.root }}{% link setup.md %}">Setup</a></td>
-            <td class="col-md-7">Download files required for the lesson</td>
+            <td class="col-md-7"></td>
         </tr>
         {% for collection in site.data.navigation-list.navigation_list %}
         {% assign collection_first_page = collection.links[0] %}
