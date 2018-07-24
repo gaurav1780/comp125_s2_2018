@@ -18,6 +18,8 @@ navigation_list:
 - id: 02-classes_and_objects_1
   title: Classes And Objects 1
   links:
-  - title: Introduction
+  - title: Introduction to Object-Oriented Programming
     link: 01-brief-introduction-to-object-oriented-programming.html
+  - title: UML Diagrams
+    link: 02-uml-diagrams.html
 ---

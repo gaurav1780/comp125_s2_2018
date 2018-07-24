@@ -1,7 +1,7 @@
 ---
-title: Introduction
+title: Introduction to Object-Oriented Programming
 ---
-Introduction
+Introduction to Object-Oriented Programming
 ============
 
 Java is an object-oriented language. Classes and objects are one of the
