@@ -5,13 +5,9 @@ title: Software to install and first program
 
 Install the following software **in the order below**. You will be asked to choose your operating system for each software, and whether it's 32-bits or 64-bits. If not sure, use this [link](http://www.computerhope.com/issues/ch001121.htm) to determine the same.
 
-1. Java Standard Development Kit (Java SDK), also called Java Standard Edition (Java SE). On the date of writing this document, the current version is 9u04 (version 9, update 4). You'll be fine as long as you have version 8 or above.
+1. [**Java Standard Edition (Java SE)**](http://www.oracle.com/technetwork/java/javase/downloads/index.html), previously known as Java Standard Development Kit (Java SDK). Current version (on the date of writing this document): `10.0.2`. You'll be fine as long as you have version 8 or above.
 
-[Java SE Download Link](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
-2. Eclipse IDE **for Java developers**.
-
-[Eclipse IDE Download Link](https://eclipse.org/downloads/)
+2. [**Eclipse IDE for Java developers**](https://eclipse.org/downloads/). Current version (on the date of writing this document): `Photon`. Previous versions `Oxygen` and `Neon` should also be ok.
 
 **NOTE:** You are free to use any other IDE besides Eclipse (such as NetBeans or IntelliJ) if you want. However, we shall be doing all screencasts and video tutorials using Eclipse.
 
@@ -170,3 +166,4 @@ The `public` keyword is for consistency and will be used for all functions unles
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XS48hrWdm4Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+I
