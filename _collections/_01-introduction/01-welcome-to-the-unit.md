@@ -1,7 +1,5 @@
 ---
 title: "Welcome to the unit!"
-layout: episode
-root: ..
 ---
 
 # Welcome to the unit

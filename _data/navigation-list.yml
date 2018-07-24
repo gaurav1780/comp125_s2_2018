@@ -4,20 +4,20 @@ navigation_list:
   title: Introduction
   links:
   - title: Welcome to the unit!
-    link: 01-welcome-to-the-unit
+    link: 01-welcome-to-the-unit.html
   - title: Pen and Paper methodology
-    link: 02-pen-and-paper-methodology
+    link: 02-pen-and-paper-methodology.html
   - title: Compiling and running java programs
-    link: 03-compiling-executing-java-programs
+    link: 03-compiling-executing-java-programs.html
   - title: History of Java
-    link: 04-history-of-java
+    link: 04-history-of-java.html
   - title: Software to install and first program
-    link: 05-software-to-install
+    link: 05-software-to-install.html
   - title: COMP115 recap
-    link: 06-revision
+    link: 06-revision.html
 - id: 02-classes_and_objects_1
   title: Classes And Objects 1
   links:
   - title: Introduction
-    link: 01-brief-introduction-to-object-oriented-programming
+    link: 01-brief-introduction-to-object-oriented-programming.html
 ---

@@ -84,7 +84,7 @@ for dir_name in DIR_LIST:
             else:
                 title = pretty_str(link[3:])
         NAV_LIST[FRONT_MATTER_LIST_NAME][-1]['links'].append(
-            {'title': title, 'link': link})
+            {'title': title, 'link': link+'.html'})
 
 # Write the content of NAV_LIST
 FULL_OUTPUT_PATH = DATA_DIR + '/' + DEST_FILE
