@@ -15,11 +15,13 @@ navigation_list:
     link: 05-software-to-install.html
   - title: COMP115 recap
     link: 06-revision.html
-- id: 02-classes_and_objects_1
-  title: Classes And Objects 1
+- id: 02-classes-and-objects
+  title: Classes And Objects
   links:
   - title: Introduction to Object-Oriented Programming
-    link: 01-brief-introduction-to-object-oriented-programming.html
-  - title: UML Diagrams
-    link: 02-uml-diagrams.html
+    link: 01-object-oriented-programming.html
+  - title: Class design and UML Diagrams
+    link: 02-class-design-and-uml-diagrams.html
+  - title: Defining classes and creating objects
+    link: 03-class-definition-and-instantiation.html
 ---

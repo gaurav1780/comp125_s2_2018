@@ -17,4 +17,4 @@ Some history about Java as a programming language follows.
 
 ## How a java program compiles and executes
 
-![](/fig/javaCompileExecute.png)
+![](./../fig/javaCompileExecute.png)
