@@ -1,5 +1,5 @@
 ---
-title: "Welcome to the unit!"
+title: "Welcome to the unit"
 ---
 
 # Welcome to the unit

@@ -1,5 +1,5 @@
 ---
-title: Software to install and first program
+title: "Software to install and first program"
 ---
 # Software to install and first program
 

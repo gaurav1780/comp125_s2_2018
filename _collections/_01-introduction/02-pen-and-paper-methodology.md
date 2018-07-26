@@ -1,5 +1,5 @@
 ---
-title: Pen and Paper methodology
+title: "Pen and paper methodology"
 ---
 # Pen and paper methodology
 

@@ -1,5 +1,5 @@
 ---
-title: Compiling and running java programs
+title: "Compiling and running java programs from command prompt or terminal"
 ---
 # Compiling and running java programs from command prompt or terminal
 

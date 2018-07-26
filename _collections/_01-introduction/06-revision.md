@@ -1,5 +1,5 @@
 ---
-title: COMP115 recap
+title: "Some problem solving to revise COMP115/WCOM115"
 ---
 # Some problem solving to revise COMP115/WCOM115
 
