@@ -68,7 +68,7 @@ collections:
     01-introduction:
         output: true
         permalink: /:collection/:path
-    02-classes_and_objects_1:
+    02-classes-and-objects:
         output: true
         permalink: /:collection/:path
 
@@ -97,7 +97,7 @@ defaults:
       layout: episode
   - scope:
       path: ""
-      type: 02-classes_and_objects_1
+      type: 02-classes-and-objects
     values:
       root: ..
       layout: episode
