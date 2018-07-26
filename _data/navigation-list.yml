@@ -24,4 +24,12 @@ navigation_list:
     link: 02-class-design-and-uml-diagrams.html
   - title: Defining classes and creating objects
     link: 03-class-definition-and-instantiation.html
+  - title: Getters and Setters
+    link: 04-getters-setters.html
+  - title: Constructors
+    link: 05-constructors.html
+  - title: toString method
+    link: 06-toString.html
+  - title: Class containing array(s)
+    link: 07-class-containing-array.html
 ---

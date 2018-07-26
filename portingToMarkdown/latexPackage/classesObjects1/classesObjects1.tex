@@ -633,9 +633,12 @@ public class Client {
 At this stage, the memory state looks like,
 
 \vskip 0.5cm
-
-		
-
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=.5]
+\memoryblock{textsize=\Large,x=0,y=8.5,width=4,height=3,array={"list"}}
+\memoryblock{textsize=\Large,x=8, y=6, width=8, height=5,array={"data = null","nItems=0"}}
+\arrow{startX=3.5, startY=10, endX=8, endY=10}
+\end{tikzpicture} \egroup 
+\vskip 0.5cm
 \newpage
 
 If we change the values of the instance variables as,

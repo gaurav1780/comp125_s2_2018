@@ -1,8 +1,7 @@
 ---
 title: Defining class and creating objects
 ---
-Defining class and creating objects
-==================================
+# Defining class and creating objects
 
 Defining classes
 ----------------
@@ -20,8 +19,8 @@ Instance variables can be declared as in the following two examples.
 Note the `public` modifier (for now):
 
 ```java
-     public int     instanceVar1;
-     public String  instanceVar2;
+ public int     instanceVar1;
+ public String  instanceVar2;
 ```
 
 Defining methods
@@ -51,13 +50,13 @@ class has yet been created.
 its radius.
 
 ```java
-    public class Circle {
-        public double radius;
-        /*
-        * note that int is a wrong choice as radius 
-        * CAN be a floating-point value like 1.5 or 2.4
-        */
-    }
+public class Circle {
+    public double radius;
+    /*
+    * note that int is a wrong choice as radius 
+    * CAN be a floating-point value like 1.5 or 2.4
+    */
+}
 ```
 	 
 Declaration and instantiation
@@ -68,8 +67,8 @@ Declaration and instantiation
 
 
 ```java
-    ClassName  classVar; //declaration
-    Rectangle r; //example
+ClassName  classVar; //declaration
+Rectangle r; //example
 ```
 
 ![](./../fig/classesObjects1/classesObjects1-figure2.png)
@@ -88,8 +87,8 @@ Declaration and instantiation
     that memory.
     
 ```java
-    classVar = new ClassName(); //instantiation
-    r = new Rectangle(); //example
+classVar = new ClassName(); //instantiation
+r = new Rectangle(); //example
 ```
 	
 ![](./../fig/classesObjects1/classesObjects1-figure3.png)
@@ -97,27 +96,27 @@ Declaration and instantiation
 -   These can be combined:
 
 ```java
-    ClassName classVar = new ClassName(); 
-    //declaration + instantiation
+ClassName classVar = new ClassName(); 
+//declaration + instantiation
 
-    Rectangle r = new Rectangle(); //example
+Rectangle r = new Rectangle(); //example
 ```
 
 [4][Declare and Instantiate an object] Declare and instantiate an object
 `myCircle` of class `Circle`
 
 ```java
-    public class Client {
-        public static void main(String[] args) {
-            Circle myCircle = new Circle();
-        }
+public class Client {
+    public static void main(String[] args) {
+        Circle myCircle = new Circle();
     }
+}
 ```
 	 
 Although, you can just write the relevant part in written exams:
 
 ```java
-    Circle myCircle = new Circle();
+Circle myCircle = new Circle();
 ```
 
 Adding method to a class
@@ -138,8 +137,8 @@ method) for an object. Think of it as the `apostrophe s (’s)` of the
 human language (as in *"Gaurav’s class"* or *"Matt’s workshop"*)
 
 ```java
-  Rectangle r = new Rectangle(); //example
-  r.width = 5;
+Rectangle r = new Rectangle(); //example
+r.width = 5;
 ```
 
 -   The expression `r` gives us access to the instance variable `width`
@@ -152,10 +151,10 @@ human language (as in *"Gaurav’s class"* or *"Matt’s workshop"*)
 
 
 ``` java
-      Rectangle r = new Rectangle(); 
-      r.width = 5;
-      r.height = 8;
-      System.out.println(r.area());
+Rectangle r = new Rectangle(); 
+r.width = 5;
+r.height = 8;
+System.out.println(r.area());
 ```
 
 Here, `r.area()` returns `width * height` and since the method is called
@@ -167,8 +166,8 @@ that sits outside the class definition and displays the radius of the
 object `myCircle` and also its area.
 
 ```java
-    System.out.println(myCircle.getRadius());
-    System.out.println(myCircle.area());
+System.out.println(myCircle.getRadius());
+System.out.println(myCircle.area());
 ```
 	 
 ## Are there any default values?

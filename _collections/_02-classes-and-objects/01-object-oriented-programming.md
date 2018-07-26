@@ -1,8 +1,7 @@
 ---
 title: Introduction to Object-Oriented Programming
 ---
-Introduction to Object-Oriented Programming
-============
+# Introduction to Object-Oriented Programming
 
 -   Classes are models of real world entities inside our programs.
 
@@ -44,9 +43,10 @@ Example: Java’s String class
 
 Example: String object
 ----------------------
-
-    String greeting = "Hello, World!";
-    System.out.println(greeting.length());
+```java
+String greeting = "Hello, World!";
+System.out.println(greeting.length());
+```
 
 Here, `greeting` is an instance, or, object of `String` class. The
 statement `String greeting = Hello, World!;` is called the
@@ -56,8 +56,10 @@ that is being invoked on object `greeting`
 Standard way of instantiatiation
 --------------------------------
 
-    String lecturer1 = "Gaurav";
-    String lecturer2 = new String("Scott");
+```java
+String lecturer1 = "Gaurav";
+String lecturer2 = new String("Scott");
+```
 
 -   The two variables are different instances of the `String` class.
 

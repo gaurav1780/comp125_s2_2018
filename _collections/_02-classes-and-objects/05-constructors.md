@@ -2,20 +2,23 @@
 title: Constructors 
 ---
 
-I wish creating objects was easier (aka constructors)
-==================================
+# I wish creating objects was easier (aka constructors)
 
 Let’s say that the user wants to create a `Rectangle` whose `width` is 5
 and `height` is 8. Following code achieves this,
 
-    Rectangle r = new Rectangle();
-    r.width = 5;
-    r.height = 8;
+```java
+Rectangle r = new Rectangle();
+r.width = 5;
+r.height = 8;
+```
 
 However, it would be really nice if one could pass the values for the
 instance variables in the instantiation statement itself, as,
 
-    Rectangle r = new Rectangle(5, 8);
+```java
+Rectangle r = new Rectangle(5, 8);
+```
 
 This is done through `constructors`.
 
@@ -39,36 +42,35 @@ Constructors
 Example - Constructor
 ---------------------
 
-    public class Rectangle {
-        private double width, height;
-        
-        //getters and setters
+```java
+public class Rectangle {
+    private double width, height;
+    
+    //getters and setters
 
-        public Rectangle() { //default constructor
-            setWidth(1);
-            setHeight(1);
-        }
-
-        //parameterized constructor for a square
-        public Rectangle(double side) { 
-            setWidth(side);
-            setHeight(side);
-        }
-
-        //parameterized constructor - generic
-        public Rectangle(double w, double h) { 
-            setWidth(w);
-            setHeight(h);
-        }
-        //rest of the code
+    public Rectangle() { //default constructor
+        setWidth(1);
+        setHeight(1);
     }
 
+    //parameterized constructor for a square
+    public Rectangle(double side) { 
+        setWidth(side);
+        setHeight(side);
+    }
 
-<center>
-<img src="./../fig/classesObjects1/classesObjects1-figure7.png"
-alt="Drawing" width = "200"\>
-</center>
+    //parameterized constructor - generic
+    public Rectangle(double w, double h) { 
+        setWidth(w);
+        setHeight(h);
+    }
+    //rest of the code
+}
+```
 
+<div>&nbsp;</div>
+![](./../fig/classesObjects1/classesObjects1-figure7.png)
+<div>&nbsp;</div>
 
 Constructors should call setters - always!
 ------------------------------------------
@@ -83,7 +85,9 @@ It should be noted that a default constructor (without any parameters)
 is pre-defined for you by Java and that’s why you can instantiate
 objects without defining it yourself.
 
-    Rectange r = new Rectangle();
+```java
+Rectange r = new Rectangle();
+```
 
 The default constructor assigns the default values for the appropriate
 data types to the instance variables. However, once you define a
@@ -97,10 +101,12 @@ Defining the default constructor
 Let’s say the default `Rectangle` instance should be of unit length. We
 can define the default constructor as,
 
-    public Rectangle() {
-        setLength(1);
-        setBreadth(1);
-    }
+```java
+public Rectangle() {
+    setLength(1);
+    setBreadth(1);
+}
+```
 
 [8][Add default and parameterized constructor] Add two constructors to
 the class `Circle`.
@@ -111,14 +117,14 @@ the class `Circle`.
 2.  Parameter passed for radius (parameterized constructor): Assigns the
     passed value to radius through the setter.
 
-<!-- -->
+```java
+//default constructor
+public Circle() {
+    setRadius(1);
+}
 
-    //default constructor
-    public Circle() {
-        setRadius(1);
-    }
-
-    //parameterized constructor
-    public Circle(double r) {
-        setRadius(r); //let setter handle the validation
-    }
+//parameterized constructor
+public Circle(double r) {
+    setRadius(r); //let setter handle the validation
+}
+```
