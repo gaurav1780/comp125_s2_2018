@@ -13,8 +13,7 @@ title: Introduction to Object-Oriented Programming
 
 -   *OO Programming* deals with realising that design correctly.
 
-Classes and instances
-=====================
+## Classes and instances
 
 Class definition specifies -
 
@@ -26,8 +25,7 @@ Class definition specifies -
 
 ![](./../fig/classesObjects1/classesObjects1-figure0.png)
 
-Example: Java’s String class
-----------------------------
+## Example: Java’s String class
 
 -   As we know `String` is a built in class for handling sequences of
     characters.
@@ -41,8 +39,8 @@ Example: Java’s String class
 -   The interface provides a number of operations on the character
     sequence.
 
-Example: String object
-----------------------
+### Example: String object
+
 ```java
 String greeting = "Hello, World!";
 System.out.println(greeting.length());
@@ -53,8 +51,7 @@ statement `String greeting = Hello, World!;` is called the
 **instantiation** statement. The class has an instance method `length`
 that is being invoked on object `greeting`
 
-Standard way of instantiatiation
---------------------------------
+## Standard way of instantiatiation
 
 ```java
 String lecturer1 = "Gaurav";

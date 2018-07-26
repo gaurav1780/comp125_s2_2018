@@ -30,8 +30,7 @@ Rectangle r = new Rectangle(5, 8);
 r.display();
 ```
 
-Problem with the `display()` method
------------------------------------
+## Problem with the `display()` method
 
 But this would only let us **display** the object details, and not send
 to a file, or concatenate with any other output.
@@ -39,8 +38,7 @@ to a file, or concatenate with any other output.
 Java provides a standard way to return the String description of an
 object using the `toString()` method (with return type `String`).
 
-Default `toString()` behaviour
-------------------------------
+## Default `toString()` behaviour
 
 When you display an object, what Java displays is the outcome of the
 <span>toString()</span> method on that object
@@ -59,8 +57,7 @@ System.out.println(r);
 System.out.println(r.toString()); 
 ```
 
-Over-riding `toString()` behaviour
-----------------------------------
+## Over-riding `toString()` behaviour
 
 We can over-ride `toString()` method as required. For the `Rectangle`
 class,

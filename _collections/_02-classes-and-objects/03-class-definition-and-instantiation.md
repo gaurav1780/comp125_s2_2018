@@ -3,8 +3,8 @@ title: Defining class and creating objects
 ---
 # Defining class and creating objects
 
-Defining classes
-----------------
+## Defining classes
+
 
 -   Each class is defined in a separate file with the same name and
     ending with `.java`
@@ -12,8 +12,7 @@ Defining classes
 -   All Java class definitions are separate files in the same folder
     (for now).
 
-Adding instance variables
--------------------------
+## Adding instance variables
 
 Instance variables can be declared as in the following two examples.
 Note the `public` modifier (for now):
@@ -23,8 +22,7 @@ Note the `public` modifier (for now):
  public String  instanceVar2;
 ```
 
-Defining methods
-----------------
+## Defining methods
 
 Method definitions have a heading and a method body
 
@@ -34,8 +32,7 @@ Method definitions have a heading and a method body
 -   The *body* defines the code to be executed when the method is
     called.
 
-Example - Defining a class
---------------------------
+## Example - Defining a class
 
 Defining a class: example Note that the above class definition merely
 provides a template or blueprint for the class. No complete program
@@ -59,12 +56,14 @@ public class Circle {
 }
 ```
 	 
-Declaration and instantiation
------------------------------
+## Declaration and instantiation
 
--   An object or instance of the new class type is declared in main as
-    follows:
+### Declaration
 
+Declaration creates a *reference* in the memory, which doesn’t refer to
+any storage space yet.
+
+An object or instance of the new class type is declared in main as follows:
 
 ```java
 ClassName  classVar; //declaration
@@ -73,18 +72,9 @@ Rectangle r; //example
 
 ![](./../fig/classesObjects1/classesObjects1-figure2.png)
 
-Declaration
------------
+### Instantiation
 
-Declaration creates a *reference* in the memory, which doesn’t refer to
-any storage space yet.
-
-Declaration and instantiation
------------------------------
-
--   We perform the `instantiation` statement to allocate storage space
-    for the instance variables of the object declared and to refer to
-    that memory.
+We perform the `instantiation` statement to allocate storage space for the instance variables of the object declared and to refer to that memory.
     
 ```java
 classVar = new ClassName(); //instantiation
@@ -93,7 +83,7 @@ r = new Rectangle(); //example
 	
 ![](./../fig/classesObjects1/classesObjects1-figure3.png)
 
--   These can be combined:
+### Combining declaration and instantiation
 
 ```java
 ClassName classVar = new ClassName(); 
@@ -119,8 +109,7 @@ Although, you can just write the relevant part in written exams:
 Circle myCircle = new Circle();
 ```
 
-Adding method to a class
-------------------------
+## Adding method to a class
 
 You can add methods inside the class that can be called on any
 *instance* of the class.
@@ -129,8 +118,7 @@ You can add methods inside the class that can be called on any
 ![](./../fig/classesObjects1/classesObjects1-figure4.png)
 
 
-The dot (.) operator
---------------------
+## The dot (.) operator
 
 The dot operator gives us access to the members (instance variables and
 method) for an object. Think of it as the `apostrophe s (’s)` of the

@@ -4,8 +4,7 @@ title: Getters and Setters
 # Getters and setters
 
 
-Bad client, bad bad client!
----------------------------
+## Bad client, bad bad client!
 
 Once the object is created, we can start operating on it.
 
@@ -17,16 +16,14 @@ System.out.println(r.area());
 //displays -40 :'(
 ```
 
-Changing visibility to private
-------------------------------
+## Changing visibility to private
 
 ![](./../fig/classesObjects1/classesObjects1-figure5.png)
 
 Now, the instance variables `width` and `height` are visible only within
 the class definition.
 
-How does one access (read/write) private instance variables
------------------------------------------------------------
+## How does one access (read/write) private instance variables
 
 We access (read and write) private instance variables through public
 methods called `getters` and `setters`.
@@ -36,8 +33,7 @@ methods called `getters` and `setters`.
 -   `setters` set the value supplied by the caller to the instance
     variables.
 
-Setters must provide validation where applicable
-------------------------------------------------
+## Setters must provide validation where applicable
 
 You can see that we validated the passed values before assigning to the
 instance variable as `width = Math.abs(w)`. This is a typical case and
