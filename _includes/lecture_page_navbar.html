@@ -8,7 +8,9 @@
         {% assign collection_links_size = collection.links | size %}
         {% for link in collection.links %}
             {% assign k = forloop.index | minus: 1 %}
-            {% if page.title == link.title %}
+            {% assign current_link_full_relative_path = '_' | append: collection.id | append: '/' | append: link.link %}
+            {% assign current_link_full_relative_path = current_link_full_relative_path | replace: '.html', '.md' %}
+            {% if page.path == current_link_full_relative_path %}
                 {% comment %}
                 If first page in the collection and is the first collection then previous is the home page. If it is the first page in the collection and it is not in the first collection, then previous page is the last page of the previous collection.
                 {% endcomment %}
