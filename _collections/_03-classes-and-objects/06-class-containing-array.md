@@ -32,7 +32,7 @@ The client is as follows,
 At this stage, the memory state looks like,
  
 <div>&nbsp;</div> 
-![](./../fig/classesObjects1/classesObjects1-figure8.png)  
+![](./../fig/03-classes-and-objects/classesObjects1-figure8.png)  
 <div>&nbsp;</div>
 
 If we change the values of the instance variables as,
@@ -50,7 +50,7 @@ If we change the values of the instance variables as,
 It now becomes,	
 
 <div>&nbsp;</div> 
-![](./../fig/classesObjects1/classesObjects1-figure9.png) 
+![](./../fig/03-classes-and-objects/classesObjects1-figure9.png) 
 <div>&nbsp;</div>
 
 Finally, we can modify the items of the array as,
@@ -69,5 +69,5 @@ Finally, we can modify the items of the array as,
 
 This gives us,  
 <div>&nbsp;</div> 
-![](./../fig/classesObjects1/classesObjects1-figure10.png) 
+![](./../fig/03-classes-and-objects/classesObjects1-figure10.png) 
 <div>&nbsp;</div>

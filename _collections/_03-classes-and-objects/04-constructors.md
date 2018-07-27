@@ -69,7 +69,7 @@ public class Rectangle {
 ```
 
 <div>&nbsp;</div>
-![](./../fig/classesObjects1/classesObjects1-figure7.png)
+![](./../fig/03-classes-and-objects/classesObjects1-figure7.png)
 <div>&nbsp;</div>
 
 Constructors should call setters - always!
@@ -108,23 +108,27 @@ public Rectangle() {
 }
 ```
 
-[8][Add default and parameterized constructor] Add two constructors to
-the class `Circle`.
+{: challenge}
+> ## Add a default constructor to the class `Circle` that assigns the value 1.0 to instance variable `radius` (through the setter).
+>> ## SOLUTION
+>>> ```java
+>>> //default constructor
+>>> public Circle() {
+>>>     setRadius(1);
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
-1.  No parameters passed (default constructor): Assigns the value 1.0 to
-    radius ... through the setter.
 
-2.  Parameter passed for radius (parameterized constructor): Assigns the
-    passed value to radius through the setter.
-
-```java
-//default constructor
-public Circle() {
-    setRadius(1);
-}
-
-//parameterized constructor
-public Circle(double r) {
-    setRadius(r); //let setter handle the validation
-}
-```
+{: challenge}
+> ## Add a parameterized constructor to the class `Circle` that assigns the value of the parameter passed to instance variable `radius` (through the setter).
+>> ## SOLUTION
+>>> ```java
+>>> //default constructor
+>>> public Circle() {
+>>>     setRadius(r); //let setter handle the validation
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}

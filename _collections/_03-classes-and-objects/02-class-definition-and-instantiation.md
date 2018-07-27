@@ -34,27 +34,37 @@ Method definitions have a heading and a method body
 
 ## Example - Defining a class
 
-Defining a class: example Note that the above class definition merely
+```java
+public class Rectangle {
+    public double width;
+    public double height;
+}
+```
+
+Note that the above class definition merely
 provides a template or blueprint for the class. No complete program
 using this class has yet been written, and no object (instance) of this
 class has yet been created.
 
 
-![](./../fig/classesObjects1/classesObjects1-figure1.png)
+![](./../fig/03-classes-and-objects/classesObjects1-figure1.png)
 
 
-[6][Define a class] Define a class for a Circle that is represented by
-its radius.
+{: challenge}
+> ## Define a class for a Circle that is represented by its radius.
+>> ## SOLUTION
+>>> ```java
+>>> public class Circle {
+>>>     public double radius;
+>>>     /*
+>>>     * note that int is a wrong choice as radius 
+>>>     * CAN be a floating-point value like 1.5 or 2.4
+>>>     */
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
-```java
-public class Circle {
-    public double radius;
-    /*
-    * note that int is a wrong choice as radius 
-    * CAN be a floating-point value like 1.5 or 2.4
-    */
-}
-```
 	 
 ## Declaration and instantiation
 
@@ -70,7 +80,7 @@ ClassName  classVar; //declaration
 Rectangle r; //example
 ```
 
-![](./../fig/classesObjects1/classesObjects1-figure2.png)
+![](./../fig/03-classes-and-objects/classesObjects1-figure2.png)
 
 ### Instantiation
 
@@ -81,7 +91,7 @@ classVar = new ClassName(); //instantiation
 r = new Rectangle(); //example
 ```
 	
-![](./../fig/classesObjects1/classesObjects1-figure3.png)
+![](./../fig/03-classes-and-objects/classesObjects1-figure3.png)
 
 ### Combining declaration and instantiation
 
@@ -92,17 +102,19 @@ ClassName classVar = new ClassName();
 Rectangle r = new Rectangle(); //example
 ```
 
-[4][Declare and Instantiate an object] Declare and instantiate an object
-`myCircle` of class `Circle`
+{: challenge}
+> ## Declare and instantiate an object `myCircle` of class `Circle`.
+>> ## SOLUTION
+>>> ```java
+>>> public class Client {
+>>>     public static void main(String[] args) {
+>>>         Circle myCircle = new Circle();
+>>>     }
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
-```java
-public class Client {
-    public static void main(String[] args) {
-        Circle myCircle = new Circle();
-    }
-}
-```
-	 
 Although, you can just write the relevant part in written exams:
 
 ```java
@@ -114,8 +126,27 @@ Circle myCircle = new Circle();
 You can add methods inside the class that can be called on any
 *instance* of the class.
 
+```java
+public class Rectangle {
+    public double width;
+    public double height;
 
-![](./../fig/classesObjects1/classesObjects1-figure4.png)
+    public double area() {
+		return width * height;
+    }
+
+    public boolean isSquare() {
+    	if(width == height)
+    		return true;
+    	else
+    		return false;
+    	//equally correct: 
+    	//return width==height;
+    }
+}
+```
+
+![](./../fig/03-classes-and-objects/classesObjects1-figure4.png)
 
 
 ## The dot (.) operator
@@ -149,14 +180,16 @@ Here, `r.area()` returns `width * height` and since the method is called
 on object `r`, it returns `r.width * r.height`. Had the method been
 called on another object `s`, it would return `s.width * s.height`.
 
-[5][Access instance variables and call methods] Write a piece of code
-that sits outside the class definition and displays the radius of the
-object `myCircle` and also its area.
+{: challenge}
+> ## Write a piece of code that sits outside the class definition and displays the radius of the object `myCircle` and also its area.
+>> ## SOLUTION
+>>> ```java
+>>> System.out.println(myCircle.getRadius());
+>>> System.out.println(myCircle.area());
+>>> ```
+>{: .solution}
+{: .challenge}
 
-```java
-System.out.println(myCircle.getRadius());
-System.out.println(myCircle.area());
-```
 	 
 ## Are there any default values?
 

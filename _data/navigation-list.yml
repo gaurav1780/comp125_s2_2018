@@ -15,21 +15,28 @@ navigation_list:
     link: 05-software-to-install.html
   - title: COMP115 recap
     link: 06-revision.html
-- id: 02-classes-and-objects
+- id: 02-debugging-unit-testing
+  title: Debugging and Unit Testing
+  links:
+  - title: Debugging
+    link: 01-debugging.html
+  - title: Unit Testing and JUnit
+    link: 02-unit-testing-junit.html
+- id: 03-classes-and-objects
   title: Classes And Objects
   links:
   - title: Introduction to Object-Oriented Programming
     link: 01-object-oriented-programming.html
-  - title: Class design and UML Diagrams
-    link: 02-class-design-and-uml-diagrams.html
   - title: Defining classes and creating objects
-    link: 03-class-definition-and-instantiation.html
+    link: 02-class-definition-and-instantiation.html
   - title: Getters and Setters
-    link: 04-getters-setters.html
+    link: 03-getters-setters.html
   - title: Constructors
-    link: 05-constructors.html
+    link: 04-constructors.html
   - title: toString method
-    link: 06-toString.html
+    link: 05-toString.html
   - title: Class containing array(s)
-    link: 07-class-containing-array.html
+    link: 06-class-containing-array.html
+  - title: Shallow vs. Deep copy of an object
+    link: 07-shallow-and-deep-copy.html
 ---

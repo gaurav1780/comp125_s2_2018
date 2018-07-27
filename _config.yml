@@ -68,7 +68,10 @@ collections:
     01-introduction:
         output: true
         permalink: /:collection/:path
-    02-classes-and-objects:
+    02-debugging-unit-testing:
+        output: true
+        permalink: /:collection/:path
+    03-classes-and-objects:
         output: true
         permalink: /:collection/:path
 
@@ -97,7 +100,13 @@ defaults:
       layout: episode
   - scope:
       path: ""
-      type: 02-classes-and-objects
+      type: 02-debugging-unit-testing
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: 03-classes-and-objects
     values:
       root: ..
       layout: episode

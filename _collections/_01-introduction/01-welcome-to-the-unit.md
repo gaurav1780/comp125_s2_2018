@@ -31,3 +31,10 @@ Please refer to the unit guide available at [http://unitguides.mq.edu.au/units](
 5. Important dates, including assessment deadlines
 
 6. Academic honesty policy
+
+## Software required
+
+There are only two softwares we use in COMP125 and you must install these in the **given order**.
+
+1. [Java SE](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html): This is the programming language we shall be using.
+2. [Eclipse IDE for Java developers](https://www.eclipse.org/downloads/): This is the programming *environment* we shall be using. It requires the programming language (Java) to be installed already.
