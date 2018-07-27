@@ -50,6 +50,16 @@ Given that the object `source` holds the reference to the instance, that referen
 ![](./../fig/03-classes-and-objects/shallowCopyDeepCopy-figure0.png)
 <div> &nbsp; </div>
 
+If you change the value of the instance variables of either `source` or `destination`, the other object will be affected.
+
+```java
+destination.setWidth(666.66);
+```
+
+<div> &nbsp; </div>
+![](./../fig/03-classes-and-objects/shallowCopyDeepCopy-figure1.png)
+<div> &nbsp; </div>
+
 ## Deep copy
 
 A **deep copy** is when you create a new instance of a class and copy the contents from another instance.
@@ -62,7 +72,17 @@ destination.setHeight(source.getHeight());
 ```
 
 <div> &nbsp; </div>
-![](./../fig/03-classes-and-objects/shallowCopyDeepCopy-figure1.png)
+![](./../fig/03-classes-and-objects/shallowCopyDeepCopy-figure2.png)
 <div> &nbsp; </div>
 
+If you change the value of the instance variables of either `source` or `destination`, the other object will **NOT** be affected.
+
+```java
+destination.setWidth(888.88);
+```
+
+
+<div> &nbsp; </div>
+![](./../fig/03-classes-and-objects/shallowCopyDeepCopy-figure3.png)
+<div> &nbsp; </div>
 

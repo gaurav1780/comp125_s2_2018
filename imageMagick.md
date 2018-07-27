@@ -17,6 +17,12 @@ find ./ -name "*.png" -exec convert {} -scale 50% outputfolder/{} \;
 
 find ./ -name "*.png" -exec convert {} -scale 50% ./{} \;
 
+###Command to trime and scale (by 50%) and overwrite files:
+
+find ./ -name "*.png" -exec convert {} -trim -scale 50% ./{} \;
+
 #####Source of commands:
 
 https://askubuntu.com/questions/351767/how-to-crop-borders-white-spaces-from-image#351772
+
+find ./ -name "shallowCopyDeepCopy*.png" -exec convert {} -scale 70% ./{} \;

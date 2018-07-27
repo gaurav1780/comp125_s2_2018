@@ -3,7 +3,7 @@ Display syllabus in tabular form.
 Days are displayed if at least one episode has 'start = true'.
 {% endcomment %}
 <div class="syllabus">
-    <h2 id="schedule">Schedule</h2>
+    <h2 id="schedule">Lecture Topics</h2>
 
     {% assign lesson_number = 0 %}
     {% assign day = 0 %}
@@ -14,12 +14,15 @@ Days are displayed if at least one episode has 'start = true'.
     {% assign current = site.start_time %}
 
     <table class="table table-striped">
+        {% comment}
         <tr>
             {% if multiday %}<td class="col-md-1"></td>{% endif %}
             <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}"></td>
             <td class="col-md-3"><a href="{{ page.root }}{% link setup.md %}">Setup</a></td>
             <td class="col-md-7"></td>
         </tr>
+        remove comment block to add setup to schedule
+        {% endcomment %}
         {% for collection in site.data.navigation-list.navigation_list %}
         {% assign collection_first_page = collection.links[0] %}
         <tr>
@@ -29,9 +32,4 @@ Days are displayed if at least one episode has 'start = true'.
         </tr>
         {% endfor %}
     </table>
-
-    <p>
-    The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
-    </p>
-
 </div>

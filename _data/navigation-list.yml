@@ -28,15 +28,17 @@ navigation_list:
   - title: Introduction to Object-Oriented Programming
     link: 01-object-oriented-programming.html
   - title: Defining classes and creating objects
-    link: 02-class-definition-and-instantiation.html
+    link: 02-defining-classes-and-instantiating-objects.html
   - title: Getters and Setters
     link: 03-getters-setters.html
   - title: Constructors
     link: 04-constructors.html
   - title: toString method
     link: 05-toString.html
-  - title: Class containing array(s)
-    link: 06-class-containing-array.html
   - title: Shallow vs. Deep copy of an object
-    link: 07-shallow-and-deep-copy.html
+    link: 06-shallow-and-deep-copy.html
+  - title: Class containing array(s)
+    link: 07-class-containing-array.html
+  - title: Array of objects
+    link: 08-array-of-objects.html
 ---
