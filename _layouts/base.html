@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/lesson.css" />
     <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/syntax.css" />
 
+    <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/dropdown-menu.css" />
+    <link rel="stylesheet" type="text/css" href="{{ page.root }}/assets/css/collapsible-content.css" />
+
     {% include favicons.html %}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,11 +31,11 @@
   <body>
     <div class="container">
       {% include navbar.html %}
-{{ content }}
+        {{ content }}
       {% if site.kind == "workshop" %}
-      {% include workshop_footer.html %}
+        {% include workshop_footer.html %}
       {% else %}
-      {% include lesson_footer.html %}
+        {% include lesson_footer.html %}
       {% endif %}
     </div>
     {% include javascript.html %}

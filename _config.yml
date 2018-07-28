@@ -1,6 +1,7 @@
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
+# markdown: redcarpet-pygments
   
 # Which carpentry is this ("swc", "dc", "lc", or "cp")?
 # swc: Software Carpentry
@@ -53,14 +54,26 @@ training_post_survey: "https://www.surveymonkey.com/r/post-instructor-training"
 # Start time in minutes (0 to be clock-independent, 540 to show a start at 09:00 am).
 start_time: 0
 
+
+collections_dir: _collections
+
 # Specify that things in the episodes collection should be output.
 collections:
-  episodes:
-    output: true
-    permalink: /:path/index.html
-  extras:
-    output: true
-    permalink: /:path/index.html
+    episodes:
+        output: true
+        permalink: /:collection/:path
+    extras:
+        output: true
+        permalink: /:path/index.html
+    01-introduction:
+        output: true
+        permalink: /:collection/:path
+    02-debugging-unit-testing:
+        output: true
+        permalink: /:collection/:path
+    03-classes-and-objects:
+        output: true
+        permalink: /:collection/:path
 
 # Set the default layout for things in the episodes collection.
 defaults:
@@ -79,12 +92,33 @@ defaults:
     values:
       root: ..
       layout: page
+  - scope:
+      path: ""
+      type: 01-introduction
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: 02-debugging-unit-testing
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: 03-classes-and-objects
+    values:
+      root: ..
+      layout: episode
 
 # Files and directories that are not to be copied.
 exclude:
   - Makefile
   - bin/
   - .Rproj.user/
+  - makeNavigationList.py
   
 # Turn on built-in syntax highlighting.
 highlighter: rouge
+
+markdown: kramdown

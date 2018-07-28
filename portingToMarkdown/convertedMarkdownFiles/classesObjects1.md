@@ -30,12 +30,12 @@ Class definition specifies -
     objects and class methods or static methods that are called on the
     class directly without invoking objects.
 
-0.1cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure0.png”
-alt=“Drawing” width = “400”/\>
 
-0.1cm
+<img src="./../fig/classesObjects1/classesObjects1-figure0.png"
+alt="Drawing" width = "400"\>
+
+
 
 Example: Java’s String class
 ----------------------------
@@ -116,12 +116,12 @@ provides a template or blueprint for the class. No complete program
 using this class has yet been written, and no object (instance) of this
 class has yet been created.
 
-0.1cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure1.png”
-alt=“Drawing” width = “400”/\>
 
-0.1cm
+<img src="./../fig/classesObjects1/classesObjects1-figure1.png"
+alt="Drawing" width = "400"\>
+
+
 
 [6][Define a class] Define a class for a Circle that is represented by
 its radius.
@@ -145,10 +145,10 @@ Declaration and instantiation
     ClassName  classVar; //declaration
     Rectangle r; //example
 
-0.5cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure2.png”
-alt=“Drawing” width = “400”/\>
+
+<img src="./../fig/classesObjects1/classesObjects1-figure2.png"
+alt="Drawing" width = "400"\>
 
 Declaration
 -----------
@@ -168,10 +168,10 @@ Declaration and instantiation
     classVar = new ClassName(); //instantiation
     r = new Rectangle(); //example
 
-0.5cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure3.png”
-alt=“Drawing” width = “400”/\>
+
+<img src="./../fig/classesObjects1/classesObjects1-figure3.png"
+alt="Drawing" width = "400"\>
 
 -   These can be combined:
 
@@ -199,19 +199,19 @@ Adding method to a class
 You can add methods inside the class that can be called on any
 *instance* of the class.
 
-0.1cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure4.png”
-alt=“Drawing” width = “400”/\>
 
-0.1cm
+<img src="./../fig/classesObjects1/classesObjects1-figure4.png"
+alt="Drawing" width = "400"\>
+
+
 
 The dot (.) operator
 --------------------
 
 The dot operator gives us access to the members (instance variables and
 method) for an object. Think of it as the `apostrophe s (’s)` of the
-human language (as in *“Gaurav’s class”* or *“Matt’s workshop”*)
+human language (as in *"Gaurav’s class"* or *"Matt’s workshop"*)
 
       Rectangle r = new Rectangle(); //example
       r.width = 5;
@@ -233,7 +233,7 @@ human language (as in *“Gaurav’s class”* or *“Matt’s workshop”*)
       System.out.println(r.area());
       
 
-0.5cm
+
 
 Here, `r.area()` returns `width * height` and since the method is called
 on object `r`, it returns `r.width * r.height`. Had the method been
@@ -278,12 +278,12 @@ System.out.println(r.area());
 Changing visibility to private
 ------------------------------
 
-0.1cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure5.png”
-alt=“Drawing” width = “400”/\>
 
-0.1cm
+<img src="./../fig/classesObjects1/classesObjects1-figure5.png"
+alt="Drawing" width = "400"\>
+
+
 
 Now, the instance variables `width` and `height` are visible only within
 the class definition.
@@ -307,12 +307,12 @@ instance variable as `width = Math.abs(w)`. This is a typical case and
 setters are in charge of validating data before assigning it to the
 instance variables.
 
-0.1cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure6.png”
-alt=“Drawing” width = “400”/\>
 
-0.1cm
+<img src="./../fig/classesObjects1/classesObjects1-figure6.png"
+alt="Drawing" width = "400"\>
+
+
 
 [8][Add getters and setters] Add getters and setters to class `Circle`.
 The setter should result in radius becoming zero if the parameter passed
@@ -419,12 +419,12 @@ Example - Constructor
         //rest of the code
     }
 
-0.1cm
 
-\<img src=“./../fig/classesObjects1/classesObjects1-figure7.png”
-alt=“Drawing” width = “400”/\>
+<center>
+<img src="./../fig/classesObjects1/classesObjects1-figure7.png"
+alt="Drawing" width = "200"\>
+</center>
 
-0.1cm
 
 Constructors should call setters - always!
 ------------------------------------------
@@ -487,8 +487,7 @@ need to display name and age of a Person object, or the details of a
 Time object in the format `hours:minutes:seconds`, or in our example,
 `width` and `height` of a `Rectangle` object. It is quite inconvenient
 to display these details as,
-
-    Rectangle r = new Rectangle(5, 8);
+I    Rectangle r = new Rectangle(5, 8);
     System.out.println(r.width+`` by ''+r.height);
 
 We *could* add a method `display` in the class `Rectangle` as,
@@ -547,7 +546,7 @@ displays the value it returns.
     and displays the value returned
     */
 
-[5][Define toString method] Define the `toString` method in the `Circle`
+Define the `toString` method in the `Circle`
 class such that it displays the object details in the following format -
 
     Circle radius: <radius>, area: <area>
@@ -587,7 +586,7 @@ The client is as follows,
 
 At this stage, the memory state looks like,
 
-0.5cm
+
 
 If we change the values of the instance variables as,
 
@@ -599,12 +598,10 @@ If we change the values of the instance variables as,
         }
     }
 
-It now becomes,
+It now becomes,	
 
-0.5cm
-
-\<img src=“./../fig/classesObjects1/classesObjects1-figure8.png”
-alt=“Drawing” width = “400”/\> 0.5cm
+<img src="./../fig/classesObjects1/classesObjects1-figure8.png"
+alt="Drawing" width = "400"\>
 
 Finally, we can modify the items of the array as,
 
@@ -618,6 +615,6 @@ Finally, we can modify the items of the array as,
         }
     }
 
-This gives us, 0.5cm \<img
-src=“./../fig/classesObjects1/classesObjects1-figure9.png” alt=“Drawing”
-width = “400”/\>
+This gives us,  
+<img src="./../fig/classesObjects1/classesObjects1-figure9.png" alt="Drawing"
+width = "400"\>
