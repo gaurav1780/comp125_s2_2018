@@ -15,13 +15,15 @@ navigation_list:
     link: 05-software-to-install.html
   - title: COMP115 recap
     link: 06-revision.html
-- id: 02-debugging-unit-testing
-  title: Debugging and Unit Testing
+- id: 02-static-debugging-unit-testing
+  title: Static keyword, Debugging and Unit Testing
   links:
+  - title: What is "static"?
+    link: 01-static.html
   - title: Debugging
-    link: 01-debugging.html
+    link: 02-debugging.html
   - title: Unit Testing and JUnit
-    link: 02-unit-testing-junit.html
+    link: 03-unit-testing-junit.html
 - id: 03-classes-and-objects
   title: Classes And Objects
   links:
