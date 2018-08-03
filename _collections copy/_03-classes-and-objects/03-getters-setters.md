@@ -1,5 +1,5 @@
 ---
-title: "Getters and setters"
+title: Getters and Setters
 ---
 # Getters and setters
 

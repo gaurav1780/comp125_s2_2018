@@ -1,5 +1,5 @@
 ---
-title: "Array of objects"
+title: Array of objects 
 ---
 
 # Array of objects

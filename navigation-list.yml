@@ -3,22 +3,22 @@ navigation_list:
 - id: 01-introduction
   title: Introduction
   links:
-  - title: Welcome to the unit
+  - title: Welcome to the unit!
     link: 01-welcome-to-the-unit.html
-  - title: Pen and paper methodology
+  - title: Pen and Paper methodology
     link: 02-pen-and-paper-methodology.html
-  - title: Compiling and running java programs from command prompt or terminal
+  - title: Compiling and running java programs
     link: 03-compiling-executing-java-programs.html
   - title: History of Java
     link: 04-history-of-java.html
   - title: Software to install and first program
     link: 05-software-to-install.html
-  - title: Some problem solving to revise COMP115/WCOM115
+  - title: COMP115 recap
     link: 06-revision.html
 - id: 02-static-debugging-unit-testing
-  title: Static Debugging Unit Testing
+  title: Static keyword, Debugging and Unit Testing
   links:
-  - title: What is static?
+  - title: What is "static"?
     link: 01-static.html
   - title: Debugging
     link: 02-debugging.html
@@ -29,13 +29,13 @@ navigation_list:
   links:
   - title: Introduction to Object-Oriented Programming
     link: 01-object-oriented-programming.html
-  - title: Defining class and creating objects
+  - title: Defining classes and creating objects
     link: 02-defining-classes-and-instantiating-objects.html
-  - title: Getters and setters
+  - title: Getters and Setters
     link: 03-getters-setters.html
-  - title: I wish creating objects was easier (aka constructors)
+  - title: Constructors
     link: 04-constructors.html
-  - title: Displaying objects
+  - title: toString method
     link: 05-toString.html
   - title: Shallow vs. Deep copy of an object
     link: 06-shallow-and-deep-copy.html

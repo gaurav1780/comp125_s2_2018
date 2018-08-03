@@ -1,5 +1,5 @@
 ---
-title: "Debugging"
+title: Debugging
 ---
 
 <div>&nbsp;</div>

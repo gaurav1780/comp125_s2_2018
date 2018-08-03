@@ -1,5 +1,5 @@
 ---
-title: "Defining class and creating objects"
+title: Defining class and creating objects
 ---
 # Defining class and creating objects
 

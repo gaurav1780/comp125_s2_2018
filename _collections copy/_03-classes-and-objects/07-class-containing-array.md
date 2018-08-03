@@ -1,5 +1,5 @@
 ---
-title: "Class containing array(s)"
+title: Class containing array(s) 
 ---
 
 # Class containing array(s)

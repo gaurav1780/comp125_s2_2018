@@ -1,5 +1,5 @@
 ---
-title: "I wish creating objects was easier (aka constructors)"
+title: Constructors 
 ---
 
 # I wish creating objects was easier (aka constructors)

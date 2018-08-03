@@ -1,5 +1,5 @@
 ---
-title: "Unit Testing and JUnit"
+title: Unit Testing and JUnit
 ---
 
 # Unit Testing and JUnit

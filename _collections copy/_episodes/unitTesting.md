@@ -1,12 +1,22 @@
 ---
-title: "Unit Testing and JUnit"
+title: Unit Testing
+teaching: 120
+exercises: 120
+questions:
+- Unit testing and JUnit
+objectives:
+- Understand the concept and importance of unit testing
+- Get an introduction to JUnit test suite
+- Using JUnit test cases effectively
+- Writing good-quality JUnit test cases
+keypoints:
+- Test cases should be comprehensive and test a variety of scenarios including boundary scenarios
+- Exceptional scenarios (what happens when input is `null`) should be handled.
 ---
 
-# Unit Testing and JUnit
+# What is "unit testing"?
 
-<div>&nbsp;</div>
-![](./../fig/02-debugging-unit-testing/cogs.png)
-<div>&nbsp;</div>
+<img src="/fig/cogs.png" alt="cogs in a machine" style="width: 400px;"/>
 
 *A system is but a collection of cogs working together.*
 
@@ -159,7 +169,5 @@ Let's take a look at the following code that contains a single method `sumEven`.
 
 <script src="https://gist.github.com/gaurav1780/b3df9f0a24fcf9a0c41cc75cdb8616a3.js"></script>
 
-The JUnit test is a separate class created to test this method. The following video describes the steps to create a JUnit test. Generally a test is written before implementing a method.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7-T3kxCcMJY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+The JUnit test is a separate class created to test this method. The steps to create a JUnit test class are shown below.
 

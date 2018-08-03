@@ -1,5 +1,5 @@
 ---
-title: "Displaying objects"
+title: toString() method
 ---
 
 # Displaying objects

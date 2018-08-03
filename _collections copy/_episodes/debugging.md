@@ -1,12 +1,23 @@
 ---
-title: "Debugging"
+title: Debugging
+teaching: 120
+exercises: 120
+questions:
+- "The power of debugging"
+objectives:
+- Understand that if the output is wrong, there are bug(s) somewhere.
+- Debugging is the process of locating the bugs and removing them.
+- Tracing code is a crucial skill
+- IDEs provide debuggers which make life so much easier for you.
+keypoints:
+- Re-visit the logic and design of your solution rather than making random changes and hoping code will "magically" work.
+- Practise pen and paper tracing and get comfortable with it.
+- Use debugger provided by IDE in real-life.
 ---
 
-<div>&nbsp;</div>
-![](./../fig/02-debugging-unit-testing/power.png)
-<div>&nbsp;</div>
+<img src="/fig/power.png" alt="Power of Debugging" style="width: 200px;"/>
 
-# Debugging
+# What is debugging?
 
 For any given problem, we design a solution and then implement it. 
 

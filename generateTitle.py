@@ -34,5 +34,5 @@ for filename in glob.iglob('_collections/**/**.md', recursive=True):
     if all(s not in filename for s in exclude):
         generate(filename)
 
-if generateNav:
-    import makeNavigationList
+# if generateNav:
+#     import makeNavigationList

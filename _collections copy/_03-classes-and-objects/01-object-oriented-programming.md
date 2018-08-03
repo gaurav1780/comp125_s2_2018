@@ -1,7 +1,6 @@
 ---
-title: "Introduction to Object-Oriented Programming"
+title: Introduction to Object-Oriented Programming
 ---
-
 # Introduction to Object-Oriented Programming
 
 -   Classes are models of real world entities inside our programs.

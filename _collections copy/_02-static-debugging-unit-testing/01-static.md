@@ -1,8 +1,8 @@
 ---
-title: "What is static?"
+title: What is "static"?
 ---
 
-# What is static?
+# What is "static"?
 
 `static` members (variables and methods) are properties of a class rather than of each `object`. Thus, you don't need to create an `object` to access a `static` variable or call a `static` method
 

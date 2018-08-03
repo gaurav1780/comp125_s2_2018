@@ -1,5 +1,5 @@
 ---
-title: "Shallow vs. Deep copy of an object"
+title: Shallow vs. Deep copy of an object
 ---
 
 # Shallow vs. Deep copy of an object
