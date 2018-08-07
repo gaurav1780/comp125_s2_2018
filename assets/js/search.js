@@ -9,7 +9,7 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<div><a href="' + item.url + '"><strong>' + item.title + '</strong></a>';
+        appendString += '<div><a href=".' + item.url + '"><strong>' + item.title + '</strong></a>';
         appendString += '<p class="bem1">' + item.excerpt + '</p></div>';
       }
 

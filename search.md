@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Search
-root: ..
+root: .
 ---
 <ul id="search-results"></ul>
 
@@ -20,7 +20,7 @@ root: ..
       {%- for page in collection.docs -%}
     "{{ page.url | slugify }}": {
     "title": "{{ page.title | xml_escape }}",
-    "url": "{{ page.url | xml_escape | absolute_url }}",
+    "url": "{{ page.url | xml_escape | relative_url | append: '.html' }}",
     "content": {{ page.content | strip_html | strip_newlines | jsonify }},
     "excerpt": {{ page.content | strip_html | truncatewords: 50 | jsonify }}
     }{% unless collection_counter == num_of_collections and forloop.index == collection_size %},
