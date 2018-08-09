@@ -1,13 +1,11 @@
-Overview
-========
+# Search Algorithms
 
-![image](images/sherlock.jpg)
+![image](fig/sherlock.jpg)
 
 We explore the two standard searching algorithms, along with analysis of
 the two.
 
-Why is searching important?
----------------------------
+## Why is searching important?
 
 Searching for *something* is one of the most fundamental operations on
 which more complex algorithms are based. Consider some of the following
@@ -39,81 +37,116 @@ All these problems rely on searching through some data set.
 So, it’s really very simple! You need searching to become good at
 algorithms that build on top of it.
 
-Linear search
-=============
-
-Version 1
----------
+## Linear search
 
 -   Simplest search algorithm.
-
 -   Look at each element of the array in turn.
-
 -   If you find the target, stop.
-
 -   If you don’t find the target by the end, it’s not there.
 
-<!-- -->
+### Version 1 - Correct or not?
 
-    /**
-     * Perform a linear search for a given integer in the array.
-     * @return true if target present, false otherwise
-     */
-    public static boolean linearSearch(int[] arr, int target) {
-       for( int i=0; i<arr.length; i++ ) {
-          if (arr[i] == target) {
-             return true;
-          } else {
-             return false;
-          }
-       }
-    }
+```java
+/**
+ * Perform a linear search for a given integer in the array.
+ * @return true if target present, false otherwise
+ */
+public static boolean containsBuggy(int[] arr, int target) {
+   for( int i=0; i<arr.length; i++ ) {
+      if (arr[i] == target) {
+         return true;
+      } else {
+         return false;
+      }
+   }
+}
+```
 
 Trace the above code with the following pair of values:
 
--   `arr = {1, 7, 2, 9}, target = 1`
+-   `arr = {10, 70, 20, 90}`, `target = 10`
+-   `arr = {10, 70, 20, 90}`, `target = 80`
+-   `arr = {10, 70, 20, 90}`, `target = 90`
 
--   `arr = {1, 7, 2, 9}, target = 8`
-
--   `arr = {1, 7, 2, 9}, target = 9`
-
-When `target = 1`, the first item (1) matches the target and the method
+When `target = 10`, the first item (10) matches the target and the method
 returns `true` correctly.
 
-When `target = 8`, the first item (1) **DOES NOT** match the target and
+When `target = 80`, the first item (10) **DOES NOT** match the target and
 the method immediately returns `false` - which is incidentally correct.
 
-When `target = 9`, the first item (1) **DOES NOT** match the target and
+When `target = 90`, the first item (10) **DOES NOT** match the target and
 the method immediately returns `false` - .
 
-You can see the problem is the `else` block. The code returns `false` as
+The problem is the `else` block. The code returns `false` as
 soon as an item doesn’t match the target.
 
 So, if the target exists in the array at any index other than 0, the
 method incorrectly returns `false`.
 
-[8][Debug linear search] Write a corrected version of the linear search
-code from above.
+{: challenge}
+> ## Write a corrected version of the linear search code from above.
+>> ## SOLUTION
+>>> ```java
+>>> public static boolean contains(int[] arr, int target) {
+>>>   for( int i=0; i<arr.length; i++ ) {
+>>>      if (arr[i] == target) {
+>>> 	     return true;
+>>>      }
+>>>   }
+>>>   return false;
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
-public static boolean linearSearch(int[] arr, int target) <span> for(
-int i=0; i\<arr.length; i++ ) <span> if (arr[i] == target) <span> return
-true; </span> </span> return false; </span>
+{: challenge}
+> ## Write a modified version of linear search that returns the first index at which the target is found, and -1 if the target is not found in the array.
+>> ## SOLUTION
+>>> ```java
+>>> public static int indexOf(int[] arr, int target) {
+>>>   for( int i=0; i<arr.length; i++ ) {
+>>>      if (arr[i] == target) {
+>>> 	     return i;
+>>>      }
+>>>   }
+>>>   return -1;
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
-[8][Analyze linear search performance] Consider an array
-`arr = {1, 2, \cdots, n}` (such that `arr.length = n`). How many times
-is the loop executed in the linear search code to search for,
+{: challenge}
+> ## Write a modified version of linear search that returns the **last** index at which the target is found, and -1 if the target is not found in the array.
+>> ## SOLUTION
+>>> ```java
+>>> public static int lastIndexOf(int[] arr, int target) {
+>>>   for( int i=0; i < arr.length; i++ ) {
+>>>      if (arr[i] == target) {
+>>> 	     return i;
+>>>      }
+>>>   }
+>>>   return -1;
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
--   `target = 1`
 
--   `target = n/2`
-
--   `target = n + 1`
-
--   `target = 1: 1 time`
-
--   `target = n/2: n/2 times`
-
--   `target = n + 1: n times`
+{: challenge}
+> ## Consider an array `arr = {1, 2, \cdots, n}` (such that `arr.length = n`). In which ca
+>> ## SOLUTION
+>>> ```java
+>>> public static boolean linearSearch(int[] arr, int target) {
+>>>   for( int i=0; i<arr.length; i++ ) {
+>>>      if (arr[i] == target) {
+>>> 	     return true;
+>>>      }
+>>>   }
+>>>   return false;
+>>> }
+>>> ```
+>{: .solution}
+{: .challenge}
 
 What information did you deduce from the above exercise?
 

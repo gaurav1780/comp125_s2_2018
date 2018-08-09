@@ -1,0 +1,90 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2016.3.15)  21 OCT 2017 13:23
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**data.tex
+(./data.tex
+./data.tex:1: Undefined control sequence.
+l.1 \usepackage
+               [T1]{fontenc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:2: Undefined control sequence.
+l.2 \usepackage
+               {pslatex}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:3: Undefined control sequence.
+l.3 \usepackage
+               [pdftex]{color}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:4: Undefined control sequence.
+l.4 \usepackage
+               [pdftex]{graphicx}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:5: Undefined control sequence.
+l.5 \usepackage
+               {verbatim}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:6: Undefined control sequence.
+l.6 \usepackage
+               {xcolor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:7: Undefined control sequence.
+l.7 \usepackage
+               {paralist}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:8: Undefined control sequence.
+l.8 \usepackage
+               [colorlinks=true,urlcolor=red]{hyperref}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:9: I can't find file `{codeSnippets.tex}'.
+l.9 \input{codeSnippets.tex}
+                            
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name
+./data.tex:9: Emergency stop.
+l.9 \input{codeSnippets.tex}
+                            
+*** (job aborted, file error in nonstop mode)
+
+./data.tex:9:  ==> Fatal error occurred, no output PDF file produced!

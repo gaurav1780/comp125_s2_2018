@@ -1,0 +1,27 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2016.3.15)  5 AUG 2018 21:32
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**data.tex
+(./data.tex
+./data.tex:1: Undefined control sequence.
+l.1 \input{comp125workshopHeader}\section
+                                         *{Learning outcomes}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./data.tex:1: I can't find file `{comp125workshopHeader}*{Learning'.
+l.1 ...t{comp125workshopHeader}\section*{Learning 
+                                                  outcomes}
+(Press Enter to retry, or Control-D to exit)
+Please type another input file name
+./data.tex:1: Emergency stop.
+l.1 ...t{comp125workshopHeader}\section*{Learning 
+                                                  outcomes}
+*** (job aborted, file error in nonstop mode)
+
+./data.tex:1:  ==> Fatal error occurred, no output PDF file produced!
