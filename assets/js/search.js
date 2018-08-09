@@ -1,4 +1,4 @@
-
+'use strict';
 (function() {
   console.log("Here I am");
   function displaySearchResults(results, store) {
@@ -9,8 +9,14 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<div><a href=".' + item.url + '"><strong>' + item.title + '</strong></a>';
-        appendString += '<p class="bem1">' + item.excerpt + '</p></div>';
+        var title = "";
+        if(item.collection_title != "") {
+          title = item.collection_title + " - " + item.title;
+        } else {
+          title = item.title;
+        }
+        appendString += '<div class="row"><a href=".' + item.url + '"><strong>' + title + '</strong></a>';
+        appendString += '</div>';
       }
 
       searchResults.innerHTML = appendString;

@@ -11,15 +11,22 @@ root: .
   window.store = {
     {% assign collections = '' | split: ',' %}
     {%- for collection in site.collections -%}
-      {%- unless collection.docs.size == 0 -%}{%- assign collections = collections | push: collection -%}{%- endunless -%}
+      {%- unless collection.docs.size == 0 or collection.label == 'episodes' -%}{%- assign collections = collections | push: collection -%}{%- endunless -%}
     {%- endfor -%}
     {%- assign num_of_collections = collections | size -%}
     {%- for collection in collections -%}
       {%- assign collection_counter = forloop.index -%}
       {%- assign collection_size = collection.docs.size -%}
+      {%- assign collection_title = "" -%}
+      {%- for nav_list_collection in site.data.navigation-list.navigation_list -%}
+        {%- if collection.label == nav_list_collection.id -%}
+          {%- assign collection_title = nav_list_collection.title -%}
+        {%- endif -%}
+      {%- endfor -%}
       {%- for page in collection.docs -%}
     "{{ page.url | slugify }}": {
     "title": "{{ page.title | xml_escape }}",
+    "collection_title": "{{ collection_title }}",
     "url": "{{ page.url | xml_escape | relative_url | append: '.html' }}",
     "content": {{ page.content | strip_html | strip_newlines | jsonify }},
     "excerpt": {{ page.content | strip_html | truncatewords: 50 | jsonify }}
