@@ -1,8 +1,8 @@
 ---
-title: "Displaying objects"
+title: "Binary search performance"
 ---
 
-# Displaying objects
+# Binary search performance
 
 Often we need to display the details of an object. For example, we might
 need to display name and age of a Person object, or the details of a

@@ -1,7 +1,7 @@
 ---
-title: "Getters and setters"
+title: "Linear search performance"
 ---
-# Getters and setters
+# Linear search performance
 
 
 ## Bad client, bad bad client!

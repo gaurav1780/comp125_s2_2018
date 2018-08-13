@@ -39,8 +39,25 @@ navigation_list:
     link: 05-toString.html
   - title: Shallow vs. Deep copy of an object
     link: 06-shallow-and-deep-copy.html
+  - title: Comparing objects
+    link: 07-compareTo.html
   - title: Class containing array(s)
-    link: 07-class-containing-array.html
+    link: 08-class-containing-array.html
   - title: Array of objects
-    link: 08-array-of-objects.html
+    link: 09-array-of-objects.html
+- id: 04-searching
+  title: Searching
+  links:
+  - title: Motivation for searching algorithms
+    link: 01-motivation-for-searching-algorithms.html
+  - title: Linear search
+    link: 02-linear-search.html
+  - title: Linear search performance
+    link: 03-linear-search-performance.html
+  - title: Binary search
+    link: 04-binary-search.html
+  - title: Binary search performance
+    link: 05-binary-search-performance.html
+  - title: When should we use which
+    link: 06-when-should-we-use-which.html
 ---

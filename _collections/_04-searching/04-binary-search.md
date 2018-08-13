@@ -1,8 +1,8 @@
 ---
-title: "I wish creating objects was easier (aka constructors)"
+title: "Binary search"
 ---
 
-# I wish creating objects was easier (aka constructors)
+# Binary search
 
 Let’s say that the user wants to create a `Rectangle` whose `width` is 5
 and `height` is 8. Following code achieves this,

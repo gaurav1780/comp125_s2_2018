@@ -74,6 +74,9 @@ collections:
     03-classes-and-objects:
         output: true
         permalink: /:collection/:path
+    04-searching:
+        output: true
+        permalink: /:collection/:path
 
 # Set the default layout for things in the episodes collection.
 defaults:
@@ -107,6 +110,12 @@ defaults:
   - scope:
       path: ""
       type: 03-classes-and-objects
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: 04-searching
     values:
       root: ..
       layout: episode
