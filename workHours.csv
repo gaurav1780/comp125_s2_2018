@@ -1,11 +1,12 @@
-Terry, Research Navigation, 8th July,1.5
-Terry, Meeting, 10th July,1
-Michael, Requirements meeting, 10th July,0.5
-Michael,Porting to markdown,13th July,3.5
-Terry,Navigation,13th July,2.0
-Terry,Navigation for alternative structure,20th July,2.0
-Terry,New table of content on home page and clicking on lecture leads to first chapter, 23rd July, 1.0
-Terry,Navigation between pages, 23rd July, 2.5
-Terry,Navigation fixes, 20th to 23rd July, 5
-Michael,Porting, 20th to 23rd July, 3
-Michael, Meeting, 10th July, 1
+Michael, Requirements meeting, 10th July,0.5,8,12
+Michael,Porting to markdown,13th July,3.5,18,27
+Michael,Porting, 20th to 23rd July,3,,
+Michael,Meeting, 10th July,1,,
+Terry, Research Navigation, 8th July,1.5,,
+Terry, Meeting, 10th July,1,,
+Terry,Navigation,13th July,2,,
+Terry,Navigation for alternative structure,20th July,2,,
+Terry,New table of content on home page and clicking on lecture leads to first chapter, 23rd July,1,,
+Terry,Navigation between pages, 23rd July,2.5,,
+Terry,Navigation fixes, 20th to 23rd July,5,,
+Terry,Search,First half of August,3,,
