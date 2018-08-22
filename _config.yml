@@ -74,7 +74,7 @@ collections:
     03-classes-and-objects:
         output: true
         permalink: /:collection/:path
-    04-searching:
+    04-searching-and-sorting:
         output: true
         permalink: /:collection/:path
 
@@ -115,7 +115,7 @@ defaults:
       layout: episode
   - scope:
       path: ""
-      type: 04-searching
+      type: 04-searching-and-sorting
     values:
       root: ..
       layout: episode
@@ -126,6 +126,9 @@ exclude:
   - bin/
   - .Rproj.user/
   - makeNavigationList.py
+  - portingToMarkdown/
+  - workshops/
+  - archive/
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge

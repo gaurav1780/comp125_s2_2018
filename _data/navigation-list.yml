@@ -1,7 +1,7 @@
 ---
 navigation_list:
 - id: 01-introduction
-  title: Introduction
+  title: Week 1 - Introduction
   links:
   - title: Welcome to the unit
     link: 01-welcome-to-the-unit.html
@@ -16,7 +16,7 @@ navigation_list:
   - title: Some problem solving to revise COMP115/WCOM115
     link: 06-revision.html
 - id: 02-static-debugging-unit-testing
-  title: Static Debugging Unit Testing
+  title: Week 2 - Static, Debugging, Unit Testing
   links:
   - title: What is static?
     link: 01-static.html
@@ -25,7 +25,7 @@ navigation_list:
   - title: Unit Testing and JUnit
     link: 03-unit-testing-junit.html
 - id: 03-classes-and-objects
-  title: Classes And Objects
+  title: Weeks 3, 4 - Classes And Objects
   links:
   - title: Introduction to Object-Oriented Programming
     link: 01-object-oriented-programming.html
@@ -45,19 +45,18 @@ navigation_list:
     link: 08-class-containing-array.html
   - title: Array of objects
     link: 09-array-of-objects.html
-- id: 04-searching
-  title: Searching
+- id: 04-searching-and-sorting
+  title: Week 5 - Searching And Sorting
   links:
-  - title: Motivation for searching algorithms
-    link: 01-motivation-for-searching-algorithms.html
-  - title: Linear search
-    link: 02-linear-search.html
-  - title: Linear search performance
-    link: 03-linear-search-performance.html
+  - title: Motivation for searching and sorting algorithms
+    link: 01-motivation-for-searching-sorting-algorithms.html
+  - title: Selection Sort
+    link: 02-selection-sort.html
+  - title: Insertion Sort
+    link: 03-insertion-sort.html
   - title: Binary search
     link: 04-binary-search.html
-  - title: Binary search performance
-    link: 05-binary-search-performance.html
-  - title: When should we use which
-    link: 06-when-should-we-use-which.html
+  - title: Searching and sorting an array of objects
+    link: 05-searching-and-sorting-on-array-of-objects.html
+
 ---

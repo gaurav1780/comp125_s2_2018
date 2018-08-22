@@ -17,7 +17,7 @@ find ./ -name "*.png" -exec convert {} -scale 50% outputfolder/{} \;
 
 find ./ -name "*.png" -exec convert {} -scale 50% ./{} \;
 
-###Command to trime and scale (by 50%) and overwrite files:
+###Command to trim and scale (by 50%) and overwrite files:
 
 find ./ -name "*.png" -exec convert {} -trim -scale 50% ./{} \;
 
