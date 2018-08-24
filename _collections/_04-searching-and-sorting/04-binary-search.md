@@ -53,19 +53,39 @@ The strategy explained in the last exercise is the same strategy we use to find 
 
 For those of you who may have used the dictionary, it's again, the same strategy used to find a particular word in a dictionary.
 
+## Visualising the game
+
+Assume the numbers in contention being in green. Initially all the numbers are in contention
+ 
+><span style="color:green">1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31</span>
+
+Guess 1: 16. Feedback: target is higher than 16
+
+><span style="color:red">1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,</span><span style="color:green"> 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31</span>
+
+Guess 2: 24. Feedback: target is lower than 24
+
+><span style="color:red">1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,</span><span style="color:green"> 17, 18, 19, 20, 21, 22, 23,</span><span style="color:red"> 24, 25, 26, 27, 28, 29, 30, 31</span>
+
+Guess 3: 20. Feedback: target is lower than 20
+
+><span style="color:red">1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,</span><span style="color:green"> 17, 18, 19,</span><span style="color:red"> 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31</span>
+
+Guess 4: 18. Feedback: target is higher than 18
+
+><span style="color:red">1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,</span><span style="color:green"> 19,</span><span style="color:red"> 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31</span>
+
+Guess 5: 19. Feedback: target equals 19 - **FOUND!**
+
 ## Coding the game
 
 Say the array `arr` is:
 
->```
->{20, 60, 40, 10, 0, 30, 70, 50}
->```
+><span style="color:red">20, 60, 40, 10, 0, 30, 70, 50</span>
 
 The first thing we need to do is to sort it. Depending on the order, the rest of the implementation will be tweaked. Say we sort it in ascending order as:
 
->```
->{0, 10, 20, 30, 40, 50, 60}
->```
+><span style="color:green">0, 10, 20, 30, 40, 50, 60</span>
 
 Let us say that `target = 40`
 
@@ -74,14 +94,14 @@ Upon comparing `target` with the guess, we can see that if present, `target` is 
 
 We update our search space by updating parameters `first` and `last` that hold first and last indices of the search space, respectively. The original values being:
 
-```
+```java
 int first = 0;
 int last = arr.length - 1;
 ```
 
 Index of the middle item is computed at each iteration as:
 
-```
+```java
 int median = (first+last)/2;
 ```
 
@@ -98,7 +118,7 @@ The three scenarios we have are:
 
 We do this as long as search space is not empty. If `first` becomes more than `last` it means the starting point of the search space is AFTER ending point of the search space which isn't possible. So the expression to carry on is:
 
-```
+```java
 (first <= last)
 ```
 
@@ -156,4 +176,4 @@ After `k` iterations, we'll reach our last item and after that the loop terminat
 
 This gives us the number of iterations in the worst case as `k`, or,
 
-> Number of iterations in worst case: log<sub>2</sub>(n)
+> Number of iterations in worst case: **log<sub>2</sub>(n)**

@@ -17,44 +17,40 @@ Before we begin, lets take a look at a pretty sweet video to illustrate selectio
 
 ## Explanation
 
-Say the pipe symbol ( \| ) separates the sorted and the unsorted parts, such that items on the left of \| are sorted and the ones on the right are unsorted, 
+Green represents sorted region, red represents unsorted region. 
 
 Original state:
->```
->|17, 16, 23, 8, 15
->```
+
+><span style="color:red">17, 16, 23, 8, 15</span>
 
 First item in unsorted part: `17`. Smallest item in unsorted part: `8`
 
-After first iteration:
->```
->8,| 16, 23, 17, 15
->```
+After **first** iteration:
+><span style="color:green">**8**</span>, <span style="color:red">16, 23, 17, 15<span style="color:red">
 
-First item in unsorted part: `25`. Smallest item in unsorted part: `15`
+First item in unsorted part: `16`. Smallest item in unsorted part: `15`
 
-After second iteration:
->```
->8, 15,| 16, 23, 17
->```
+After **second** iteration:
+><span style="color:green">**8, 15**,</span> <span style="color:red"> 23, 17, 16</span>
 
-First item in unsorted part: `16`. Smallest item in unsorted part: `16`
+First item in unsorted part: `23`. Smallest item in unsorted part: `16`
 
-After third iteration:
+After **third** iteration:
 
->```
->8, 15, 16,| 23, 17
->```
+><span style="color:green">**8, 15, 16**,</span> <span style="color:red"> 17, 23
 
-First item in unsorted part: `23`. Smallest item in unsorted part: `17`
+First item in unsorted part: `17`. Smallest item in unsorted part: `17`
 
-After fourth iteration:
+After **fourth** iteration:
 
->```
->8, 15, 16, 17,| 23
->```
+><span style="color:green">**8, 15, 16, 17**,</span> <span style="color:red"> 23
 
 Unsorted part has only one item left, which has to be the smallest item. Therefore, fifth iteration is not required.
+
+**SORTED ARRAY:**
+
+><span style="color:green">**8, 15, 16, 17, 23**
+
 
 {: challenge}
 > ## How many iterations are required to sort an array containing `n` items using selection sort?
@@ -79,7 +75,7 @@ startIndex = 0
 while(startIndex < arr.length - 1) {
 	smallestIndex = index of smallest item starting at unsortedStartIndex
 	swap items at startIndex, smallestIndex
-	startIndex++
+	move unsorted region to the right by increasing startIndex
 }
 ```
 
@@ -120,7 +116,7 @@ public static int getSmallestItemIndex(int[] data, int firstIndex) {
 }
 ```
 
-## Selection sort performance analysis
+## Selection sort performance
 
 The number of times `getSmallestItemIndex` method is called is `(n-1)`.
 
