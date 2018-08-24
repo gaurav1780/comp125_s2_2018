@@ -31,7 +31,7 @@ $color-testimonial: #fc8dc1 !default;
 @mixin cdSetup($color) {
   color: $color;
   border-left: solid 5px $color;
-  margin-bottom: 0px;
+  margin: 0px;
   border-radius: 4px 0 0 4px;
 }
 
@@ -45,6 +45,7 @@ $color-testimonial: #fc8dc1 !default;
 .python, .language-python { @include cdSetup($color-source); }
 .r, .language-r           { @include cdSetup($color-source); }
 .sql, .langauge-sql       { @include cdSetup($color-source); }
+.java, .language-java { @include cdSetup($color-source); }
 
 .error pre,
 .output pre,
@@ -132,9 +133,11 @@ font-size: 18px;
 
 code {
   white-space: nowrap;
-  padding: 2px 5px;
-  color: #3d90d9;
-  background-color: #e7e7e7;
+  padding: 5px 5px 5px 5px;
+  font-size: 12pt;
+  border: none;
+  color: #238E23;
+  background-color: #23;
 }
 
 img {
@@ -286,4 +289,19 @@ nav.navbar-default {
   .logo.navbar-brand {
     margin-bottom: 5px;
   }
+}
+
+.lineno {
+  border: none;
+  margin-right: none;
+  color: #238E23;
+  background-color: inherit;
+  display: inline-block;
+  padding-top: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
