@@ -79,7 +79,7 @@ public static boolean containsDuplicateSorted(int[] data) {
 
 ### Example 2
 
-Finding if two items have the same items is much easier if you sort the arrays and them compare for them being identical.
+Finding if two arrays have the same items is much easier if you sort the arrays and them compare for them being identical.
 
 >{10, 40, 20, 90} and {90, 20, 10, 40} have the same items
 
@@ -92,7 +92,7 @@ public static boolean sameItemsUnsorted(int[] a, int[] b) {
 	if(a.length != b.length)
 		return false;
 	for(int i=0; i < a.length; i++) {
-		if(count(a, a[i]) != count(b, a[i]) {
+		if(count(a, a[i]) != count(b, a[i])) {
 			return false;
 		}
 	}
@@ -114,7 +114,7 @@ public static int count(int[] data, int item) {
 #### Solution with sorted arrays :)
 
 ```
-public static boolean sameItemsUnsorted(int[] a, int[] b) {
+public static boolean sameItemsSorted(int[] a, int[] b) {
 	if(a.length != b.length)
 		return false;
 	for(int i=0; i < a.length; i++) {
@@ -126,6 +126,61 @@ public static boolean sameItemsUnsorted(int[] a, int[] b) {
 }
 ```
 
+**Case 1**: Comparing `{10, 70, 20, 90}` with `{10, 70, 20, 90}`
+
+>Compare first items
+>
+><span style="color:green">10</span>	70	20	90
+>
+><span style="color:green">10</span>	70	20	90
+
+<p>&nbsp;</p>
+
+>Compare second items
+>
+>10	<span style="color:green">70</span>	20	90
+>
+>10	<span style="color:green">70</span>	20	90
+
+<p>&nbsp;</p>
+
+>Compare third items
+>
+>10	70	<span style="color:green">20</span>	90
+>
+>10	70	<span style="color:green">20</span>	90
+
+<p>&nbsp;</p>
+
+>Compare fourth items
+>
+>10	70	20	<span style="color:green">90</span>
+>
+>10	70	20	<span style="color:green">90</span>
+
+<p>&nbsp;</p>
+
+>return `true`
+
+**Case 2**: Comparing `{10, 70, 20, 90}` with `{10, 80, 20, 90}`
+
+>Compare first items
+>
+><span style="color:green">10</span>	70	20	90
+>
+><span style="color:green">10</span>	80	20	90
+
+<p>&nbsp;</p>
+
+>Compare second items
+>
+>10	<span style="color:red">70</span>	20	90
+>
+>10	<span style="color:red">80</span>	20	90
+
+<p>&nbsp;</p>
+
+>return `false`
 {: challenge}
 > ## Define a method that returns the highest number in an unsorted array. Return 0 if array is null or empty.
 >> ## SOLUTION

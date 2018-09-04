@@ -46,7 +46,7 @@ navigation_list:
   - title: Array of objects
     link: 09-array-of-objects.html
 - id: 04-searching-and-sorting
-  title: Week 5 - Searching And Sorting
+  title: Weeks 5, 6 - Searching And Sorting
   links:
   - title: Motivation for searching and sorting algorithms
     link: 01-motivation-for-searching-sorting-algorithms.html

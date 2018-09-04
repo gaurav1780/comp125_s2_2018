@@ -127,7 +127,7 @@ What happens when `first > last` and the expression is no longer true? We have s
 ### Putting it all together
 
 ```java
-public static int binarySearch(int[] arr) {
+public static int binarySearch(int[] arr, int target) {
 	int first = 0;
 	int last = arr.length - 1; 
 	while(first <= last) {

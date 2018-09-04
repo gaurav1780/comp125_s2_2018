@@ -143,36 +143,74 @@ public static void insertionSort(int[] arr) {
 	int idx = 1;
 	while(idx < arr.length) {
 		int backup = arr[idx];
-		int k = i-1;
-		while(k >= 0 && arr[k] > backup) {
-			arr[k+1] = arr[k]; 	//move item forward
-			k--; 			//check item before it
+		int currentIndex = idx-1;
+		while(currentIndex >= 0 && arr[currentIndex] > backup) {
+			arr[currentIndex+1] = arr[currentIndex]; 	//move item forward
+			currentIndex--; 			//check item before it
 		}
-		arr[k+1] = backup; 		//move backup at index of last moved item
+		arr[currentIndex+1] = backup; 		//move backup at index of last moved item
+		idx++; 				//check for the next item
 	}
 }
 ```
+
+Of course, you can have another version of the same using a `for` loop for the outside loop. But it's only a different coding style - the algorithm remains the same.
+
+#### Variation 2
+
+```java
+public static void insertionSort(int[] arr) {
+	for(int idx = 1; idx < arr.length; idx++) {
+		int backup = arr[idx];
+		int currentIndex = idx-1;
+		while(currentIndex >= 0 && arr[currentIndex] > backup) {
+			arr[currentIndex+1] = arr[currentIndex]; 	//move item forward
+			currentIndex--; 			//check item before it
+		}
+		arr[currentIndex+1] = backup; 		//move backup at index of last moved item
+	}
+}cup
+```
+
+{: challenge}
+> ## Modify the implementation of insertion sort so it sorts the array in descending order.
+>> ## SOLUTION
+>>>```java
+>>>public static void insertionSortDescending(int[] arr) {
+>>>	 for(int idx = 1; idx < arr.length; idx++) {
+>>>		int backup = arr[idx];
+>>>		int currentIndex = idx-1;
+>>>		while(currentIndex >= 0 && arr[currentIndex] < backup) { //ONLY CHANGE: smaller items to the end
+>>>			arr[currentIndex+1] = arr[currentIndex]; 
+>>>			currentIndex--; 			
+>>>		}
+>>>		arr[currentIndex+1] = backup; 		
+>>>	 }
+>>>}
+>>>```
+>{: .solution}
+{: .challenge}
 
 ## Insertion sort performance
 
 ### Best case scenario
 
-In the best case, the array is already sorted in ascending order. The boolean expression `(k >= 0 && arr[k] > backup)` is never true and the inner loop never executes. 
+In the best case, the array is already sorted in ascending order. The boolean expression `(currentIndex >= 0 && arr[currentIndex] > backup)` is never true and the inner loop never executes. 
 
-Thus, in the best case, there are `n-1` executions of the expression `(k >= 0 && arr[k] > backup)`
+Thus, in the best case, there are `n-1` executions of the expression `(currentIndex >= 0 && arr[currentIndex] > backup)`
 
-> Number of iterations in worst case: `n-1`
+> Number of iterations in best case: `n-1`
 
 ### Worst case scenario
 
-In the best case, the array is already sorted in ascending order. The boolean expression `(k >= 0 && arr[k] > backup)` is true for all `k >= 0`, the inner loop executes the following number of times:
+In the best case, the array is already sorted in ascending order. The boolean expression `(currentIndex >= 0 && arr[currentIndex] > backup)` is true for all `currentIndex >= 0`, the inner loop executes the following number of times:
 
 - 1 time, for `idx = 1`
 - 2 times, for `idx = 2`
 - ...
 - `n-1` time, for `idx = arr.length - 1`
 
-Thus, in the worst case, there are `1+2+...+n-1` = `n*(n-1)/2` executions of the expression `(k >= 0 && arr[k] > backup)`
+Thus, in the worst case, there are `1+2+...+n-1` = `n*(n-1)/2` executions of the expression `(currentIndex >= 0 && arr[currentIndex] > backup)`
 
 > Number of iterations in worst case: `n*(n-1)/2`
 

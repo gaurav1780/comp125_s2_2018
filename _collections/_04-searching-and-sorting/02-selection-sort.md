@@ -116,6 +116,40 @@ public static int getSmallestItemIndex(int[] data, int firstIndex) {
 }
 ```
 
+Of course, you can have another version of the same using a `for` loop for the outside loop. But it's only a different coding style - the algorithm remains the same. Note that the implementarion of `getSmallestItemIndex` remains the same.
+
+#### Variation 2
+
+```java
+public static void selectionSort(int[] arr) {
+	for(int startIndex = 0; startIndex < arr.length - 1; startIndex++) {
+		int smallestIndex = getSmallestItemIndex(arr, startIndex);
+
+		int temp = arr[startIndex];
+		arr[startIndex] = arr[smallestIndex];
+		arr[smallestIndex] = temp;
+	}
+}
+```
+
+{: challenge}
+> ## Modify the implementation of selection sort so it sorts the array in descending order.
+>> ## SOLUTION
+>>>```java
+>>>public static void selectionSortDescending(int[] arr) {
+>>>	 for(int startIndex = 0; startIndex < arr.length - 1; startIndex++) {
+>>>		int highestIndex = getHighestItemIndex(arr, startIndex); //ONLY CHANGE: find index of highest item
+>>>		//implementation of getHighestItemIndex left as homework exercise
+>>>
+>>>		int temp = arr[startIndex];
+>>>		arr[startIndex] = arr[highestIndex];
+>>>		arr[highestIndex] = temp;
+>>>	 }
+>>>}
+>>>```
+>{: .solution}
+{: .challenge}
+
 ## Selection sort performance
 
 The number of times `getSmallestItemIndex` method is called is `(n-1)`.
