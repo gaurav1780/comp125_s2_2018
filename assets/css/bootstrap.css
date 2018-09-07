@@ -2277,7 +2277,14 @@ th {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
+  /*
+  This section have been commented out to remove the styling applied to border-top,
+  remove the solid line styling that is seen for tables that surrounds a code block
+  rendered by rogue.
+
   border-top: 1px solid #ddd;
+
+  */
 }
 .table > thead > tr > th {
   vertical-align: bottom;
