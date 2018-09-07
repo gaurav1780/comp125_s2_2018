@@ -294,9 +294,8 @@ nav.navbar-default {
 //----------------------------------------
 // Highlighted code blocks
 //----------------------------------------
-
 .highlight table {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 1em;
   border: 0;
 
@@ -338,14 +337,24 @@ nav.navbar-default {
 .table > tfoot > tr > td {
   border-top: 0;
 }
-
 .lineno {
-  border: none;
   margin-right: none;
   color: #238E23;
   background-color: inherit;
   display: inline-block;
-  padding-left: 0;
+
+  /*
+  Remove the comment block enclosing the following styling if you want line numbers without borders
+  The transparent border for top and bottom is for alignment purposes. This is because
+  the <pre> element have a border of 1 px for each side. If lineno doesn't have a border,
+  then there will be a misalignment between the line number and code by 2 px.
+  */
+
+  /*
+  border: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
