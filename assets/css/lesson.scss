@@ -144,6 +144,43 @@ img {
   max-width: 100%;
 }
 
+.highlight table {
+  margin-bottom: 0;
+  font-size: 1em;
+  border: 0;
+
+  td {
+    padding: 0;
+    width: calc(100% - 1em);
+    border: 0;
+
+    /* line numbers*/
+    &.gutter,
+    &.rouge-gutter {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 1em;
+      text-align: right;
+    }
+
+    /* code */
+    &.code,
+    &.rouge-code {
+      padding-left: 1em;
+    }
+  }
+
+  pre {
+    margin: 0;
+    
+  }
+}
+
+.highlight pre {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
 //----------------------------------------
 // Miscellaneous.
 //----------------------------------------
