@@ -291,13 +291,70 @@ nav.navbar-default {
   }
 }
 
+//----------------------------------------
+// Highlighted code blocks
+//----------------------------------------
+.highlight table {
+  margin: 0;
+  font-size: 1em;
+  border: 0;
+
+  td {
+    padding: 0;
+    width: calc(100% - 1em);
+    border: 0;
+
+    /* line numbers*/
+    &.gutter,
+    &.rouge-gutter {
+      padding-left: 0em;
+      padding-right: 0em;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 1em;
+
+      text-align: right;
+    }
+
+    /* code */
+    &.code,
+    &.rouge-code {
+      padding-left: 1em;
+      padding: 0 0;
+    }
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+.highlight pre {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.table > tfoot > tr > td {
+  border-top: 0;
+}
 .lineno {
-  border: none;
   margin-right: none;
   color: #238E23;
   background-color: inherit;
   display: inline-block;
-  padding-top: 10px;
+
+  /*
+  Remove the comment block enclosing the following styling if you want line numbers without borders
+  The transparent border for top and bottom is for alignment purposes. This is because
+  the <pre> element have a border of 1 px for each side. If lineno doesn't have a border,
+  then there will be a misalignment between the line number and code by 2 px.
+  */
+
+  /*
+  border: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
