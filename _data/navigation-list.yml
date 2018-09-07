@@ -16,7 +16,7 @@ navigation_list:
   - title: Some problem solving to revise COMP115/WCOM115
     link: 06-revision.html
 - id: 02-static-debugging-unit-testing
-  title: Week 2 - Static, Debugging, Unit Testing
+  title: Week 2 - Static Debugging Unit Testing
   links:
   - title: What is static?
     link: 01-static.html
@@ -58,5 +58,21 @@ navigation_list:
     link: 04-binary-search.html
   - title: Searching and sorting an array of objects
     link: 05-searching-and-sorting-on-array-of-objects.html
-
+- id: 05-recursion
+  title: Week 7 - Recursion
+  links:
+  - title: What is recursion?
+    link: 01-what-is-recursion.html
+  - title: Why should I use recursion?
+    link: 02-why-do-i-need-recursion.html
+  - title: When should I not use recursion?
+    link: 03-when-should-i-not-use-recursion.html
+  - title: What happens during a method call?
+    link: 04-what-happens-during-method-calls.html
+  - title: Method calling itself
+    link: 05-method-calling-itself.html
+  - title: First look at a recursive solution
+    link: 06-first-look-at-a-recursive-solution.html
+  - title: A better example
+    link: 07-a-better-example.html
 ---

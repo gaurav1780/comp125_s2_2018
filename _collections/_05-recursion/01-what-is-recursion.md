@@ -54,6 +54,9 @@ Focus on the part
 
 It is the same problem as the original problem, except there is one less number to handle, and thus is *simpler*.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KEEKn7Me-ms" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
 ## Equivalence
 
 It has been proven that there is a recursive solution for every iterative solution and vice versa. We will soon look at some of the aspects to consider while deciding on which approach to take.

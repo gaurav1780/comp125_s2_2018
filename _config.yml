@@ -77,7 +77,9 @@ collections:
     04-searching-and-sorting:
         output: true
         permalink: /:collection/:path
-
+    05-recursion:
+        output: true
+        permalink: /:collection/:path
 # Set the default layout for things in the episodes collection.
 defaults:
   - values:
@@ -116,6 +118,12 @@ defaults:
   - scope:
       path: ""
       type: 04-searching-and-sorting
+    values:
+      root: ..
+      layout: episode
+  - scope:
+      path: ""
+      type: 05-recursion
     values:
       root: ..
       layout: episode

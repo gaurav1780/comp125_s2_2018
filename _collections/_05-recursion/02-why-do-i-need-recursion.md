@@ -1,53 +1,63 @@
 ---
-title: "Motivation for searching and sorting algorithms"
+title: "Why should I use recursion?"
 ---
 
 # Why should I use recursion?
 
 ## Advantages
 
-1. Some solutions have an intuitive recursive design. Some examples (we assume n >= 0 for all examples):
+#### 1. Intuitiveness
+
+Some solutions have an intuitive recursive design. Some examples (we assume n >= 0 for all examples):
 
 	1. x<sup>n</sup> = x<sup>n-1</sup> * x (if n > 0, or 1 if n == 0)
 	2. `nDigits(n)` = `nDigits(n/10) + 1` (if n > 0, or 0 if n == 0)
 	3. `sum(n) = sum(n-1) + n` if(n > 0, or 0 if n == 0)
 
-2. 
->return `false`
-{: challenge}
-> ## Define a method that returns the highest number in an unsorted array. Return 0 if array is null or empty.
->> ## SOLUTION
->>> ```java
->>> public static int highestUnsorted(int[] arr) {
->>> 	if(arr == null || arr.length == 0) {
->>> 		return 0;
->>> 	}
->>> 	int result = arr[0];
->>> 	for(int i=1; i < arr.length; i++) {
->>> 		if(arr[i] > result) {
->>> 			result = arr[i];
->>>		}
->>> 	}
->>>	return result;
->>> }
->>> ```
->{: .solution}
-{: .challenge}
+#### 2. Complex problems
 
-{: challenge}
-> ## Define a method that returns the highest number in an array sorted in ascending order. Return 0 if array is null or empty.
->> ## SOLUTION
->>> ```java
->>> public static int highestSorted(int[] arr) {
->>> 	if(arr == null || arr.length == 0) {
->>> 		return 0;
->>> 	}
->>> 	return arr[arr.length-1]; //last item is the highest item
->>> }
->>> ```
->{: .solution}
-{: .challenge}
+While trivial problems have fairly obvious recursive **and** iterative solutions, it's much easier to find a recursive solution to the more complex problems. For example, creating a random permutation of the word "super".
+ 
+> random permutation of the word "super"
+> = random character from "super" (say 'u') + random permutation of the word "sper"
 
-### Cost of sorting needs to be recognized
+> random permutation of the word "sper"
+> = random character from "sper" (say 'r') + random permutation of the word "spe"
 
-Of course, sorting involves a one-time fixed-cost of sorting the array, but the ongoing or variable cost of these operations reduces considerablly.
+> random permutation of the word "spe"
+> = random character from "spe" (say 's') + random permutation of the word "pe"
+
+> random permutation of the word "pe"
+> = random character from "pe" (say 'e') + random permutation of the word "p"
+
+> random permutation of the word "p"
+> = random character from "p" (has to be 'p') + random permutation of the word ""
+
+> random permutation of the word ""
+> = "" (end case)
+
+Plugging the values back:
+
+> random permutation of the word "p"
+> = 'p' + ""
+> = "p"
+
+> random permutation of the word "pe"
+> = 'e' + "p"
+> = "ep"
+
+> random permutation of the word "spe"
+> = 's' + "ep"
+> = "sep"
+
+> random permutation of the word "sper"
+> = 'r' + "sep"
+> = "rsep"
+
+> random permutation of the word "super"
+> = 'u' + "rsep"
+> = "ursep"
+
+#### 3. Recursive data structures
+
+Advanced data structures (such as linked lists, trees and graphs) are recursive in nature and it is logical to operate recursively on them.
