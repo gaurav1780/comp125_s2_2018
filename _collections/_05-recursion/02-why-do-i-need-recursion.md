@@ -10,10 +10,16 @@ title: "Why should I use recursion?"
 
 Some solutions have an intuitive recursive design. Some examples (we assume n >= 0 for all examples):
 
-	1. x<sup>n</sup> = x<sup>n-1</sup> * x (if n > 0, or 1 if n == 0)
-	2. `nDigits(n)` = `nDigits(n/10) + 1` (if n > 0, or 0 if n == 0)
-	3. `sum(n) = sum(n-1) + n` if(n > 0, or 0 if n == 0)
-
+1. x to the power of n:
+	- `x`<sup>`n`</sup> = `x`<sup>`n-1`</sup> * `x` if n > 0
+	- `x`<sup>`0`</sup> = 1
+2. number of digits in an integer: 
+	- `nDigits(n)` = `nDigits(n/10) + 1` if n > 0
+	- `nDigits(0)` = 0
+3. sum of the first n positive integers (1 + 2 + ... + n): 
+	- `sum(n) = sum(n-1) + n` if n > 0
+	- `sum(0)` = 0
+	
 #### 2. Complex problems
 
 While trivial problems have fairly obvious recursive **and** iterative solutions, it's much easier to find a recursive solution to the more complex problems. For example, creating a random permutation of the word "super".

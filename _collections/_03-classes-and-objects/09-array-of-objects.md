@@ -100,3 +100,70 @@ This time, you will get the following output:
 4.0 by 6.0
 5.0 by 8.0
 ```
+
+## Exercise: Creating (filtered) deep copy of an object array
+
+Consider the array `source` populated as:
+
+```java
+Rectangle[] source = new Rectangle[20];
+for(int i=0; i < source.length; i++) {
+	double randWidth = 1 + rand.nextInt(5);
+	double randHeight = 1 + rand.nextInt(5);
+	source[i] = new Rectangle(randWidth, randHeight);
+}
+```
+
+Create a second array containing Rectangles that have an area of 10 or more.
+
+#### STEP 1: Count the number of rectangles with area of 10 or more
+
+```java
+int count = 0;
+for(int i=0; i < source.length; i++) {
+	if(source[i].area() >= 10) {
+		count++;
+	}
+}
+```
+
+#### STEP 2: Create an array of required size
+
+```java
+Rectangle[] bigRectangles = new Rectangle[count];
+```
+
+#### STEP 3: Populate the array
+
+```java
+int destIndex = 0;
+for(int i=0; i < source.length; i++) {
+	if(source[i].area() >= 10) {
+		bigRectangles[destIndex] = source[i];
+		destIndex++;
+	}
+}
+```
+
+{: challenge}
+> ## Given an array `data` of `Rectangle` objects, create an array `wider` with those rectangles whose width is more than their height
+>> ## SOLUTION
+```java
+int count = 0;
+for(int i=0; i < data.length; i++) {
+	if(data[i].getWidth() > data[i].getHeight()) {
+		count++;
+	}
+}
+Rectangle[] wider = new Rectangle[count];
+int destIndex = 0;
+for(int i=0; i < data.length; i++) {
+	if(data[i].getWidth() > data[i].getHeight()) {
+		wider[destIndex] = data[i];
+		destIndex++;
+	}
+}
+```
+>{: .solution}
+{: .challenge}
+

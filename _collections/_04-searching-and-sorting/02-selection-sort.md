@@ -55,7 +55,7 @@ Unsorted part has only one item left, which has to be the smallest item. Therefo
 {: challenge}
 > ## How many iterations are required to sort an array containing `n` items using selection sort?
 >> ## SOLUTION
->>> `(n-1)` iterations
+`(n-1)` iterations
 >{: .solution}
 {: .challenge}
 
@@ -135,18 +135,18 @@ public static void selectionSort(int[] arr) {
 {: challenge}
 > ## Modify the implementation of selection sort so it sorts the array in descending order.
 >> ## SOLUTION
->>>```java
->>>public static void selectionSortDescending(int[] arr) {
->>>	 for(int startIndex = 0; startIndex < arr.length - 1; startIndex++) {
->>>		int highestIndex = getHighestItemIndex(arr, startIndex); //ONLY CHANGE: find index of highest item
->>>		//implementation of getHighestItemIndex left as homework exercise
->>>
->>>		int temp = arr[startIndex];
->>>		arr[startIndex] = arr[highestIndex];
->>>		arr[highestIndex] = temp;
->>>	 }
->>>}
->>>```
+```java
+public static void selectionSortDescending(int[] arr) {
+	 for(int startIndex = 0; startIndex < arr.length - 1; startIndex++) {
+		int highestIndex = getHighestItemIndex(arr, startIndex); //ONLY CHANGE: find index of highest item
+		//implementation of getHighestItemIndex left as homework exercise
+
+		int temp = arr[startIndex];
+		arr[startIndex] = arr[highestIndex];
+		arr[highestIndex] = temp;
+	 }
+}
+```
 >{: .solution}
 {: .challenge}
 

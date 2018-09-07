@@ -46,7 +46,7 @@ After **fourth** iteration:
 {: challenge}
 > ## How many iterations are required to sort an array containing `n` items using insertion sort?
 >> ## SOLUTION
->>> `(n-1)` iterations
+ `(n-1)` iterations
 >{: .solution}
 {: .challenge}
 
@@ -175,19 +175,19 @@ public static void insertionSort(int[] arr) {
 {: challenge}
 > ## Modify the implementation of insertion sort so it sorts the array in descending order.
 >> ## SOLUTION
->>>```java
->>>public static void insertionSortDescending(int[] arr) {
->>>	 for(int idx = 1; idx < arr.length; idx++) {
->>>		int backup = arr[idx];
->>>		int currentIndex = idx-1;
->>>		while(currentIndex >= 0 && arr[currentIndex] < backup) { //ONLY CHANGE: smaller items to the end
->>>			arr[currentIndex+1] = arr[currentIndex]; 
->>>			currentIndex--; 			
->>>		}
->>>		arr[currentIndex+1] = backup; 		
->>>	 }
->>>}
->>>```
+```java
+public static void insertionSortDescending(int[] arr) {
+	 for(int idx = 1; idx < arr.length; idx++) {
+		int backup = arr[idx];
+		int currentIndex = idx-1;
+		while(currentIndex >= 0 && arr[currentIndex] < backup) { //ONLY CHANGE: smaller items to the end
+			arr[currentIndex+1] = arr[currentIndex]; 
+			currentIndex--; 			
+		}
+		arr[currentIndex+1] = backup; 		
+	 }
+}
+```
 >{: .solution}
 {: .challenge}
 

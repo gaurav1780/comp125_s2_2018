@@ -184,34 +184,34 @@ public static boolean sameItemsSorted(int[] a, int[] b) {
 {: challenge}
 > ## Define a method that returns the highest number in an unsorted array. Return 0 if array is null or empty.
 >> ## SOLUTION
->>> ```java
->>> public static int highestUnsorted(int[] arr) {
->>> 	if(arr == null || arr.length == 0) {
->>> 		return 0;
->>> 	}
->>> 	int result = arr[0];
->>> 	for(int i=1; i < arr.length; i++) {
->>> 		if(arr[i] > result) {
->>> 			result = arr[i];
->>>		}
->>> 	}
->>>	return result;
->>> }
->>> ```
+ ```java
+ public static int highestUnsorted(int[] arr) {
+ 	if(arr == null || arr.length == 0) {
+ 		return 0;
+ 	}
+ 	int result = arr[0];
+ 	for(int i=1; i < arr.length; i++) {
+ 		if(arr[i] > result) {
+ 			result = arr[i];
+		}
+ 	}
+	return result;
+ }
+ ```
 >{: .solution}
 {: .challenge}
 
 {: challenge}
 > ## Define a method that returns the highest number in an array sorted in ascending order. Return 0 if array is null or empty.
 >> ## SOLUTION
->>> ```java
->>> public static int highestSorted(int[] arr) {
->>> 	if(arr == null || arr.length == 0) {
->>> 		return 0;
->>> 	}
->>> 	return arr[arr.length-1]; //last item is the highest item
->>> }
->>> ```
+ ```java
+ public static int highestSorted(int[] arr) {
+ 	if(arr == null || arr.length == 0) {
+ 		return 0;
+ 	}
+ 	return arr[arr.length-1]; //last item is the highest item
+ }
+ ```
 >{: .solution}
 {: .challenge}
 

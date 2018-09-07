@@ -131,13 +131,13 @@ main(null) uses the received value (10) as needed
 {: challenge}
 > ## Define a method that returns number of digits in the integer passed. Return 0 if the integer passed is 0. Tip: when a number is divided by 10,   we get a number without its last digit.
 >> ## SOLUTION
->>> ```java
->>> public static int nDigits(int n) {
->>> 	if(n == 0)
->>> 		return 0;
->>> 	int numberWithoutLastDigit = n/10;
->>> 	return 1 + nDigits(numberWithoutLastDigit);
->>> }
->>> ```
+ ```java
+ public static int nDigits(int n) {
+ 	if(n == 0)
+ 		return 0;
+ 	int numberWithoutLastDigit = n/10;
+ 	return 1 + nDigits(numberWithoutLastDigit);
+ }
+ ```
 >{: .solution}
 {: .challenge}

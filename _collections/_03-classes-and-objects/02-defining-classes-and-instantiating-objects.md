@@ -53,15 +53,15 @@ class has yet been created.
 {: challenge}
 > ## Define a class for a Circle that is represented by its radius.
 >> ## SOLUTION
->>> ```java
->>> public class Circle {
->>>     public double radius;
->>>     /*
->>>     * note that int is a wrong choice as radius 
->>>     * CAN be a floating-point value like 1.5 or 2.4
->>>     */
->>> }
->>> ```
+ ```java
+ public class Circle {
+     public double radius;
+     /*
+     * note that int is a wrong choice as radius 
+     * CAN be a floating-point value like 1.5 or 2.4
+     */
+ }
+ ```
 >{: .solution}
 {: .challenge}
 
@@ -105,13 +105,13 @@ Rectangle r = new Rectangle(); //example
 {: challenge}
 > ## Declare and instantiate an object `myCircle` of class `Circle`.
 >> ## SOLUTION
->>> ```java
->>> public class Client {
->>>     public static void main(String[] args) {
->>>         Circle myCircle = new Circle();
->>>     }
->>> }
->>> ```
+ ```java
+ public class Client {
+     public static void main(String[] args) {
+         Circle myCircle = new Circle();
+     }
+ }
+ ```
 >{: .solution}
 {: .challenge}
 
@@ -183,10 +183,10 @@ called on another object `s`, it would return `s.width * s.height`.
 {: challenge}
 > ## Write a piece of code that sits outside the class definition and displays the radius of the object `myCircle` and also its area.
 >> ## SOLUTION
->>> ```java
->>> System.out.println(myCircle.getRadius());
->>> System.out.println(myCircle.area());
->>> ```
+ ```java
+ System.out.println(myCircle.getRadius());
+ System.out.println(myCircle.area());
+ ```
 >{: .solution}
 {: .challenge}
 

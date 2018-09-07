@@ -179,31 +179,31 @@ The following events take place upon the execution of `r1.compareTo(r2)`:
 {: challenge}
 > ## Define the `compareTo` method in the `Circle` class such that it returns 1 if the calling object is larger than the parameter, -1 if it's smaller, and 0 if it's the same size.
 >> ## SOLUTION
->>> ```java
->>> public int compareTo(Circle other) {
->>>	if(this.radius > other.radius) {
->>> 		return 1;
->>> 	}
->>> 	if(this.radius < other.radius) {
->>> 		return -1;
->>> 	}
->>> 	return 0;
->>> }   
->>> ```
+ ```java
+ public int compareTo(Circle other) {
+	if(this.radius > other.radius) {
+ 		return 1;
+ 	}
+ 	if(this.radius < other.radius) {
+ 		return -1;
+ 	}
+ 	return 0;
+ }   
+ ```
 >{: .solution}
 {: .challenge}
 
 {: challenge}
 > ## In a separate client, compare two `Circle` objects `c1` and `c2` and store the result in variable `comp`. 
 >> ## SOLUTION
->>> ```java
->>> public class Client {
->>>     public static void main(String[] args) {
->>>         //assuming c1 and c2 are objects of class Circle
->>>         int comp = c1.compareTo(c2);
->>>     }   
->>> }
->>> ```
+ ```java
+ public class Client {
+     public static void main(String[] args) {
+         //assuming c1 and c2 are objects of class Circle
+         int comp = c1.compareTo(c2);
+     }   
+ }
+ ```
 >{: .solution}
 {: .challenge}
 

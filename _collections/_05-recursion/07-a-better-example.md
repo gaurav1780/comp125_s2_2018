@@ -149,16 +149,16 @@ main(null) uses the received value ("repus") as needed
 {: challenge}
 > ## Define a method that returns `true` if the String passed is purely numeric (all characters are between '0' and '9'), false otherwise. Return `true` if String is empty.
 >> ## SOLUTION
->>> ```java
->>> public static boolean isNumeric(String str) {
->>> 	if(str.equals(""))
->>> 		return true;
->>> 	char first = str.charAt(0);
->>> 	if(first < '0' || last > '9') 
->>> 		return false;
->>> 	String rest = str.substring(1);
->>> 	return isNumeric(rest);
->>> }
->>> ```
+ ```java
+ public static boolean isNumeric(String str) {
+ 	if(str.equals(""))
+ 		return true;
+ 	char first = str.charAt(0);
+ 	if(first < '0' || last > '9') 
+ 		return false;
+ 	String rest = str.substring(1);
+ 	return isNumeric(rest);
+ }
+ ```
 >{: .solution}
 {: .challenge}

@@ -106,12 +106,12 @@ public Rectangle() {
 {: challenge}
 > ## Add a default constructor to the class `Circle` that assigns the value 1.0 to instance variable `radius` (through the setter).
 >> ## SOLUTION
->>> ```java
->>> //default constructor
->>> public Circle() {
->>>     setRadius(1);
->>> }
->>> ```
+ ```java
+ //default constructor
+ public Circle() {
+     setRadius(1);
+ }
+ ```
 >{: .solution}
 {: .challenge}
 
@@ -119,11 +119,11 @@ public Rectangle() {
 {: challenge}
 > ## Add a parameterized constructor to the class `Circle` that assigns the value of the parameter passed to instance variable `radius` (through the setter).
 >> ## SOLUTION
->>> ```java
->>> //parameterized constructor
->>> public Circle(double r) {
->>>     setRadius(r); //let setter handle the validation
->>> }
->>> ```
+ ```java
+ //parameterized constructor
+ public Circle(double r) {
+     setRadius(r); //let setter handle the validation
+ }
+ ```
 >{: .solution}
 {: .challenge}

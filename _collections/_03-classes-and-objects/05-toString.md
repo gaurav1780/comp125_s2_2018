@@ -83,26 +83,26 @@ System.out.println(r);
 {: challenge}
 > ## Define the `toString` method in the `Circle` class such that it displays the object details in the format *Circle radius: <radius>, area: <area>*
 >> ## SOLUTION
->>> ```java
->>> public String toString() {
->>>     String result = "Circle radius: "+radius+", area: "+area();
->>>     return result;
->>> }   
->>> ```
+ ```java
+ public String toString() {
+     String result = "Circle radius: "+radius+", area: "+area();
+     return result;
+ }   
+ ```
 >{: .solution}
 {: .challenge}
 
 {: challenge}
 > ## In a separate client, create a `Circle` object with radius 1.6 and display it on the console.
 >> ## SOLUTION
->>> ```java
->>> public class Client {
->>>     public static void main(String[] args) {
->>>         Circle myCircle = new Circle(1.6);
->>>         System.out.println(myCircle); //toString() called implicitly
->>>     }   
->>> }
->>> ```
+ ```java
+ public class Client {
+     public static void main(String[] args) {
+         Circle myCircle = new Circle(1.6);
+         System.out.println(myCircle); //toString() called implicitly
+     }   
+ }
+ ```
 >{: .solution}
 {: .challenge}
 

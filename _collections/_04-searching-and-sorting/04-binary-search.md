@@ -33,14 +33,14 @@ Lets say that we are playing the game that has the following rules.
 {: challenge}
 > ## Does it make sense for the first guess to be 5?
 >> ## SOLUTION
->>> No. Of course, you will find the target with any given guess with a small probability. Otherwise, in this case, if you are very lucky (4/31 probability), you'll be left with 4 numbers to guess from. However, the chances are (26/31 probability) that you'll be left with 26 numbers to guess from. 
+No. Of course, you will find the target with any given guess with a small probability. Otherwise, in this case, if you are very lucky (4/31 probability), you'll be left with 4 numbers to guess from. However, the chances are (26/31 probability) that you'll be left with 26 numbers to guess from. 
 >{: .solution}
 {: .challenge}
 
 {: challenge}
 > ## What is a clever first guess?
 >> ## SOLUTION
->>> The first clever guess would be 16 since either that **is** the target (1/31) or in either of the remaining cases, you are left with 15 numbers to guess from (either 1 to 15, or 16 to 31).
+The first clever guess would be 16 since either that **is** the target (1/31) or in either of the remaining cases, you are left with 15 numbers to guess from (either 1 to 15, or 16 to 31).
 >{: .solution}
 {: .challenge}
 
@@ -160,7 +160,7 @@ k = log<sub>2</sub>(n)
 
 The best case is that the middle item is the target. In the best case, it takes only one iteration to find the target.
 
-> Number of iterations in worst case: 1
+> Number of iterations in best case: 1
 
 ### Worst case scenario
 
