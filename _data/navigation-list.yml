@@ -64,7 +64,7 @@ navigation_list:
   - title: What is recursion?
     link: 01-what-is-recursion.html
   - title: Why should I use recursion?
-    link: 02-why-do-i-need-recursion.html
+    link: 02-why-should-i-use-recursion.html
   - title: When should I not use recursion?
     link: 03-when-should-i-not-use-recursion.html
   - title: What happens during a method call?
