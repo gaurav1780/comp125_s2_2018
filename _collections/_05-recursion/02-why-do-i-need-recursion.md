@@ -10,9 +10,9 @@ title: "Why should I use recursion?"
 
 Some solutions have an intuitive recursive design. Some examples (we assume n >= 0 for all examples):
 
-	1. x<sup>n</sup> = x<sup>n-1</sup> * x (if n > 0, or 1 if n == 0)
-	2. `nDigits(n)` = `nDigits(n/10) + 1` (if n > 0, or 0 if n == 0)
-	3. `sum(n) = sum(n-1) + n` if(n > 0, or 0 if n == 0)
+1. `x`<sup>`n`</sup> = `x`<sup>`n-1`</sup> * `x` (if n > 0, or 1 if n == 0)
+2. `nDigits(n)` = `nDigits(n/10)` + `1` (if n > 0, or 0 if n == 0)
+3. `sum(n) = sum(n-1)` + `n` if(n > 0, or 0 if n == 0)
 
 #### 2. Complex problems
 
