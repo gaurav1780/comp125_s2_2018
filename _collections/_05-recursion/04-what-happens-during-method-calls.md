@@ -15,7 +15,7 @@ public static void main(String[] args) {
 
 public static int foo(int a) {
 	int temp = bar(a);
-	return result = temp * temp;
+	int result = temp * temp;
 	return result;
 }
 

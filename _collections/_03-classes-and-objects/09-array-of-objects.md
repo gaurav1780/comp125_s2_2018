@@ -166,4 +166,3 @@ for(int i=0; i < data.length; i++) {
 ```
 >{: .solution}
 {: .challenge}
-

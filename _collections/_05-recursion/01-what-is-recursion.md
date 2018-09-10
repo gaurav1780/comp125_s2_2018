@@ -19,9 +19,6 @@ Add all integers between `low` and `high` (inclusive on both sides, and assuming
 
 ```java
 public static int sum(int low, int high) {
-	if(low % 2 != 0) {
-		low++;
-	}
 	int total = 0;
 	for(int i=low; i<=high; i++) {
 		total = total + i;
