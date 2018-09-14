@@ -16,12 +16,6 @@ For example,
 | "Voila!"      | "!alioV"        |
 | "nicely done" | "enod ylecin"   |
 
-Examples:
-
-> Input = 4 -> return 1 + 2 + 3 + 4 (10)
-
-> Input = 6 -> return 1 + 2 + 3 + 4 + 5 + 6 (21)
-
 Let's call the method `reverse` and the the formal parameter `str` and take an example:
 
 > reverse("fine") = "enif"
@@ -86,45 +80,15 @@ public static String reverse(String str) {
 
 ```
 reverse("super") = reverse("uper") + 's'
-```
-
-```
 	reverse("uper") = reverse("per") + 'u'
-```
-
-```
 		reverse("per") = reverse("er") + 'p'
-```
-
-```
 			reverse("er") = reverse("r") + 'e'
-```
-
-```
 				reverse("r") = reverse("") + 'r'
-```
-
-```
 					reverse("") returns ""
-```
-
-```
 				reverse("r") = "" + 'r' = "r"
-```
-
-```
 			reverse("er") = "r" + 'e' = "re"
-```
-
-```
 		reverse("per") = "re" + 'p' = "rep"
-```
-
-```
 	reverse("uper") = "rep" + 'u' = "repu"
-```
-
-```
 reverse("super") = "repu" + 's' = "repus"
 ```
 

@@ -68,6 +68,7 @@ public class Rectangle {
 }
 ```
 
+
 ## Setters must provide validation where applicable
 
 You can see that we validated the passed values before assigning to the
