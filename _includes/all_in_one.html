@@ -1,0 +1,16 @@
+<script src="{{ page.root }}/assets/js/aio.js"></script>
+<script>
+    var collection_urls = [
+    {% for collection_page in site[page.collection] %}
+    '{{ collection_page.url }}'{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ];
+
+  window.onload = aio(collection_urls)
+</script>
+{% comment %}
+Create anchor for each one of the episodes.
+{% endcomment %}
+{% for collection_page in site[page.collection] %}
+<article id="{{ collection_page.url }}"></article>
+{% endfor %}
