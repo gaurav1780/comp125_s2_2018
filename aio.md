@@ -1,22 +1,6 @@
 ---
-collection-name: '05-recursion'
+title: "All in one"
+lecture_all_in_one_page: true
 ---
 
-
-<script src="{{ page.root }}/assets/js/aio.js"></script>
-<script>
-
-    var lesson_episodes = [
-    {% for episode in site[page.collection-name] %}
-    "{{ episode.url }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-    ];
-
-  window.onload = aio(lesson_episodes)
-</script>
-{% comment %}
-Create anchor for each one of the episodes.
-{% endcomment %}
-{% for episode in site[page.collection-name] %}
-<article id="{{ episode.url }}"></article>
-{% endfor %}
+{% include all_in_one.html %}
