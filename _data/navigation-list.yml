@@ -15,7 +15,7 @@ navigation_list:
     link: 05-software-to-install.html
   - title: Some problem solving to revise COMP115/WCOM115
     link: 06-revision.html
-  - title: All in one
+  - title: All in one - Introduction
     link: 99-aio.html
 - id: 02-static-debugging-unit-testing
   title: Static Debugging Unit Testing

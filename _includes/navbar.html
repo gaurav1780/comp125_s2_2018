@@ -42,10 +42,24 @@ Lesson navigation bar.
                             <a class="nav-folder" href="{{ page.root }}/{{ id }}/{{ collection_first_link }}">{{ collection_title }}</a>
                             <ul class="dropdown-menu">
                                 {% for link in collection.links %}
-                                {% if forloop.index == collection_links_size %}
-                                {%- comment -%}
-                                  Add seperator to distinguish between the all in one page for that collection.
-                                {%- endcomment -%}
+                                
+
+                                {% comment %}
+                                Find the current page that correspond to this link in the nav list
+                                {% endcomment %}
+                                {% assign link_without_html_ext = link.link | split: '.html' %}
+                                {% capture cur_page_id %}/{{ id }}/{{ link_without_html_ext[0] }}{% endcapture %}
+                                {% for collection_page in site.[id] %}
+                                    {% if collection_page.url == cur_page_id %}
+                                        {% assign cur_page = collection_page %}
+                                    {% endif %}
+                                {% endfor %}
+                                
+                                {% comment %}
+                                If cur_page is the last page and it has a collection_all_in_one variable with the value true then it
+                                is a all in one page so add seperator to distinguish between the all in one page for that collection.
+                                {% endcomment %}
+                                {% if forloop.index == collection_links_size and cur_page.collection_all_in_one == true %}
                                   <li role="separator" class="divider"></li>
                                 {% endif %}
                                 <li><a href="{{ page.root }}/{{ id }}/{{ link.link }}"> {{ link.title }}</a></li>
