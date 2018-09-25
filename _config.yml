@@ -127,6 +127,12 @@ defaults:
     values:
       root: ..
       layout: episode
+- scope:
+    path: ""
+    type: 06-lists
+  values:
+    root: ..
+    layout: episode
 
 # Files and directories that are not to be copied.
 exclude:
@@ -137,9 +143,6 @@ exclude:
   - portingToMarkdown/
   - workshops/
   - archive/
-
-# Turn on built-in syntax highlighting.
-highlighter: rouge
 
 markdown: kramdown
 # !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change

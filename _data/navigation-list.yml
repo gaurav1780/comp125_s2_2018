@@ -1,7 +1,7 @@
 ---
 navigation_list:
 - id: 01-introduction
-  title: Week 1 - Introduction
+  title: Introduction
   links:
   - title: Welcome to the unit
     link: 01-welcome-to-the-unit.html
@@ -16,7 +16,7 @@ navigation_list:
   - title: Some problem solving to revise COMP115/WCOM115
     link: 06-revision.html
 - id: 02-static-debugging-unit-testing
-  title: Week 2 - Static Debugging Unit Testing
+  title: Static Debugging Unit Testing
   links:
   - title: What is static?
     link: 01-static.html
@@ -25,7 +25,7 @@ navigation_list:
   - title: Unit Testing and JUnit
     link: 03-unit-testing-junit.html
 - id: 03-classes-and-objects
-  title: Weeks 3, 4 - Classes And Objects
+  title: Classes And Objects
   links:
   - title: Introduction to Object-Oriented Programming
     link: 01-object-oriented-programming.html
@@ -46,7 +46,7 @@ navigation_list:
   - title: Array of objects
     link: 09-array-of-objects.html
 - id: 04-searching-and-sorting
-  title: Weeks 5, 6 - Searching And Sorting
+  title: Searching And Sorting
   links:
   - title: Motivation for searching and sorting algorithms
     link: 01-motivation-for-searching-sorting-algorithms.html
@@ -59,7 +59,7 @@ navigation_list:
   - title: Searching and sorting an array of objects
     link: 05-searching-and-sorting-on-array-of-objects.html
 - id: 05-recursion
-  title: Week 7 - Recursion
+  title: Recursion
   links:
   - title: What is recursion?
     link: 01-what-is-recursion.html
@@ -75,4 +75,27 @@ navigation_list:
     link: 06-first-look-at-a-recursive-solution.html
   - title: A better example
     link: 07-a-better-example.html
+- id: 06-lists
+  title: Lists
+  links:
+  - title: What are lists?
+    link: 01-what-are-lists.html
+  - title: What are arrays not good enough?
+    link: 02-why-are-arrays-not-good-enough.html
+  - title: Built-in lists in Java
+    link: 03-built-in-lists-in-java.html
+  - title: Enhanced for loop
+    link: 04-enhanced-for-loop.html
+  - title: Custom built arraylist
+    link: 05-custom-built-arraylist.html
+  - title: Object holding another reference
+    link: 06-object-holding-another-reference.html
+  - title: The node class
+    link: 07-the-node-class.html
+  - title: Custom built linkedlist
+    link: 08-custom-built-linkedlist.html
+  - title: Traversing custom built linkedlist
+    link: 09-traversing-custom-built-linkedlist.html
+  - title: More advanced methods in custom linkedlist
+    link: 10-more-advanced-methods-in-custom-linkedlist.html
 ---
