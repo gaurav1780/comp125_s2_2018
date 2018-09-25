@@ -15,7 +15,7 @@ The **most frequently used** methods from `List` are:
 | get(int): Object          | returns Object at passed index (IndexOutOfBoundsException if the index is out of range)             |
 | size(): int               | returns number of items in the list (0 if empty)                                                    |
 | add(Object)               |  adds passed object at the end of the list (IndexOutOfBoundsException if the index is out of range) |
-| add(int, Object)          | adds (at the given index) the object passed (                                                       |
+| add(int, Object)          | adds (at the given index) the object passed (IndexOutOfBoundsException if the index is out of range)                                                       |
 | contains(Object): boolean | returns true if passed object exists in the list, false otherwise                                   |
 | indexOf(Object): int      | returns first index at which passed object exists (-1 if it doesn't exist in the list)              |
 | lastIndexOf(Object): int      | returns last index at which passed object exists (-1 if it doesn't exist in the list)              |
@@ -44,7 +44,7 @@ Example (Java 8 and beyond),
 ```java
 ArrayList<Integer> list = new ArrayList();
 ```
-#### Adding items at the end
+### Adding items at the end
 
 ```java
 list.add(10);
@@ -54,7 +54,7 @@ list.add(90);
 //list = [10, 70, 20, 90]
 ```
 
-#### Adding items at arbitrary index
+### Adding items at arbitrary index
 
 ```java
 list.add(0, 30);
@@ -69,7 +69,7 @@ list.add(list.size(), 30); //after the last item
 list.add(20, -60); //throws IndexOutOfBoundsException
 ```
 
-#### Removing an item at a specific index
+### Removing an item at a specific index
 
 ```java
 list.remove(5);
@@ -80,7 +80,7 @@ list.remove(-3); //throws IndexOutOfBoundsException
 list.remove(6); //throws IndexOutOfBoundsException
 ```
 
-#### Removing a specific object
+### Removing a specific object
 
 The only scenario in which this is tricky is a list containing Integers, because the type of the object and the type of the index is the same (int or Integer).
 
@@ -94,7 +94,7 @@ list.remove((Integer)4);
 //removes item 4. list = [30, 10, 70, 30]
 ```
 
-#### Iterating over the list
+### Iterating over the list
 
 Following example adds the items in the list
 
@@ -106,7 +106,7 @@ for(int i=0; i < list.size(); i++) {
 //total = 30+10+70+30 = 140
 ```
 
-#### Checking existence and location of items in list
+### Checking existence and location of items in list
 	
 ```java
 //note: list = [30, 10, 70, 30]
@@ -119,7 +119,7 @@ int idx3 = list.indexOf(30);        //idx3 = 0
 int idx4 = list.lastIndexOf(30);    //idx4 = 3
 ```
 
-#### Storing list contents in a String or displaying it
+### Storing list contents in a String or displaying it
 
 ```java
 String str = list.toString(); //str = "[30, 10, 70, 30]"
@@ -210,7 +210,7 @@ int mostFreq = maxIndex + 1; //add the offset to get outcome from index
 
 You can do this all of this in methods as well. Example for task 3 (average) provided.
 
-#### Method definition
+### Method definition
 
 ```java
 public static double getAverage(ArrayList<Integer> data) {

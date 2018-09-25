@@ -80,6 +80,9 @@ collections:
     05-recursion:
         output: true
         permalink: /:collection/:path
+    06-lists:
+        output: true
+        permalink: /:collection/:path
 # Set the default layout for things in the episodes collection.
 defaults:
   - values:
@@ -127,19 +130,16 @@ defaults:
     values:
       root: ..
       layout: episode
-<<<<<<< HEAD
-- scope:
-    path: ""
-    type: 06-lists
-  values:
-    root: ..
-    layout: episode
-=======
   - scope:
-      path: "_collections/*/99-aio.md"
+      path: ""
+      type: 06-lists
     values:
-        collection_all_in_one: true
->>>>>>> 28a23d19b8102cdb578bf5e981b1335cf14d33ae
+      root: ..
+      layout: episode
+  # - scope:
+  #     path: "_collections/*/99-aio.md"
+  #   values:
+  #     collection_all_in_one: true
 
 # Files and directories that are not to be copied.
 exclude:
@@ -150,13 +150,10 @@ exclude:
   - portingToMarkdown/
   - workshops/
   - archive/
-<<<<<<< HEAD
-=======
 # !github-pages! mandatory › https://help.github.com/articles/using-jekyll-with-pages/#configuration-settings-you-cannot-change
 # Since Jekyll 3 the default highlighter is Rouge (replaced Pygments.rb in v44)
 # Turn on built-in syntax highlighting.
 highlighter: rouge
->>>>>>> 28a23d19b8102cdb578bf5e981b1335cf14d33ae
 
 markdown: kramdown
 

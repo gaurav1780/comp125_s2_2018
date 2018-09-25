@@ -1,8 +1,8 @@
 ---
-title: "What are arrays not good enough?"
+title: "Why are arrays not good enough?"
 ---
 
-# What are arrays not good enough?
+# Why are arrays not good enough?
 
 ## Example - copying over a subset
 
