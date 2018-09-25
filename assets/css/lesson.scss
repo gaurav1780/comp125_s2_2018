@@ -298,6 +298,7 @@ nav.navbar-default {
   margin: 0;
   font-size: 1em;
   border: 0;
+  width: 100%;
 
   td {
     padding: 0;
@@ -326,11 +327,15 @@ nav.navbar-default {
 
   pre {
     margin: 0;
+    width: 100%;
   }
 }
 
+
+
 .highlight pre {
   width: 100%;
+
   margin-bottom: 5px;
 }
 
@@ -340,9 +345,10 @@ nav.navbar-default {
 .lineno {
   margin-right: none;
   color: #238E23;
-  background-color: inherit;
-  display: inline-block;
 
+  background-color: inherit;
+  height: 100%;
+  display: inline-block;
   /*
   Remove the comment block enclosing the following styling if you want line numbers without borders
   The transparent border for top and bottom is for alignment purposes. This is because
