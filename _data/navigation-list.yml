@@ -98,16 +98,20 @@ navigation_list:
     link: 04-enhanced-for-loop.html
   - title: Iterator
     link: 05-iterator.html
-  - title: Custom built arraylist
+  - title: Custom-built arraylist
     link: 06-custom-built-arraylist.html
-  - title: Object holding another reference
-    link: 07-object-holding-another-reference.html
-  - title: The node class
-    link: 08-the-node-class.html
+  - title: The Node class
+    link: 07-the-node-class.html
   - title: Custom built linkedlist
-    link: 09-custom-built-linkedlist.html
+    link: 08-custom-built-linkedlist.html
   - title: Traversing custom built linkedlist
-    link: 10-traversing-custom-built-linkedlist.html
+    link: 09-traversing-custom-built-linkedlist.html
   - title: More advanced methods in custom linkedlist
-    link: 11-more-advanced-methods-in-custom-linkedlist.html
+    link: 10-more-advanced-methods-in-custom-linkedlist.html
+  - title: Erollsimulation
+    link: DiceRollSimulation.html
+  - title: Tangle
+    link: Rectangle.html
+  - title: Tangleclient
+    link: RectangleClient.html
 ---

@@ -33,7 +33,7 @@ for(int item: data) {
 ### Example with list
 
 ```java
-ArrayList<Integer> list = new ArrayList();
+ArrayList<Integer> list = new ArrayList<Integer>();
 list.add(10);
 list.add(70);
 list.add(20);

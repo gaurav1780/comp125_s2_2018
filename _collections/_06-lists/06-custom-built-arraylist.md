@@ -1,5 +1,5 @@
 ---
-title: "Custom built arraylist"
+title: "Custom-built arraylist"
 ---
 
 # Custom-built arraylist
@@ -214,7 +214,7 @@ Hence, we keep the return type `Double` since we can return `null` as error code
 	}
 ```		
 
-# Complete class and client
+# Complete class and client (including homework)
 
 - [MyArrayList.java](./MyArrayList.java) (contains several incomplete methods for practice)
 - [MyArrayListClient.java](./MyArrayListClient.java)
