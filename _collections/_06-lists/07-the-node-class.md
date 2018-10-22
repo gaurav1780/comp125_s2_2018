@@ -3,7 +3,6 @@ title: "The Node class"
 ---
 # The Node class
 
-
 Consider the following class `Point`:
 
 ```java
@@ -48,6 +47,10 @@ Line line = new Line(new Point(10, 40), new Point(70, 60));
 ![](./../fig/06-lists/composition/composition-figure1.png)
 
 # The Node class
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fDU7AtmQBjA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>&nbsp;</p>
 
 Now, consider the following class:
 
@@ -111,6 +114,10 @@ Here, we created an *anonymous* `Node` object - `new Node(10, null)` - and passe
 
 
 ## Linking nodes
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jqu9IpulHvU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p>&nbsp;</p>
 
 We can link any number of nodes as we want.
 

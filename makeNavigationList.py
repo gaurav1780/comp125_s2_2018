@@ -67,7 +67,7 @@ for dir_name in DIR_LIST:
     full_dir_name = COLLECTIONS_DIR_NAME + '/' + dir_name
     for file in sorted(os.listdir(full_dir_name)):
         print(file)
-        if file.endswith('.md'):
+        if (file[0:1] == '0' or file[0:1] == '1') and file.endswith('.md'):
             filename = os.fsdecode(file)
             title = ''
             page_path = full_dir_name + '/' + filename

@@ -22,10 +22,6 @@ public class MyArrayList {
 
 	//grow the array. if not full, don't do anything
 	private void grow() { //private because we don't want clients to call it
-		if(!isFull()) { //should not grow if not full
-			return;
-		}
-
 		double[] temp = new double[data.length + 5]; //5 extra items
 
 		for(int i=0; i < data.length; i++) { //copy all items over

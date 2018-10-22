@@ -1,5 +1,5 @@
 \documentclass{exam} 
-\def\workshopTitle{Workshop - ArrayLists 1} 
+\def\workshopTitle{Workshop - ArrayLists - 1} 
 \input{comp125workshopHeader}
 \section* {Learning outcomes}
 
@@ -194,19 +194,19 @@ public class MyArrayList {
 \question Add a method \texttt{product} that when passed an \texttt{ArrayList} of \texttt{Double} objects, returns the product of all items in the \texttt{ArrayList}. The method should return 0 if the list is \texttt{null} or empty.
 
 \begin{lstlisting}
-	public static double product(ArrayList <Double> list)
+public static double product(ArrayList <Double> list)
 \end{lstlisting}
 
 \begin{solution}
 \begin{lstlisting}
 public static double product(ArrayList <Double> list) {
-		if(list == null || list.size() == 0) 
-			return 0;
-		double result = 1;
-		for(Double item: list)
-			result*=item;
-		return result;
-	}	
+	if(list == null || list.size() == 0) 
+		return 0;
+	double result = 1;
+	for(Double item: list)
+		result*=item;
+	return result;
+}	
 \end{lstlisting}	
 \end{solution}
 
@@ -214,27 +214,27 @@ public static double product(ArrayList <Double> list) {
 \question Add a method \texttt{sumPositive} that when passed an \texttt{ArrayList} of \texttt{Integer} objects, returns the sum of all positive values in the \texttt{ArrayList}. The method should return 0 if the list is \texttt{null} or empty.
 
 \begin{lstlisting}
-	public static int sumPositive(ArrayList <Integer> list)
+public static int sumPositive(ArrayList <Integer> list)
 \end{lstlisting}
 
 \begin{solution}
 \begin{lstlisting}
-	public static int sumPositive(ArrayList <Integer> list) {
-		if(list == null || list.size() == 0) 
-			return 0;
-		int result = 0;
-		for(Integer item: list)
-			if(item > 0)			
-				result+=item;
-		return result;
-	}	
+public static int sumPositive(ArrayList <Integer> list) {
+	if(list == null || list.size() == 0) 
+		return 0;
+	int result = 0;
+	for(Integer item: list)
+		if(item > 0)			
+			result+=item;
+	return result;
+}	
 \end{lstlisting}	
 \end{solution}
 
 \question Add a method \texttt{count} that when passed an \texttt{ArrayList<Integer> list} and an \texttt{Integer target}, returns the number of times \texttt{target} exists in \texttt{list}.
 
 \begin{lstlisting}
-	public static int count(ArrayList<Integer> list, Integer target)
+public static int count(ArrayList<Integer> list, Integer target)
 \end{lstlisting}
 
 \begin{solution}

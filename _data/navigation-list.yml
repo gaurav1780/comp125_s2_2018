@@ -15,8 +15,6 @@ navigation_list:
     link: 05-software-to-install.html
   - title: Some problem solving to revise COMP115/WCOM115
     link: 06-revision.html
-  - title: All in one - Introduction
-    link: 99-aio.html
 - id: 02-static-debugging-unit-testing
   title: Static Debugging Unit Testing
   links:
@@ -26,8 +24,6 @@ navigation_list:
     link: 02-debugging.html
   - title: Unit Testing and JUnit
     link: 03-unit-testing-junit.html
-  - title: All in one
-    link: 99-aio.html
 - id: 03-classes-and-objects
   title: Classes And Objects
   links:
@@ -49,8 +45,6 @@ navigation_list:
     link: 08-class-containing-array.html
   - title: Array of objects
     link: 09-array-of-objects.html
-  - title: All in one
-    link: 99-aio.html
 - id: 04-searching-and-sorting
   title: Searching And Sorting
   links:
@@ -64,8 +58,6 @@ navigation_list:
     link: 04-binary-search.html
   - title: Searching and sorting an array of objects
     link: 05-searching-and-sorting-on-array-of-objects.html
-  - title: All in one
-    link: 99-aio.html
 - id: 05-recursion
   title: Recursion
   links:
@@ -83,8 +75,6 @@ navigation_list:
     link: 06-first-look-at-a-recursive-solution.html
   - title: A better example
     link: 07-a-better-example.html
-  - title: All in one
-    link: 99-aio.html
 - id: 06-lists
   title: Lists
   links:
@@ -104,14 +94,6 @@ navigation_list:
     link: 07-the-node-class.html
   - title: Custom built linkedlist
     link: 08-custom-built-linkedlist.html
-  - title: Traversing custom built linkedlist
-    link: 09-traversing-custom-built-linkedlist.html
-  - title: More advanced methods in custom linkedlist
-    link: 10-more-advanced-methods-in-custom-linkedlist.html
-  - title: Erollsimulation
-    link: DiceRollSimulation.html
-  - title: Tangle
-    link: Rectangle.html
-  - title: Tangleclient
-    link: RectangleClient.html
+  - title: Important methods in custom linkedlist
+    link: 09-important-methods-in-custom-linkedlist.html
 ---

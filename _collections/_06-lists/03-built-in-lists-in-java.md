@@ -56,7 +56,7 @@ You can similarly create a `LinkedList` object as,
 
 
 ```java
-LinkedList<Double> grades = new ArrayList<Double>();
+LinkedList<Double> grades = new LinkedList<Double>();
 ```
 
 ### Adding items at the end
