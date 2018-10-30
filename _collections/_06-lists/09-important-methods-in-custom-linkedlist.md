@@ -148,17 +148,20 @@ for(int i=0; i < idx - 1; i++) { //moved forward idx-1 times
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure24.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure24.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure25.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure25.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure26.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure26.png)
+
 <p></p>
 &nbsp;
 <p></p>
@@ -183,12 +186,14 @@ return itemRemoved;
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure27.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure27.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure28.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure28.png)
+
 <p></p>
 &nbsp;
 <p></p>
@@ -277,22 +282,26 @@ In the diagrams, we illustrate the process when inserting value 50 between 10 an
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure17.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure17.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure18.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure18.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure19.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure19.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure20.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure20.png)
+
 <p></p>
 &nbsp;
 <p></p>
@@ -312,12 +321,14 @@ return true;
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure22.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure22.png)
+
 <p></p>
 &nbsp;
 <p></p>
 
-![](./../fig/06-lists/customBuiltLinkedlist/linkedlists-figure23.png)
+![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure23.png)
+
 <p></p>
 &nbsp;
 <p></p>
