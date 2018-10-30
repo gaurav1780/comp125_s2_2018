@@ -144,27 +144,19 @@ for(int i=0; i < idx - 1; i++) { //moved forward idx-1 times
 }
 ```
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure24.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure25.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure26.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 Then we make a backup copy of the value of the node to be removed.
 
@@ -182,21 +174,10 @@ current.setNext(nodeToRemove.getNext());
 return itemRemoved;
 ```
 
-<p></p>
-&nbsp;
-<p></p>
-
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure27.png)
 
-<p></p>
-&nbsp;
-<p></p>
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure28.png)
-
-<p></p>
-&nbsp;
-<p></p>
 
 
 ### Putting it together, remove(int) is defined as:
@@ -278,33 +259,23 @@ for(int i=0; i < idx - 1; i++) { //moved forward idx-1 times
 
 In the diagrams, we illustrate the process when inserting value 50 between 10 and 70.
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure17.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure18.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure19.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure20.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 
 Finally, we insert the new node after it.
@@ -317,21 +288,15 @@ node.setNext(itemAfter); //node.next will ne null if node added to end of list
 return true;
 ```
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure22.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure23.png)
 
-<p></p>
-&nbsp;
-<p></p>
+
 
 ### Putting it together, insert(int, int) is defined as:
 
