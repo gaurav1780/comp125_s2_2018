@@ -31,7 +31,8 @@ find ./ -name "*.png" -exec convert {} -trim -scale 25% -border 30x30 -backgroun
 
 find ./ -name "*.png" -exec convert {} -background white -alpha remove ./{} \;
 
-find ./ -name "*.png" -exec convert {} -trim -scale 25% -border 30x30 -bordercolor white -background white -alpha remove ./{} \;
+find ./ -name "*.png" -exec convert {} -trim -scale 40% -border 30x30 -bordercolor white -background white -alpha remove ./{} \;
+
 #####Source of commands:
 
 https://askubuntu.com/questions/351767/how-to-crop-borders-white-spaces-from-image#351772
