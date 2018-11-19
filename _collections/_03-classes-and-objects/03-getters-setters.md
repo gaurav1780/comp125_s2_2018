@@ -1,5 +1,5 @@
 ---
-title: Getters and Setters
+title: "Getters and setters"
 ---
 # Getters and setters
 
@@ -20,15 +20,18 @@ System.out.println(r.area());
 
 ```java
 public class Rectangle {
-    private double width;
-    private double height;
+	private double width;
+	private double height;
 
-    public double area() {
-	return width * height;
-    }
+	public double area() {
+		return width * height;
+	}
 
-    public boolean isSquare() {
-		return (width==height);
+	public boolean isSquare() {
+		if(width==height)
+			return true;
+		else
+			return false;
     }
 }
 ```
@@ -65,6 +68,7 @@ public class Rectangle {
 }
 ```
 
+
 ## Setters must provide validation where applicable
 
 You can see that we validated the passed values before assigning to the
@@ -79,20 +83,17 @@ instance variables.
 {: challenge}
 > ## Add getters and setters to class `Circle`. The setter should result in radius becoming zero if the parameter passed is not positive.
 >> ## SOLUTION
->>> ```java
->>> //setter
->>> public void setRadius(double r) {
->>>     if(r < 0)
->>>         radius = 0;
->>>     else
->>>         radius = r;
->>> }
->>> 
->>> //getter
->>> public double getRadius() {
->>>     return radius;
->>> }
->>> ```
+```java
+ public void setRadius(double r) { //setter
+     if(r < 0)
+         radius = 0;
+     else
+         radius = r;
+ }
+ public double getRadius() { //getter
+     return radius;
+ }
+ ```
 >{: .solution}
 {: .challenge}
 
@@ -100,21 +101,21 @@ instance variables.
 > ## Writing client
 > ### Write a client (code sitting outside `Circle.java`, for example, in the main method of another class) that declares and instantiates object `myCircle` of class `Circle` that has a radius of 1.8, displays radius of `myCircle` and increases radius of  `myCircle` by 1.4
 >> ## SOLUTION
->>> ```java
->>> public class Client {
->>>     public static void main(String[] args) {
->>>         Circle myCircle = new Circle();
->>>         myCircle.setRadius(1.8);
->>>         System.out.println(myCircle.getRadius());
->>>         myCircle.setRadius(myCircle.getRadius() + 1.4);
->>>         /* 
->>> 				or you can split it up as:
->>>         		double current = myCircle.getRadius();
->>>         		double updated = current + 1.4;
->>>         		myCircle.setRadius(updated);
->>>         */
->>>     }
->>> }
->>> ```
+ ```java
+ public class Client {
+     public static void main(String[] args) {
+         Circle myCircle = new Circle();
+         myCircle.setRadius(1.8);
+         System.out.println(myCircle.getRadius());
+         myCircle.setRadius(myCircle.getRadius() + 1.4);
+         /* 
+ 		or you can split it up as:
+         	double current = myCircle.getRadius();
+         	double updated = current + 1.4;
+         	myCircle.setRadius(updated);
+         */
+     }
+ }
+ ```
 >{: .solution}
 {: .challenge}

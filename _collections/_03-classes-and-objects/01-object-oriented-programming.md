@@ -1,6 +1,7 @@
 ---
-title: Introduction to Object-Oriented Programming
+title: "Introduction to Object-Oriented Programming"
 ---
+
 # Introduction to Object-Oriented Programming
 
 -   Classes are models of real world entities inside our programs.
@@ -90,16 +91,15 @@ How about `DataPlan`?
 > ## What are the instance variables for a `Date` entity? As in the calendar Date. What are the instance methods of the entity? Draw the class diagram.
 >> ## SOLUTION
 >>> Instance variables: `day`, `month`, `year`.
->>> 
 >>> Instance methods: `isLeapYear`, `daysLeftInYear`, ...
->>>> ![](./../fig/03-classes-and-objects/DateClassDiagram.png)
+>>>
+>>> ![](./../fig/03-classes-and-objects/DateClassDiagram.png)
 >{: .solution}
 {: .challenge}
 
 {: challenge}
 > ## Draw the object diagram for an instance of Date entity that represents 19th April 2014
 >> ## SOLUTION
->> 
 >>> ![](./../fig/03-classes-and-objects/dateObjectDiagram.png)
 >{: .solution}
 {: .challenge}

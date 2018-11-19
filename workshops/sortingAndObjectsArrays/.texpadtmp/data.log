@@ -1,0 +1,480 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2016.3.15)  3 APR 2016 15:44
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex"
+(/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:1: Undefined control sequence.
+l.1 \usepackage
+               [T1]{fontenc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:2: Undefined control sequence.
+l.2 \usepackage
+               {pslatex}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:3: Undefined control sequence.
+l.3  \usepackage
+                [pdftex]{color}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:4: Undefined control sequence.
+l.4  \usepackage
+                [pdftex]{graphicx}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:5: Undefined control sequence.
+l.5 \usepackage
+               {verbatim}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:6: Undefined control sequence.
+l.6 \usepackage
+               {xcolor}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:7: Undefined control sequence.
+l.7 \usepackage
+               {paralist}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:8: Undefined control sequence.
+l.8 \usepackage
+               {tagging}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:10: Undefined control sequence.
+l.10 \usepackage
+                [colorlinks=true,urlcolor=red]{hyperref}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:11: Undefined control sequence.
+l.11 \setlength
+               {\topmargin}{-0.5in}                  % topmargin now at 1in
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:11: Undefined control sequence.
+l.11 \setlength{\topmargin
+                          }{-0.5in}                  % topmargin now at 1in
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:12: Undefined control sequence.
+l.12 \setlength
+               {\textheight}{9.5in}                  % body of text = 9.5in
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:12: Undefined control sequence.
+l.12 \setlength{\textheight
+                           }{9.5in}                  % body of text = 9.5in
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:13: Undefined control sequence.
+l.13 \setlength
+               {\oddsidemargin}{0in}                 % left margin = 1.0in o...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:13: Undefined control sequence.
+l.13 \setlength{\oddsidemargin
+                              }{0in}                 % left margin = 1.0in o...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:14: Undefined control sequence.
+l.14 \setlength
+               {\evensidemargin}{0in}                % left margin = 1.0in o...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:14: Undefined control sequence.
+l.14 \setlength{\evensidemargin
+                               }{0in}                % left margin = 1.0in o...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:15: Undefined control sequence.
+l.15 \setlength
+               {\textwidth}{6.5in}                   % width of text line.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:15: Undefined control sequence.
+l.15 \setlength{\textwidth
+                          }{6.5in}                   % width of text line.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:16: Undefined control sequence.
+l.16 \setlength
+               {\parindent}{0.0in}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:16: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.16 \setlength{\parindent}
+                           {0.0in}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:16: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.16 \setlength{\parindent}
+                           {0.0in}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:17: Undefined control sequence.
+l.17 \newcommand
+                {\code}{\texttt}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:17: Undefined control sequence.
+l.17 \newcommand{\code
+                      }{\texttt}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:17: Undefined control sequence.
+l.17 \newcommand{\code}{\texttt
+                               }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:19: Undefined control sequence.
+l.19 \usepackage
+                {listings}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:20: Undefined control sequence.
+l.20 \lstset
+            {%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:22: Undefined control sequence.
+l.22 	basicstyle=\footnotesize
+                              \ttfamily,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:22: Undefined control sequence.
+l.22 	basicstyle=\footnotesize\ttfamily
+                                       ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:24: Undefined control sequence.
+l.24 	numberstyle=\tiny
+                       ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:29: Undefined control sequence.
+l.29 	moredelim=**[is][\color
+                             {red}]{@}{@}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (3.35721pt too wide) in paragraph at lines 19--31
+[]\tenrm listings lan-guage=Java, ba-sic-style=, num-bers=left, num-ber-style=, xleft-mar-gin=17pt, xright-mar-gin=5pt,|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm l
+.\tenrm i
+.\tenrm s
+.\tenrm t
+.etc.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:32: Undefined control sequence.
+l.32 \lstdefinestyle
+                    {buggy}{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:36: Undefined control sequence.
+l.36   basicstyle=\ttfamily
+                           \color{black},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:36: Undefined control sequence.
+l.36   basicstyle=\ttfamily\color
+                                 {black},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:37: Undefined control sequence.
+l.37   moredelim=**[is][\color
+                              {red}]{@}{@},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:40: Undefined control sequence.
+l.40 \lstdefinestyle
+                    {correct}{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:44: Undefined control sequence.
+l.44   basicstyle=\ttfamily
+                           \color{black},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:44: Undefined control sequence.
+l.44   basicstyle=\ttfamily\color
+                                 {black},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:45: Undefined control sequence.
+l.45   moredelim=**[is][\color
+                              {blue}]{@}{@},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:48: Undefined control sequence.
+l.48 \begin
+           {document}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:50: Undefined control sequence.
+l.50 \definecolor
+                 {aquamarine}{rgb}{0,0,0.7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:51: Undefined control sequence.
+l.51 \definecolor
+                 {blue}{rgb}{0,0,0.7}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:52: Undefined control sequence.
+l.52 \definecolor
+                 {red}{rgb}{1,0,0}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:55: Undefined control sequence.
+l.55 \vspace
+            {0.2in}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:56: Undefined control sequence.
+l.56 \begin
+           {center}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:57: Undefined control sequence.
+l.57         {\large
+                      %MACQUARIE UNIVERSITY\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:59: Undefined control sequence.
+l.59 \includegraphics
+                     [scale=0.3]{../../logo.jpg}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:64: Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.64         Workshop Week 6}}
+                              
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+ \medskip {\it Faculty of Science and Engineering\\} \vspace {0.2in} \ETC.
+/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/data.tex:64: Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.64         Workshop Week 6}}
+                              
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] )</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on "/Users/gauravgupta/Google Drive/comp125/COMP125-2016-S1/workshops/week6/.texpadtmp/data.pdf" (1 page, 18937 bytes).
+PDF statistics:
+ 12 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

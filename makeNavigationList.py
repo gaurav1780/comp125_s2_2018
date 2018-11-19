@@ -66,25 +66,29 @@ for dir_name in DIR_LIST:
         {'id': dir_name[1:], 'title': pretty_dir_name, 'links': []})
     full_dir_name = COLLECTIONS_DIR_NAME + '/' + dir_name
     for file in sorted(os.listdir(full_dir_name)):
-        filename = os.fsdecode(file)
-        title = ''
-        page_path = full_dir_name + '/' + filename
-        # Link is the filename excluding the file extension
-        link = filename.split(".")[0]
-        with open(page_path) as page_file:
-            PAGE_YAML, content = frontmatter.parse(page_file.read())
-            # If file have 'title' front matter variable then that will
-            # be the value in navigation-list.yml for that file,
-            # otherwise the title will be version of the link with the
-            # prepend 'xx-' removed, where 'xx' is a digit and the
-            # word is titlecased and all '-' character in the string
-            # is replaced with the ' ' character.
-            if 'title' in PAGE_YAML:
-                title = PAGE_YAML['title']
-            else:
-                title = pretty_str(link[3:])
-        NAV_LIST[FRONT_MATTER_LIST_NAME][-1]['links'].append(
-            {'title': title, 'link': link+'.html'})
+        print(file)
+        if (file[0:1] == '0' or file[0:1] == '1') and file.endswith('.md'):
+            filename = os.fsdecode(file)
+            title = ''
+            page_path = full_dir_name + '/' + filename
+            # Link is the filename excluding the file extension
+            link = filename.split(".")[0]
+            with open(page_path) as page_file:
+                PAGE_YAML, content = frontmatter.parse(page_file.read())
+                # If file have 'title' front matter variable then that will
+                # be the value in navigation-list.yml for that file,
+                # otherwise the title will be version of the link with the
+                # prepend 'xx-' removed, where 'xx' is a digit and the
+                # word is titlecased and all '-' character in the string
+                # is replaced with the ' ' character.
+                if 'title' in PAGE_YAML:
+                    title = PAGE_YAML['title']
+                else:
+                    title = pretty_str(link[3:])
+            NAV_LIST[FRONT_MATTER_LIST_NAME][-1]['links'].append(
+                {'title': title, 'link': link+'.html'})
+        else:
+            print("boo!")
 
 # Write the content of NAV_LIST
 FULL_OUTPUT_PATH = DATA_DIR + '/' + DEST_FILE

@@ -1,0 +1,43 @@
+<script src="{{ page.root }}/assets/js/aio.js"></script>
+{% assign collections = site.data.navigation-list.navigation_list %}
+{% assign collections_size = collections | size %}
+<script>
+    {% if page.lecture_all_in_one_page == true %}
+
+    var collection_urls = [
+    {% for collection in collections %}
+      {% assign collection_index = forloop.index %}
+      {% for collection_page in site[collection.id] %}
+        '{{ collection_page.url }}.html'{% unless forloop.last and collection_index == collections_size %},{% endunless %}
+      {% endfor %}
+    {% endfor %}
+    ];
+    {% else %}
+
+    var collection_urls = [
+      {% for collection_page in site[page.collection] %}
+      '{{ collection_page.url }}.html'{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+
+    {% endif %}
+
+  window.onload = aio(collection_urls)
+</script>
+{% comment %}
+Create anchor for each one of the episodes.
+{% endcomment %}
+
+{% if page.lecture_all_in_one_page == true %}
+  {% for collection in collections %}
+    {% for collection_page in site[collection.id] %}
+<article id="{{ collection_page.url }}.html"></article>
+    {% endfor %}
+  {% endfor %}
+{% else %}
+
+{% for collection_page in site[page.collection] %}
+<article id="{{ collection_page.url }}.html"></article>
+{% endfor %}
+
+{% endif %}

@@ -30,9 +30,12 @@ def generate(path):
     file.close()
 
 
-for filename in glob.iglob('_collections/**/**.md', recursive=True):
+for filename in glob.iglob('_collections/**/0**.md', recursive=True):
     if all(s not in filename for s in exclude):
         generate(filename)
 
-if generateNav:
-    import makeNavigationList
+for filename in glob.iglob('_collections/**/1**.md', recursive=True):
+    if all(s not in filename for s in exclude):
+        generate(filename)
+# if generateNav:
+#     import makeNavigationList

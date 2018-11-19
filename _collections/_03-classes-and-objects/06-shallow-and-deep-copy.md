@@ -1,6 +1,5 @@
 ---
-title: Shallow vs. Deep copy of an object
-keywords: shallow copy, deep copy
+title: "Shallow vs. Deep copy of an object"
 ---
 
 # Shallow vs. Deep copy of an object

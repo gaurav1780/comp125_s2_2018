@@ -17,9 +17,21 @@ find ./ -name "*.png" -exec convert {} -scale 50% outputfolder/{} \;
 
 find ./ -name "*.png" -exec convert {} -scale 50% ./{} \;
 
-###Command to trime and scale (by 50%) and overwrite files:
+###Command to trim and scale (by 30%) and overwrite files:
 
-find ./ -name "*.png" -exec convert {} -trim -scale 50% ./{} \;
+find ./ -name "*.png" -exec convert {} -trim -scale 30% ./{} \;
+
+
+###Command to trim and scale (by 25%) with 30 pixel borders and overwrite files:
+
+find ./ -name "*.png" -exec convert {} -trim -scale 25% ./{} \;
+
+find ./ -name "*.png" -exec convert {} -trim -scale 25% -border 30x30 -background white -alpha remove ./{} \;
+
+
+find ./ -name "*.png" -exec convert {} -background white -alpha remove ./{} \;
+
+find ./ -name "*.png" -exec convert {} -trim -scale 40% -border 30x30 -bordercolor white -background white -alpha remove ./{} \;
 
 #####Source of commands:
 

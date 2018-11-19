@@ -30,22 +30,47 @@ Lesson navigation bar.
                 {% endcomment %}
 
                 {% comment %} Show lecture material{% endcomment %}
-                <li class="dropdown">
+                <li id="lecture-nav-bar" class="dropdown">
                     <a href="{{ page.root }}/{{ index_page }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        {%- for collection in site.data.navigation-list.navigation_list -%}
+                        {% for collection in site.data.navigation-list.navigation_list %}
                         {%- assign id = collection.id -%}
                         {%- assign collection_title = collection.title -%}
                         {%- assign collection_first_link = collection.links[0].link -%}
+                        {%- assign collection_links_size = collection.links | size -%}
                         <li class="dropdown-submenu">
                             <a class="nav-folder" href="{{ page.root }}/{{ id }}/{{ collection_first_link }}">{{ collection_title }}</a>
-                            <ul class="dropdown-menu">
-                                {%- for link in collection.links -%}
+                            <ul id="{{ id }}-navbar" class="dropdown-menu">
+                                {% for link in collection.links %}
+
+
+                                {% comment %}
+                                Find the current page that correspond to this link in the nav list
+                                {% endcomment %}
+                                {% assign link_without_html_ext = link.link | split: '.html' %}
+                                {% capture cur_page_id %}/{{ id }}/{{ link_without_html_ext[0] }}{% endcapture %}
+                                {% for collection_page in site.[id] %}
+                                    {% if collection_page.url == cur_page_id %}
+                                        {% assign cur_page = collection_page %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% comment %}
+                                If cur_page is the last page and it has a collection_all_in_one variable with the value true then it
+                                is a all in one page so add seperator to distinguish between the all in one page for that collection.
+                                {% endcomment %}
+                                {% if forloop.index == collection_links_size and cur_page.collection_all_in_one == true %}
+                                  <li role="separator" class="divider"></li>
+                                {% endif %}
                                 <li><a href="{{ page.root }}/{{ id }}/{{ link.link }}"> {{ link.title }}</a></li>
                                 {%- endfor -%}
                             </ul>
                         </li>
                         {% endfor %}
+                        <!--
+                         <li role="separator" class="divider"></li>
+                        <li><a href="{{ page.root }}{% link aio.md %}">All in one page (In Progress - Not Working Yet)</a></li>
+                      -->
                     </ul>
                 </li>
 
