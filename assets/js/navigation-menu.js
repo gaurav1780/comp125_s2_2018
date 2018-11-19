@@ -16,5 +16,24 @@ $(document).ready(function(){
     else{
         $('.dropdown-toggle').attr('aria-expanded','true');
     }
+    
+    // Toggle ul
+    
+    $('#01-introduction-navbar').css('display', 'block');
+    $('#01-introduction-navbar').css('top', '0%');
+    $('#01-introduction-navbar').css('left', '100%');
+    $('#01-introduction-navbar').css('position', 'absolute');
+    // Set timeout so it revertws back to hidden.
+    //
+    function removeStyling() {
+      $('#01-introduction-navbar').css('display', '');
+      $('#01-introduction-navbar').css('top', '');
+      $('#01-introduction-navbar').css('left', '');
+      $('#01-introduction-navbar').css('position', '');
+
+    }
+    var duration = 5000; //In miliseconds
+    setTimeout(removeStyling, duration);
+
   });
 });
