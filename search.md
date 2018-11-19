@@ -3,8 +3,7 @@ layout: base
 title: Search
 root: .
 ---
-<ul id="search-results" class="list-group"></ul>
-
+<table id="search-results" class="table table-striped table-bordered" style="width:100%"></table>
 
 <script>
   window.store = {

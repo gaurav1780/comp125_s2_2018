@@ -5,7 +5,7 @@
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
     if (results.length) { // Are there any results?
-      var appendString = '';
+      var appendString = '<thead><tr><th>Title</th></tr></thead><tbody>';
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
@@ -16,13 +16,13 @@
         } else {
           title = item.title;
         }
-        appendString += '<li class="list-group-item"><a href=".' + item.url + '"><strong>' + title + '</strong></a>';
-        appendString += '</li>';
+        appendString += '<tr><td><a href=".' + item.url + '"><strong>' + title + '</strong></a>';
+        appendString += '</td></tr>';
       }
 
-      searchResults.innerHTML = appendString;
+      searchResults.innerHTML = appendString + '</tbody>';
     } else {
-      searchResults.innerHTML = '<li>No results found</li>';
+      searchResults.innerHTML = '<thead><tr><th>Name</th></tr></thead><tbody></tbody>';
     }
   }
 

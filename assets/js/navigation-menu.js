@@ -37,7 +37,7 @@ function toggleNavBar(collectionId) {
     else{
         $('.dropdown-toggle').attr('aria-expanded','true');
     }
-    
+
     // Style the element with collectionNavbar class.
     $(collectionNavbar).css('display', 'block');
     $(collectionNavbar).css('top', '0%');
@@ -64,3 +64,7 @@ $(document).ready(function(){
     toggleNavBar('{{ id }}');
   {% endfor %}
 });
+
+$(document).ready(function() {
+    $('#search-results').DataTable();
+} );
