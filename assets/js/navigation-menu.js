@@ -8,6 +8,13 @@ var introduction = '01-introduction';
 function toggleNavBar(collectionName) {
   var collectionId = '#' + collectionName;
   var collectionNavbar = collectionId + '-navbar';
+  function removeStyling(name) {
+      $(name).css('display', '');
+      $(name).css('top', '');
+      $(name).css('left', '');
+      $(name).css('position', '');
+
+  };
   console.log(collectionNavbar);
   $(collectionId).click(function(e) {
     // Kill click event, otherwise Bootstrap will treat it as a click outside of the dropdown and immediately close it.
@@ -26,22 +33,27 @@ function toggleNavBar(collectionName) {
     }
     
     // Toggle ul
+    //$(collectionNavbar).toggleClass('show-navbar');
+
     
     $(collectionNavbar).css('display', 'block');
     $(collectionNavbar).css('top', '0%');
     $(collectionNavbar).css('left', '100%');
     $(collectionNavbar).css('position', 'absolute');
-    // Set timeout so it revertws back to hidden.
-    function removeStyling() {
-      $(collectionNavbar).css('display', '');
-      $(collectionNavbar).css('top', '');
-      $(collectionNavbar).css('left', '');
-      $(collectionNavbar).css('position', '');
-
-    }
+    
+    /*
     var duration = 5000; //In miliseconds
     setTimeout(removeStyling, duration);
+    */
 
+  });
+  $(document).click(function() {
+    // $(collectionNavbar).removeClass('show-navbar');
+    removeStyling(collectionNavbar);
+  });
+  $('.dropdown-submenu').mouseover(function(e) {
+    e.stopPropagation();
+    removeStyling(collectionNavbar);
   });
 }
 
