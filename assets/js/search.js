@@ -1,13 +1,22 @@
 'use strict';
 
 // Credit to https://learn.cloudcannon.com/jekyll/jekyll-search-using-lunr-js/
+
+// Inspiration from https://stackoverflow.com/questions/41436805/how-to-display-a-table-with-10-rows-per-page
+// to use datatable.js
 (function() {
   function displaySearchResults(results, store) {
+    // String for datatable HTML element
+    var tableString = '<thead>'+
+    // Table Headings
+    '<tr><th>Name</th><th>Tags</th></tr>'+
+    '</thead>'+
+    // Start of table body
+    '<tbody>';
     var searchResults = document.getElementById('search-results');
     if (results.length) { // Are there any results?
-      var appendString = '<thead><tr><th>Title</th></tr></thead><tbody>';
-
-      for (var i = 0; i < results.length; i++) {  // Iterate over the results
+      // Iterate over the results and append into tableString
+      for (var i = 0; i < results.length; i++) {
         var item = store[results[i].ref];
         var title = "";
 
@@ -16,14 +25,18 @@
         } else {
           title = item.title;
         }
-        appendString += '<tr><td><a href=".' + item.url + '"><strong>' + title + '</strong></a>';
-        appendString += '</td></tr>';
-      }
 
-      searchResults.innerHTML = appendString + '</tbody>';
-    } else {
-      searchResults.innerHTML = '<thead><tr><th>Name</th></tr></thead><tbody></tbody>';
+        // If no tags for item, then default value is N/A.
+        var tags = item.tags || 'N/A';
+        // Append result
+        tableString += '<tr>'+
+        '<td><a href=".' + item.url + '"><strong>' + title + '</strong></a></td>'+
+        '<td>' + tags +'</td>'
+        '</tr>';
+      }
     }
+    // End table body with ending tbody tag.
+    searchResults.innerHTML = tableString + '</tbody>';
   }
 
   function getQueryVariable(variable) {
