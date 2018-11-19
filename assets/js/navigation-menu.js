@@ -3,11 +3,9 @@ layout: null
 ---
 'use strict';
 
-var introduction = '01-introduction';
-
-function toggleNavBar(collectionName) {
-  var collectionId = '#' + collectionName;
-  var collectionNavbar = collectionId + '-navbar';
+function toggleNavBar(collectionId) {
+  var collectionIdSelector = '#' + collectionId;
+  var collectionNavbar = collectionIdSelector + '-navbar';
   function removeStyling(name) {
       $(name).css('display', '');
       $(name).css('top', '');
@@ -16,13 +14,21 @@ function toggleNavBar(collectionName) {
 
   };
   console.log(collectionNavbar);
-  $(collectionId).click(function(e) {
+
+  $(collectionIdSelector).click(function(e) {
     // Kill click event, otherwise Bootstrap will treat it as a click outside of the dropdown and immediately close it.
     // Source: https://stackoverflow.com/questions/22842903/how-to-open-bootstrap-dropdown-programmatically
     e.stopPropagation();
-    // Toggle class 'open'.
+    // Open lectures dropdown menu.
     $("#lecture-nav-bar").toggleClass("open");
-    // Toggle aria-expanded attribute
+
+    // Remove styling for all dropdown-submenu.
+    {% for collection in site.data.navigation-list.navigation_list %}
+    {%- assign id = collection.id -%}
+      removeStyling('#{{ id }}-navbar');
+    {% endfor %}
+
+    // Toggle aria-expanded attribute.
     // Source: https://stackoverflow.com/questions/26340129/jquery-toggle-attribute-value
     if($('.dropdown-toggle').attr('aria-expanded')==='true'){
            //alert("true");
@@ -32,25 +38,19 @@ function toggleNavBar(collectionName) {
         $('.dropdown-toggle').attr('aria-expanded','true');
     }
     
-    // Toggle ul
-    //$(collectionNavbar).toggleClass('show-navbar');
-
-    
+    // Style the element with collectionNavbar class.
     $(collectionNavbar).css('display', 'block');
     $(collectionNavbar).css('top', '0%');
     $(collectionNavbar).css('left', '100%');
     $(collectionNavbar).css('position', 'absolute');
-    
-    /*
-    var duration = 5000; //In miliseconds
-    setTimeout(removeStyling, duration);
-    */
+
 
   });
-  $(document).click(function() {
-    // $(collectionNavbar).removeClass('show-navbar');
+  // On click where in the document, remove the styling for element with collectionNavbar class.
+  $('html').click(function() {
     removeStyling(collectionNavbar);
   });
+  // On mouseover any .dropdown-submenu element, remove styling for element with collectionNavbar class.
   $('.dropdown-submenu').mouseover(function(e) {
     e.stopPropagation();
     removeStyling(collectionNavbar);
