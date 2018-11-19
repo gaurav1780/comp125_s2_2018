@@ -3,9 +3,8 @@ layout: base
 title: Search
 root: .
 ---
-<ul id="search-results"></ul>
+<ul id="search-results" class="list-group"></ul>
 
-<ul id="search-results" class="side-nav"></ul>
 
 <script>
   window.store = {

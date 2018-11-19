@@ -16,8 +16,8 @@
         } else {
           title = item.title;
         }
-        appendString += '<div class="row"><a href=".' + item.url + '"><strong>' + title + '</strong></a>';
-        appendString += '</div>';
+        appendString += '<li class="list-group-item"><a href=".' + item.url + '"><strong>' + title + '</strong></a>';
+        appendString += '</li>';
       }
 
       searchResults.innerHTML = appendString;
