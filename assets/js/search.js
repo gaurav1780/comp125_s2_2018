@@ -10,7 +10,7 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
         var title = "";
-        
+
         if(item.collection_title != "") {
           title = item.collection_title + " - " + item.title;
         } else {
@@ -48,16 +48,14 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('content');
-      this.field('excerpt');
+      this.field('tags');
     });
 
     for (var key in window.store) { // Add the data to lunr
       idx.add({
         'id': key,
         'title': window.store[key].title,
-        'content': window.store[key].content,
-        'excerpt': window.store[key].excerpt,
+        'tags': window.store[key].tags,
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search

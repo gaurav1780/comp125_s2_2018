@@ -1,5 +1,8 @@
 ---
 title: "Pen and paper methodology"
+tags:
+- "dummy tag 2"
+- "dummy tag 3"
 ---
 # Pen and paper methodology
 

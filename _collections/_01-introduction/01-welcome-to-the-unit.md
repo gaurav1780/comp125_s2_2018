@@ -1,5 +1,9 @@
 ---
 title: "Welcome to the unit"
+tags:
+- "dummy tag 1"
+- "dummy tag 2"
+- "dummy tag 3"
 ---
 
 # Welcome to the unit

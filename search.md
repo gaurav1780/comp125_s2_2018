@@ -28,8 +28,7 @@ root: .
     "title": "{{ page.title | xml_escape }}",
     "collection_title": "{{ collection_title }}",
     "url": "{{ page.url | xml_escape | relative_url | append: '.html' }}",
-    "content": {{ page.content | strip_html | strip_newlines | jsonify }},
-    "excerpt": {{ page.content | strip_html | truncatewords: 50 | jsonify }}
+    "tags": "{{ page.tags | join: ', ' }}",
     }{% unless collection_counter == num_of_collections and forloop.index == collection_size %},
     {% endunless %}
       {%- endfor -%}
