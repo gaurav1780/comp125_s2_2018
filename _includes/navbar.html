@@ -3,8 +3,8 @@ Lesson navigation bar.
 {% endcomment %}
 
 {% assign index_page = 'index.html' %}
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -42,7 +42,7 @@ Lesson navigation bar.
                             <a class="nav-folder" href="{{ page.root }}/{{ id }}/{{ collection_first_link }}">{{ collection_title }}</a>
                             <ul id="{{ id }}-navbar" class="dropdown-menu">
                                 {% for link in collection.links %}
-                                
+
 
                                 {% comment %}
                                 Find the current page that correspond to this link in the nav list
@@ -54,7 +54,7 @@ Lesson navigation bar.
                                         {% assign cur_page = collection_page %}
                                     {% endif %}
                                 {% endfor %}
-                                
+
                                 {% comment %}
                                 If cur_page is the last page and it has a collection_all_in_one variable with the value true then it
                                 is a all in one page so add seperator to distinguish between the all in one page for that collection.
