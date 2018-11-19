@@ -27,7 +27,7 @@ Days are displayed if at least one episode has 'start = true'.
         {% assign collection_first_page = collection.links[0] %}
         <tr>
             <td class="{% if multiday %}col-md-1{% else %}col-md-2{% endif %}"></td>
-            <td class="col-md-3">{{ forloop.index }}. <a href="{{ page.root }}/{{ collection.id }}/{{ collection_first_page.link }}">{{ collection.title }}</a></td>
+            <td class="col-md-3">{{ forloop.index }}. <a id="{{ collection.id }}" href="#">{{ collection.title }}</a></td>
             <td class="col-md-7"></td>
         </tr>
         {% endfor %}

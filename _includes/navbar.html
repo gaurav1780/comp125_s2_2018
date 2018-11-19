@@ -30,7 +30,7 @@ Lesson navigation bar.
                 {% endcomment %}
 
                 {% comment %} Show lecture material{% endcomment %}
-                <li class="dropdown">
+                <li id="lecture-nav-bar" class="dropdown">
                     <a href="{{ page.root }}/{{ index_page }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lectures<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         {% for collection in site.data.navigation-list.navigation_list %}
@@ -40,7 +40,7 @@ Lesson navigation bar.
                         {%- assign collection_links_size = collection.links | size -%}
                         <li class="dropdown-submenu">
                             <a class="nav-folder" href="{{ page.root }}/{{ id }}/{{ collection_first_link }}">{{ collection_title }}</a>
-                            <ul class="dropdown-menu">
+                            <ul id="{{ id }}-navbar" class="dropdown-menu">
                                 {% for link in collection.links %}
                                 
 
