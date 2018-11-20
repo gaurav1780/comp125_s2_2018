@@ -1,8 +1,8 @@
 ---
 title: "Pen and paper methodology"
 tags:
-- "dummy tag 2"
-- "dummy tag 3"
+- "tracing"
+- "control flow"
 ---
 # Pen and paper methodology
 
