@@ -17,3 +17,14 @@
   left: 100%;
   position: absolute;
 }
+
+// Source: https://stackoverflow.com/questions/11124777/twitter-bootstrap-navbar-fixed-top-overlapping-site
+// Added this so that navbar don't cover content
+body {
+  padding-top: 90px;
+}
+// Source: https://stackoverflow.com/questions/11124777/twitter-bootstrap-navbar-fixed-top-overlapping-site
+// Added this so that navbar don't cover content
+@media screen and (max-width: 780px) {
+    body { padding-top: 0px; }
+}
