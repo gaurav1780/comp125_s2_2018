@@ -1,5 +1,8 @@
 ---
 title: "Pen and paper methodology"
+tags:
+- "tracing"
+- "control flow"
 ---
 # Pen and paper methodology
 
