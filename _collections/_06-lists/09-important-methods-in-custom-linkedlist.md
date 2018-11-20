@@ -84,7 +84,7 @@ When the loop terminates, `current` holds a reference to the `Node` object whose
 return current.getData();
 ```
 
-### Putting it together, get(int) is defined as:
+#### Putting it together, `get(int)` is defined as:
 
 ```java
 public Integer get(int idx) {
@@ -163,7 +163,6 @@ Then we make a backup copy of the value of the node to be removed.
 ```java
 Node nodeToRemove = current.getNext();
 int itemRemoved = nodeToRemove.getData();
-}
 ```
 
 
@@ -180,7 +179,7 @@ return itemRemoved;
 ![](./../fig/06-lists/customBuiltLinkedList/linkedlists-figure28.png)
 
 
-### Putting it together, remove(int) is defined as:
+#### Putting it together, `remove(int)` is defined as:
 
 ```java
 public Integer remove(int idx) {
@@ -298,7 +297,7 @@ return true;
 
 
 
-### Putting it together, insert(int, int) is defined as:
+#### Putting it together, `insert(int, int)` is defined as:
 
 ```java
 public boolean insert(int idx, int value) {
