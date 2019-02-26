@@ -64,7 +64,7 @@ collections:
         permalink: /:collection/:path
     extras:
         output: true
-        permalink: /:path/index.html
+        permalink: /:collection/:path
     01-introduction:
         output: true
         permalink: /:collection/:path
