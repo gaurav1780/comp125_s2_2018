@@ -55,13 +55,13 @@ An illustration of memory transactions is given below
 > ### STEP 1: main calls foo(4)
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/recursiveCall-figure0.png)
+![](./../fig/04-recursion/recursiveCall-figure0.png)
 <div>&nbsp;</div>
 
 > ### STEP 2: foo(4) calls foo(3)
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/recursiveCall-figure1.png)
+![](./../fig/04-recursion/recursiveCall-figure1.png)
 <div>&nbsp;</div>
 
 > ### ...and it repeats forever (ends with StackOverflowError)

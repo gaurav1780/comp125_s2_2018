@@ -45,20 +45,7 @@ navigation_list:
     link: 08-class-containing-array.html
   - title: Array of objects
     link: 09-array-of-objects.html
-- id: 04-searching-and-sorting
-  title: Searching And Sorting
-  links:
-  - title: Motivation for searching and sorting algorithms
-    link: 01-motivation-for-searching-sorting-algorithms.html
-  - title: Selection Sort
-    link: 02-selection-sort.html
-  - title: Insertion Sort
-    link: 03-insertion-sort.html
-  - title: Binary search
-    link: 04-binary-search.html
-  - title: Searching and sorting an array of objects
-    link: 05-searching-and-sorting-on-array-of-objects.html
-- id: 05-recursion
+- id: 04-recursion
   title: Recursion
   links:
   - title: What is recursion?
@@ -75,6 +62,11 @@ navigation_list:
     link: 06-first-look-at-a-recursive-solution.html
   - title: A better example
     link: 07-a-better-example.html
+- id: 05-searching
+  title: Searching
+  links:
+  - title: Binary search
+    link: 01-binary-search.html
 - id: 06-lists
   title: Lists
   links:

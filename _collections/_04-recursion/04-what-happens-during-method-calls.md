@@ -28,7 +28,7 @@ public static int bar(int b) {
 > ### STEP 1: main method is invoked by JVM
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/callingMethods-figure0.png)
+![](./../fig/04-recursion/callingMethods-figure0.png)
 <div>&nbsp;</div>
 
 Method call is placed on the stack. Note that parameter is `null` because we typically do not pass any arguments to main, at least in this unit.
@@ -36,7 +36,7 @@ Method call is placed on the stack. Note that parameter is `null` because we typ
 > ### STEP 2: main method calls `foo` with parameter `c`
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/callingMethods-figure1.png)
+![](./../fig/04-recursion/callingMethods-figure1.png)
 <div>&nbsp;</div>
 
 Another entry is made for the call to `foo` and placed on the stack.
@@ -45,7 +45,7 @@ Another entry is made for the call to `foo` and placed on the stack.
 > ### STEP 3: `foo` calls `bar` with parameter `a`
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/callingMethods-figure2.png)
+![](./../fig/04-recursion/callingMethods-figure2.png)
 <div>&nbsp;</div>
 
 A third entry is made for the call to `bar` and placed on the stack.
@@ -54,7 +54,7 @@ A third entry is made for the call to `bar` and placed on the stack.
 > ### STEP 4: `bar` returns value to `foo`
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/callingMethods-figure3.png)
+![](./../fig/04-recursion/callingMethods-figure3.png)
 <div>&nbsp;</div>
 
 Entry for `bar` is taken off the stack. `foo` becomes the active method.
@@ -62,7 +62,7 @@ Entry for `bar` is taken off the stack. `foo` becomes the active method.
 > ### STEP 5: `foo` returns value to `main`
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/callingMethods-figure4.png)
+![](./../fig/04-recursion/callingMethods-figure4.png)
 <div>&nbsp;</div>
 
 Entry for `foo` is taken off the stack. `main` becomes the active method.
@@ -70,7 +70,7 @@ Entry for `foo` is taken off the stack. `main` becomes the active method.
 > ### STEP 6: Rest of main executes
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/callingMethods-figure5.png)
+![](./../fig/04-recursion/callingMethods-figure5.png)
 <div>&nbsp;</div>
 
 # Formal parameters vs. actual parameters
@@ -119,5 +119,5 @@ public static void main(String[] args) {
 Now we have a variable `a` in method main (represented by `main: a`) being passed to `foo` and copied into variable `a`, represented by `foo(10): a`. This is ok since the two variables, although with the same name, exist in different scopes. The following figure summarizes the transaction.
 
 <div>&nbsp;</div>
-![](./../fig/05-recursion/actualParametererFormalParameter-figure0.png)
+![](./../fig/04-recursion/actualParametererFormalParameter-figure0.png)
 <div>&nbsp;</div>

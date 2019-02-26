@@ -74,10 +74,10 @@ collections:
     03-classes-and-objects:
         output: true
         permalink: /:collection/:path
-    04-searching-and-sorting:
+    04-recursion:
         output: true
         permalink: /:collection/:path
-    05-recursion:
+    05-searching:
         output: true
         permalink: /:collection/:path
     06-lists:
@@ -120,13 +120,13 @@ defaults:
       layout: episode
   - scope:
       path: ""
-      type: 04-searching-and-sorting
+      type: 04-recursion
     values:
       root: ..
       layout: episode
   - scope:
       path: ""
-      type: 05-recursion
+      type: 05-searching
     values:
       root: ..
       layout: episode
