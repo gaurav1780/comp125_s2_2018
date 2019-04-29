@@ -136,10 +136,10 @@ defaults:
     values:
       root: ..
       layout: episode
-  # - scope:
-  #     path: "_collections/*/99-aio.md"
-  #   values:
-  #     collection_all_in_one: true
+  - scope:
+      path: "_collections/*/99-aio.md"
+    values:
+      collection_all_in_one: true
 
 # Files and directories that are not to be copied.
 exclude:

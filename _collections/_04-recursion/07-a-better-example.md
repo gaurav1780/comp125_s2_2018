@@ -4,6 +4,77 @@ title: "A better example"
 
 # A better example
 
+## Prerequisites
+
+We shall be talking about recursion on Strings. In order to deal with Strings in java, there are some important points to understand.
+
+1. `substring(start, end)`: returns a part of the String on which the method is called starting at index `start` and ending **before** index `end`. Examples:
+	
+	```java
+		String str = "nintendo";
+		String a = str.substring(3, 6); //a = "ten"
+		String b = str.substring(0, 4); //b = "nint"
+		String c = str.substrng(6,8); //c = "do"
+		String d = str.substring(5,10); //throws StringIndexOutOfBoundsException
+		String e = str.substring(5,2); //throws StringIndexOutOfBoundsException
+		String f = str.substring(-3,2); //throws StringIndexOutOfBoundsException
+	```
+
+2. `substring(start)`: returns a part of the String on which the method is called starting at index `start` to the end of the String. Examples:
+	
+	```java
+		String str = "nintendo";
+		String a = str.substring(3); //a = "tendo"
+		String b = str.substring(1); //b = "intendo"
+		String c = str.substrng(6); //c = "do"
+		String d = str.substring(10); //throws StringIndexOutOfBoundsException
+		String e = str.substring(-5); //throws StringIndexOutOfBoundsException
+	```
+
+3. `charAt(index)`: returns the character at given index. Examples:
+	
+	```java
+		String str = "nintendo";
+		char a = str.charAt(0); //gives the first character 'n'
+		char a = str.charAt(3); //character at index 3: 't'
+		char a = str.charAt( str.length()-1 ); //gives the last character 'o'
+		char d = str.charAt(10); //throws StringIndexOutOfBoundsException
+		String e = str.charAt(-5); //throws StringIndexOutOfBoundsException
+	```
+
+4. You cannot compare a character with a String.
+
+
+	```java
+	String str = "$$$888$$$";
+	char first = str.charAt(0);
+	if(first == "$") { //WRONG: char compared with String
+		//something
+	}
+	if(first == '$') { //CORRECT: char compared with char
+		//something
+	}
+	
+5. You should compare Strings using `equals` method and NOT `==`.
+
+	```java
+	String str = "she did splendidly, DIDN'T she?";
+	String sub = str.substring(0,3);
+	if(sub == "did") { //WRONG: Strings compared using ==
+		//something
+	}
+	if(sub.equals("did")) { //CORRECT: Strings compared using equals
+		//something
+	}
+	if(sub.equalsIgnoreCase("did")) { //case insensitive comparison
+		//something
+	}
+	```
+
+&nbsp;
+&nbsp;
+&nbsp;
+	
 ### PROBLEM STATEMENT
 
 Define a method that when passed a String, returns the reverse of the String.
@@ -49,7 +120,7 @@ Putting it all together:
 ```java
 public static String reverse(String str) {
 	char first = str.charAt(0);
-	char rest = str.substring(1);
+	String rest = str.substring(1);
 	String revRest = reverse(rest);
 	String result = revRest + first;
 	return result;
@@ -69,7 +140,7 @@ public static String reverse(String str) {
 	}
 	//reaches here only if string is not empty
 	char first = str.charAt(0);
-	char rest = str.substring(1);
+	String rest = str.substring(1);
 	String revRest = reverse(rest);
 	String result = revRest + first;
 	return result;
@@ -126,3 +197,11 @@ main(null) uses the received value ("repus") as needed
  ```
 >{: .solution}
 {: .challenge}
+
+BTW, if you like **compact** solutions, look at the one below:
+
+```java
+public static String reverse(String str) {
+	return str.isEmpty() ? "" : reverse(str.substring(1)) + str.charAt(0);
+}
+```

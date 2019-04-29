@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.15)  10 AUG 2018 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.15)  5 APR 2019 12:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -88,7 +88,10 @@ LaTeX Info: Redefining \textsubscript on input line 3718.
 \c@figure=\count86
 \c@table=\count87
 \bibindent=\dimen102
-) (/Users/gauravgupta/Library/texmf/tex/myOptions.sty (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+No auxiliary output files.
+
+(/Users/gauravgupta/Library/texmf/tex/myOptions.sty (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
  (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
@@ -2580,7 +2583,7 @@ Package: ulem 2012/05/18
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \scopeblock with sig. 'm' on line 98.
+. Defining command \scopeblock with sig. 'm' on line 106.
 .................................................
 ) (/Users/gauravgupta/Library/texmf/tex/memory.tex
 .................................................
@@ -2591,78 +2594,76 @@ Package: ulem 2012/05/18
 ) (/Users/gauravgupta/Library/texmf/tex/fancylistings.tex)) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))
 \openout4 = `classesObjects1.auxlock'.
 
-LaTeX Font Info:    Try loading font information for T1+Heuristica-TLF on input line 40.
+LaTeX Font Info:    Try loading font information for T1+Heuristica-TLF on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/heuristica/T1Heuristica-TLF.fd
 File: T1Heuristica-TLF.fd 2015/01/04 (autoinst) Font definitions for T1/Heuristica-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 40.
+(Font)              scaled to size 10.0pt on input line 26.
  (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.aux)
-\openout1 = `classesObjects1.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/zutmi/m/it on input line 40.
-LaTeX Font Info:    Try loading font information for OML+zutmi on input line 40.
+LaTeX Font Info:    Checking defaults for OML/zutmi/m/it on input line 26.
+LaTeX Font Info:    Try loading font information for OML+zutmi on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/omlzutmi.fd
 File: omlzutmi.fd 2014/04/14 Fontinst v1.933 font definitions for OML/zutmi.
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/omsntxsy.fd
 File: omsntxsy.fd 2012/11/14 Fontinst v1.933 font definitions for OMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 26.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for T2A+cmr on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for T2B+cmr on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T2B/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for T2B+cmr on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2bcmr.fd
 File: t2bcmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for T2C+cmr on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T2C/cmr/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for T2C+cmr on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/cyrillic/t2ccmr.fd
 File: t2ccmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for LY1+ptm on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 26.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 40.
+(Font)              scaled to size 10.95pt on input line 26.
 \AtBeginShipoutBox=\box205
-Package hyperref Info: Link coloring ON on input line 40.
+Package hyperref Info: Link coloring ON on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -2670,14 +2671,10 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count315
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
- (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.out) (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.out)
-\@outlinefile=\write7
-\openout7 = `classesObjects1.out'.
-
- ABD: EveryShipout initializing macros (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
+ (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.out) (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.out) ABD: EveryShipout initializing macros (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count316
 \scratchdimen=\dimen279
@@ -2704,55 +2701,48 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \c@mv@tabular=\count322
 \c@mv@boldtabular=\count323
 \c@lstlisting=\count324
-LaTeX Font Info:    Try loading font information for T1+fla on input line 42.
+LaTeX Font Info:    Try loading font information for T1+fla on input line 28.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lato/t1fla.fd
 File: t1fla.fd 2011/12/25 Fontinst v1.933 font definitions for T1/fla.
 ) <mqlogo.jpeg, id=79, 501.875pt x 150.5625pt>
 File: mqlogo.jpeg Graphic file (type jpg)
  <use mqlogo.jpeg>
-Package pdftex.def Info: mqlogo.jpeg used on input line 42.
+Package pdftex.def Info: mqlogo.jpeg used on input line 28.
 (pdftex.def)             Requested size: 125.47794pt x 37.64282pt.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 42.
+(Font)              scaled to size 14.4pt on input line 28.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 42.
+(Font)              scaled to size 10.5pt on input line 28.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 7.9pt on input line 42.
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 42.
+(Font)              scaled to size 7.9pt on input line 28.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 28.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 42.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 28.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 42.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 28.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 42.
+(Font)              scaled to size 14.4pt on input line 28.
  [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/gauravgupta/Library/texmf/tex/mqlogo.jpeg>]
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 44.
+(Font)              scaled to size 10.95pt on input line 30.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/it' will be
-(Font)              scaled to size 14.4pt on input line 44.
- (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.toc)
-\tf@toc=\write8
-\openout8 = `classesObjects1.toc'.
+(Font)              scaled to size 14.4pt on input line 30.
+ (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.toc) [2
 
- [2
-
-] (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.loe)
-\tf@loe=\write9
-\openout9 = `classesObjects1.loe'.
-
-) [3
+] (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/classesObjects1/.texpadtmp/classesObjects1.loe)) [3
 
 ] [4
+
 
 ]
 LaTeX Font Info:    Try loading font information for TS1+Heuristica-TLF on input line 11.
@@ -2765,6 +2755,7 @@ LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 13.
  [5
 
+
 ]
 ===== Image 'classesObjects1-figure0' is up-to-date. ======
 
@@ -2773,6 +2764,7 @@ Overfull \hbox (2071.04445pt too wide) in paragraph at lines 27--40
  []
 
 [6
+
 
 ]
 Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
@@ -2788,7 +2780,15 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 (Font)              scaled to size 9.30756pt on input line 48.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 60.
- [8] [9
+ [8
+
+
+
+] [9
+
+
+
+
 
 ]
 
@@ -2807,11 +2807,11 @@ l.110 \lstinputlisting{code/Rectangle0.java}
 
  
 Here is how much of TeX's memory you used:
- 42560 strings out of 493089
- 840544 string characters out of 6134842
- 1184867 words of memory out of 5000000
- 45192 multiletter control sequences out of 15000+600000
+ 42553 strings out of 493089
+ 840420 string characters out of 6134842
+ 1184148 words of memory out of 5000000
+ 45185 multiletter control sequences out of 15000+600000
  67450 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,7n,90p,10486b,1257s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,7n,90p,10461b,1257s stack positions out of 5000i,500n,10000p,200000b,80000s
 ./classesObjects1.tex:110:  ==> Fatal error occurred, no output PDF file produced!

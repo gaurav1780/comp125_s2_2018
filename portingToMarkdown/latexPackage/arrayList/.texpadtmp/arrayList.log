@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.15)  5 APR 2019 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.15)  29 APR 2019 11:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**classesObjects1.tex
-(./classesObjects1.tex
+**arrayList.tex
+(./arrayList.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/Users/gauravgupta/Library/texmf/tex/comp125lectureHeader.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -2592,7 +2592,7 @@ Package: ulem 2012/05/18
 . Defining command \memory with sig. 'mmmmmmmm' on line 91.
 .................................................
 ) (/Users/gauravgupta/Library/texmf/tex/fancylistings.tex)) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))
-\openout4 = `classesObjects1.auxlock'.
+\openout4 = `arrayList.auxlock'.
 
 LaTeX Font Info:    Try loading font information for T1+Heuristica-TLF on input line 26.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/heuristica/T1Heuristica-TLF.fd
@@ -2600,10 +2600,11 @@ File: T1Heuristica-TLF.fd 2015/01/04 (autoinst) Font definitions for T1/Heuristi
 )
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 26.
- (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/output/.texpadtmp/classesObjects1.aux)
+
+No file arrayList.aux.
 LaTeX Font Info:    Checking defaults for OML/zutmi/m/it on input line 26.
 LaTeX Font Info:    Try loading font information for OML+zutmi on input line 26.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/omlzutmi.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/newtx/omlzutmi.fd
 File: omlzutmi.fd 2014/04/14 Fontinst v1.933 font definitions for OML/zutmi.
 )
 LaTeX Font Info:    ... okay on input line 26.
@@ -2629,8 +2630,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 26.
@@ -2674,7 +2674,7 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
 LaTeX Info: Redefining \nameref on input line 26.
- (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/output/.texpadtmp/classesObjects1.out) (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/output/.texpadtmp/classesObjects1.out) ABD: EveryShipout initializing macros (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ ABD: EveryShipout initializing macros (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count316
 \scratchdimen=\dimen279
@@ -2704,7 +2704,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 LaTeX Font Info:    Try loading font information for T1+fla on input line 28.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lato/t1fla.fd
 File: t1fla.fd 2011/12/25 Fontinst v1.933 font definitions for T1/fla.
-) <mqlogo.jpeg, id=79, 501.875pt x 150.5625pt>
+) <mqlogo.jpeg, id=39, 501.875pt x 150.5625pt>
 File: mqlogo.jpeg Graphic file (type jpg)
  <use mqlogo.jpeg>
 Package pdftex.def Info: mqlogo.jpeg used on input line 28.
@@ -2737,71 +2737,54 @@ LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 30.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/b/it' will be
 (Font)              scaled to size 14.4pt on input line 30.
- (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/output/.texpadtmp/classesObjects1.toc) [2
+ [2
 
-] (/Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/output/.texpadtmp/classesObjects1.loe)) [3
-
-] [4
-
-
-]
-LaTeX Font Info:    Try loading font information for TS1+Heuristica-TLF on input line 11.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/heuristica/TS1Heuristica-TLF.fd
-File: TS1Heuristica-TLF.fd 2015/01/04 (autoinst) Font definitions for TS1/Heuristica-TLF.
-)
-LaTeX Font Info:    Font shape `TS1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 11.
-LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 13.
- [5
-
-
-]
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 34.
+])
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 4.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 34.
-LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
-(Font)              scaled to size 9.30756pt on input line 36.
+(Font)              scaled to size 9.30756pt on input line 4.
 LaTeX Font Info:    Font shape `T1/Heuristica-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 48.
- [6
+(Font)              scaled to size 6.0pt on input line 5.
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 9.30756pt on input line 5.
 
+===== Image 'arrayList-figure0' is up-to-date. ======
 
+Overfull \hbox (2071.04445pt too wide) in paragraph at lines 13--25
+ [] 
+ []
 
+[3
 
-] [7
+]
+Overfull \vbox (2925.35474pt too high) has occurred while \output is active []
 
-] [8
-
-
-
+ [4 <./arrayList-figure0.png>] (/Users/gauravgupta/Library/texmf/tex/comp125lectureFooter.tex [5
 
 
 ]
-
-! Package Listings Error: File `code/Rectangle0(.java)' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: java)
-
-Enter file name: 
-./classesObjects1.tex:98: Emergency stop.
-<read *> 
-         
-l.98 \lstinputlisting{code/Rectangle0.java}
-                                           ^^M
-*** (cannot \read from terminal in nonstop modes)
-
- 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4.
+ ) ) 
 Here is how much of TeX's memory you used:
- 42547 strings out of 493089
- 840038 string characters out of 6134842
- 1179148 words of memory out of 5000000
- 45183 multiletter control sequences out of 15000+600000
- 67450 words of font info for 75 fonts, out of 8000000 for 9000
+ 42463 strings out of 493089
+ 837586 string characters out of 6134842
+ 1175005 words of memory out of 5000000
+ 45133 multiletter control sequences out of 15000+600000
+ 57930 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,8n,90p,10461b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
-./classesObjects1.tex:98:  ==> Fatal error occurred, no output PDF file produced!
+ 77i,7n,90p,10455b,1187s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/heuristica/zut_geqeyh.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lato/lato-01.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-Bold.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-BoldItalic.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/heuristica/Heuristica-Regular.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lato/Lato-Bol.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb>
+Output written on /Users/gauravgupta/Documents/GitHub/testing/comp125_s2_2018/portingToMarkdown/latexPackage/arrayList/.texpadtmp/arrayList.pdf (5 pages, 257197 bytes).
+PDF statistics:
+ 104 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+

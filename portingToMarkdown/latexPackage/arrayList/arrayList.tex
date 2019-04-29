@@ -1,0 +1,27 @@
+\def\topic{Linked Lists}
+\input{comp125lectureHeader}
+
+\begin{lstlisting}
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(10);
+list.add(70);
+list.add(20);
+list.add(90);
+\end{lstlisting}
+
+\begin{center}
+\bgroup \tikzset{png export} \begin{tikzpicture}[scale=0.5]
+
+\memoryblock{y=10, width=4,height=1.5,array={"list"}, colour=green!10!white}
+
+\memoryblock{y=6,width=5,height=2,array={"elementData"}, colour=blue!10!white}
+
+\memoryblock{width=3,height=4.5,array={"10", "70", "20", "90"}, colour=red!10!white}
+
+\draw [line width = 0.5mm, -{Latex[length=3mm]}] (2,10.2) -- (2,8);
+
+\draw [line width = 0.5mm, -{Latex[length=3mm]}] (2, 6.2) -- (2, 4.5);
+\end{tikzpicture} \egroup
+\end{center}
+
+\input{comp125lectureFooter}

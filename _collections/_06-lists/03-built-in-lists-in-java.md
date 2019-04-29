@@ -50,14 +50,15 @@ For those interested in learning about this, check out [Java Generics](https://d
 ArrayList<Integer> list = new ArrayList<Integer>();
 ```
 
-This creates a list that can hold integer values (as Integer objects).
+This creates a list that can holds integer values (as `Integer` objects) in an internal array `elementData`.
 
 You can similarly create a `LinkedList` object as,
-
 
 ```java
 LinkedList<Double> grades = new LinkedList<Double>();
 ```
+
+We will look at storage when we talk about custom-built linked lists.
 
 ### Adding items at the end
 
@@ -69,7 +70,9 @@ list.add(90);
 //list = [10, 70, 20, 90]
 ```
 
-Inside object `list`, the values are held in an instance variable array named `elementData`. Thus, in this case, `list.elementData = {10, 70, 20, 90}`
+If it's an `ArrayList`, inside object `list`, the values are held in an instance variable array named `elementData`. Thus, in this case, `list.elementData = {10, 70, 20, 90}`
+
+![](./../fig/06-lists/builtInLists/arrayList-figure0.png)
 
 NOTE: A `LinkedList` holds objects differently from an `ArrayList`. We'll talk more about that later.
 
